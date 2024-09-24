@@ -1,0 +1,243 @@
+table VIEW_GBL_DIM_CALENDAR_WITH_LANG
+	lineageTag: 4c9e989a-a5be-4453-a7e9-76225fb2be89
+
+	column DATE
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 3d52b2cf-8de7-4954-8066-eec65173d1d3
+		summarizeBy: none
+		sourceColumn: DATE
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 82ddd5ce-b0ee-42de-9482-61fbc676130e
+		summarizeBy: none
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = User
+
+	column SEMESTER
+		dataType: string
+		lineageTag: 81c177fe-78ea-4a74-bb55-bada197e44c7
+		summarizeBy: none
+		sourceColumn: SEMESTER
+
+		annotation SummarizationSetBy = User
+
+	column QUARTER
+		dataType: string
+		lineageTag: a0b88e9e-0c8c-4e46-90c0-1a2571badfbd
+		summarizeBy: none
+		sourceColumn: QUARTER
+
+		annotation SummarizationSetBy = User
+
+	column MONTH
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7c7ca5ba-9e17-4d1b-ad63-cb167925932f
+		summarizeBy: none
+		sourceColumn: MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_DESC
+		dataType: string
+		lineageTag: b3647b7d-b980-40b4-b151-c8ab22b50c9e
+		summarizeBy: none
+		sourceColumn: MONTH_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
+
+	column DAY
+		dataType: int64
+		formatString: 0
+		lineageTag: 33c4421c-2291-48b0-aa28-9a913f0131e7
+		summarizeBy: none
+		sourceColumn: DAY
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_DAY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ce21d86b-24e7-4703-becc-69448e66d878
+		summarizeBy: none
+		sourceColumn: WEEK_DAY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_DAY_2
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: b6995dd0-99bc-47eb-a028-e9d14c76be8e
+		summarizeBy: none
+		sourceColumn: WEEK_DAY_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_DAY_DESC
+		dataType: string
+		lineageTag: 9a303a11-d004-4f0d-bb2b-523c46542bd6
+		summarizeBy: none
+		sourceColumn: WEEK_DAY_DESC
+		sortByColumn: WEEK_DAY
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_NUMBER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7749a2fc-7059-42f9-9c00-b2e509cc5248
+		summarizeBy: none
+		sourceColumn: WEEK_NUMBER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_DESC
+		dataType: string
+		lineageTag: 12b942b9-40b1-45ef-9597-ea678ce4cbd0
+		summarizeBy: none
+		sourceColumn: WEEK_DESC
+		sortByColumn: WEEK_NUMBER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
+
+	column FIRST_DAY_WEEK
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 8472c727-abc0-4fce-9511-5c02273ef628
+		summarizeBy: none
+		sourceColumn: FIRST_DAY_WEEK
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LAST_DAY_WEEK
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 3d931af3-aa92-475e-bc10-f2039bbb14ad
+		summarizeBy: none
+		sourceColumn: LAST_DAY_WEEK
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YEAR_MONTH
+		dataType: string
+		isHidden
+		lineageTag: 60de758f-e196-40cc-8341-1d06e3b15be0
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column YEAR_MONTH_SHORT_DESC
+		dataType: string
+		lineageTag: 560ded0d-e030-4182-a45f-d39fa7172047
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH_SHORT_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
+
+	column YEAR_MONTH_DESC
+		dataType: string
+		lineageTag: e71936f7-4296-4ba1-818c-f36d2ac00e53
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
+
+	column WORKING_DAY
+		dataType: int64
+		formatString: 0
+		lineageTag: 29b3da11-0299-4ade-866f-79b3db883895
+		summarizeBy: none
+		sourceColumn: WORKING_DAY
+
+		annotation SummarizationSetBy = User
+
+	column CREATION_DATE
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		isAvailableInMdx: false
+		lineageTag: 01bedce1-d5ad-49b1-adb8-ed27bb00270f
+		summarizeBy: none
+		sourceColumn: CREATION_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column USER_CULTURE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: e9557036-fa8f-4903-9817-34817287f96b
+		summarizeBy: none
+		sourceColumn: USER_CULTURE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition VIEW_GBL_DIM_CALENDAR_WITH_LANG = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar),
+				    PBI_VIEW_GBL_DIM_CALENDAR_WITH_LANG = Source{[Schema="PBI",Item="VIEW_GBL_DIM_CALENDAR_WITH_LANG"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_CALENDAR_WITH_LANG
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

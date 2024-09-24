@@ -1,0 +1,139 @@
+relationship 596431c7-4e16-21cc-4a02-7d265473d620
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_CODE
+	toColumn: VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG_BRIDGE.FRANCHISE_CODE
+
+relationship 21f389b8-2296-f3d6-a93c-03375dc48c55
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_GBL_DIM_SITES_WITH_LANG.SITE_CODE
+	toColumn: VIEW_GBL_DIM_SITES_WITH_LANG_BRIDGE.SITE_CODE
+
+relationship 60e92367-aae7-30b0-51f3-87018a24646a
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_NLR_DIM_ACTIVITIES_GSC_WITH_LANG.ACTIVITY_CODE
+	toColumn: VIEW_NLR_DIM_ACTIVITIES_GSC_WITH_LANG_BRIDGE.ACTIVITY_CODE
+
+relationship 20dafd18-bf37-c595-548c-e944bef91871
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG.NLR_CODE
+	toColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG_BRIDGE.NLR_CODE
+
+relationship 58122bc3-779f-d541-a8e5-1d21397b2f91
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG.PL_CODE
+	toColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG_BRIDGE.PL_CODE
+
+relationship 6f1a8b4c-ffde-b46b-e12e-e8050c145ddf
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG.PL_IFRS_CODE
+	toColumn: VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG_BRIDGE.PL_IFRS_CODE
+
+relationship 8bcaccc7-31c4-9c0e-2576-2df0b85d5105
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_NLR_DIM_BL_IFRS_SCG_WITH_LANG.BL_IFRS_CODE
+	toColumn: VIEW_NLR_DIM_BL_IFRS_SCG_WITH_LANG_BRIDGE.BL_IFRS_CODE
+
+relationship 3e1a0bf2-2e0b-b5ea-4258-188493a5c776
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.FRANCHISE_CODE
+	toColumn: VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG_BRIDGE.FRANCHISE_CODE
+
+relationship dc9312c8-29c2-c4df-66b3-228eddbd16fc
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.SITE_CODE
+	toColumn: VIEW_GBL_DIM_SITES_WITH_LANG_BRIDGE.SITE_CODE
+
+relationship 175bf63c-bca4-7bc5-ee91-feb92ba19353
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.ACTIVITY_CODE
+	toColumn: VIEW_NLR_DIM_ACTIVITIES_GSC_WITH_LANG_BRIDGE.ACTIVITY_CODE
+
+relationship 2be8542a-ed11-531f-89a2-9ce387b55d1a
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.NLR_CODE
+	toColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG_BRIDGE.NLR_CODE
+
+relationship d107fc49-0a7a-708f-4759-0f61c8aab23c
+	isActive: false
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.PL_CODE
+	toColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG_BRIDGE.PL_CODE
+
+relationship ec65113a-5729-31d4-2ac5-cc70993002c5
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.PL_IFRS_CODE
+	toColumn: VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG_BRIDGE.PL_IFRS_CODE
+
+relationship 89e1b16a-61b1-6044-4249-9a46a250e0b6
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG.DATE
+	toColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG_BRIDGE.DATE
+
+relationship be748ef9-e5ed-ad25-4cf7-b3e5ca347b9b
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.FIRST_DAY
+	toColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG_BRIDGE.DATE
+
+relationship e84b6fc2-11f0-e94f-9001-abb39f949806
+	fromColumn: VIEW_NLR_FACT_DW_TRANSBL.BL_IFRS_CODE_1
+	toColumn: VIEW_NLR_DIM_BL_IFRS_SCG_WITH_LANG_BRIDGE.BL_IFRS_CODE
+
+relationship f0d2cf11-1e8b-ef9e-22da-2660d3c4d1b6
+	fromColumn: VIEW_NLR_FACT_BI_BL_BUDGET.BL_IFRS_CODE
+	toColumn: VIEW_NLR_DIM_BL_IFRS_SCG_WITH_LANG_BRIDGE.BL_IFRS_CODE
+
+relationship 1608943e-d1d1-fb51-9595-7b4fc8531922
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_IFRS_CODE
+	toColumn: VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG_BRIDGE.PL_IFRS_CODE
+
+relationship d99a2c6a-e534-2036-1f83-05e578cee092
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_CODE
+	toColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG_BRIDGE.NLR_CODE
+
+relationship d62ccaaa-4e72-9287-d8eb-30dc34b8e3ba
+	fromColumn: VIEW_NLR_FACT_BI_BL_BUDGET.NLR_CODE
+	toColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG_BRIDGE.NLR_CODE
+
+relationship 1ec9e6f3-669a-50c5-29f9-c65b3fd518ee
+	fromColumn: VIEW_NLR_FACT_DW_TRANSBL.NLR_CODE
+	toColumn: VIEW_NLR_DIM_COMPANIES_WITH_LANG_BRIDGE.NLR_CODE
+
+relationship ed9c3327-f874-2c30-89a3-84593a1565c8
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.FRANCHISE_CODE
+	toColumn: VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG_BRIDGE.FRANCHISE_CODE
+
+relationship 3c67007e-8ba5-c7a6-4412-7c02727d839b
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.SITE_CODE
+	toColumn: VIEW_GBL_DIM_SITES_WITH_LANG_BRIDGE.SITE_CODE
+
+relationship f2d896ed-6470-0da8-fc51-6a90d5363ce2
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.ACTIVITY_CODE
+	toColumn: VIEW_NLR_DIM_ACTIVITIES_GSC_WITH_LANG_BRIDGE.ACTIVITY_CODE
+
+relationship e12edb46-1133-3447-72a1-da7a6c580d2a
+	fromColumn: VIEW_NLR_FACT_BI_BL_BUDGET.ANALYSIS_DATE
+	toColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG_BRIDGE.DATE
+
+relationship 5cfbfca7-2466-f38d-15b8-cb7859565510
+	fromColumn: VIEW_NLR_FACT_DW_TRANSBL.BL_DATE
+	toColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG_BRIDGE.DATE
+
+relationship e6e8aa17-b933-07bf-8a2e-f683b99b93dc
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PERIOD
+	toColumn: VIEW_GBL_DIM_CALENDAR_WITH_LANG_BRIDGE.DATE
+
+relationship 2d83aee0-997a-c1aa-4898-a8a28220d33d
+	fromColumn: SIGNAL.PL_Code
+	toColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG_BRIDGE.PL_CODE
+
+relationship 661f370a-3b60-eaef-b212-b9c5f6a86963
+	toCardinality: many
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL.PL_CODE
+	toColumn: SIGNAL.PL_CACULATION
+
+relationship 0c991693-cc06-8432-7898-12482aaa1f9e
+	toCardinality: many
+	fromColumn: VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_CODE
+	toColumn: SIGNAL.PL_CACULATION
+

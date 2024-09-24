@@ -1,0 +1,7 @@
+cultureInfo pt-PT
+	translations
+		model Model
+			table PBI_TABLE_TITULOS
+				column Id
+					caption: Original_Description
+

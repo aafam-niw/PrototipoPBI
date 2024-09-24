@@ -1,0 +1,32 @@
+table VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG_BRIDGE
+	lineageTag: 6710716d-0c80-45df-9634-5f3af04ebd81
+
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: dc662e91-a0bb-4ae0-8183-306a1527a2d8
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG_BRIDGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"PL_IFRS_CODE"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
