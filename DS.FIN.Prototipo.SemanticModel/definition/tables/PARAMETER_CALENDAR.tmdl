@@ -1,0 +1,77 @@
+table PARAMETER_CALENDAR
+	lineageTag: 5ed389aa-8bc3-48ca-a196-e4fabd81b2dd
+
+	column PARAMETER_CALENDAR
+		dataType: string
+		lineageTag: bc04a546-352e-454c-98c8-979a67321ac1
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_CALENDAR Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_CALENDAR Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CALENDAR Fields'
+		dataType: string
+		isHidden
+		lineageTag: 191e60a2-a304-4911-afb3-2c6505ad5309
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_CALENDAR Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CALENDAR Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3e0ba76e-3c09-4aa3-894b-344d841c70b6
+		summarizeBy: sum
+		isDataTypeInferred
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		dataType: string
+		isHidden
+		lineageTag: 1fc72eee-fa95-485a-9c28-40e584eb9849
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_CALENDAR = calculated
+		mode: import
+		source =
+				{
+				    ("YEAR", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, "en-US"),
+				    ("QUARTER", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, "en-US"),
+				    ("MONTH", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, "en-US"),
+				
+				    ("ANO", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, "pt-PT"),
+				    ("TRIMESTRE", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, "pt-PT"),
+				    ("MÊS", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, "pt-PT"),
+				
+				    ("AÑO", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, "es-ES"),
+				    ("TRIMESTRE", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, "es-ES"),
+				    ("MES", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, "es-ES"),
+				
+				    ("ANNÉE", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, "fr-FR"),
+				    ("TRIMESTRE", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, "fr-FR"),
+				    ("MOIS", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, "fr-FR")
+				}
+
+	annotation PBI_Id = 8245bebed7644d56b1c162c4f1c6eaf5
+

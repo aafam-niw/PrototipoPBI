@@ -1,0 +1,94 @@
+table PARAMETER_MEASURES
+	lineageTag: 6da240f3-a674-455c-aafa-f98ce53fbce4
+
+	column PARAMETER_MEASURES
+		dataType: string
+		lineageTag: 2d618430-c5fa-42f8-b28c-0b207599cf8b
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_MEASURES Fields'
+		dataType: string
+		isHidden
+		lineageTag: 77f19bba-ef1c-4c82-b909-b182db8101ef
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_MEASURES Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eafa5060-a554-4f5c-ac3c-7193be1ecca2
+		summarizeBy: sum
+		isDataTypeInferred
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		dataType: string
+		isHidden
+		lineageTag: ffa7d401-52eb-4312-8a54-c4a9701fd38c
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				    ("Balance", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, "en-US"),
+				    ("Budget Admin", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, "en-US"),
+				    ("Deviation N/N Budget Admin", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, "en-US"),
+				    ("Budget", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, "en-US"),
+				    ("Deviation N/N Budget", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, "en-US"),
+				    ("Last Year", NAMEOF('MEASURES_TABLE'[Last Year]), 5, "en-US"),
+				    ("Deviation N/N-1", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, "en-US"),
+				    
+				    ("Saldo", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, "pt-PT"),
+				    ("Orçamento Admin", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, "pt-PT"),
+				    ("Desvio N/N Admin Orçamenton", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, "pt-PT"),
+				    ("Orçamento", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, "pt-PT"),
+				    ("Desvio N/N Orçamento", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, "pt-PT"),
+				    ("Ano Anterior", NAMEOF('MEASURES_TABLE'[Last Year]), 5, "pt-PT"),
+				    ("Desvio N/N-1", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, "pt-PT"),
+				    
+				    ("Saldo", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, "es-ES"),
+				    ("Budget Admin", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, "es-ES"),
+				    ("Desviación N/N Admin Presupuesto", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, "es-ES"),
+				    ("Presupuesto Admin", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, "es-ES"),
+				    ("Desviación N/N Presupuesto", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, "es-ES"),
+				    ("Año Pasado", NAMEOF('MEASURES_TABLE'[Last Year]), 5, "es-ES"),
+				    ("Desviación N/N-1", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, "es-ES"),
+				    
+				    ("Solde", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, "fr-FR"),
+				    ("Budget Admin", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, "fr-FR"),
+				    ("Déviation N/N Admin Budget", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, "fr-FR"),
+				    ("Budget", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, "fr-FR"),
+				    ("Déviation N/N Budget", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, "fr-FR"),
+				    ("l'année dernière", NAMEOF('MEASURES_TABLE'[Last Year]), 5, "fr-FR"),
+				    ("Déviation N/N-1", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, "fr-FR")
+				}
+				```
+
+	annotation PBI_Id = 92876e1d56bc4fe89a5fc7c474f37655
+

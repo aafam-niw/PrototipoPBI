@@ -1,0 +1,83 @@
+table PARAMETER_FIELDS
+	lineageTag: 7e178b5d-cef2-4b08-80a7-3180e5afa155
+
+	column PARAMETER_FIELDS
+		dataType: string
+		lineageTag: cb36f5b5-6eaa-42af-8595-de1126d42ac6
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_FIELDS Fields'
+		dataType: string
+		isHidden
+		lineageTag: 4544a903-f103-46e3-b168-5d6459839a52
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_FIELDS Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 71264161-b31f-436c-b741-eb245babf034
+		summarizeBy: sum
+		isDataTypeInferred
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		dataType: string
+		isHidden
+		lineageTag: 69e15f66-4a51-4749-85bd-479dca0b2c08
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("PL_LEVEL_1_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, "en-US"),
+				    ("PL_LEVEL_2_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, "en-US"),
+				    ("SITE_LEVEL_1_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, "en-US"),
+				    ("SITE_LEVEL_2_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, "en-US"),
+				    
+				    ("PL_NIVEL_1_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, "pt-PT"),
+				    ("PL_NIVEL_2_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, "pt-PT"),
+				    ("SITE_NIVEL_1_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, "pt-PT"),
+				    ("SITE_NIVEL_2_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, "pt-PT"),
+				    
+				    ("PL_NIVEL_1_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, "es-ES"),
+				    ("PL_NIVEL_2_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, "es-ES"),
+				    ("SITE_NIVEL_1_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, "es-ES"),
+				    ("SITE_NIVEL_2_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, "es-ES"),
+				    
+				    ("PL_NIVEAU_1_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, "fr-FR"),
+				    ("PL_NIVEAU_2_DESC", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, "fr-FR"),
+				    ("SITE_NIVEAU_1_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, "fr-FR"),
+				    ("SITE_NIVEAU_2_DESC", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, "fr-FR")
+				}
+				
+				```
+
+	annotation PBI_Id = 271b467c968449cb80907fe5f9eeb15f
+

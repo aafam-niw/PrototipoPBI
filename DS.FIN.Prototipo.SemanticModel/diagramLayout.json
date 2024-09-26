@@ -386,6 +386,16 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "PARAMETER_CALENDAR",
+          "nodeLineageTag": "5ed389aa-8bc3-48ca-a196-e4fabd81b2dd",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
