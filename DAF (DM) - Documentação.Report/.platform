@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DAF (DM) - Documentação"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f43a5950-2c1f-42a4-ad06-4f75a4cadec4"
+  }
+}

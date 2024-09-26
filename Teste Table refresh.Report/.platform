@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Teste Table refresh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "76911799-28bd-4d9f-8b6b-e3b602728401"
+  }
+}

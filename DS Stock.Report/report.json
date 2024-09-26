@@ -1,0 +1,51 @@
+{
+  "config": "{\"version\":\"5.30\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.33\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6205f23c01e0b15874c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":752,\"y\":88,\"z\":1000,\"width\":304,\"height\":304}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"SFA_REMINDER.BRAND\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SFA_REMINDER\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BRAND\"},\"Name\":\"SFA_REMINDER.BRAND\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 304.00,
+          "width": 304.00,
+          "x": 752.00,
+          "y": 88.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ffc24507d29ba244a91d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":128,\"y\":80,\"z\":0,\"width\":304,\"height\":304}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim Corporate Structure.PT_Company_Desc\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Corporate Structure\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"PT_Company_Desc\"},\"Name\":\"Dim Corporate Structure.PT_Company_Desc\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 304.00,
+          "width": 304.00,
+          "x": 128.00,
+          "y": 80.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

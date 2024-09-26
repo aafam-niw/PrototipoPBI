@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Saldos CA"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "242fa9dd-8692-4cf8-9287-a2951390a1c4"
+  }
+}

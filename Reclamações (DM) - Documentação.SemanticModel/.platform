@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Reclamações (DM) - Documentação"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "406a0039-4c89-471e-8a92-04ad739fec4d"
+  }
+}

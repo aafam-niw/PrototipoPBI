@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.27\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.29\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"38da71f5190f5b3b679f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":560,\"y\":16,\"z\":2,\"width\":368,\"height\":368}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(CA Service Sales.NLR_Code)\"},{\"queryRef\":\"CA Vehicles Sales.Available_Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CA Service Sales\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"CA Vehicles Sales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NLR_Code\"}},\"Function\":5},\"Name\":\"CountNonNull(CA Service Sales.NLR_Code)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Available_Date\"}},\"Function\":5},\"Name\":\"CA Vehicles Sales.Available_Date\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NLR_Code\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 368.00,
+          "width": 368.00,
+          "x": 560.00,
+          "y": 16.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"512a32ad5ae382610594\",\"layouts\":[{\"id\":0,\"position\":{\"x\":944,\"y\":368,\"z\":3,\"width\":304,\"height\":288}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"GBL_Setup_Clients.Client_Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"GBL_Setup_Clients\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Client_Name\"},\"Name\":\"GBL_Setup_Clients.Client_Name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 288.00,
+          "width": 304.00,
+          "x": 944.00,
+          "y": 368.00,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"d947cb428a39b85fb256\",\"layouts\":[{\"id\":0,\"position\":{\"x\":24,\"y\":16,\"z\":1,\"width\":360,\"height\":368}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"NLR_Dim_Companies.EN_Company_Desc\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"n\",\"Entity\":\"NLR_Dim_Companies\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"EN_Company_Desc\"},\"Name\":\"NLR_Dim_Companies.EN_Company_Desc\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"n\",\"Entity\":\"NLR_Dim_Companies\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"EN_Company_Desc\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Caetano Auto S.A'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 368.00,
+          "width": 360.00,
+          "x": 24.00,
+          "y": 16.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"f2ed9574655fff779765\",\"layouts\":[{\"id\":0,\"position\":{\"x\":416,\"y\":368,\"z\":4,\"width\":368,\"height\":304}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"GBL_Dim_Franchises_GSC.PT_Franchise_Desc\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"GBL_Dim_Franchises_GSC\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"PT_Franchise_Desc\"},\"Name\":\"GBL_Dim_Franchises_GSC.PT_Franchise_Desc\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 304.00,
+          "width": 368.00,
+          "x": 416.00,
+          "y": 368.00,
+          "z": 4.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

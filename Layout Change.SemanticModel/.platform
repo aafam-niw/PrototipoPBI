@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Layout Change"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c9d072ce-e606-4b86-9203-6a4c155fc86b"
+  }
+}

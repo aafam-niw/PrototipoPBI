@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Consentimentos RGPD (DM) - Documentação"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fdb85167-203a-471f-af93-5bd022aa302b"
+  }
+}

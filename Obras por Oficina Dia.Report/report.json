@@ -1,0 +1,51 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.46\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2bd6891b9e329ce06588\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980,\"y\":72.88256227758006,\"width\":300,\"height\":300,\"z\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Calendário.Ano\",\"active\":true},{\"queryRef\":\"Calendário.Mês\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano\"},\"Name\":\"Calendário.Ano\",\"NativeReferenceName\":\"Ano\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Mês\"},\"Name\":\"Calendário.Mês\",\"NativeReferenceName\":\"Mês\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano\"}}}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Calendário.Ano\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Ano\"}}],\"isPinned\":true},{\"queryRefs\":[\"Calendário.Mês\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2023L\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Mês\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2023L\"}},{\"Literal\":{\"Value\":\"'Mar'\"}}]]}}}]}}}}]},\"filterExpressionMetadata\":{\"expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Ano\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Mês\"}}],\"cachedValueItems\":[{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Ano\"}},\"Right\":{\"Literal\":{\"Value\":\"2023L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Mês\"}},\"Right\":{\"Literal\":{\"Value\":\"'Mar'\"}}}}}],\"valueMap\":{\"0\":\"2023\",\"1\":\"Mar\"}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendário\"}},\"Property\":\"Ano\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 300.00,
+          "width": 300.00,
+          "x": 980.00,
+          "y": 72.88,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"6b55c180c1dcbbe79bb8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":175.37366548042704,\"y\":72.88256227758006,\"z\":0,\"width\":537.5088967971529,\"height\":635.4448398576512,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Estrutura Organizativa.Rede\",\"active\":true},{\"queryRef\":\"Estrutura Organizativa.Classificação\",\"active\":true},{\"queryRef\":\"Estrutura Organizativa.Plataforma\",\"active\":true},{\"queryRef\":\"Estrutura Organizativa.Polo\",\"active\":true},{\"queryRef\":\"Oficinas.Oficina\",\"active\":true},{\"queryRef\":\"Calendário.Data\",\"active\":true}],\"Values\":[{\"queryRef\":\"Medidas.Obras\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Estrutura Organizativa\",\"Type\":0},{\"Name\":\"o\",\"Entity\":\"Oficinas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Data\"},\"Name\":\"Calendário.Data\",\"NativeReferenceName\":\"Data\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Obras\"},\"Name\":\"Medidas.Obras\",\"NativeReferenceName\":\"Obras\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Rede\"},\"Name\":\"Estrutura Organizativa.Rede\",\"NativeReferenceName\":\"Rede\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Classificação\"},\"Name\":\"Estrutura Organizativa.Classificação\",\"NativeReferenceName\":\"Classificação\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Plataforma\"},\"Name\":\"Estrutura Organizativa.Plataforma\",\"NativeReferenceName\":\"Plataforma\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Polo\"},\"Name\":\"Estrutura Organizativa.Polo\",\"NativeReferenceName\":\"Polo\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Oficina\"},\"Name\":\"Oficinas.Oficina\",\"NativeReferenceName\":\"Oficina\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Rede\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Estrutura Organizativa.Rede\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Estrutura Organizativa\"}},\"Property\":\"Rede\"}}],\"isPinned\":true},{\"queryRefs\":[\"Estrutura Organizativa.Classificação\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Estrutura Organizativa\"}},\"Property\":\"Classificação\"}}],\"isPinned\":true},{\"queryRefs\":[\"Estrutura Organizativa.Plataforma\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Estrutura Organizativa\"}},\"Property\":\"Plataforma\"}}],\"isPinned\":true},{\"queryRefs\":[\"Estrutura Organizativa.Polo\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Estrutura Organizativa\"}},\"Property\":\"Polo\"}}],\"isPinned\":true},{\"queryRefs\":[\"Oficinas.Oficina\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Oficinas\"}},\"Property\":\"Oficina\"}}],\"isPinned\":true},{\"queryRefs\":[\"Calendário.Data\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Toyota'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Caetano-Auto'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Caetano-Auto Algarve'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'CA Algarve (Portimao)'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Mecânica'\"}}],\"isToggled\":true}]}]}]}]}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 635.44,
+          "width": 537.50,
+          "x": 175.37,
+          "y": 72.88,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

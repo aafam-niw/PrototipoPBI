@@ -16,7 +16,7 @@
       },
       {
         "name": "PBI_ProTooling",
-        "value": "[\"CalcGroup\",\"DevMode\"]"
+        "value": "[\"CalcGroup\"]"
       },
       {
         "name": "BestPracticeAnalyzer_IgnoreRules",
@@ -1544,16 +1544,6 @@
                       "Type": "Noun",
                       "Weight": 0.451
                     }
-                  },
-                  {
-                    "Current Year": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -2118,7 +2108,7 @@
                     }
                   },
                   {
-                    "Budget Adm": {
+                    "Orçamento Admin": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -2355,16 +2345,6 @@
                     "N-1": {
                       "State": "Generated",
                       "Weight": 0.97
-                    }
-                  },
-                  {
-                    "Deviation N / N-1": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -2685,16 +2665,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Deviation N / N Budg": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -3188,16 +3158,6 @@
                       "Type": "Noun",
                       "Weight": 0.52
                     }
-                  },
-                  {
-                    "Deviation N / N Budg Adm": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -3599,16 +3559,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.582
-                    }
-                  },
-                  {
-                    "Prior Year": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -4148,8 +4098,114 @@
                 "State": "Generated",
                 "Terms": [
                   {
-                    "titulo": {
+                    "visual title": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "title": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "visual designation": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "designation": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "visual name": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "visual award": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "visual call": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "visual heading": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "visual label": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "award": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "call": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "heading": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
                     }
                   }
                 ]
@@ -5239,18 +5295,78 @@
                   "Value": "Hidden"
                 }
               },
-              "measures_table.v_Titulo_FormatString_titulo_FormatString": {
+              "measures_table.v_Visual_Title_FormatString_visual_title_FormatString": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "MEASURES_TABLE",
-                    "ConceptualProperty": "_Titulo FormatString"
+                    "ConceptualProperty": "_Visual Title FormatString"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "_titulo FormatString": {
+                    "_visual title FormatString": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "_visual designation formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "_visual name formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "_visual award formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "_visual call formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "_visual heading formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "_visual label formatstring": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
                     }
                   }
                 ],
@@ -6284,6 +6400,135 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "parameter_measure.user_culture": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PARAMETER_MEASURES",
+                    "ConceptualProperty": "USER_CULTURE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "user culture": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "USER_CULTURE": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "culture": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "user ethos": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "user philosophy": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "user nation": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "ethos": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "philosophy": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "nation": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "user art, music, and literature": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "art, music, and literature": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "user civilization": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.451
+                    }
+                  },
+                  {
+                    "user society": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.451
                     }
                   }
                 ]
@@ -30251,7 +30496,7 @@
                         "Role": "measures_table"
                       }
                     },
-                    "ID": "measures_tables_have_titulo",
+                    "ID": "measures_tables_have_visual_title",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -30357,6 +30602,39 @@
                   "parameter_measure.parameter_measure": {
                     "Target": {
                       "Entity": "parameter_measure.parameter_measure"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "parameter_measure_has_user_culture": {
+                "Binding": {
+                  "ConceptualEntity": "PARAMETER_MEASURES"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "parameter_measure.user_culture"
+                      },
+                      "Subject": {
+                        "Role": "parameter_measure"
+                      }
+                    },
+                    "ID": "parameter_measures_have_user_cultures",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "parameter_measure": {
+                    "Target": {
+                      "Entity": "parameter_measure"
+                    }
+                  },
+                  "parameter_measure.user_culture": {
+                    "Target": {
+                      "Entity": "parameter_measure.user_culture"
                     }
                   }
                 },
@@ -42517,7 +42795,16 @@
             "filterExpression": "[USER_CULTURE] == USERCULTURE()"
           },
           {
-            "name": "VIEW_NLR_DIM_PL_IFRS_SCG_WITH_LANG"
+            "name": "PARAMETER_MEASURES",
+            "filterExpression": "[USER_CULTURE] == USERCULTURE()"
+          },
+          {
+            "name": "PARAMETER_CALENDAR",
+            "filterExpression": "[USER_CULTURE] == USERCULTURE()"
+          },
+          {
+            "name": "PARAMETER_FIELDS",
+            "filterExpression": "[USER_CULTURE] == USERCULTURE()"
           }
         ]
       }
@@ -47254,7 +47541,7 @@
                 "    // UI",
                 "    \"Pl Display Order\", [Pl Display Order],",
                 "    \"Last Refresh\", [Last Refresh],",
-                "    \"Titulo\", [Visual Title]",
+                "    \"Visual Title\", [Visual Title]",
                 ")"
               ]
             }
@@ -48735,7 +49022,9 @@
                 "        { 4, \"Marca\", \"Franchise\", \"Franquicia\", \"Franchise\"},",
                 "        { 5, \"Atividade\", \"Activity\", \"Actividad\", \"Activité\"},",
                 "        { 6, \"Empresa\", \"Company\", \"Empresa\", \"Entreprise\"},",
-                "        { 7, \"Lucro e Perda\", \"Profit & Loss\", \"Ganancias y Pérdidas\", \"Profit et Perte\"}",
+                "        { 7, \"Lucro e Perda\", \"Profit & Loss\", \"Ganancias y Pérdidas\", \"Profit et Perte\"},",
+                "        { 8, \"Protótipo PBI\", \"PBI Prototype\", \"Prototipo PBI\", \"Prototype PBI\" },",
+                "        { 9, \"Página\", \"Page\", \"Página\", \"Page\" }",
                 "    }",
                 ")"
               ],
@@ -48889,6 +49178,23 @@
             "sourceColumn": "[Value3]",
             "summarizeBy": "sum",
             "type": "calculatedTableColumn"
+          },
+          {
+            "name": "USER_CULTURE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "ffa7d401-52eb-4312-8a54-c4a9701fd38c",
+            "sourceColumn": "[Value4]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
           }
         ],
         "lineageTag": "6da240f3-a674-455c-aafa-f98ce53fbce4",
@@ -48899,13 +49205,37 @@
             "source": {
               "expression": [
                 "{",
-                "    (\"Current Year\", NAMEOF('MEASURES_TABLE'[PL Balance]), 0),",
-                "    (\"Budget Adm\", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1),",
-                "    (\"Deviation N / N Budg Adm\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2),",
-                "    (\"Budget\", NAMEOF('MEASURES_TABLE'[PL Budget]), 3),",
-                "    (\"Deviation N / N Budg\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4),",
-                "    (\"Prior Year\", NAMEOF('MEASURES_TABLE'[Last Year]), 5),",
-                "    (\"Deviation N / N-1\", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6)",
+                "    (\"Balance\", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, \"en-US\"),",
+                "    (\"Budget Admin\", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, \"en-US\"),",
+                "    (\"Deviation N/N Budget Admin\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, \"en-US\"),",
+                "    (\"Budget\", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, \"en-US\"),",
+                "    (\"Deviation N/N Budget\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, \"en-US\"),",
+                "    (\"Last Year\", NAMEOF('MEASURES_TABLE'[Last Year]), 5, \"en-US\"),",
+                "    (\"Deviation N/N-1\", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, \"en-US\"),",
+                "    ",
+                "    (\"Saldo\", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, \"pt-PT\"),",
+                "    (\"Orçamento Admin\", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, \"pt-PT\"),",
+                "    (\"Desvio N/N Admin Orçamenton\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, \"pt-PT\"),",
+                "    (\"Orçamento\", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, \"pt-PT\"),",
+                "    (\"Desvio N/N Orçamento\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, \"pt-PT\"),",
+                "    (\"Ano Anterior\", NAMEOF('MEASURES_TABLE'[Last Year]), 5, \"pt-PT\"),",
+                "    (\"Desvio N/N-1\", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, \"pt-PT\"),",
+                "    ",
+                "    (\"Saldo\", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, \"es-ES\"),",
+                "    (\"Budget Admin\", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, \"es-ES\"),",
+                "    (\"Desviación N/N Admin Presupuesto\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, \"es-ES\"),",
+                "    (\"Presupuesto Admin\", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, \"es-ES\"),",
+                "    (\"Desviación N/N Presupuesto\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, \"es-ES\"),",
+                "    (\"Año Pasado\", NAMEOF('MEASURES_TABLE'[Last Year]), 5, \"es-ES\"),",
+                "    (\"Desviación N/N-1\", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, \"es-ES\"),",
+                "    ",
+                "    (\"Solde\", NAMEOF('MEASURES_TABLE'[PL Balance]), 0, \"fr-FR\"),",
+                "    (\"Budget Admin\", NAMEOF('MEASURES_TABLE'[PL Budget Admin]), 1, \"fr-FR\"),",
+                "    (\"Déviation N/N Admin Budget\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget Admin]), 2, \"fr-FR\"),",
+                "    (\"Budget\", NAMEOF('MEASURES_TABLE'[PL Budget]), 3, \"fr-FR\"),",
+                "    (\"Déviation N/N Budget\", NAMEOF('MEASURES_TABLE'[Deviation N/N Budget]), 4, \"fr-FR\"),",
+                "    (\"l'année dernière\", NAMEOF('MEASURES_TABLE'[Last Year]), 5, \"fr-FR\"),",
+                "    (\"Déviation N/N-1\", NAMEOF('MEASURES_TABLE'[Deviation N/N-1]), 6, \"fr-FR\")",
                 "}"
               ],
               "type": "calculated"
@@ -49080,6 +49410,23 @@
             "sourceColumn": "[Value3]",
             "summarizeBy": "sum",
             "type": "calculatedTableColumn"
+          },
+          {
+            "name": "USER_CULTURE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "69e15f66-4a51-4749-85bd-479dca0b2c08",
+            "sourceColumn": "[Value4]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
           }
         ],
         "lineageTag": "7e178b5d-cef2-4b08-80a7-3180e5afa155",
@@ -49090,16 +49437,153 @@
             "source": {
               "expression": [
                 "{",
-                "    (\"PL_LEVEL_1_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0),",
-                "    (\"PL_LEVEL_2_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1),",
-                "    (\"PL_LEVEL_3_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_3_DESC]), 2),",
-                "    (\"PL_LEVEL_4_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_4_DESC]), 3),",
-                "    (\"PL_LEVEL_5_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_5_DESC]), 4),",
-                "    (\"SITE_LEVEL_1_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_1_DESC]), 5),",
-                "    (\"SITE_LEVEL_2_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_2_DESC]), 6),",
-                "    (\"SITE_LEVEL_3_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_3_DESC]), 7),",
-                "    (\"SITE_LEVEL_4_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_4_DESC]), 8),",
-                "    (\"SITE_LEVEL_5_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 9)",
+                "    (\"PL_LEVEL_1_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, \"en-US\"),",
+                "    (\"PL_LEVEL_2_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, \"en-US\"),",
+                "    (\"SITE_LEVEL_1_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, \"en-US\"),",
+                "    (\"SITE_LEVEL_2_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, \"en-US\"),",
+                "    ",
+                "    (\"PL_NIVEL_1_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, \"pt-PT\"),",
+                "    (\"PL_NIVEL_2_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, \"pt-PT\"),",
+                "    (\"SITE_NIVEL_1_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, \"pt-PT\"),",
+                "    (\"SITE_NIVEL_2_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, \"pt-PT\"),",
+                "    ",
+                "    (\"PL_NIVEL_1_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, \"es-ES\"),",
+                "    (\"PL_NIVEL_2_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, \"es-ES\"),",
+                "    (\"SITE_NIVEL_1_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, \"es-ES\"),",
+                "    (\"SITE_NIVEL_2_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, \"es-ES\"),",
+                "    ",
+                "    (\"PL_NIVEAU_1_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_1_DESC]), 0, \"fr-FR\"),",
+                "    (\"PL_NIVEAU_2_DESC\", NAMEOF('VIEW_NLR_DIM_PL_GSC_WITH_LANG'[PL_LEVEL_2_DESC]), 1, \"fr-FR\"),",
+                "    (\"SITE_NIVEAU_1_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 2, \"fr-FR\"),",
+                "    (\"SITE_NIVEAU_2_DESC\", NAMEOF('VIEW_GBL_DIM_SITES_WITH_LANG'[SITE_LEVEL_5_DESC]), 3, \"fr-FR\")",
+                "}",
+                ""
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PARAMETER_CALENDAR",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "8245bebed7644d56b1c162c4f1c6eaf5"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PARAMETER_CALENDAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "bc04a546-352e-454c-98c8-979a67321ac1",
+            "relatedColumnDetails": {
+              "groupByColumns": [
+                {
+                  "groupingColumn": "PARAMETER_CALENDAR Fields"
+                }
+              ]
+            },
+            "sortByColumn": "PARAMETER_CALENDAR Order",
+            "sourceColumn": "[Value1]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "PARAMETER_CALENDAR Fields",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "kind": 2,
+                  "version": 3
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "191e60a2-a304-4911-afb3-2c6505ad5309",
+            "sortByColumn": "PARAMETER_CALENDAR Order",
+            "sourceColumn": "[Value2]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "PARAMETER_CALENDAR Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "3e0ba76e-3c09-4aa3-894b-344d841c70b6",
+            "sourceColumn": "[Value3]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "USER_CULTURE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "1fc72eee-fa95-485a-9c28-40e584eb9849",
+            "sourceColumn": "[Value4]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "5ed389aa-8bc3-48ca-a196-e4fabd81b2dd",
+        "partitions": [
+          {
+            "name": "PARAMETER_CALENDAR",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "{",
+                "    (\"YEAR\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, \"en-US\"),",
+                "    (\"QUARTER\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, \"en-US\"),",
+                "    (\"MONTH\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, \"en-US\"),",
+                "",
+                "    (\"ANO\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, \"pt-PT\"),",
+                "    (\"TRIMESTRE\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, \"pt-PT\"),",
+                "    (\"MÊS\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, \"pt-PT\"),",
+                "",
+                "    (\"AÑO\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, \"es-ES\"),",
+                "    (\"TRIMESTRE\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, \"es-ES\"),",
+                "    (\"MES\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, \"es-ES\"),",
+                "",
+                "    (\"ANNÉE\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[YEAR]), 0, \"fr-FR\"),",
+                "    (\"TRIMESTRE\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[QUARTER]), 1, \"fr-FR\"),",
+                "    (\"MOIS\", NAMEOF('VIEW_GBL_DIM_CALENDAR_WITH_LANG'[MONTH_DESC]), 2, \"fr-FR\")",
                 "}"
               ],
               "type": "calculated"

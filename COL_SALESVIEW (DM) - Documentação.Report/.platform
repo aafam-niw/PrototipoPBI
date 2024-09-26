@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "COL_SALESVIEW (DM) - Documentação"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7ec43441-75cd-47d7-ac1f-3471df5454ca"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.43\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.43\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5173cb88c7218060d68c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":848.7455197132617,\"y\":4.587813620071685,\"z\":1000,\"width\":331.4695340501792,\"height\":665.2329749103943}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Peças.Peça\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Peças\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Peça\"},\"Name\":\"Peças.Peça\",\"NativeReferenceName\":\"Peça\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Peças\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Peça\"}},\"Right\":{\"Literal\":{\"Value\":\"'wallbox'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Peças\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Peça\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'10 MONOF WALLBOX'\"}}],[{\"Literal\":{\"Value\":\"'CABLE HOLDER WALLBOX'\"}}],[{\"Literal\":{\"Value\":\"'INST WALLBOX MONOF'\"}}],[{\"Literal\":{\"Value\":\"'INST WALLBOX TRIF'\"}}],[{\"Literal\":{\"Value\":\"'PEN WIFI WALLBOX'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CAB VER TOYO'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CABLE PLATE'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CABLE VERSIO'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CONECT TOYOT'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CONECTADA'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CONNECT TOYO'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX CONNECTED PL'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX DOUBLE MASTE'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX DOUBLE PLATE'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX ENTRADA LEX'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX ENTRADA TOY'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX POLE SINGLE'\"}}],[{\"Literal\":{\"Value\":\"'WALLBOX SOCKET VERSI'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 665.23,
+          "width": 331.47,
+          "x": 848.75,
+          "y": 4.59,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"82fdf23290dcc9547834\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.35616438356165,\"y\":293.6986301369863,\"z\":2000,\"width\":665.2054794520548,\"height\":367.1232876712329}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Peças.Família\"},{\"queryRef\":\"Peças.PAR_PNC\"},{\"queryRef\":\"Peças.Código Produto\"},{\"queryRef\":\"Peças.Peça\"},{\"queryRef\":\"Medidas.Qtd Peças\"},{\"queryRef\":\"Medidas.Peças Venda Balcão Qtd\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Peças\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Qtd Peças\"},\"Name\":\"Medidas.Qtd Peças\",\"NativeReferenceName\":\"Qtd Peças\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Família\"},\"Name\":\"Peças.Família\",\"NativeReferenceName\":\"Família\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Peça\"},\"Name\":\"Peças.Peça\",\"NativeReferenceName\":\"Peça\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PAR_PNC\"},\"Name\":\"Peças.PAR_PNC\",\"NativeReferenceName\":\"PAR_PNC\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Código Produto\"},\"Name\":\"Peças.Código Produto\",\"NativeReferenceName\":\"Código Produto\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Peças Venda Balcão Qtd\"},\"Name\":\"Medidas.Peças Venda Balcão Qtd\",\"NativeReferenceName\":\"Peças Venda Balcão Qtd\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 367.12,
+          "width": 665.21,
+          "x": 38.36,
+          "y": 293.70,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"8c6d08605715b09d7100\",\"layouts\":[{\"id\":0,\"position\":{\"x\":89.86301369863014,\"y\":4.587813620071685,\"width\":665.2054794520548,\"height\":165.27520007855844,\"z\":2001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Calendário.Ano-Mês\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano-Mês\"},\"Name\":\"Calendário.Ano-Mês\",\"NativeReferenceName\":\"Ano-Mês\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano-Mês\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2023-Janeiro'\"}}],[{\"Literal\":{\"Value\":\"'2023-Fevereiro'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 165.28,
+          "width": 665.21,
+          "x": 89.86,
+          "y": 4.59,
+          "z": 2001.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

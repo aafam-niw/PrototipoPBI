@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "View_VHE_Fact_BI_Sales_Detail"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1f8aec72-536d-4744-9f7c-aa49b75b8c88"
+  }
+}

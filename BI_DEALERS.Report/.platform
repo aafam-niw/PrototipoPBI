@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "BI_DEALERS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9fdb8388-b443-43e8-a82a-2294f6f596bd"
+  }
+}

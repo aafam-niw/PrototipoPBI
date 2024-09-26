@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../View_VHE_Fact_BI_Sales_Detail.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

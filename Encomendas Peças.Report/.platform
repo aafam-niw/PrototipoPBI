@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Encomendas Peças"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0a63bdfe-6479-4534-8df9-486891237964"
+  }
+}

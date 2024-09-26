@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Superstore_RodrigoRosas"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a4411641-c608-45ab-8d8c-055277e24985"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Obras por Oficina Dia"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "993d4f1f-d57b-46fd-a3f3-f3cd4661953e"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "MarketDealer (DM) - Documentação"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "759e5e36-991e-46be-8bfd-f091b4f903e6"
+  }
+}

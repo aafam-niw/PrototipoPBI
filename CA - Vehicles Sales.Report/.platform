@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CA - Vehicles Sales"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4b8ded50-7388-4ebd-a602-62e03cb7376f"
+  }
+}

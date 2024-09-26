@@ -1,0 +1,1436 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.121.644.0 (23.09)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Medidas\",\"Detail\",\"Novos\",\"Usados\",\"Após-Venda\",\"Sessões Total\",\"Device\"]"
+      }
+    ],
+    "culture": "pt-PT",
+    "cultures": [
+      {
+        "name": "pt-PT",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Detail",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = GoogleAnalytics.Accounts(),",
+          "    #\"182940621\" = Source{[Id=\"182940621\"]}[Data],",
+          "    #\"UA-182940621-36\" = #\"182940621\"{[Id=\"UA-182940621-36\"]}[Data],",
+          "    #\"258503366\" = #\"UA-182940621-36\"{[Id=\"258503366\"]}[Data],",
+          "    #\"Added Items\" = Cube.Transform(#\"258503366\",",
+          "        {",
+          " {Cube.AddAndExpandDimensionColumn, \"ga:date\", {\"ga:date\"}, {\"Date\"}},",
+          "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel1\", {\"ga:pagePathLevel1\"}, {\"Page path level 1\"}},",
+          "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel2\", {\"ga:pagePathLevel2\"}, {\"Page path level 2\"}},",
+          "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel3\", {\"ga:pagePathLevel3\"}, {\"Page path level 3\"}},",
+          "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel4\", {\"ga:pagePathLevel4\"}, {\"Page path level 4\"}},",
+          "            {Cube.AddMeasureColumn, \"Pageviews\", \"ga:pageviews\"},",
+          "            {Cube.AddMeasureColumn, \"Avg. Time on Page\", \"ga:avgTimeOnPage\"},",
+          "            {Cube.AddAndExpandDimensionColumn, \"ga:deviceCategory\", {\"ga:deviceCategory\"}, {\"Device Category\"}}",
+          "        }),",
+          "    #\"Added Items1\" = Cube.Transform(#\"Added Items\",",
+          "        {",
+          "            {Cube.AddMeasureColumn, \"Pages / Session\", \"ga:pageviewsPerSession\"},",
+          "            {Cube.AddMeasureColumn, \"Sessions\", \"ga:sessions\"},",
+          "            {Cube.AddMeasureColumn, \"Goal 2 Completions\", \"ga:goal2Completions\"}",
+          "        })",
+          "in",
+          "    #\"Added Items1\""
+        ],
+        "kind": "m",
+        "lineageTag": "73284082-c157-4b22-9b08-adcab7fa2a96"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "1a1d8947-1d0a-41ae-9010-a3933b202e82",
+        "fromColumn": "Date",
+        "fromTable": "Usados",
+        "toColumn": "Data",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "769ddbba-63f1-4ded-b45e-2fe642283bb9",
+        "fromColumn": "Date",
+        "fromTable": "Após-Venda",
+        "toColumn": "Data",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "9c100802-ba72-4fd4-a571-261538690fe7",
+        "fromColumn": "Date",
+        "fromTable": "Novos",
+        "toColumn": "Data",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "289fffa7-321b-4d82-a34a-ae0bbdc60aaa",
+        "fromColumn": "Date",
+        "fromTable": "Sessões Total",
+        "toColumn": "Data",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "a03b258c-ffe0-4936-bd7a-5ff4f7cd5c01",
+        "fromColumn": "Device Category",
+        "fromTable": "Novos",
+        "toColumn": "Device",
+        "toTable": "Device"
+      },
+      {
+        "name": "f79bfd0b-8229-4c2f-81be-0204d0286918",
+        "fromColumn": "Device Category",
+        "fromTable": "Usados",
+        "toColumn": "Device",
+        "toTable": "Device"
+      },
+      {
+        "name": "10c3306d-e171-4042-bf6f-cb7a76812108",
+        "fromColumn": "Device Category",
+        "fromTable": "Após-Venda",
+        "toColumn": "Device",
+        "toTable": "Device"
+      },
+      {
+        "name": "e0a149d0-87a7-465b-b630-bed4f6a5124a",
+        "fromColumn": "Device Category",
+        "fromTable": "Sessões Total",
+        "toColumn": "Device",
+        "toTable": "Device"
+      },
+      {
+        "name": "e5b60a7e-4aab-41bd-8089-4e750c8b617b",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Tipo",
+        "fromTable": "Indicador",
+        "toColumn": "Tipo",
+        "toTable": "Tipo"
+      }
+    ],
+    "sourceQueryCulture": "pt-PT",
+    "tables": [
+      {
+        "name": "Usados",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "lineageTag": "80615a9f-5544-4679-8b17-eba85aa1101d",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sessions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "476e2c1c-f6f2-451b-8dcd-7dbebed47464",
+            "sourceColumn": "Sessions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Device Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "444761de-5d83-48b8-b9b1-ea8ed0141298",
+            "sourceColumn": "Device Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modelo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "539864f7-a294-460a-8ba4-ca9d5d171b0d",
+            "sourceColumn": "Modelo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Viatura Usada",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eb8e126e-e266-4c63-9f3c-adcd34a635fc",
+            "sourceColumn": "Viatura Usada",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pages / Session",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e32e77fa-54b7-4837-bcc0-dc6a7b85a0b8",
+            "sourceColumn": "Pages / Session",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Pageviews",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6b748d4d-ef48-49e3-9045-291592fd37d0",
+            "sourceColumn": "Pageviews",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "New Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2583ca8c-75d7-42fd-a287-38c28887ed04",
+            "sourceColumn": "New Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "31988643-6e74-4f56-bfd4-3c6118e20e59",
+            "sourceColumn": "Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bounce Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "057fa07e-c3d8-43fe-930c-2a90d8223d0f",
+            "sourceColumn": "Bounce Rate",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "69bfba86-8e0e-48f2-99c7-fb9e2892dddc",
+        "partitions": [
+          {
+            "name": "Usados-a8d7e07c-7abd-4c00-9f15-8738af0977e0",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origem = GoogleAnalytics.Accounts(),",
+                "    #\"182940621\" = Origem{[Id=\"182940621\"]}[Data],",
+                "    #\"UA-182940621-36\" = #\"182940621\"{[Id=\"UA-182940621-36\"]}[Data],",
+                "    #\"258503366\" = #\"UA-182940621-36\"{[Id=\"258503366\"]}[Data],",
+                "    #\"Itens Adicionados\" = Cube.Transform(#\"258503366\",",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel1\", {\"ga:pagePathLevel1\"}, {\"Page path level 1\"}},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:date\", {\"ga:date\"}, {\"Date\"}},",
+                "            {Cube.AddMeasureColumn, \"Sessions\", \"ga:sessions\"},",
+                "            {Cube.AddMeasureColumn, \"Pages / Session\", \"ga:pageviewsPerSession\"},",
+                "            {Cube.AddMeasureColumn, \"Pageviews\", \"ga:pageviews\"},",
+                "            {Cube.AddMeasureColumn, \"New Users\", \"ga:newUsers\"},",
+                "            {Cube.AddMeasureColumn, \"Users\", \"ga:users\"},",
+                "            {Cube.AddMeasureColumn, \"Bounce Rate\", \"ga:bounceRate\"},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:deviceCategory\", {\"ga:deviceCategory\"}, {\"Device Category\"}},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel4\", {\"ga:pagePathLevel4\"}, {\"Page path level 4\"}}     ",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Itens Adicionados\", each Text.Contains([Page path level 1], \"viatura\")),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows\",{\"Page path level 1\"}),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Removed Columns\", \"Page path level 4\", Splitter.SplitTextByEachDelimiter({\"/\"}, QuoteStyle.Csv, false), {\"Page path level 4.1\", \"Page path level 4.2\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Split Column by Delimiter\",{{\"Page path level 4.1\", type text}, {\"Page path level 4.2\", type text}}),",
+                "    #\"Split Column by Delimiter1\" = Table.SplitColumn(#\"Changed Type\", \"Page path level 4.2\", Splitter.SplitTextByEachDelimiter({\"/\"}, QuoteStyle.Csv, false), {\"Page path level 4.2.1\", \"Page path level 4.2.2\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Split Column by Delimiter1\",{{\"Page path level 4.2.1\", type text}, {\"Page path level 4.2.2\", type text}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Changed Type1\",{\"Page path level 4.1\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns1\",{{\"Page path level 4.2.1\", \"Modelo\"}, {\"Page path level 4.2.2\", \"Viatura Usada\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Após-Venda",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              },
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "isHidden": true,
+            "lineageTag": "c72bc7ae-69d1-47a2-b888-9b7c1d045f88",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Device Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "998146c1-0efe-43c4-af6a-f880379ee553",
+            "sourceColumn": "Device Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pages / Session",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f5ae05fe-defd-4a6c-9487-3f28b5eda56e",
+            "sourceColumn": "Pages / Session",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Pageviews",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "888439c1-5c29-4f51-97a5-1abe369c6622",
+            "sourceColumn": "Pageviews",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "New Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2baa195c-5963-4960-b4d2-ddabdc1a9606",
+            "sourceColumn": "New Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a47d3f0a-ebba-4023-8ee5-ed3bccdc04bd",
+            "sourceColumn": "Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bounce Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ac426a4c-0362-4699-aa93-e1c48eb11b27",
+            "sourceColumn": "Bounce Rate",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sessions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "af580781-597d-496b-8112-784907fdc1d7",
+            "sourceColumn": "Sessions",
+            "summarizeBy": "sum"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "579b300e-5a7a-456f-8d6b-a9e883f89e8e",
+        "partitions": [
+          {
+            "name": "Após-Venda-6dc36d8c-a7cf-4a8f-8fbc-cad27d7a0665",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origem = GoogleAnalytics.Accounts(),",
+                "    #\"182940621\" = Origem{[Id=\"182940621\"]}[Data],",
+                "    #\"UA-182940621-36\" = #\"182940621\"{[Id=\"UA-182940621-36\"]}[Data],",
+                "    #\"258503366\" = #\"UA-182940621-36\"{[Id=\"258503366\"]}[Data],",
+                "    #\"Itens Adicionados\" = Cube.Transform(#\"258503366\",",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel1\", {\"ga:pagePathLevel1\"}, {\"Page path level 1\"}},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:date\", {\"ga:date\"}, {\"Date\"}},",
+                "            {Cube.AddMeasureColumn, \"Sessions\", \"ga:sessions\"},",
+                "            {Cube.AddMeasureColumn, \"Pages / Session\", \"ga:pageviewsPerSession\"},",
+                "            {Cube.AddMeasureColumn, \"Pageviews\", \"ga:pageviews\"},",
+                "            {Cube.AddMeasureColumn, \"New Users\", \"ga:newUsers\"},",
+                "            {Cube.AddMeasureColumn, \"Users\", \"ga:users\"},",
+                "            {Cube.AddMeasureColumn, \"Bounce Rate\", \"ga:bounceRate\"},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:deviceCategory\", {\"ga:deviceCategory\"}, {\"Device Category\"}}  ",
+                "        }),",
+                "    #\"Linhas Filtradas\" = Table.SelectRows(#\"Itens Adicionados\", each Text.Contains([Page path level 1], \"apos\")),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Linhas Filtradas\",{\"Page path level 1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "ebf2034bc20549909bafc740fd56335b"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Data",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "7630ffb2-ad45-4041-b961-34abb96904f1",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "YEAR('Calendar'[Data])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "82664f33-489b-470d-8061-b3bccb3331cc",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês Nº",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "MONTH('Calendar'[Data])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "04b4f838-9160-4cab-8579-1d2e3af34bc5",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "DAY('Calendar'[Data])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "76079601-02b8-470a-96df-a2bec85e9ee5",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "FORMAT('Calendar'[Data], \"mmm\", \"pt-pt\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "a83b8f6e-1e37-4ef9-a598-2dff293d11f8",
+            "sortByColumn": "Mês Nº",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "cf02deef-d90e-4cb0-858b-16aa14d86838",
+        "partitions": [
+          {
+            "name": "Calendar-06e2115d-5770-4637-9e79-c93ce926b024",
+            "mode": "import",
+            "source": {
+              "expression": "CALENDAR(DATE(2021,1,1), TODAY())",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "ea5ed902-86dd-44ed-98db-55a246fd5d9e",
+        "measures": [
+          {
+            "name": "Após-Venda Sessões",
+            "displayFolder": "Após-Venda",
+            "expression": "SUM('Após-Venda'[Sessions])",
+            "formatString": "0",
+            "lineageTag": "e0fb7d8e-28de-42d1-8ba7-962b18a35fb1"
+          },
+          {
+            "name": "Após-Venda Visualizções",
+            "displayFolder": "Após-Venda",
+            "expression": "SUM('Após-Venda'[Pageviews])",
+            "formatString": "0",
+            "lineageTag": "96f458ce-9b01-4a57-a952-f7acbf4a04ac"
+          },
+          {
+            "name": "Usados Sessões",
+            "displayFolder": "Usados",
+            "expression": "SUM('Usados'[Sessions])",
+            "formatString": "0",
+            "lineageTag": "3bb4c4c5-c598-494c-bce5-7b17b6a48f0a"
+          },
+          {
+            "name": "Usados Visualizações",
+            "displayFolder": "Usados",
+            "expression": "SUM('Usados'[Pageviews])",
+            "formatString": "0",
+            "lineageTag": "81362b2d-3416-450f-8280-b73da6572961"
+          },
+          {
+            "name": "Novos Sessões",
+            "displayFolder": "Novos",
+            "expression": "SUM('Novos'[Sessions])",
+            "formatString": "0",
+            "lineageTag": "3b3071e7-8ae9-4c69-9501-c5e727c0a11c"
+          },
+          {
+            "name": "Novos Tx. Rejeição",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Novos",
+            "expression": "AVERAGE('Novos'[Bounce Rate])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "aa1b8009-d2fb-4e1c-86bf-b188f1b74231"
+          },
+          {
+            "name": "Novos Páginas/sessão",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Novos",
+            "expression": "AVERAGE(Novos[Pages / Session])",
+            "lineageTag": "135353ec-6952-47a8-9be1-1cb9916f20fd"
+          },
+          {
+            "name": "Novos Novos Utilizadores",
+            "displayFolder": "Novos",
+            "expression": [
+              "",
+              "SUM('Novos'[New Users])"
+            ],
+            "formatString": "0",
+            "lineageTag": "38e3d31e-8812-4e3b-8816-ce679ef5326d"
+          },
+          {
+            "name": "Total Sessões",
+            "displayFolder": "Geral",
+            "expression": "Sum('Sessões Total'[Sessions])",
+            "formatString": "0",
+            "lineageTag": "17c61cdd-4d48-479a-8050-a7d0ae3c1bef"
+          },
+          {
+            "name": "Novos Visualizações",
+            "displayFolder": "Novos",
+            "expression": "SUM('Novos'[Pageviews])",
+            "formatString": "0",
+            "lineageTag": "49336866-a13c-49c3-b4b0-80442cf16314"
+          },
+          {
+            "name": "Total Visualizações",
+            "displayFolder": "Geral",
+            "expression": "Sum('Sessões Total'[Pageviews])",
+            "formatString": "0",
+            "lineageTag": "d8ebcdbc-f11f-4fec-9757-018ed1f45220"
+          },
+          {
+            "name": "Total Páginas por sessão",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "Geral",
+            "expression": [
+              "",
+              "AVERAGE( 'Sessões Total'[Pages / Session])"
+            ],
+            "extendedProperties": [
+              {
+                "name": "MeasureTemplate",
+                "type": "json",
+                "value": {
+                  "daxTemplateName": "AveragePerCategory",
+                  "version": 0
+                }
+              }
+            ],
+            "lineageTag": "7f5be099-4cd7-48e9-a200-1f4cec4d989e"
+          },
+          {
+            "name": "Total Tx. Rejeição",
+            "displayFolder": "Geral",
+            "expression": [
+              "",
+              "AVERAGE('Sessões Total'[Bounce Rate])"
+            ],
+            "extendedProperties": [
+              {
+                "name": "MeasureTemplate",
+                "type": "json",
+                "value": {
+                  "daxTemplateName": "AveragePerCategory",
+                  "version": 0
+                }
+              }
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "e44fe1a6-c971-4dea-b3db-2bd1f36f5587"
+          },
+          {
+            "name": "Total Novos Utilizadores",
+            "displayFolder": "Geral",
+            "expression": "SUM('Sessões Total'[New Users])",
+            "formatString": "0",
+            "lineageTag": "9ec40741-fbc5-48db-b9b3-459e078f421a"
+          },
+          {
+            "name": "Após-Venda Novos Utilizadores",
+            "displayFolder": "Após-Venda",
+            "expression": "SUM('Após-Venda'[New Users])",
+            "formatString": "0",
+            "lineageTag": "7f033bee-c7e0-4680-bda3-f15b406ab255"
+          },
+          {
+            "name": "Após-Venda Páginas/sessão",
+            "displayFolder": "Após-Venda",
+            "expression": [
+              "",
+              "AVERAGE('Após-Venda'[Pages / Session])"
+            ],
+            "formatString": "0.00",
+            "lineageTag": "fa14c724-b928-4d40-9b6f-9aab1215cc7c"
+          },
+          {
+            "name": "Após-Venda Tx. Rejeição",
+            "displayFolder": "Após-Venda",
+            "expression": [
+              "",
+              "AVERAGE('Após-Venda'[Bounce Rate])"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "fa276476-f76b-4641-b64b-86bfecb219b4"
+          },
+          {
+            "name": "Usados Páginas/sessão",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "Usados",
+            "expression": [
+              "",
+              "AVERAGE(Usados[Pages / Session])"
+            ],
+            "lineageTag": "028d4862-87c3-448f-83ba-0a6f6f5ea1d1"
+          },
+          {
+            "name": "Usados Novos Utilizadores",
+            "displayFolder": "Usados",
+            "expression": "SUM(Usados[New Users])",
+            "formatString": "0",
+            "lineageTag": "3de558ae-ee91-4807-bc86-fb1a17210af6"
+          },
+          {
+            "name": "Usados Tx. Rejeição",
+            "displayFolder": "Usados",
+            "expression": [
+              "",
+              "AVERAGE(Usados[Bounce Rate])"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "75d70f20-bf0d-4a22-8ed6-dc0b680facbb"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas-8f144284-2856-4634-a834-5a751b320974",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Novos",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "893e5d1c-5ec6-4a73-ab7f-1c94daf30ef5",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sessions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2ced637c-2b19-4034-aa89-95f64056ac16",
+            "sourceColumn": "Sessions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Device Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b58e04b4-f041-459b-916b-7843eddb0dff",
+            "sourceColumn": "Device Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modelo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00a0fba4-7b6d-4d55-8003-0c0973482096",
+            "sourceColumn": "Modelo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pages / Session",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b2e9d1d8-7571-49ff-99f5-05aa1c942b26",
+            "sourceColumn": "Pages / Session",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Pageviews",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3e72fd23-8656-4349-ad8a-a326d4e391f2",
+            "sourceColumn": "Pageviews",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "New Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ed1119ba-a0b7-4cdb-9281-f2816b6a1927",
+            "sourceColumn": "New Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "91f2d054-b2aa-45f1-b90e-5317e2ba0f82",
+            "sourceColumn": "Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bounce Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3fbc3a49-db72-4a02-8444-1bb79cfd2498",
+            "sourceColumn": "Bounce Rate",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "cf60ac6f-89fe-494a-a60d-6f2c5ebc3fde",
+        "partitions": [
+          {
+            "name": "Novos-6a96bf3d-255b-47d3-9b8f-b80fc9e4a8f3",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origem = GoogleAnalytics.Accounts(),",
+                "    #\"182940621\" = Origem{[Id=\"182940621\"]}[Data],",
+                "    #\"UA-182940621-36\" = #\"182940621\"{[Id=\"UA-182940621-36\"]}[Data],",
+                "    #\"258503366\" = #\"UA-182940621-36\"{[Id=\"258503366\"]}[Data],",
+                "    #\"Itens Adicionados\" = Cube.Transform(#\"258503366\",",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel1\", {\"ga:pagePathLevel1\"}, {\"Page path level 1\"}},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:date\", {\"ga:date\"}, {\"Date\"}},",
+                "            {Cube.AddMeasureColumn, \"Sessions\", \"ga:sessions\"},",
+                "            {Cube.AddMeasureColumn, \"Pages / Session\", \"ga:pageviewsPerSession\"},",
+                "            {Cube.AddMeasureColumn, \"Pageviews\", \"ga:pageviews\"},",
+                "            {Cube.AddMeasureColumn, \"New Users\", \"ga:newUsers\"},",
+                "            {Cube.AddMeasureColumn, \"Users\", \"ga:users\"},",
+                "            {Cube.AddMeasureColumn, \"Bounce Rate\", \"ga:bounceRate\"},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:deviceCategory\", {\"ga:deviceCategory\"}, {\"Device Category\"}},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:pagePathLevel2\", {\"ga:pagePathLevel2\"}, {\"Page path level 2\"}}              ",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Itens Adicionados\", each Text.Contains([Page path level 1], \"carros\")),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows\",{\"Page path level 1\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Page path level 2\", \"Modelo\"}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"/\",\"\",Replacer.ReplaceText,{\"Modelo\"})",
+                "in",
+                "    #\"Replaced Value\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sessões Total",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "03f5b3fa-9dd0-4d0b-a799-ead7ad694d17",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sessions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "dc4cafe1-89a7-4daf-96df-f1b841059f0e",
+            "sourceColumn": "Sessions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Device Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c4d6884-dee0-4852-a439-ae8bb86c5716",
+            "sourceColumn": "Device Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pages / Session",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c0669041-61cb-4270-b51b-abefafde141e",
+            "sourceColumn": "Pages / Session",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Pageviews",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "90aa73ac-a4dc-4dff-a598-6db2d5c909c6",
+            "sourceColumn": "Pageviews",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "New Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "66701cfe-0957-4353-9af2-a0c58bba7c80",
+            "sourceColumn": "New Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Users",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0970d1d3-57ad-4e39-a2ed-5dc072f62311",
+            "sourceColumn": "Users",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bounce Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4a7c107f-720f-447e-a7bf-5ea9920cde0f",
+            "sourceColumn": "Bounce Rate",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "19b5c54d-1773-4bcf-af4e-313c54c1cdb8",
+        "partitions": [
+          {
+            "name": "Sessões Total-923e7af2-a89a-4fb6-8d3e-c966c686cd77",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origem = GoogleAnalytics.Accounts(),",
+                "    #\"182940621\" = Origem{[Id=\"182940621\"]}[Data],",
+                "    #\"UA-182940621-36\" = #\"182940621\"{[Id=\"UA-182940621-36\"]}[Data],",
+                "    #\"258503366\" = #\"UA-182940621-36\"{[Id=\"258503366\"]}[Data],",
+                "    #\"Itens Adicionados\" = Cube.Transform(#\"258503366\",",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:date\", {\"ga:date\"}, {\"Date\"}},",
+                "            {Cube.AddMeasureColumn, \"Sessions\", \"ga:sessions\"},",
+                "            {Cube.AddAndExpandDimensionColumn, \"ga:deviceCategory\", {\"ga:deviceCategory\"}, {\"Device Category\"}}            ",
+                "        }),",
+                "    #\"Added Items\" = Cube.Transform(#\"Itens Adicionados\",",
+                "        {",
+                "            {Cube.AddMeasureColumn, \"Pages / Session\", \"ga:pageviewsPerSession\"},",
+                "            {Cube.AddMeasureColumn, \"Pageviews\", \"ga:pageviews\"},",
+                "            {Cube.AddMeasureColumn, \"New Users\", \"ga:newUsers\"},",
+                "            {Cube.AddMeasureColumn, \"Users\", \"ga:users\"},",
+                "            {Cube.AddMeasureColumn, \"Bounce Rate\", \"ga:bounceRate\"}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Device",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Device",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac61653f-93b7-43ea-b136-a1f6ed756117",
+            "sourceColumn": "Device",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ee39714d-80c6-4350-8341-644e827d548c",
+        "partitions": [
+          {
+            "name": "Device-82ab07ca-aaef-4597-8772-e80c07f5c90e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WSkktzi7JL1CK1YlWys1PysxJBTNLEpNyUkuUYmMB\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Device = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Device\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Indicador",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "b2edd146445140d984fc6c647cbf64a4"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Indicador",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "47fe6f4f-abe9-49dd-a081-21c769d534c3",
+            "relatedColumnDetails": {
+              "groupByColumns": [
+                {
+                  "groupingColumn": "Indicador Fields"
+                }
+              ]
+            },
+            "sortByColumn": "Indicador Order",
+            "sourceColumn": "[Value1]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Indicador Fields",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "kind": 2,
+                  "version": 3
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "df46b291-b1f5-4ff4-9970-4069636b3bc8",
+            "sortByColumn": "Indicador Order",
+            "sourceColumn": "[Value2]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Indicador Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "6c3cadb9-635f-4c05-87b6-f8323cb28321",
+            "sourceColumn": "[Value3]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Tipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "71e8a188-33fe-4447-922e-55d58e774b4a",
+            "sourceColumn": "[Value4]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "dd2f2e86-9b4e-4e5e-bfa4-36156763220e",
+        "partitions": [
+          {
+            "name": "Indicador-b4bc5a70-c96e-4b87-8538-bb1155d9654e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "{",
+                "    (\"Novos Sessões\", NAMEOF('Medidas'[Novos Sessões]), 1, \"Sessões\"),",
+                "    (\"Usados Sessões\", NAMEOF('Medidas'[Usados Sessões]), 2, \"Sessões\"),",
+                "    (\"Após-Venda Sessões\", NAMEOF('Medidas'[Após-Venda Sessões]), 3, \"Sessões\"),",
+                "    (\"Total Sessões\", NAMEOF('Medidas'[Total Sessões]), 4, \"Sessões\"),",
+                "    (\"Novos Visualizações\", NAMEOF('Medidas'[Novos Visualizações]), 5, \"Visualizações\"),",
+                "    (\"Usados Visualizações\", NAMEOF('Medidas'[Usados Visualizações]), 6, \"Visualizações\"),",
+                "    (\"Após-Venda Visualizações\", NAMEOF('Medidas'[Após-Venda Visualizções]), 7, \"Visualizações\"),",
+                "    (\"Após-Venda Novos Utilizadores\", NAMEOF('Medidas'[Após-Venda Novos Utilizadores]), 8, \"Novos Utilizadores\"),",
+                "    (\"Usados Novos Utilizadores\", NAMEOF('Medidas'[Usados Novos Utilizadores]), 9, \"Novos Utilizadores\"),",
+                "    (\"Novos Novos Utilizadores\", NAMEOF('Medidas'[Novos Novos Utilizadores]), 10, \"Novos Utilizadores\")",
+                "}"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tipo",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "fcc06bba54eb4ae998541d28a152a498"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Tipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "25bb79aa-1bcb-422c-abc7-7950ed192575",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "4d7076d2-6e82-4d59-ba13-754787d27712",
+        "partitions": [
+          {
+            "name": "Tipo-2e305fe1-5d87-42a5-a072-7f422554990a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "{",
+                "    \"Visualizações\",",
+                "    \"Sessões\",",
+                "    \"Configurações\",",
+                "    \"Novos Utilizadores\"",
+                "}"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

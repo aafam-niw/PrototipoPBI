@@ -1,0 +1,138 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"isPersistentUserStateDisabled\":true,\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useNewFilterPaneExperience\":true,\"optOutNewFilterPaneExperience\":false,\"defaultFilterActionIsDataFilter\":true,\"useCrossReportDrillthrough\":false,\"allowChangeFilterTypes\":true,\"allowInlineExploration\":false,\"disableFilterPaneSearch\":false,\"enableDeveloperMode\":false,\"useEnhancedTooltips\":true,\"useScaledTooltips\":false,\"useDefaultAggregateDisplayName\":true,\"queryLimitOption\":6,\"customMemoryLimit\":\"1048576\",\"customTimeoutLimit\":\"225\"},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"356L\"}}}}}]}}",
+      "displayName": "Página 1",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a7c6069c286b1c663ca8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.960591133004927,\"y\":15.960591133004927,\"z\":0,\"width\":721.7733990147783,\"height\":127.68472906403942,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"DS.NiW.Global\",\"textStyle\":{\"fontSize\":\"54pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 127.68,
+          "width": 721.77,
+          "x": 15.96,
+          "y": 15.96,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"356L\"}}}}}]}}",
+      "displayName": "Duplicate of Página 1",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ec30336d34509870c88f",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"26aa42ac3c950d2106ba\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.059040590405903,\"y\":419.42435424354244,\"z\":3000,\"width\":1263.9409594095941,\"height\":285.2841328413284,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim Tipos Valor.Tipo Valor\",\"active\":true},{\"queryRef\":\"Dim DR Gestão.Rubrica DR - Nível 1\",\"active\":true},{\"queryRef\":\"Data Análise.Ano\",\"active\":true},{\"queryRef\":\"Dim Clientes Morada.Cliente\"}],\"Values\":[{\"queryRef\":\"Medidas.Valor (Financial)\"}],\"Columns\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim DR Gestão\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim Centros Custo\",\"Type\":0},{\"Name\":\"d2\",\"Entity\":\"Dim Clientes Morada\",\"Type\":0},{\"Name\":\"d3\",\"Entity\":\"Data Análise\",\"Type\":0},{\"Name\":\"d4\",\"Entity\":\"Dim Tipos Valor\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Rubrica DR - Nível 1\"},\"Name\":\"Dim DR Gestão.Rubrica DR - Nível 1\",\"NativeReferenceName\":\"Rubrica DR - Nível 1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor (Financial)\"},\"Name\":\"Medidas.Valor (Financial)\",\"NativeReferenceName\":\"Valor (Financial)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Cliente\"},\"Name\":\"Dim Clientes Morada.Cliente\",\"NativeReferenceName\":\"Cliente\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d3\"}},\"Property\":\"Ano\"},\"Name\":\"Data Análise.Ano\",\"NativeReferenceName\":\"Ano\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d4\"}},\"Property\":\"Tipo Valor\"},\"Name\":\"Dim Tipos Valor.Tipo Valor\",\"NativeReferenceName\":\"Tipo Valor\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim Tipos Valor.Tipo Valor\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim Tipos Valor\"}},\"Property\":\"Tipo Valor\"}}],\"isPinned\":true},{\"queryRefs\":[\"Dim DR Gestão.Rubrica DR - Nível 1\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim DR Gestão\"}},\"Property\":\"Rubrica DR - Nível 1\"}}],\"isPinned\":true},{\"queryRefs\":[\"Data Análise.Ano\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Data Análise\"}},\"Property\":\"Ano\"}}],\"isPinned\":true},{\"queryRefs\":[\"Dim Clientes Morada.Cliente\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Real'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Volume de Faturação'\"}}],\"isToggled\":true}]},{\"identityValues\":[{\"Literal\":{\"Value\":\"'Orç #1'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Volume de Faturação'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'DR'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 285.28,
+          "width": 1263.94,
+          "x": 16.06,
+          "y": 419.42,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"c162dba9ac3f121e80e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":26.45018450184502,\"y\":24.56088560885609,\"z\":2000,\"width\":167.2029520295203,\"height\":72.7380073800738,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Data Análise.Ano\",\"active\":true},{\"queryRef\":\"Data Análise.Ano.Mês\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Data Análise\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Ano\"},\"Name\":\"Data Análise.Ano\",\"NativeReferenceName\":\"Ano\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Ano.Mês\"},\"Name\":\"Data Análise.Ano.Mês\",\"NativeReferenceName\":\"Ano.Mês\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Ano\"}}}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Data Análise.Ano\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Data Análise\"}},\"Property\":\"Ano\"}}],\"isPinned\":true},{\"queryRefs\":[\"Data Análise.Ano.Mês\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2024L\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"steppedLayoutIndentation\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 72.74,
+          "width": 167.20,
+          "x": 26.45,
+          "y": 24.56,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"cddc94c43034d6a27296\",\"layouts\":[{\"id\":0,\"position\":{\"x\":216.32472324723247,\"y\":21.726937269372694,\"z\":5000,\"width\":282.450184501845,\"height\":79.35055350553506,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim Clientes Morada.Cliente\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Clientes Morada\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Cliente\"},\"Name\":\"Dim Clientes Morada.Cliente\",\"NativeReferenceName\":\"Cliente\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 79.35,
+          "width": 282.45,
+          "x": 216.32,
+          "y": 21.73,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"f2b11843c237c701c59b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":26.45018450184502,\"y\":101.07749077490774,\"z\":1000,\"width\":778.3911439114391,\"height\":290.9520295202952,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\",\"active\":true},{\"queryRef\":\"Data Análise.Ano.Mês\"}],\"Values\":[{\"queryRef\":\"Medidas.Vendas\"},{\"queryRef\":\"Medidas.Valor (toInvoice)\"},{\"queryRef\":\"Medidas.Valor Erro\"},{\"queryRef\":\"Medidas.% Cumprimento Deadline Faturação\"},{\"queryRef\":\"Medidas.Valor Contrato EV\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Centros Custo\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Data Análise\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Vendas\"},\"Name\":\"Medidas.Vendas\",\"NativeReferenceName\":\"Simulação\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor (toInvoice)\"},\"Name\":\"Medidas.Valor (toInvoice)\",\"NativeReferenceName\":\"Valor (toInvoice)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Erro\"},\"Name\":\"Medidas.Valor Erro\",\"NativeReferenceName\":\"Valor Erro\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"% Cumprimento Deadline Faturação\"},\"Name\":\"Medidas.% Cumprimento Deadline Faturação\",\"NativeReferenceName\":\"% Cumprimento Deadline Faturação\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Contrato EV\"},\"Name\":\"Medidas.Valor Contrato EV\",\"NativeReferenceName\":\"Valor Contrato EV\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Ano.Mês\"},\"Name\":\"Data Análise.Ano.Mês\",\"NativeReferenceName\":\"Ano.Mês\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim Centros Custo.Centro Custo\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim Centros Custo\"}},\"Property\":\"Centro Custo\"}}],\"isPinned\":true},{\"queryRefs\":[\"Data Análise.Ano.Mês\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Medidas.Vendas\":{\"displayName\":\"Simulação\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'To Invoice'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter6d58f2e25c6de92b7553\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim Cenários\"}},\"Property\":\"Cenário\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Cenários\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Cenário\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Simulação'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 290.95,
+          "width": 778.39,
+          "x": 26.45,
+          "y": 101.08,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fcdedb7a0f9a0e8e0e9c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":873.8007380073801,\"y\":44.398523985239855,\"z\":4000,\"width\":394.86346863468634,\"height\":315.5129151291513,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\",\"active\":true},{\"queryRef\":\"Data Análise.Ano\"},{\"queryRef\":\"Dim Clientes Morada.Cliente\"}],\"Values\":[{\"queryRef\":\"Medidas.Valor Faturado\"},{\"queryRef\":\"Medidas.Simulação\"},{\"queryRef\":\"Medidas.Valor Venda\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Centros Custo\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Data Análise\",\"Type\":0},{\"Name\":\"d2\",\"Entity\":\"Dim Clientes Morada\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Faturado\"},\"Name\":\"Medidas.Valor Faturado\",\"NativeReferenceName\":\"Venda Detalhe\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Simulação\"},\"Name\":\"Medidas.Simulação\",\"NativeReferenceName\":\"Simulação\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Venda\"},\"Name\":\"Medidas.Valor Venda\",\"NativeReferenceName\":\"Valor Venda\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Ano\"},\"Name\":\"Data Análise.Ano\",\"NativeReferenceName\":\"Ano\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Cliente\"},\"Name\":\"Dim Clientes Morada.Cliente\",\"NativeReferenceName\":\"Cliente\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim Centros Custo.Centro Custo\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim Centros Custo\"}},\"Property\":\"Centro Custo\"}}],\"isPinned\":true},{\"queryRefs\":[\"Data Análise.Ano\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Data Análise\"}},\"Property\":\"Ano\"}}],\"isPinned\":true},{\"queryRefs\":[\"Dim Clientes Morada.Cliente\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Medidas.Valor Faturado\":{\"displayName\":\"Venda Detalhe\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vnd Detalhe + Simulação vs Vendas'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 315.51,
+          "width": 394.86,
+          "x": 873.80,
+          "y": 44.40,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Segurança Bidirecional",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f7281e900b4bbd904b67",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"595ee792afa22dad77f6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":288.5549132947977,\"y\":0,\"z\":1000,\"width\":533.773740710157,\"height\":719.8018166804294,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\"},{\"queryRef\":\"Medidas.Valor Display\"},{\"queryRef\":\"Dim Clientes Morada.Plataforma - Nível 2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Centros Custo\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim Clientes Morada\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Display\"},\"Name\":\"Medidas.Valor Display\",\"NativeReferenceName\":\"Valor Display\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Plataforma - Nível 2\"},\"Name\":\"Dim Clientes Morada.Plataforma - Nível 2\",\"NativeReferenceName\":\"Plataforma - Nível 2\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.80,
+          "width": 533.77,
+          "x": 288.55,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8608eb7a4adffd65d149\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.210297316896302,\"y\":0,\"z\":0,\"width\":258.04205946337925,\"height\":720.2900652646845,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Centros Custo\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 720.29,
+          "width": 258.04,
+          "x": 10.21,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8639aee136f99b712389\",\"layouts\":[{\"id\":0,\"position\":{\"x\":822.0895522388059,\"y\":0,\"z\":2000,\"width\":457.6119402985075,\"height\":353.7313432835821,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim Centros Custo.Centro Custo\"},{\"queryRef\":\"Medidas.Valor Display\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim Centros Custo\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Centro Custo\"},\"Name\":\"Dim Centros Custo.Centro Custo\",\"NativeReferenceName\":\"Centro Custo\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Valor Display\"},\"Name\":\"Medidas.Valor Display\",\"NativeReferenceName\":\"Valor Display\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 353.73,
+          "width": 457.61,
+          "x": 822.09,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

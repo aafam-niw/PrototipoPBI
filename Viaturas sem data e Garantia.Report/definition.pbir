@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Viaturas sem data e Garantia.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

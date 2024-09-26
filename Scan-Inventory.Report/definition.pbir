@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Scan-Inventory.SemanticModel"
+    },
+    "byConnection": null
+  }
+}
