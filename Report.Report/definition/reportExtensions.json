@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+  "name": "extension",
+  "entities": [
+    {
+      "name": "MEASURES_TABLE",
+      "measures": [
+        {
+          "name": "Chart - Display Order",
+          "dataType": "Double",
+          "expression": "\n\nSWITCH(\n    SELECTEDVALUE(PARAMETER_CALENDAR[PARAMETER_CALENDAR Order]),\n    0, SELECTEDVALUE(VIEW_GBL_DIM_CALENDAR_WITH_LANG[YEAR]),\n    1, SELECTEDVALUE(VIEW_GBL_DIM_CALENDAR_WITH_LANG[QUARTER]),\n    2, SELECTEDVALUE(VIEW_GBL_DIM_CALENDAR_WITH_LANG[MONTH])\n    )",
+          "formatString": "General Number",
+          "displayFolder": "UI"
+        },
+        {
+          "name": "PL Level 1 Display Order",
+          "dataType": "Double",
+          "expression": "\n\nCALCULATE(\n    MIN(VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_DISPLAY_ORDER]),\n    ALL(CALCGROUP_CURRENCY),\n    ALL(PARAMETER_CALENDAR)\n)",
+          "formatString": "General Number"
+        }
+      ]
+    }
+  ]
+}
