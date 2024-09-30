@@ -951,16 +951,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.508
 			          }
-			        },
-			        {
-			          "Orçamento Admin": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },

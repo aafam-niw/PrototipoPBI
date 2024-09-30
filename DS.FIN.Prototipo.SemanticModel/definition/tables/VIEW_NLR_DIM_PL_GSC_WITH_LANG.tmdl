@@ -108,6 +108,7 @@ table VIEW_NLR_DIM_PL_GSC_WITH_LANG
 		lineageTag: c5bcc8c1-84ab-4a1e-8e27-f8d2fd5634fb
 		summarizeBy: none
 		sourceColumn: PL_LEVEL_1_DESC
+		sortByColumn: PL_Level_1_Display_Order
 
 		changedProperty = SortByColumn
 
@@ -340,15 +341,42 @@ table VIEW_NLR_DIM_PL_GSC_WITH_LANG
 
 		annotation SummarizationSetBy = Automatic
 
+	column PL_Level_1_Display_Order =
+			
+			
+			CALCULATE(
+			    MIN(VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_DISPLAY_ORDER]),
+			    ALLEXCEPT(VIEW_NLR_DIM_PL_GSC_WITH_LANG, VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_LEVEL_1_DESC_2])
+			)
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f2fdefd-32d6-491e-b2a9-18d29bb4cbc0
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_LEVEL_1_DESC_2
+		dataType: string
+		lineageTag: b49c6baf-2651-4298-916b-e547323cd614
+		summarizeBy: none
+		sourceColumn: PL_LEVEL_1_DESC_2
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition VIEW_NLR_DIM_PL_GSC_WITH_LANG = m
 		mode: import
 		queryGroup: Dimensions
 		source =
 				let
 				    Source = Sql.Database(Server, DatabaseDim),
-				    PBI_VIEW_NLR_DIM_PL_GSC_WITH_LANG = Source{[Schema="PBI",Item="VIEW_NLR_DIM_PL_GSC_WITH_LANG"]}[Data]
+				    PBI_VIEW_NLR_DIM_PL_GSC_WITH_LANG = Source{[Schema="PBI",Item="VIEW_NLR_DIM_PL_GSC_WITH_LANG"]}[Data],
+				    #"Coluna Duplicada" = Table.DuplicateColumn(PBI_VIEW_NLR_DIM_PL_GSC_WITH_LANG, "PL_LEVEL_1_DESC", "PL_LEVEL_1_DESC - Cópia"),
+				    #"Colunas com Nome Mudado" = Table.RenameColumns(#"Coluna Duplicada",{{"PL_LEVEL_1_DESC - Cópia", "PL_LEVEL_1_DESC_2"}})
 				in
-				    PBI_VIEW_NLR_DIM_PL_GSC_WITH_LANG
+				    #"Colunas com Nome Mudado"
 
 	annotation PBI_NavigationStepName = Navigation
 
