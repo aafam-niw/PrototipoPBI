@@ -54,6 +54,15 @@
           "x": 1068.60,
           "y": 140.58,
           "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7567bc9d395db5772097\",\"layouts\":[{\"id\":0,\"position\":{\"x\":910.8955223880597,\"y\":430.1899256812552,\"width\":369.1044776119403,\"height\":289.8100743187448,\"z\":2001}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 289.81,
+          "width": 369.10,
+          "x": 910.90,
+          "y": 430.19,
+          "z": 2001.00
         }
       ],
       "width": 1280.00
