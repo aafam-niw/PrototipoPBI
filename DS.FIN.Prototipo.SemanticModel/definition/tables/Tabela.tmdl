@@ -1,0 +1,40 @@
+/// DW: PBI.Tabela
+table Tabela
+	lineageTag: ad5e149c-96b2-4292-b2c1-759a30d91c35
+
+	/// DW:PBI.Tabela.PL_LEVEL_1_CODE
+	column PL_LEVEL_1_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 13c4142d-9bac-47e2-95eb-db27cc3a119b
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_LEVEL_1_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.Tabela.PL_Level_1_Display_Order
+	column PL_Level_1_Display_Order
+		dataType: int64
+		formatString: 0
+		lineageTag: 826739b5-a246-482c-9ba0-71051232a759
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_Level_1_Display_Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabela = calculated
+		mode: import
+		source =
+				
+				
+				SUMMARIZE(
+				    VIEW_NLR_DIM_PL_GSC_WITH_LANG,
+				    VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_LEVEL_1_CODE],
+				    VIEW_NLR_DIM_PL_GSC_WITH_LANG[PL_Level_1_Display_Order])
+
+	annotation PBI_Id = c408b7e892d4466795ad358c4c4d3eed
+

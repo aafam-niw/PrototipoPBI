@@ -1,0 +1,88 @@
+/// DW: PBI.PBI_TABLE_TITULOS
+table PBI_TABLE_TITULOS
+	lineageTag: bd44bd32-c59d-42b0-9f8a-1137097af650
+
+	/// DW:PBI.PBI_TABLE_TITULOS.pt-PT
+	column pt-PT
+		dataType: string
+		lineageTag: 0e751402-0cab-4698-807d-a4f087a2df83
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [pt-PT]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PBI_TABLE_TITULOS.en-US
+	column en-US
+		dataType: string
+		lineageTag: 6a1c2ae9-dc9b-48e2-93f6-ad5f7d51b4ea
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [en-US]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PBI_TABLE_TITULOS.es-ES
+	column es-ES
+		dataType: string
+		lineageTag: 8d4d3133-c652-42f6-9b71-4429d593bd64
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [es-ES]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PBI_TABLE_TITULOS.fr-FR
+	column fr-FR
+		dataType: string
+		lineageTag: 03319f53-cd42-4cd5-b238-a4e4fc0a93e0
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [fr-FR]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PBI_TABLE_TITULOS.Id
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6602daa7-f589-47fe-ab59-264cb3b7c4f1
+		summarizeBy: count
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PBI_TABLE_TITULOS = calculated
+		mode: import
+		source =
+				
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "pt-PT", STRING,
+				    "en-US", STRING,
+				    "es-ES", STRING,
+				    "fr-FR", STRING,
+				    {
+				        { 1, "Demonstração de Resultados", "Income Statements", "Estado de Resultados", "Compte de Résultat"},
+				        { 2, "Moeda", "Currency", "Moneda", "Monnaie"},
+				        { 3, "Período", "Period", "Período", "Période"},
+				        { 4, "Marca", "Franchise", "Franquicia", "Franchise"},
+				        { 5, "Atividade", "Activity", "Actividad", "Activité"},
+				        { 6, "Empresa", "Company", "Empresa", "Entreprise"},
+				        { 7, "Lucro e Perda", "Profit & Loss", "Ganancias y Pérdidas", "Profit et Perte"},
+				        { 8, "Protótipo PBI", "PBI Prototype", "Prototipo PBI", "Prototype PBI" },
+				        { 9, "Página", "Page", "Página", "Page" },
+				        { 10, "Página", "Page", "Página", "Page" },
+				        { 11, "Descrição de Nível 1 do PL", "PL Level 1 Description", "Descripción de Nivel 1 del PL", "Description Niveau 1 du PL" }
+				    }
+				)
+
+	annotation PBI_Id = 0aeb4b6bb42641fb8deb24e0f8a4e4fd
+

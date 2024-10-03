@@ -1,0 +1,150 @@
+/// DW: PBI.VIEW_NLR_FACT_BI_BL_BUDGET
+table VIEW_NLR_FACT_BI_BL_BUDGET
+	lineageTag: 44cb29c3-8833-46ad-ac33-d9dcdaa785a1
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 11f10fcd-64a2-4ced-85a4-3147ee6417a0
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 6833bd6a-0727-437d-8a01-5a1ddec39a71
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CSN_ENTITY_CODE
+	column CSN_ENTITY_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1abcbe68-512c-47a3-a735-af186684abeb
+		summarizeBy: none
+		sourceColumn: CSN_ENTITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.ANALYSIS_DATE
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		isAvailableInMdx: false
+		lineageTag: 26aa5126-f188-4b66-9243-0a6fb2157357
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.VALUE_TYPE_CODE
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 61149c1a-4c38-4642-ae9c-24790286ea95
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BL_IFRS_CODE
+	column BL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d1f0ff9f-97a9-4a42-b505-7097dc0c24f0
+		summarizeBy: none
+		sourceColumn: BL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BL_IFRS_SIGNAL
+	column BL_IFRS_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 565ea0bb-f6d5-4c90-9401-1a2cccffe7f3
+		summarizeBy: none
+		sourceColumn: BL_IFRS_SIGNAL
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BALANCE
+	column BALANCE
+		dataType: double
+		lineageTag: da2402f0-f953-478c-8dfb-3b75772f31cf
+		summarizeBy: none
+		sourceColumn: BALANCE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.RECORD_DATE
+	column RECORD_DATE
+		dataType: string
+		lineageTag: 5dce0fa0-111d-40ae-9c40-020cb21be128
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.SKEY_ID
+	column SKEY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6dd112f0-c0cb-44b3-976e-a908c797ba43
+		summarizeBy: count
+		sourceColumn: SKEY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CURRENCY_RATE
+	column CURRENCY_RATE
+		dataType: double
+		lineageTag: e4dc81f0-6ceb-4877-b4ea-1e5367ee3348
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition VIEW_NLR_FACT_BI_BL_BUDGET = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database, [Query="SELECT [Client_Id] AS CLIENT_ID#(lf)      ,[NLR_Code] AS NLR_CODE#(lf)      ,[CSN_Entity_Code] AS CSN_ENTITY_CODE#(lf)      ,DATEFROMPARTS(LEFT(BL_Month,4), RIGHT(BL_Month,2),1) AS ANALYSIS_DATE#(lf)      ,[Value_Type_Code] AS VALUE_TYPE_CODE#(lf)      ,[BL_IFRS_Code] AS BL_IFRS_CODE#(lf)      ,[BL_IFRS_Signal] AS BL_IFRS_SIGNAL#(lf)      ,[Balance] AS BALANCE#(lf)      ,[Record_Date] AS RECORD_DATE#(lf)      ,[SKey_Id] AS SKEY_ID#(lf)#(tab)  ,[Currency_Rate] AS CURRENCY_RATE#(lf)#(lf)FROM [dbo].[NLR_Fact_BI_BL_Budget] AS FTBLBUD WITH(NOLOCK)"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

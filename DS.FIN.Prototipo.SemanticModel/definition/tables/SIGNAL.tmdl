@@ -1,0 +1,159 @@
+/// DW: PBI.SIGNAL
+table SIGNAL
+	lineageTag: cc153f0f-a94b-4fb0-a10b-00909e76078d
+
+	/// DW:PBI.SIGNAL.PL_Code
+	column PL_Code
+		dataType: string
+		lineageTag: c0332292-ff8f-4540-a2bc-ec4364167955
+		summarizeBy: none
+		sourceColumn: PL_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Level_1_Code
+	column PL_Level_1_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a367dda-6a7d-492d-9857-6c7e04f9fbe5
+		summarizeBy: count
+		sourceColumn: PL_Level_1_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Level_2_Code
+	column PL_Level_2_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 0888d246-bb75-466c-923a-fba0fe73d611
+		summarizeBy: count
+		sourceColumn: PL_Level_2_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Level_3_Code
+	column PL_Level_3_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 6359d605-ea2c-47e5-a351-390eb9abd1da
+		summarizeBy: count
+		sourceColumn: PL_Level_3_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Level_4_Code
+	column PL_Level_4_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d6fd9cf-953d-4535-a126-9e176ad50346
+		summarizeBy: count
+		sourceColumn: PL_Level_4_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Level_5_Code
+	column PL_Level_5_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: d0a04b57-54ac-483c-aa48-63bfc7e670a6
+		summarizeBy: count
+		sourceColumn: PL_Level_5_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Desc
+	column PT_PL_Desc
+		dataType: string
+		lineageTag: cacfaaa6-eb7f-4a3c-a5eb-2f94a45b00e2
+		summarizeBy: none
+		sourceColumn: PT_PL_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Level_1_Desc
+	column PT_PL_Level_1_Desc
+		dataType: string
+		lineageTag: 97df9628-3746-49fb-876e-0e08d184ea65
+		summarizeBy: none
+		sourceColumn: PT_PL_Level_1_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Level_2_Desc
+	column PT_PL_Level_2_Desc
+		dataType: string
+		lineageTag: ae21ad12-c659-463f-8ad7-5b8df1ced2d9
+		summarizeBy: none
+		sourceColumn: PT_PL_Level_2_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Level_3_Desc
+	column PT_PL_Level_3_Desc
+		dataType: string
+		lineageTag: ebc07fb7-b719-4e4e-bb37-65757dd2cb4a
+		summarizeBy: none
+		sourceColumn: PT_PL_Level_3_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Level_4_Desc
+	column PT_PL_Level_4_Desc
+		dataType: string
+		lineageTag: 9e09bca5-fca4-4419-b000-1520155dd835
+		summarizeBy: none
+		sourceColumn: PT_PL_Level_4_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PT_PL_Level_5_Desc
+	column PT_PL_Level_5_Desc
+		dataType: string
+		lineageTag: 0fef1fc9-d3c3-48c1-b5bf-a733dc818b99
+		summarizeBy: none
+		sourceColumn: PT_PL_Level_5_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Code_Source_ForCalculation
+	column PL_Code_Source_ForCalculation
+		dataType: string
+		lineageTag: a30258ad-e828-420f-af9b-fa94860aa1bd
+		summarizeBy: none
+		sourceColumn: PL_Code_Source_ForCalculation
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_Code_Source_Signal_ForCalculations
+	column PL_Code_Source_Signal_ForCalculations
+		dataType: int64
+		formatString: 0
+		lineageTag: db1ec194-2505-4aae-9f4e-f85a8b9fd135
+		summarizeBy: sum
+		sourceColumn: PL_Code_Source_Signal_ForCalculations
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SIGNAL.PL_CACULATION
+	column PL_CACULATION
+		dataType: string
+		lineageTag: 525a04d3-8b56-4098-ad11-b181c5e33c92
+		summarizeBy: none
+		sourceColumn: PL_CACULATION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SIGNAL = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim, [Query="-- Código para desmultiplicar a Dim PL com as rúbricas fontes para cálculo das categorias calculadas.#(lf)#(lf)  #(lf)#(tab)DECLARE @ExecOrder_Counter SMALLINT#(lf)#(tab)#(tab),@Execution_Order SMALLINT#(lf)#(lf)  #(tab)SELECT @ExecOrder_Counter = MAX(Execution_Order)#(lf)#(tab)FROM NLR_MapBI_PL_CalcCategories_GSC#(lf)#(lf)#(lf)#(tab)--Vamos criar uma tabela temporária para tratar este processo#(lf)#(tab)IF OBJECT_ID('tempdb..#temp_CalculatedTest') IS NOT NULL DROP TABLE #temp_CalculatedTest#(lf)#(lf)#(tab)CREATE TABLE #temp_CalculatedTest#(lf)#(tab)(#(lf)#(tab)#(tab)[PL_Code_Calculated] [varchar](20) COLLATE Latin1_General_CI_AS NULL,#(lf)#(tab)#(tab)[PL_Code_Source] [varchar](20) NULL,#(lf)#(tab)#(tab)[PL_Signal] [smallint] NULL#(lf)#(tab))#(lf)#(lf)#(tab)SET @Execution_Order = 1#(lf)#(tab)-- #(lf)#(tab)WHILE (@Execution_Order <= @ExecOrder_Counter)#(lf)#(tab)BEGIN#(lf)#(tab)#(tab)#(tab)INSERT INTO #temp_CalculatedTest#(lf)#(tab)#(tab)#(tab)SELECT Dim.PL_Code#(lf)#(tab)#(tab)#(tab)#(tab), COALESCE(Calculated_Test.PL_Code_Source, CASE WHEN LEN(Calc.PL_Code_Source) <> LEN(Dim.PL_Code) THEN Calc.PL_Code_Source + SUBSTRING(Dim.PL_Code, LEN(Calc.PL_Code_Source) + 1, LEN(Dim.PL_Code) - LEN(Calc.PL_Code_Source))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)ELSE Calc.PL_Code_Source END,'') AS PL_Code_Source#(lf)#(tab)#(tab)#(tab)#(tab), COALESCE(Calculated_Test.PL_Signal, Calc.PL_Signal, 1) AS PL_Signal#(lf)#(tab)#(tab)#(tab)FROM [dbo].[NLR_Dim_PL_GSC] AS Dim#(lf)#(tab)#(tab)#(tab)LEFT OUTER JOIN [dbo].[NLR_MapBI_PL_CalcCategories_GSC] AS Calc ON Dim.PL_Code like Calc.PL_Code_Destin + '%'#(lf)#(tab)#(tab)#(tab)LEFT OUTER JOIN #temp_CalculatedTest AS Calculated_Test ON Calculated_Test.PL_Code_Calculated like #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)WHEN LEN(Calc.PL_Code_Source) <> LEN(Dim.PL_Code) AND (LEN(Calc.PL_Code_Source) = '3' AND LEN(Calc.PL_Code_Destin) = '3') THEN Calc.PL_Code_Source + SUBSTRING(Dim.PL_Code, LEN(Calc.PL_Code_Source) + 1, LEN(Dim.PL_Code) - LEN(Calc.PL_Code_Source))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)ELSE Calc.PL_Code_Source END +'%'#(lf)#(tab)#(tab)#(tab)WHERE Dim.IsCalculated = 1#(lf)#(tab)#(tab)#(tab)#(tab)AND Calc.Execution_Order = @Execution_Order#(lf)#(tab)#(tab)#(tab)UNION#(lf)#(tab)#(tab)#(tab)SELECT Dim.PL_Code#(lf)#(tab)#(tab)#(tab)#(tab), COALESCE(Dim2.PL_Code, #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)CASE WHEN LEN(Calc.PL_Code_Source) <> LEN(Dim.PL_Code) #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)THEN Calc.PL_Code_Source + SUBSTRING(Dim.PL_Code, LEN(Calc.PL_Code_Source) + 1, LEN(Dim.PL_Code) - LEN(Calc.PL_Code_Source))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)ELSE Calc.PL_Code_Source #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)END,'') AS PL_Code_Source#(lf)#(tab)#(tab)#(tab)#(tab), Calc.PL_Signal AS PL_Signal#(tab)#(lf)#(tab)#(tab)#(tab)FROM [dbo].[NLR_Dim_PL_GSC] AS Dim#(lf)#(tab)#(tab)#(tab)INNER JOIN [dbo].[NLR_MapBI_PL_CalcCategories_GSC] AS Calc ON Dim.PL_Code like Calc.PL_Code_Destin + '%'#(lf)#(tab)#(tab)#(tab)LEFT OUTER JOIN [dbo].[NLR_Dim_PL_GSC] AS Dim2 ON Dim2.PL_Code like #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)WHEN LEN(Calc.PL_Code_Source) <> LEN(Dim.PL_Code) AND (LEN(Calc.PL_Code_Source) = '3' AND LEN(Calc.PL_Code_Destin) = '3') THEN Calc.PL_Code_Source + SUBSTRING(Dim.PL_Code, LEN(Calc.PL_Code_Source) + 1, LEN(Dim.PL_Code) - LEN(Calc.PL_Code_Source))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)ELSE Calc.PL_Code_Source END +'%'#(lf)#(tab)#(tab)#(tab)#(tab)AND Dim2.IsCalculated = 0#(lf)#(tab)#(tab)#(tab)#(tab)AND Dim2.Info_Flag = 0#(lf)#(tab)#(tab)#(tab)WHERE Dim.IsCalculated = 1#(lf)#(tab)#(tab)#(tab)#(tab)AND Calc.Execution_Order = @Execution_Order#(lf)#(lf)#(lf)#(tab)#(tab)#(tab)SET @Execution_Order = @Execution_Order + 1#(lf)#(tab)END#(lf)#(lf)#(lf)#(tab)SELECT Dim.PL_Code#(lf)#(tab)#(tab), Dim.PL_Level_1_Code#(lf)#(tab)#(tab), Dim.PL_Level_2_Code#(lf)#(tab)#(tab), Dim.PL_Level_3_Code#(lf)#(tab)#(tab), Dim.PL_Level_4_Code#(lf)#(tab)#(tab), Dim.PL_Level_5_Code#(lf)#(tab)#(tab), Dim.PT_PL_Desc#(lf)#(tab)#(tab), Dim.PT_PL_Level_1_Desc#(lf)#(tab)#(tab), Dim.PT_PL_Level_2_Desc#(lf)#(tab)#(tab), Dim.PT_PL_Level_3_Desc#(lf)#(tab)#(tab), Dim.PT_PL_Level_4_Desc#(lf)#(tab)#(tab), Dim.PT_PL_Level_5_Desc#(lf)#(tab)#(tab), CASE WHEN Dim.IsCalculated = 1 THEN Calc_Test.PL_Code_Source#(lf)#(tab)#(tab)#(tab)ELSE NULL END AS PL_Code_Source_ForCalculation#(lf)#(tab)#(tab), CASE WHEN Dim.IsCalculated = 1 THEN Calc_Test.PL_Signal#(lf)#(tab)#(tab)#(tab)ELSE 1 END AS PL_Code_Source_Signal_ForCalculations#(lf)#(tab)FROM [NLR_Dim_PL_GSC] AS Dim#(lf)#(tab)LEFT OUTER JOIN #temp_CalculatedTest AS Calc_Test ON Dim.PL_Code = Calc_Test.PL_Code_Calculated#(lf)#(tab)ORDER BY Dim.PL_Display_Order#(lf)"]),
+				    #"Added Conditional Column" = Table.AddColumn(Source, "PL_CACULATION", each if [PL_Code_Source_ForCalculation] = null then [PL_Code] else [PL_Code_Source_ForCalculation])
+				in
+				    #"Added Conditional Column"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

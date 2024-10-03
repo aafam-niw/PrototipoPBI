@@ -1,0 +1,44 @@
+/// DW: PBI.LastRefresh
+table LastRefresh
+	isHidden
+	lineageTag: 8ffcdd91-ca3b-4bc8-9f0d-5279fb2a3372
+
+	measure 'Last Refresh' =
+			
+			
+			SELECTEDVALUE(LastRefresh[Column1])
+		isHidden
+		lineageTag: a3570d6b-6bd2-4b6a-94f2-6c53e344819a
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.LastRefresh.Column1
+	column Column1
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		isAvailableInMdx: false
+		lineageTag: d32159ad-871d-44f3-8bb0-573c4b5f795e
+		summarizeBy: none
+		sourceColumn: Column1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LastRefresh = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Database, [Query="SELECT GETDATE()"])
+				in
+				    Source
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

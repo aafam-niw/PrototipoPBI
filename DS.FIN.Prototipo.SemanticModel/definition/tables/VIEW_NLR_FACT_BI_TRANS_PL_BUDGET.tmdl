@@ -1,0 +1,296 @@
+/// DW: PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+table VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+	lineageTag: 4e054dc4-8c9c-406d-b170-f7da30b0a9ea
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.SKEY_ID
+	column SKEY_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: e93cdef4-c04c-408a-b994-9b9b863db534
+		summarizeBy: none
+		sourceColumn: SKEY_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 15124b08-4fc9-4301-8551-6f33eb925d18
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_MAPPING_GROUP
+	column NLR_MAPPING_GROUP
+		dataType: int64
+		formatString: 0
+		lineageTag: 1540af06-347f-4b49-8927-70d09725de3a
+		summarizeBy: none
+		sourceColumn: NLR_MAPPING_GROUP
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.ENVIRONMENT
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: d56a24d6-00c3-4c73-b2d6-d7232c377fac
+		summarizeBy: none
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 61523615-e244-43ff-98b7-0d0f0cb12d8d
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PERIOD
+	column PERIOD
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		isAvailableInMdx: false
+		lineageTag: 31046907-19e2-41f8-829c-baa75c6176a5
+		summarizeBy: none
+		sourceColumn: PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_ACCOUNT
+	column NLR_ACCOUNT
+		dataType: string
+		lineageTag: 3a2d5636-ed92-46ec-9d79-f4bd67a0ed59
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_ACCOUNT_DESC
+	column NLR_ACCOUNT_DESC
+		dataType: string
+		lineageTag: 8ef8e1d0-e4d9-4593-9771-d586730c7e8d
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.COST_CENTRE
+	column COST_CENTRE
+		dataType: string
+		lineageTag: 09bb0372-d12b-49c0-a341-35567c59f9bd
+		summarizeBy: none
+		sourceColumn: COST_CENTRE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.COST_CENTRE_DESC
+	column COST_CENTRE_DESC
+		dataType: string
+		lineageTag: f1ab68cb-d425-4737-a568-e72ffb47d11a
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.SITE_CODE
+	column SITE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 5518310d-3388-4704-9c9a-f504637c6364
+		summarizeBy: none
+		sourceColumn: SITE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.FRANCHISE_CODE
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 3138f50a-11a2-454e-896a-25fa6269f0a7
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.ACTIVITY_CODE
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 2a610443-65d4-416d-b61e-88461a81c25f
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.BALANCE
+	column BALANCE
+		dataType: double
+		lineageTag: 602f4edc-ab03-4d80-8192-9518fc657aad
+		summarizeBy: none
+		sourceColumn: BALANCE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.DIST_VALUE
+	column DIST_VALUE
+		dataType: double
+		lineageTag: 5edf8231-1575-4099-a5d4-15c79ebfbbfa
+		summarizeBy: none
+		sourceColumn: DIST_VALUE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.DIST_VALUE2
+	column DIST_VALUE2
+		dataType: double
+		lineageTag: 2a5a75ab-352b-4d0e-bf46-c6e3dffeba53
+		summarizeBy: none
+		sourceColumn: DIST_VALUE2
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.DIST_VALUE3
+	column DIST_VALUE3
+		dataType: double
+		lineageTag: 177487a2-0eb6-4fb1-8ebd-ddcb20b2311b
+		summarizeBy: none
+		sourceColumn: DIST_VALUE3
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.DIST_VALUE4
+	column DIST_VALUE4
+		dataType: double
+		lineageTag: 37d4296b-a292-4796-95b6-f5d86aca3a29
+		summarizeBy: none
+		sourceColumn: DIST_VALUE4
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_CODE
+	column PL_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b231e584-4e50-4d28-b142-b2fdc8b2d1ab
+		summarizeBy: none
+		sourceColumn: PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_IFRS_CODE
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: de1cb941-7735-40e3-ae91-b6bc9a2e81b9
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.SALES_TYPE_CODE
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 278f199a-5524-4c3f-ab1b-8c570897d247
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.CURRENCY_RATE
+	column CURRENCY_RATE
+		dataType: double
+		lineageTag: 333b4cdb-58a2-41ce-b5fd-5cf42eabec7f
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.RECORD_DATE
+	column RECORD_DATE
+		dataType: string
+		lineageTag: dc1d179a-3222-45f6-8697-8e2f8d73ce7f
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.VALUE_TYPE_CODE
+	column VALUE_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: b348a5eb-e963-422c-9149-0210a99a8de2
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database, [Query="SELECT [SKey_Id] AS SKEY_ID#(lf)      ,[Client_Id] AS CLIENT_ID#(lf)      ,[NLR_MappingGroup] AS NLR_MAPPING_GROUP#(lf)      ,[Environment] AS ENVIRONMENT#(lf)      ,[NLR_Code] AS NLR_CODE#(lf)      ,DATEFROMPARTS(LEFT(Period,4),RIGHT(Period,2),1) AS PERIOD#(lf)      ,[NLR_Account] AS NLR_ACCOUNT#(lf)      ,[NLR_Account_Desc] AS NLR_ACCOUNT_DESC#(lf)      ,[Cost_Centre] AS COST_CENTRE#(lf)      ,[Cost_Centre_Desc] AS COST_CENTRE_DESC#(lf)      ,[Site_Code] AS SITE_CODE#(lf)      ,[Franchise_Code] AS FRANCHISE_CODE#(lf)      ,[Activity_Code] AS ACTIVITY_CODE#(lf)      ,[Balance] AS BALANCE#(lf)      ,[Dist_Value] AS DIST_VALUE#(lf)      ,[Dist_Value2] AS DIST_VALUE2#(lf)      ,[Dist_Value3] AS DIST_VALUE3#(lf)      ,[Dist_Value4] AS DIST_VALUE4#(lf)      ,[PL_Code] AS PL_CODE#(lf)      ,[PL_IFRS_Code] AS PL_IFRS_CODE#(lf)      ,[Sales_Type_Code] AS SALES_TYPE_CODE#(lf)      ,[Currency_Rate] AS CURRENCY_RATE#(lf)      ,[Record_Date] AS RECORD_DATE#(lf)      ,[Value_Type_Code] AS VALUE_TYPE_CODE#(lf)FROM [dbo].[NLR_Fact_BI_TransPL_Budget] AS FTPLBUD WITH(NOLOCK)"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

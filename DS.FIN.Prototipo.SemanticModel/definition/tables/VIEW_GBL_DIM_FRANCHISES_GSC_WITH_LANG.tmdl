@@ -1,0 +1,93 @@
+/// DW: PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG
+table VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG
+	lineageTag: 123c0376-0120-4718-a4f2-ceec8fd1bc57
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_CODE
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d4d2336d-5900-412e-af35-f1067dda3aa9
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_DESC
+	column FRANCHISE_DESC
+		dataType: string
+		lineageTag: 5576aae3-9de8-4787-9643-74351f8b397a
+		summarizeBy: none
+		sourceColumn: FRANCHISE_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_NLR
+	column FRANCHISE_NLR
+		dataType: int64
+		formatString: 0
+		lineageTag: 988e2003-f05f-4954-8256-ea0db76bda56
+		summarizeBy: none
+		sourceColumn: FRANCHISE_NLR
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_VHE
+	column FRANCHISE_VHE
+		dataType: int64
+		formatString: 0
+		lineageTag: 31a554ea-4cdd-4dbf-9537-49bf93fb23a9
+		summarizeBy: none
+		sourceColumn: FRANCHISE_VHE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_PSE
+	column FRANCHISE_PSE
+		dataType: int64
+		formatString: 0
+		lineageTag: abadf3dd-3fcb-48f4-afa0-823d030e2980
+		summarizeBy: none
+		sourceColumn: FRANCHISE_PSE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.FRANCHISE_DISPLAY_ORDER
+	column FRANCHISE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 358ad54f-fc45-4958-ba5f-27dc6b1be5f4
+		summarizeBy: none
+		sourceColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG.USER_CULTURE
+	column USER_CULTURE
+		dataType: string
+		lineageTag: 76091fca-6f26-4cd0-9845-6dfc1ad88efd
+		summarizeBy: none
+		sourceColumn: USER_CULTURE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG = Source{[Schema="PBI",Item="VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_FRANCHISES_GSC_WITH_LANG
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
