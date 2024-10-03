@@ -248,6 +248,15 @@ table VIEW_GBL_DIM_CALENDAR_WITH_LANG
 
 		annotation SummarizationSetBy = User
 
+	column Column = SUM(VIEW_GBL_DIM_CALENDAR_WITH_LANG[WORKING_DAY])
+		dataType: int64
+		formatString: 0
+		lineageTag: ae3502be-0e71-45a4-aa5d-a18a11afcf3a
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
 	partition VIEW_GBL_DIM_CALENDAR_WITH_LANG = m
 		mode: import
 		queryGroup: Dimensions
