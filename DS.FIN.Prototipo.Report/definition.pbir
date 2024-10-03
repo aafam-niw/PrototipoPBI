@@ -1,9 +1,0 @@
-{
-  "version": "4.0",
-  "datasetReference": {
-    "byPath": {
-      "path": "../DS.FIN.Prototipo.SemanticModel"
-    },
-    "byConnection": null
-  }
-}
