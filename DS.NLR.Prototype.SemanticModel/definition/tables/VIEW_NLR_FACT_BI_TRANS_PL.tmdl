@@ -1,0 +1,701 @@
+/// DW.PBI.VIEW_NLR_FACT_BI_TRANS_PL
+table VIEW_NLR_FACT_BI_TRANS_PL
+	lineageTag: 82f64add-fa16-42cc-a16d-ad0ad017e877
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d415aca2-d38f-453c-937a-106f075a272e
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DMS_TYPE_CODE
+	column DMS_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 2c7702bb-c9df-49b8-ba55-69b96304f37e
+		summarizeBy: none
+		sourceColumn: DMS_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.NLR_MAPPING_GROUP
+	column NLR_MAPPING_GROUP
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d3f37e2-a02e-43ea-a8d3-ab78ad428441
+		summarizeBy: none
+		sourceColumn: NLR_MAPPING_GROUP
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.ENVIRONMENT
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bafd2c2-24d3-47ec-96cf-120214ffbd7e
+		summarizeBy: none
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: c6f33b0d-ae5f-4cb0-a108-9b6400cc82a7
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PERIOD
+	column PERIOD
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: a0a740ad-621a-4167-855d-5405daa2f9c0
+		summarizeBy: none
+		sourceColumn: PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.FIRST_DAY
+	column FIRST_DAY
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: b4983ef9-e8c0-445c-952c-8637dd423f3e
+		summarizeBy: none
+		sourceColumn: FIRST_DAY
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.LAST_DAY
+	column LAST_DAY
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8bca7640-2417-4702-9b31-b4b02cf16998
+		summarizeBy: none
+		sourceColumn: LAST_DAY
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.NLR_ACCOUNT
+	column NLR_ACCOUNT
+		dataType: string
+		lineageTag: 5bfa85c3-01a3-4ee7-b54b-10b0a31f59dc
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.SITE_TYPE_CODE
+	column SITE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 381fa535-7aa9-460a-a359-e5ea50a36a55
+		summarizeBy: none
+		sourceColumn: SITE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.SITE_CODE
+	column SITE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: dd36efd8-df32-4c06-a1a8-8b9430df8eba
+		summarizeBy: none
+		sourceColumn: SITE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.FRANCHISE_CODE
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: dbb5d1b7-9b84-451b-ab1a-b90235180615
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.ACTIVITY_CODE
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 50f13900-cbf3-47fa-90bf-57501c62516b
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DEBIT
+	column DEBIT
+		dataType: double
+		formatString: 0.00
+		lineageTag: 75780b7e-1381-400b-8e98-ed731874bf96
+		summarizeBy: none
+		sourceColumn: DEBIT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.CREDIT
+	column CREDIT
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7c934674-ec1d-4286-8840-98e311a4661f
+		summarizeBy: none
+		sourceColumn: CREDIT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.BALANCE
+	column BALANCE
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: f759f8fd-7492-423c-98c8-afe786c1f655
+		summarizeBy: none
+		sourceColumn: BALANCE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE
+	column DIST_VALUE
+		dataType: double
+		formatString: 0.00
+		lineageTag: 208d4599-faa8-4a03-9a49-6eb32f1882e0
+		summarizeBy: none
+		sourceColumn: DIST_VALUE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE2
+	column DIST_VALUE2
+		dataType: double
+		formatString: 0.00
+		lineageTag: cb6b7c90-1c85-42d9-b270-acae8795c39f
+		summarizeBy: none
+		sourceColumn: DIST_VALUE2
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE3
+	column DIST_VALUE3
+		dataType: double
+		formatString: 0.00
+		lineageTag: e1b8cbaf-66f7-4ae1-adf9-7a7ff8ed936d
+		summarizeBy: none
+		sourceColumn: DIST_VALUE3
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE4
+	column DIST_VALUE4
+		dataType: double
+		formatString: 0.00
+		lineageTag: 402c3dae-ddfb-4631-bf17-4f0dbb6a5deb
+		summarizeBy: none
+		sourceColumn: DIST_VALUE4
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE5
+	column DIST_VALUE5
+		dataType: double
+		formatString: 0.00
+		lineageTag: 23f7488c-802b-4ff3-9bd6-f77f2c1cd43d
+		summarizeBy: none
+		sourceColumn: DIST_VALUE5
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE6
+	column DIST_VALUE6
+		dataType: double
+		formatString: 0.00
+		lineageTag: 33168ddd-cdc3-4fe6-9d99-361666830ab5
+		summarizeBy: none
+		sourceColumn: DIST_VALUE6
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE7
+	column DIST_VALUE7
+		dataType: double
+		formatString: 0.00
+		lineageTag: c7dcbfda-82c7-4d3e-8d67-dc8c04da8352
+		summarizeBy: none
+		sourceColumn: DIST_VALUE7
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE8
+	column DIST_VALUE8
+		dataType: double
+		formatString: 0.00
+		lineageTag: 523d89b1-a79a-4cb1-9a1f-c3aae99f4d2b
+		summarizeBy: none
+		sourceColumn: DIST_VALUE8
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE9
+	column DIST_VALUE9
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4cf5538c-42fa-4ca6-8aed-0d85553ccd72
+		summarizeBy: none
+		sourceColumn: DIST_VALUE9
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE10
+	column DIST_VALUE10
+		dataType: double
+		formatString: 0.00
+		lineageTag: 35d09f2e-296d-479a-b27c-9b1dc4d5cf94
+		summarizeBy: none
+		sourceColumn: DIST_VALUE10
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE11
+	column DIST_VALUE11
+		dataType: double
+		formatString: 0.00
+		lineageTag: eab725d0-fdb0-4f0b-9661-41ceddda73f9
+		summarizeBy: none
+		sourceColumn: DIST_VALUE11
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.DIST_VALUE12
+	column DIST_VALUE12
+		dataType: double
+		formatString: 0.00
+		lineageTag: 25a81316-b4ba-4837-a164-b6828985ea15
+		summarizeBy: none
+		sourceColumn: DIST_VALUE12
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_CODE
+	column PL_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: f264ed5b-98c8-45dc-9e4a-f370162f85bb
+		summarizeBy: none
+		sourceColumn: PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL2_CODE
+	column PL2_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 41c3836c-be46-4f2c-be45-bc67eadb59b9
+		summarizeBy: none
+		sourceColumn: PL2_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.CURRENCY_RATE
+	column CURRENCY_RATE
+		dataType: double
+		lineageTag: fb22193d-43f2-44a5-bea6-ba33fb0c2106
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_IFRS_CODE
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: f291d302-accc-4bf8-a7cf-02de5a213401
+		summarizeBy: sum
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_RECORD_TYPE
+	column PL_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 04ea4f91-373f-4715-83f1-a673fa8f664f
+		summarizeBy: none
+		sourceColumn: PL_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_SIGNAL
+	column PL_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: e39e18b6-6aa7-4477-a80d-5fe628e25d9e
+		summarizeBy: none
+		sourceColumn: PL_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLFISCALES_RECORD_TYPE
+	column PLFISCALES_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c965eb6-df59-40a7-971e-a339a41ab710
+		summarizeBy: none
+		sourceColumn: PLFISCALES_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLFISCALES_CODE
+	column PLFISCALES_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 611b03cf-ec58-4103-97ea-6624a765e7dd
+		summarizeBy: none
+		sourceColumn: PLFISCALES_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLFISCALES_SIGNAL
+	column PLFISCALES_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: aa1b48ef-dedf-4205-b062-e42f8768790a
+		summarizeBy: none
+		sourceColumn: PLFISCALES_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLSYTNER_RECORD_TYPE
+	column PLSYTNER_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: b0fe7ff4-68d7-4438-8d28-b3b2bfcc5933
+		summarizeBy: none
+		sourceColumn: PLSYTNER_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLSYTNER_CODE
+	column PLSYTNER_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 131af21a-71b9-4c32-891a-e62d9985a003
+		summarizeBy: none
+		sourceColumn: PLSYTNER_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLSYTNER_SIGNAL
+	column PLSYTNER_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 1820b606-8916-463f-83fe-a09d7f8cc32e
+		summarizeBy: none
+		sourceColumn: PLSYTNER_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL2_SIGNAL
+	column PL2_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 68604869-4110-42f3-93c7-629721802314
+		summarizeBy: none
+		sourceColumn: PL2_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_IFRS_RECORD_TYPE
+	column PL_IFRS_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a8289cc-a948-4da8-a38d-7a965a7c5437
+		summarizeBy: none
+		sourceColumn: PL_IFRS_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_IFRS_SIGNAL
+	column PL_IFRS_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 62d08966-c75c-41cb-87a9-c61c6150affd
+		summarizeBy: none
+		sourceColumn: PL_IFRS_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLDTR_CODE
+	column PLDTR_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c0c0eaf6-575d-48fe-ac30-3f2c6d0af9e1
+		summarizeBy: none
+		sourceColumn: PLDTR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLDTR_SIGNAL
+	column PLDTR_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: cc6a8298-bc73-457a-9a0f-5a3badaf956e
+		summarizeBy: none
+		sourceColumn: PLDTR_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PLDTR_RECORD_TYPE
+	column PLDTR_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 71b1dc7e-6596-40cd-a4b5-5f1ded83225e
+		summarizeBy: none
+		sourceColumn: PLDTR_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_ACCOUNT_DESC
+		dataType: string
+		lineageTag: 2ca2d947-83a1-4ad3-83ae-319c7da404f7
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_CENTRE
+		dataType: string
+		lineageTag: 17afbf00-fb50-497f-9e3b-5dc26bd9dfce
+		summarizeBy: none
+		sourceColumn: COST_CENTRE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_CENTRE_DESC
+		dataType: string
+		lineageTag: 6dfff347-bb62-4df0-83a0-eef5e1a7b5ff
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c921c65e-835c-4ced-89b8-a2d384400e5c
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f95d403-3109-4e6d-8a0c-7ef7c327f41e
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: af4dc91f-3f1b-44ce-943b-3ccd33b5fd22
+		summarizeBy: sum
+		sourceColumn: TIE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL2_LEVEL_1_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 26442d6f-d353-49ce-acff-4256abf49bc3
+		summarizeBy: sum
+		sourceColumn: PL2_LEVEL_1_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL2_QTY_FLAG
+		dataType: int64
+		formatString: 0
+		lineageTag: 97170f39-6529-4298-87a9-60acaa694aa4
+		summarizeBy: sum
+		sourceColumn: PL2_QTY_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL2_INSURANCE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c1081db0-9b90-4f54-a4e8-221623665266
+		summarizeBy: sum
+		sourceColumn: PL2_INSURANCE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_LEVEL_3_CODE_TOBOOK
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d3f861c-efed-4561-9f4a-af59cef2716c
+		summarizeBy: sum
+		sourceColumn: PL_LEVEL_3_CODE_TOBOOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE_TOBOOK
+		dataType: int64
+		formatString: 0
+		lineageTag: afbb0075-5db3-4f7c-8b52-551d51e76a0c
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE_TOBOOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_3_CODE_TOBOOK
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c6335e5-39ed-4231-b535-e08652daa7d9
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_3_CODE_TOBOOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_CODE_TOBOOK
+		dataType: int64
+		formatString: 0
+		lineageTag: f0582715-f024-435c-badf-fb3c91867d32
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_CODE_TOBOOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLSYTNER_DETAIL_CODE
+		dataType: string
+		lineageTag: 6cec445b-de3e-4c59-9ce1-76a3eb56dd0e
+		summarizeBy: none
+		sourceColumn: PLSYTNER_DETAIL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLSYTNER_FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 92065f98-4059-4330-84c3-e1a44638a4a9
+		summarizeBy: sum
+		sourceColumn: PLSYTNER_FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLSYTNER_SALES_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: da2949c0-571b-407a-8e62-95c9cd5b905b
+		summarizeBy: sum
+		sourceColumn: PLSYTNER_SALES_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_PL_CODE
+		dataType: string
+		lineageTag: ecc8ebe7-139b-4eaf-8a1b-c4660100fcd8
+		summarizeBy: none
+		sourceColumn: HRE_COST_PL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_PL_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: ecd19e10-9378-4793-82b6-df1e4f988d65
+		summarizeBy: sum
+		sourceColumn: HRE_COST_PL_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: f80dec30-d8c0-4780-9a5c-75cdff1575bd
+		summarizeBy: sum
+		sourceColumn: HRE_COST_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_INCLUDED
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 492917a1-9b31-4920-b9fc-19c14be37d7c
+		summarizeBy: none
+		sourceColumn: HRE_COST_INCLUDED
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_FACT_BI_TRANS_PL = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database, [CreateNavigationProperties=false]),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+		annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["MINIMIZE_POWER_QUERY_TRANSFORMATIONS"]}
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

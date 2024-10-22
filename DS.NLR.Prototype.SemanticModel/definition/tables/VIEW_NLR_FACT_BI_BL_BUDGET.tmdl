@@ -1,0 +1,255 @@
+/// DW.PBI.VIEW_NLR_FACT_BI_BL_BUDGET
+table VIEW_NLR_FACT_BI_BL_BUDGET
+	lineageTag: 44cb29c3-8833-46ad-ac33-d9dcdaa785a1
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 11f10fcd-64a2-4ced-85a4-3147ee6417a0
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 6833bd6a-0727-437d-8a01-5a1ddec39a71
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CSN_ENTITY_CODE
+	column CSN_ENTITY_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1abcbe68-512c-47a3-a735-af186684abeb
+		summarizeBy: none
+		sourceColumn: CSN_ENTITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.ANALYSIS_DATE
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 26aa5126-f188-4b66-9243-0a6fb2157357
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.VALUE_TYPE_CODE
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 61149c1a-4c38-4642-ae9c-24790286ea95
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BL_IFRS_CODE
+	column BL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d1f0ff9f-97a9-4a42-b505-7097dc0c24f0
+		summarizeBy: none
+		sourceColumn: BL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BL_IFRS_SIGNAL
+	column BL_IFRS_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 565ea0bb-f6d5-4c90-9401-1a2cccffe7f3
+		summarizeBy: none
+		sourceColumn: BL_IFRS_SIGNAL
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.BALANCE
+	column BALANCE
+		dataType: double
+		lineageTag: da2402f0-f953-478c-8dfb-3b75772f31cf
+		summarizeBy: none
+		sourceColumn: BALANCE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.CURRENCY_RATE
+	column CURRENCY_RATE
+		dataType: double
+		lineageTag: e4dc81f0-6ceb-4877-b4ea-1e5367ee3348
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.SCY_Client_Id
+	column SCY_Client_Id
+		dataType: string
+		isHidden
+		lineageTag: 6e3b013e-c338-476b-95c0-66de306f16b8
+		summarizeBy: none
+		sourceColumn: SCY_Client_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_BL_BUDGET.SCY_Value_Type_Code
+	column SCY_Value_Type_Code
+		dataType: string
+		isHidden
+		lineageTag: 589694f1-ccbc-4037-a4df-151b08c07381
+		summarizeBy: none
+		sourceColumn: SCY_Value_Type_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_IFRS_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: c176c967-a16d-4860-82e1-db0eb1c3d425
+		summarizeBy: sum
+		sourceColumn: BL_IFRS_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLFISCALES_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 80b30df9-d2a4-4489-ac54-d3fc82114177
+		summarizeBy: sum
+		sourceColumn: BLFISCALES_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLFISCALES_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: ed1400fb-1a66-4a61-8b9f-71b0d5ed3dfd
+		summarizeBy: sum
+		sourceColumn: BLFISCALES_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLFISCALES_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 827cc927-ffaa-442b-b60d-77e5cfb21027
+		summarizeBy: sum
+		sourceColumn: BLFISCALES_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLSYTNER_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 7cdf80c3-e0d6-4daf-b388-c42bf6b87214
+		summarizeBy: sum
+		sourceColumn: BLSYTNER_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLSYTNER_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a3d6c61-12cf-4f92-930d-25d2dfa3923d
+		summarizeBy: sum
+		sourceColumn: BLSYTNER_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLSYTNER_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 16da07c0-e676-474d-b049-df48a2a1640a
+		summarizeBy: sum
+		sourceColumn: BLSYTNER_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLDTR_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: f9a4b495-25c3-4ac2-85aa-b6fdc4805f75
+		summarizeBy: sum
+		sourceColumn: BLDTR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLDTR_SIGNAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 87f1ddb0-924c-4aa5-9a2e-347213d9b93b
+		summarizeBy: sum
+		sourceColumn: BLDTR_SIGNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLDTR_GROUPINGACCOUNT
+		dataType: string
+		lineageTag: b3b57d81-922e-4fcc-b7d0-2fa8f3075d24
+		summarizeBy: none
+		sourceColumn: BLDTR_GROUPINGACCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLDTR_RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 379e606c-ce58-42a5-aeef-e3e27c1985ee
+		summarizeBy: sum
+		sourceColumn: BLDTR_RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_FACT_BI_BL_BUDGET = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    #"Filtered Rows" = Table.SelectRows(Source, each [Item] = "VIEW_NLR_FACT_BI_BL_BUDGET"),
+				    PBI_VIEW_NLR_FACT_BI_BL_BUDGET = #"Filtered Rows"{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL_BUDGET
+
+		annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["MINIMIZE_POWER_QUERY_TRANSFORMATIONS"]}
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

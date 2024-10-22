@@ -1,0 +1,44 @@
+/// DW.PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_CLIENT
+table SCY_View_DS_NLR_PROTOTIPO_FACT_NLR_CLIENT
+	isHidden
+	lineageTag: 39cc1f62-bc84-432c-a964-94a464dad796
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_CLIENT.O365_USER
+	column O365_USER
+		dataType: string
+		isHidden
+		lineageTag: a0ea9680-9739-4a67-92aa-9b084e420d37
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_CLIENT.SCY_Client_Id
+	column SCY_Client_Id
+		dataType: string
+		isHidden
+		lineageTag: 8e809af7-4a80-4d2a-bd44-0e71970f53ff
+		summarizeBy: none
+		sourceColumn: SCY_Client_Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_View_DS_NLR_PROTOTIPO_FACT_NLR_CLIENT = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.FIN.PROTOTIPO_FACT_FIN.CLIENT = Source{[Schema="SCY",Item="View_DS.NLR.PROTOTIPO_FACT_NLR.CLIENT"]}[Data]
+				in
+				    SCY_View_DS.FIN.PROTOTIPO_FACT_FIN.CLIENT
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

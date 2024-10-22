@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "be24d74c2f0d8c91b8e5",
+  "position": {
+    "x": 0,
+    "y": 288.78048780487808,
+    "z": 0,
+    "height": 431.219512195122,
+    "width": 792.19512195121956,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VIEW_NLR_DIM_PL_GSC_WITH_LANG"
+                    }
+                  },
+                  "Property": "PL_LEVEL_1_DESC"
+                }
+              },
+              "queryRef": "VIEW_NLR_DIM_PL_GSC_WITH_LANG.PL_LEVEL_1_DESC",
+              "nativeQueryRef": "PL_LEVEL_1_DESC"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VIEW_NLR_DIM_PL_GSC_WITH_LANG"
+                    }
+                  },
+                  "Property": "PL_LEVEL_1_DESC_2"
+                }
+              },
+              "queryRef": "VIEW_NLR_DIM_PL_GSC_WITH_LANG.PL_LEVEL_1_DESC_2",
+              "nativeQueryRef": "PL_LEVEL_1_DESC_2"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

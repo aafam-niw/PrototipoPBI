@@ -1,0 +1,230 @@
+/// DW.PBI.VIEW_GBL_DIM_SITES_WITH_LANG
+table VIEW_GBL_DIM_SITES_WITH_LANG
+	lineageTag: 16ade25a-5a46-44b8-a0b4-2798b54dc53a
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: a84468ed-0076-4861-b1c0-70218cea72dd
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_CODE
+	column SITE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 6d9882d8-dbda-4693-8225-58b5bc6d6fa7
+		summarizeBy: none
+		sourceColumn: SITE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_1_CODE
+	column SITE_LEVEL_1_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 9afa73a7-09f2-4e15-9685-443e180a4fdb
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_1_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_2_CODE
+	column SITE_LEVEL_2_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 2b80f547-c8ce-4c5b-890b-fe1eae4b92ec
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_2_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_3_CODE
+	column SITE_LEVEL_3_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 6d2ab4a7-a3aa-4011-8b67-7e05a3581a6f
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_3_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_4_CODE
+	column SITE_LEVEL_4_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: ff67a742-fe7e-4d29-b83a-123901938f7f
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_4_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_5_CODE
+	column SITE_LEVEL_5_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: beafecaa-58e9-4871-a7a1-ffa236f468fc
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_5_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_1_DESC
+	column SITE_LEVEL_1_DESC
+		dataType: string
+		lineageTag: 8121cf2a-d7a7-4ec7-b6dd-7c36f9ba6bb3
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_1_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_2_DESC
+	column SITE_LEVEL_2_DESC
+		dataType: string
+		lineageTag: a422f382-6094-464b-9cc6-d5e08b8d2d54
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_2_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_3_DESC
+	column SITE_LEVEL_3_DESC
+		dataType: string
+		lineageTag: cf110863-f637-497e-a384-672bfccbedd4
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_3_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_4_DESC
+	column SITE_LEVEL_4_DESC
+		dataType: string
+		lineageTag: 0de8517c-4d53-4f3a-9646-aeb3c7d778cf
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_4_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_5_DESC
+	column SITE_LEVEL_5_DESC
+		dataType: string
+		lineageTag: 9a911aba-6485-432b-9380-75a1c77fd772
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_5_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_DESC
+	column SITE_DESC
+		dataType: string
+		lineageTag: 71165f33-8404-4e6c-b787-9b57cc0dacb3
+		summarizeBy: none
+		sourceColumn: SITE_DESC
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_LEVEL_3_DESC_PSEADMRPT
+	column SITE_LEVEL_3_DESC_PSEADMRPT
+		dataType: string
+		lineageTag: dd4e6cbe-59da-4204-b9f5-631e9457c45c
+		summarizeBy: none
+		sourceColumn: SITE_LEVEL_3_DESC_PSEADMRPT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_DESC_PSEADMRPT
+	column SITE_DESC_PSEADMRPT
+		dataType: string
+		lineageTag: cab8d687-b089-47c5-b855-f90ff109ea33
+		summarizeBy: none
+		sourceColumn: SITE_DESC_PSEADMRPT
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.ACTIVE
+	column ACTIVE
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9dffa16a-61e6-454e-8f32-81fefbf24699
+		summarizeBy: none
+		sourceColumn: ACTIVE
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.SITE_DISPLAY_ORDER
+	column SITE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a76d802-df23-4cd2-99e4-3ccdaee53e57
+		summarizeBy: none
+		sourceColumn: SITE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.IFC_INCLUDED
+	column IFC_INCLUDED
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 67b2294a-51e9-4fc0-afb9-b9ae7123ff4c
+		summarizeBy: none
+		sourceColumn: IFC_INCLUDED
+
+		annotation SummarizationSetBy = User
+
+	/// DW:PBI.VIEW_GBL_DIM_SITES_WITH_LANG.USER_CULTURE
+	column USER_CULTURE
+		dataType: string
+		lineageTag: e176cb34-6d76-4abd-a464-ebb40710e5f3
+		summarizeBy: none
+		sourceColumn: USER_CULTURE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_SITES_WITH_LANG = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_SITES_WITH_LANG = Source{[Schema="PBI",Item="VIEW_GBL_DIM_SITES_WITH_LANG"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_SITES_WITH_LANG
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

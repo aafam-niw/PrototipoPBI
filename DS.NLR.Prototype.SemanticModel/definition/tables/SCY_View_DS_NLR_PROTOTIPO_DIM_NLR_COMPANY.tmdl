@@ -1,0 +1,47 @@
+/// DW.PBI.SCY_View_DS_FIN_PROTOTIPO_DIM_FIN_COMPANY
+table SCY_View_DS_NLR_PROTOTIPO_DIM_NLR_COMPANY
+	isHidden
+	lineageTag: da5a99a2-b0aa-437b-87fc-adfa15cb9c96
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_DIM_FIN_COMPANY.O365_USER
+	column O365_USER
+		dataType: string
+		isHidden
+		lineageTag: 2f3a0807-7910-494a-8609-99405cd1c992
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_DIM_FIN_COMPANY.COMPANY_LEVEL_1_CODE
+	column COMPANY_LEVEL_1_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 34d5dff0-8bf9-4519-9f90-35bf2a5a5557
+		summarizeBy: none
+		sourceColumn: COMPANY_LEVEL_1_CODE
+
+		changedProperty = IsHidden
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_View_DS_NLR_PROTOTIPO_DIM_NLR_COMPANY = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.FIN.PROTOTIPO_DIM_FIN.COMPANY = Source{[Schema="SCY",Item="View_DS.NLR.PROTOTIPO_DIM_NLR.COMPANY"]}[Data]
+				in
+				    SCY_View_DS.FIN.PROTOTIPO_DIM_FIN.COMPANY
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+/// DW.PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_VALUETYPE
+table SCY_View_DS_NLR_PROTOTIPO_FACT_NLR_VALUETYPE
+	isHidden
+	lineageTag: 4fe16fff-8fca-4da4-90e1-4bdd23ff027f
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_VALUETYPE.O365_USER
+	column O365_USER
+		dataType: string
+		isHidden
+		lineageTag: 26a72da4-ce34-42a3-a515-e2815282f7b6
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.SCY_View_DS_FIN_PROTOTIPO_FACT_FIN_VALUETYPE.SCY_Value_Type_Code
+	column SCY_Value_Type_Code
+		dataType: string
+		isHidden
+		lineageTag: a532c8e8-98d9-4efd-b2a5-ce66ec8fec06
+		summarizeBy: none
+		sourceColumn: SCY_Value_Type_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_View_DS_NLR_PROTOTIPO_FACT_NLR_VALUETYPE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.FIN.PROTOTIPO_FACT_FIN.VALUETYPE = Source{[Schema="SCY",Item="View_DS.NLR.PROTOTIPO_FACT_NLR.VALUETYPE"]}[Data]
+				in
+				    SCY_View_DS.FIN.PROTOTIPO_FACT_FIN.VALUETYPE
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
