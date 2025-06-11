@@ -1,0 +1,67 @@
+table PARAMETER_VIEW_VHE_DIM_PHYSICAL_LOCATIONS
+	lineageTag: ca027027-2107-4471-af76-83f7276e7914
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 91dd3f7d-c1e2-4739-b75c-de24e815b44d
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_DESC
+		lineageTag: d4e36a85-afa7-4c47-885c-28e17ab0b7a0
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_LEVEL_1_DESC
+		lineageTag: 47b99619-b76d-46ea-a168-cba1a547ea18
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_PHYSICAL_LOCATIONS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[PT_PHYSICAL_LOCATION_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[PT_PHYSICAL_LOCATION_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[EN_PHYSICAL_LOCATION_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[EN_PHYSICAL_LOCATION_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[ES_PHYSICAL_LOCATION_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[ES_PHYSICAL_LOCATION_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[FR_PHYSICAL_LOCATION_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PHYSICAL_LOCATIONS'[FR_PHYSICAL_LOCATION_LEVEL_1_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 51af595fbca6494abe4659a44ab77251
+

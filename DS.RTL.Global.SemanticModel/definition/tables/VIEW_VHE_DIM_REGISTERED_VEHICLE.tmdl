@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_REGISTERED_VEHICLE
+	isHidden
+	lineageTag: 7352416a-d6d7-424b-b42f-88012998da3e
+
+	column REGISTERED_VEHICLE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 22e7ec0a-743d-43ae-bdb2-8f055aa172ec
+		summarizeBy: none
+		sourceColumn: REGISTERED_VEHICLE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_REGISTERED_VEHICLE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 24fff0f5-0716-4d9a-9ba8-418f90dd0efe
+		summarizeBy: none
+		sourceColumn: PT_REGISTERED_VEHICLE_DESC
+		sortByColumn: REGISTERED_VEHICLE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_REGISTERED_VEHICLE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 75ad70b8-736c-4cf1-8e33-6083a495e05f
+		summarizeBy: none
+		sourceColumn: EN_REGISTERED_VEHICLE_DESC
+		sortByColumn: REGISTERED_VEHICLE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_REGISTERED_VEHICLE_DESC
+		dataType: string
+		isHidden
+		lineageTag: e1722cca-288f-46e8-a0b3-d2e830ef6fb2
+		summarizeBy: none
+		sourceColumn: ES_REGISTERED_VEHICLE_DESC
+		sortByColumn: REGISTERED_VEHICLE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_REGISTERED_VEHICLE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 92c312aa-f8f0-48f6-972a-3c79eeb3dd77
+		summarizeBy: none
+		sourceColumn: FR_REGISTERED_VEHICLE_DESC
+		sortByColumn: REGISTERED_VEHICLE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTERED_VEHICLE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2b64831e-cc4b-43b8-b059-a780ee35bde4
+		summarizeBy: sum
+		sourceColumn: REGISTERED_VEHICLE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_REGISTERED_VEHICLE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_REGISTERED_VEHICLE_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_REGISTERED_VEHICLE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_REGISTERED_VEHICLE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

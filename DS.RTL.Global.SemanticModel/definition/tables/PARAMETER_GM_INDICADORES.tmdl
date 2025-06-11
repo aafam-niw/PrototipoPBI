@@ -1,0 +1,109 @@
+table PARAMETER_GM_INDICADORES
+	isHidden
+	lineageTag: d54d7ca6-9660-4450-a9ee-e68ea561f0a3
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: eaf08ebf-5fa2-4b63-aec1-b08ccea6cdf3
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 6c3bb491-a419-475c-9d9a-1b320660d7be
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 8fceefa3-a7b0-4f1b-b319-1ae856424ee0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1b69c438-393c-4766-9cc1-81d74c0a91c0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Value Type'
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 8d56e1d8-e295-4c80-b97d-34bc2b3b2d36
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value Type]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_GM_INDICADORES = calculated
+		mode: import
+		source = ```
+				
+				
+				 DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "Value Type", INTEGER,
+				    {
+				        { 1, "Real", "GM CY", "pt-PT", 2 },
+				        { 2, "Orç", "GM Bgt", "pt-PT", 3 },
+				        { 3, "Δ Orç", "GM Delta Bgt", "pt-PT", 3 },
+				        { 4, "Orç Adm", "GM Bgt Adm", "pt-PT", 4 },
+				        { 5, "Δ Orç Adm", "GM Delta Bgt Adm", "pt-PT", 4 },
+				        { 6, "AA", "GM LY", "pt-PT", 2 },
+				        { 7, "Δ AA", "GM Delta LY", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "GM CY", "en-US", 2 },
+				        { 2, "Bgt", "GM Bgt", "en-US", 3 },
+				        { 3, "Δ Bgt", "GM Delta Bgt", "en-US", 3 },
+				        { 4, "Bgt Adm", "GM Bgt Adm", "en-US", 4 },
+				        { 5, "Δ Bgt Adm", "GM Delta Bgt Adm", "en-US", 4 },
+				        { 6, "LY", "GM LY", "en-US", 2 },
+				        { 7, "Δ LY", "GM Delta LY", "en-US", 2 },
+				
+				
+				        { 1, "Real", "GM CY", "es-ES", 2 },
+				        { 2, "Ppto", "GM Bgt", "es-ES", 3 },
+				        { 3, "Δ Ppto", "GM Delta Bgt", "es-ES", 3 },
+				        { 4, "Ppto. Adm", "GM Bgt Adm", "es-ES", 4 },
+				        { 5, "Δ Ppto Adm", "GM Delta Bgt Adm", "es-ES", 4 },
+				        { 6, "AA", "GM LY", "es-ES", 2 },
+				        { 7, "Δ AA", "GM Delta LY", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "GM CY", "fr-FR", 2 },
+				        { 2, "Bgt", "GM Bgt", "fr-FR", 3 },
+				        { 3, "Δ Bgt", "GM Delta Bgt", "fr-FR", 3 },
+				        { 4, "Bgt Adm", "GM Bgt Adm", "fr-FR", 4 },
+				        { 5, "Δ Bgt Adm", "GM Delta Bgt Adm", "fr-FR", 4 },
+				        { 6, "AD", "GM LY", "fr-FR", 2 },
+				        { 7, "Δ AD", "GM Delta LY", "fr-FR", 2 }
+				    }
+				)
+				
+				
+				```
+
+	annotation PBI_Id = d1c34e480b5d4222b1e1dca8381f3a6e
+

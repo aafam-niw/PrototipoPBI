@@ -1,0 +1,94 @@
+perspective 'Vehicle Sales'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_SYTNER_MEASURES
+
+	perspectiveTable PARAMETER_VHE_SALES_MEASURES
+
+		perspectiveColumn PARAMETER_VHE_SALES_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_MEASURES
+
+		perspectiveColumn MEASURE_LEVEL_1_DESC
+
+		perspectiveColumn MEASURE_LEVEL_2_DESC
+
+		perspectiveColumn MEASURE_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_FRANCHISES
+
+		perspectiveColumn FRANCHISE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_TYPES
+
+		perspectiveColumn VHE_TYPE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES
+
+		perspectiveColumn VEHICLE_CLASS_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_SOURCES
+
+		perspectiveColumn SOURCE_DESC
+
+		perspectiveColumn SOURCE_LEVEL_1_DESC
+
+		perspectiveColumn SOURCE_LEVEL_2_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_SALES_TYPES
+
+		perspectiveColumn SALES_TYPE_DESC
+
+		perspectiveColumn SALES_TYPE_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_STOCK_AGE
+
+		perspectiveColumn STOCK_AGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_REGISTRATION_AGE
+
+		perspectiveColumn REGISTRATION_AGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_FUEL_TYPES
+
+		perspectiveColumn FUEL_TYPE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_ACCOUNTING_REFLECT
+
+		perspectiveColumn ACCOUNTING_REFLECT_DESC
+
+	perspectiveTable VIEW_VHE_FACT_SALES
+
+		perspectiveColumn ACTUAL_DELIVERY_DATE
+
+	perspectiveTable VIEW_GBL_DIM_USERS
+
+		perspectiveColumn USER_NAME
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_POSITIONS
+
+		perspectiveColumn POSITION_DESC
+
+	perspectiveTable VIEW_GBL_DIM_SALES_EXECUTIVES
+
+		perspectiveColumn SALES_EXECUTIVE_NAME
+

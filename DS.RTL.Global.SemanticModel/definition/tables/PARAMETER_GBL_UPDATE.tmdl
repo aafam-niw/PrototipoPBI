@@ -1,0 +1,91 @@
+table PARAMETER_GBL_UPDATE
+	isHidden
+	lineageTag: 93aaa2c2-4a2d-43ab-b5ab-5f095468aef0
+
+	column PARAMETER_GBL_UPDATE
+		isHidden
+		lineageTag: d991b023-fe92-468d-bc88-cc1ccd34996b
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_GBL_UPDATE Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_GBL_UPDATE Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GBL_UPDATE Fields'
+		isHidden
+		lineageTag: 87aef4bc-45db-4825-b8d1-6b3b76fd2f43
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_GBL_UPDATE Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GBL_UPDATE Order'
+		isHidden
+		formatString: 0
+		lineageTag: 4a9e3b5f-4c46-4735-9f1a-4549436407d3
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: aeb36aa7-de65-478b-be7e-b946573088ef
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_GBL_UPDATE = calculated
+		mode: import
+		source = ```
+				{
+				    ("Client", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[CLIENT_DESCRIPTION]), 1, "en-US"),
+				    ("Country", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[DMS_LEVEL_3]), 2, "en-US"),
+				    ("Area", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[AREA_DISPLAY]), 3, "en-US"),
+				    ("Last Update (DW)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_UPDATE_DATE]), 4, "en-US"),
+				    ("Last Refresh (PBI)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_REFRESH_DATE]), 5, "en-US"),
+				    ("Update Status", NAMEOF([simbol_daily_update_tt]), 6, "en-US"),
+				     
+				    
+				    ("Cliente", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[CLIENT_DESCRIPTION]), 1, "pt-PT"),
+				    ("País", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[DMS_LEVEL_3]), 2, "pt-PT"),
+				    ("Área", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[AREA_DISPLAY]), 3, "pt-PT"),
+				    ("Última Modificação (DW)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_UPDATE_DATE]), 4, "pt-PT"),
+				    ("Última Atualização (PBI)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_REFRESH_DATE]), 5, "pt-PT"),
+				    ("Status de Atualização", NAMEOF([simbol_daily_update_tt]), 6, "pt-PT"),
+				        
+				    
+				    ("Cliente", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[CLIENT_DESCRIPTION]), 1, "es-ES"),
+				    ("País", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[DMS_LEVEL_3]), 2, "es-ES"),
+				    ("Área", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[AREA_DISPLAY]), 3, "es-ES"),
+				    ("Última Modificación (DW)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_UPDATE_DATE]), 4, "es-ES"),
+				    ("Última Actualización (PBI)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_REFRESH_DATE]), 5, "es-ES"),
+				    ("Estado de Actualización", NAMEOF([simbol_daily_update_tt]), 6, "es-ES"),
+				
+				    
+				    ("Client", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[CLIENT_DESCRIPTION]), 1, "fr-FR"),
+				    ("Pays", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[DMS_LEVEL_3]), 2, "fr-FR"),
+				    ("Zone", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[AREA_DISPLAY]), 3, "fr-FR"),
+				    ("Dernière Modification (DW)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_UPDATE_DATE]), 4, "fr-FR"),
+				    ("Dernière Actualisation (PBI)", NAMEOF(VIEW_GBL_DTBI_LAST_UPDATE[LAST_REFRESH_DATE]), 5, "fr-FR"),
+				    ("Statut de Mise à Jour", NAMEOF([simbol_daily_update_tt]), 6, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 68ce9bc6722945e49d61955743e4126a
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["DATE/CALENDAR_TABLES_SHOULD_BE_MARKED_AS_A_DATE_TABLE"]}
+

@@ -1,0 +1,22 @@
+perspective 'Vehicle Production'
+
+	perspectiveTable PARAMETER_VHE_PRD_MEASURES
+
+		perspectiveColumn PARAMETER_VHE_PRD_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_PRODUCTION_TYPES
+
+		perspectiveColumn PRODUCTION_TYPE_DESC
+
+		perspectiveColumn PRODUCTION_TYPE_LEVEL_1_DESC
+

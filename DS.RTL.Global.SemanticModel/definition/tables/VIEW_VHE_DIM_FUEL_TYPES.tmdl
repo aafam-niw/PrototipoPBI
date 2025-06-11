@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_FUEL_TYPES
+	isHidden
+	lineageTag: d871c84e-ad2e-4eda-afa4-37aae9b0ecc3
+
+	column FUEL_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 8e6103c7-190b-4730-843e-bec325f2fb51
+		summarizeBy: none
+		sourceColumn: FUEL_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_FUEL_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 46e516e1-0b4f-44e9-a9be-a14edba7ccb3
+		summarizeBy: none
+		sourceColumn: PT_FUEL_TYPE_DESC
+		sortByColumn: FUEL_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_FUEL_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 909e420e-0ab1-4acc-bcda-d4e068cc404f
+		summarizeBy: none
+		sourceColumn: EN_FUEL_TYPE_DESC
+		sortByColumn: FUEL_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_FUEL_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: f62a478d-9d0f-478e-9a30-43e04fe2d516
+		summarizeBy: none
+		sourceColumn: ES_FUEL_TYPE_DESC
+		sortByColumn: FUEL_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_FUEL_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: f9ddfa9f-d760-4f00-8d69-93a9158365f6
+		summarizeBy: none
+		sourceColumn: FR_FUEL_TYPE_DESC
+		sortByColumn: FUEL_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUEL_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1246426d-6a0f-4dbe-b54f-4328cfb4521e
+		summarizeBy: sum
+		sourceColumn: FUEL_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_FUEL_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_FUEL_TYPES_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_FUEL_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_FUEL_TYPES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

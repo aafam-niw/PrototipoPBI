@@ -1,0 +1,138 @@
+table VIEW_HRE_DIM_INTERNAL_CATEGORIES
+	isHidden
+	lineageTag: 5aec1320-3b21-4410-b1df-1b98e6f7fd9c
+
+	column INTERNAL_CATEGORY_CODE
+		dataType: string
+		isHidden
+		isKey
+		isNullable: false
+		sourceProviderType: varchar(5)
+		lineageTag: cfe1ca38-ecd4-46dd-b756-c62e6988c9e7
+		summarizeBy: none
+		sourceColumn: INTERNAL_CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_INTERNAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 0a40156c-816c-4119-8e4d-97bdb9b4ea20
+		summarizeBy: none
+		sourceColumn: PT_INTERNAL_CATEGORY_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_INTERNAL_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 41403f69-0fd9-4cc3-aca4-ffa63bb3d9d9
+		summarizeBy: none
+		sourceColumn: PT_INTERNAL_CATEGORY_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_INTERNAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 67ff01f4-420d-4527-97ce-9fc676609d8a
+		summarizeBy: none
+		sourceColumn: EN_INTERNAL_CATEGORY_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_INTERNAL_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: edf8e765-d428-4d2b-956e-1298e4fb27c1
+		summarizeBy: none
+		sourceColumn: EN_INTERNAL_CATEGORY_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_INTERNAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: b020a8ef-6ca2-4330-bcbc-4b1b16f5aaa4
+		summarizeBy: none
+		sourceColumn: ES_INTERNAL_CATEGORY_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_INTERNAL_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: f0760464-657e-47b0-919a-2edd7d8a7c01
+		summarizeBy: none
+		sourceColumn: ES_INTERNAL_CATEGORY_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_INTERNAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ccf95976-f424-4e50-be3b-6c827a20041a
+		summarizeBy: none
+		sourceColumn: FR_INTERNAL_CATEGORY_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_INTERNAL_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 535958f0-9d7c-434f-a33b-e7663e7f5c8c
+		summarizeBy: none
+		sourceColumn: FR_INTERNAL_CATEGORY_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_HRE_DIM_INTERNAL_CATEGORIES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_HRE_DIM_INTERNAL_CATEGORIES_MPBI = Source{[Schema="PBI",Item="VIEW_HRE_DIM_INTERNAL_CATEGORIES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_HRE_DIM_INTERNAL_CATEGORIES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

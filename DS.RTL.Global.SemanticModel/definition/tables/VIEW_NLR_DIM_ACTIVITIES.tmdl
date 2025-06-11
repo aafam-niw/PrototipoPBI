@@ -1,0 +1,413 @@
+table VIEW_NLR_DIM_ACTIVITIES
+	isHidden
+	lineageTag: b053eb46-03f6-46ab-9834-60778a7b07ab
+
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0da03328-1550-4a51-9b50-24c652101f3c
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_1_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6795ac0e-8421-4463-a44c-490ee0f92c35
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_1_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACTIVITY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 9d81927f-8461-4714-9557-961dec209cc3
+		summarizeBy: none
+		sourceColumn: PT_ACTIVITY_DESC
+		sortByColumn: ACTIVITY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACTIVITY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 09bb526b-ab58-43c4-94e9-9be18af9d788
+		summarizeBy: none
+		sourceColumn: PT_ACTIVITY_LEVEL_1_DESC
+		sortByColumn: ACTIVITY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACTIVITY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 59bb58e0-184c-4652-bcea-9de431e88cbb
+		summarizeBy: none
+		sourceColumn: PT_ACTIVITY_LEVEL_2_DESC
+		sortByColumn: ACTIVITY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACTIVITY_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 593e06bc-882f-431f-8128-a36209bacb18
+		summarizeBy: none
+		sourceColumn: PT_ACTIVITY_LEVEL_3_DESC
+		sortByColumn: ACTIVITY_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACTIVITY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: b1c2169c-00fe-4650-82c2-cbaf3ee2e9e3
+		summarizeBy: none
+		sourceColumn: EN_ACTIVITY_DESC
+		sortByColumn: ACTIVITY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACTIVITY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: ea6d3efb-872b-49f6-bf74-38ed625336ea
+		summarizeBy: none
+		sourceColumn: EN_ACTIVITY_LEVEL_1_DESC
+		sortByColumn: ACTIVITY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACTIVITY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 9d6cb89f-4b58-42ec-8192-4d7afdfe7556
+		summarizeBy: none
+		sourceColumn: EN_ACTIVITY_LEVEL_2_DESC
+		sortByColumn: ACTIVITY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACTIVITY_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: c7b2f9aa-303f-42d2-8573-43bd9de51443
+		summarizeBy: none
+		sourceColumn: EN_ACTIVITY_LEVEL_3_DESC
+		sortByColumn: ACTIVITY_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACTIVITY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 44599db0-f21c-4e8a-b9fd-35c7f8b8b1df
+		summarizeBy: none
+		sourceColumn: ES_ACTIVITY_DESC
+		sortByColumn: ACTIVITY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACTIVITY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 4d789461-7b22-4e22-8952-093d29582aa8
+		summarizeBy: none
+		sourceColumn: ES_ACTIVITY_LEVEL_1_DESC
+		sortByColumn: ACTIVITY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACTIVITY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: c8b1e98f-9bf0-405a-8f02-f28bfd250f22
+		summarizeBy: none
+		sourceColumn: ES_ACTIVITY_LEVEL_2_DESC
+		sortByColumn: ACTIVITY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACTIVITY_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: cb55ca92-e16d-461a-b8a8-8e4ae6ed32fc
+		summarizeBy: none
+		sourceColumn: ES_ACTIVITY_LEVEL_3_DESC
+		sortByColumn: ACTIVITY_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACTIVITY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 8a77ae1f-e669-4451-963f-9cb9b2a0b7a6
+		summarizeBy: none
+		sourceColumn: FR_ACTIVITY_DESC
+		sortByColumn: ACTIVITY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACTIVITY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: d8a26415-10d1-4965-aa62-b30ed3882642
+		summarizeBy: none
+		sourceColumn: FR_ACTIVITY_LEVEL_1_DESC
+		sortByColumn: ACTIVITY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACTIVITY_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: c31e57e9-fe3d-4dd5-9531-812d964b2c55
+		summarizeBy: none
+		sourceColumn: FR_ACTIVITY_LEVEL_3_DESC
+		sortByColumn: ACTIVITY_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACTIVITY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: d88935ad-3e64-4ad4-b8ed-e28bd3042cfb
+		summarizeBy: none
+		sourceColumn: FR_ACTIVITY_LEVEL_2_DESC
+		sortByColumn: ACTIVITY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 264810a6-6143-463a-9926-80777194161a
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2649e5f7-6f73-46af-aabf-7f168406470d
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fa36a867-d0e0-4816-9686-b00d3fcc01f3
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 683383ca-4c0c-4ef4-8768-c6349ebcbf29
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_2_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c492875-491d-4883-b75a-41f333f19e4e
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_2_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_3_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 411b6a04-6173-4c3d-a66b-b42822d28924
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_3_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_4_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a66add2-88e9-4a44-8ed0-bb8e065777cc
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_4_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACTIVITY_LEVEL_4_DESC
+		dataType: string
+		lineageTag: c0071f7f-83ad-410d-a9f8-cd82bcd80417
+		summarizeBy: none
+		sourceColumn: PT_ACTIVITY_LEVEL_4_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACTIVITY_LEVEL_4_DESC
+		dataType: string
+		lineageTag: 2f3f04b8-e5a8-4132-b669-a1f74b7ff1ff
+		summarizeBy: none
+		sourceColumn: EN_ACTIVITY_LEVEL_4_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACTIVITY_LEVEL_4_DESC
+		dataType: string
+		lineageTag: f85cbb3b-374e-4ea0-bd93-c359fc30ceb4
+		summarizeBy: none
+		sourceColumn: ES_ACTIVITY_LEVEL_4_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACTIVITY_LEVEL_4_DESC
+		dataType: string
+		lineageTag: 595b1624-25fa-4f44-bb53-f21ac056e301
+		summarizeBy: none
+		sourceColumn: FR_ACTIVITY_LEVEL_4_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_4_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c0992ac-16b7-4674-b1ad-4f02dc7e3ea1
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_4_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_ACTIVITIES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_ACTIVITIES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_ACTIVITIES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_ACTIVITIES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

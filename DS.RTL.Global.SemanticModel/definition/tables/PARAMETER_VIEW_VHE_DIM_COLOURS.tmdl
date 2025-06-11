@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_COLOURS
+	lineageTag: ee798746-c834-4c5b-a4c6-8476eed7a9ea
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 7288caca-3ca1-43ca-ac9a-9960e6618aac
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column COLOUR_DESC
+		lineageTag: 24aff98c-3806-4dfe-9729-65a4b7387400
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_COLOURS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_COLOURS'[PT_COLOUR_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_COLOURS'[EN_COLOUR_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_COLOURS'[ES_COLOUR_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_COLOURS'[FR_COLOUR_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = a337e5ec1e3b4f259de19e4bbedd36af
+

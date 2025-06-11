@@ -1,0 +1,99 @@
+﻿table VIEW_GBL_DIM_USERS
+	lineageTag: 327656c0-fa66-4e60-a8ab-af87ec19e831
+
+	column USER_KEY
+		dataType: int64
+		isKey
+		formatString: 0
+		lineageTag: 92eb4a9e-1e6f-4c8a-afc4-58ca17e4a9e5
+		summarizeBy: none
+		sourceColumn: USER_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CODE
+		dataType: string
+		lineageTag: 096a3390-b8a7-4a8e-b7db-b49d6257698e
+		summarizeBy: none
+		sourceColumn: USER_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_NAME
+		dataType: string
+		lineageTag: 849ceafb-b913-43fa-8f5d-444194922418
+		summarizeBy: none
+		sourceColumn: USER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_GBL_DIM_USERS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USERS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_USERS
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

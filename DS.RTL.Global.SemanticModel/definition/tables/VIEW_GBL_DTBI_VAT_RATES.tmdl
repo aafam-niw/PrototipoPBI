@@ -1,0 +1,165 @@
+﻿table VIEW_GBL_DTBI_VAT_RATES
+	isHidden
+	lineageTag: 8838682a-b8aa-4b3c-9b7d-82dcb922be44
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a35ef48-9d07-4cb6-9e7e-d930ed8c1ae7
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENVIRONMENT
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: abdc8c22-3b17-4e10-a3d2-e687b5d32dcf
+		summarizeBy: none
+		sourceColumn: ENVIRONMENT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 99ba66b6-0d6a-4af5-a58d-8ca5c1934716
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9d45f0d4-4b19-4c57-8727-6e667d4618be
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAT_RATE
+		dataType: double
+		isHidden
+		lineageTag: 94ba9730-d033-4a9e-981e-d9271fe9b456
+		summarizeBy: none
+		sourceColumn: VAT_RATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VAT_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 248f70e1-5214-4d28-b3a5-3ff8fd56c929
+		summarizeBy: none
+		sourceColumn: VAT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_GBL_DTBI_VAT_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_VAT_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_VAT_RATES
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

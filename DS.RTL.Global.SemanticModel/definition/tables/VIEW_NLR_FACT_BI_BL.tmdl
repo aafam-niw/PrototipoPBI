@@ -1,0 +1,267 @@
+﻿/// DW: PBI.VIEW_NLR_FACT_BI_TRANS_BL
+table VIEW_NLR_FACT_BI_BL
+	isHidden
+	lineageTag: c5f27ed4-8b7f-4070-8eca-91e8ae6bf214
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_BL.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 3813b80e-a77b-4f20-b1f8-e52aec6e49af
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_BL.BALANCE
+	column BALANCE
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 71c0e8a0-8fd4-443a-b6eb-f9d493f319f6
+		summarizeBy: none
+		sourceColumn: BALANCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 70f5faeb-229d-4ac7-8d96-3225435efd38
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 17086bbe-893f-4691-860c-b2c76d7d6357
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 38ec0215-a13d-4689-ae56-adf0a1f1a9fc
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 9b8d205e-0f83-43ab-84b5-9c8bf38c7fbe
+		summarizeBy: none
+		sourceColumn: BL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 979d4379-6c58-4b7b-a8c3-4d1e77fb196c
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 75354391-5bad-462f-ac6c-21930abaf8bf
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 1578947b-4b23-41cd-8803-0bbb7c45251f
+		summarizeBy: none
+		sourceColumn: BL_FISCAL_ES_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column BL_SYTNER_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 19035d7f-50fe-4513-af1a-ae64a16e1d90
+		summarizeBy: none
+		sourceColumn: BL_SYTNER_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BALANCE_FISCAL_ES
+		dataType: double
+		isHidden
+		lineageTag: f3ddb7ca-7e25-4cb5-85b5-0adbc2286891
+		summarizeBy: none
+		sourceColumn: BALANCE_FISCAL_ES
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BALANCE_SYTNER
+		dataType: double
+		isHidden
+		lineageTag: 9450095c-8cb6-49f4-84d2-f428398e79bc
+		summarizeBy: none
+		sourceColumn: BALANCE_SYTNER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 423201af-ea5e-48ed-8c33-5286d59d456f
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column CLOSED_PERIOD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 847be3c0-ec1c-443c-9f40-b9afd371b24c
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_NLR_FACT_BI_BL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_BL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_BL
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+
+

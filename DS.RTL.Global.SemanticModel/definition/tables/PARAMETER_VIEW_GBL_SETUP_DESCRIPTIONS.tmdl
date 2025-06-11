@@ -1,0 +1,68 @@
+table PARAMETER_VIEW_GBL_SETUP_DESCRIPTIONS
+	lineageTag: f46efa72-bcfb-4314-9767-8de9fffd9a96
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: a049d509-7233-4929-bae2-cccaf8425a26
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		lineageTag: 1ae64460-6738-4e52-9b3d-c979ba899da6
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRANSLATION
+		lineageTag: 3a80f8cb-7455-4eaa-bc7d-eef07bbeac89
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_SETUP_DESCRIPTIONS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[PT_DESCRIPTION]), 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[PT_TRANSLATION])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[EN_DESCRIPTION]), 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[EN_TRANSLATION])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[ES_DESCRIPTION]), 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[ES_TRANSLATION])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[FR_DESCRIPTION]), 
+				    NAMEOF('VIEW_GBL_SETUP_DESCRIPTIONS'[FR_TRANSLATION])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 3dc6e6a678d84cd8ae3743bedc8587d7
+

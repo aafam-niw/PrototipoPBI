@@ -1,0 +1,64 @@
+table PARAMETER_VHE_PURCHASE_MEASURES
+	lineageTag: c3193246-2ec4-491f-b210-d25b2928727b
+
+	column PARAMETER_VHE_PURCHASE_MEASURE
+		lineageTag: 499596a3-321d-4e4c-8969-d1b9efe0cce3
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_PURCHASE_MEASURE Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_PURCHASE_MEASURE Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PURCHASE_MEASURE Fields'
+		isHidden
+		lineageTag: 4a15a884-f35f-4c07-afdf-f0fb3e99e4b2
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_PURCHASE_MEASURE Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PURCHASE_MEASURE Order'
+		isHidden
+		formatString: 0
+		lineageTag: de339dd3-9255-4516-9198-cbf14de84789
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: ac72e0ed-426c-4a8b-b54b-c5f6c08e1263
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_PURCHASE_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([VHE Purchase CY]), 0, "pt-PT"),
+				
+				    ("CY", NAMEOF([VHE Purchase CY]), 0, "en-US"),
+				    
+				    ("Real", NAMEOF([VHE Purchase CY]), 0, "es-ES"),
+				
+				    ("Réel", NAMEOF([VHE Purchase CY]), 0, "fr-FR")
+				
+				}
+				```
+
+	annotation PBI_Id = 951250a477e74cf999a02a11dc581507
+

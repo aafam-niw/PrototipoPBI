@@ -1,0 +1,186 @@
+table VIEW_NLR_DIM_CASH_FLOW
+	isHidden
+	lineageTag: f7294758-07ff-4d83-8c50-0aa97ae1c601
+
+	column CF_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b1c2af4f-845c-42a1-b23d-087c31e4dc1e
+		summarizeBy: none
+		sourceColumn: CF_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CF_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 3ede7bf1-fcec-4e2a-9807-95309586b716
+		summarizeBy: none
+		sourceColumn: PT_CF_LEVEL_1_DESC
+		sortByColumn: CF_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CF_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: f9338b52-7d16-4f13-9d14-7aca0aa281a2
+		summarizeBy: none
+		sourceColumn: PT_CF_DESC
+		sortByColumn: CF_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CF_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 3053c874-3e57-4c09-bee4-ba311931c0b0
+		summarizeBy: none
+		sourceColumn: EN_CF_LEVEL_1_DESC
+		sortByColumn: CF_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CF_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ec60ae79-1a49-4126-a3dc-8b247d19cbe1
+		summarizeBy: none
+		sourceColumn: EN_CF_DESC
+		sortByColumn: CF_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CF_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: d519d792-8bc1-4a78-81cd-b3807ecb02d6
+		summarizeBy: none
+		sourceColumn: ES_CF_LEVEL_1_DESC
+		sortByColumn: CF_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CF_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 8fcb2284-99ba-4262-a05e-d162788c7994
+		summarizeBy: none
+		sourceColumn: ES_CF_DESC
+		sortByColumn: CF_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CF_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 527acaba-f304-4715-959e-25e0ccf5738c
+		summarizeBy: none
+		sourceColumn: FR_CF_LEVEL_1_DESC
+		sortByColumn: CF_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CF_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 556d2bbc-4202-4612-a66b-6a6e28a3cbc1
+		summarizeBy: none
+		sourceColumn: FR_CF_DESC
+		sortByColumn: CF_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 126fcb1c-1727-4c54-863d-eaaa6746202f
+		summarizeBy: none
+		sourceColumn: CF_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7970ff14-cc32-4652-8fca-97f7c41da9c0
+		summarizeBy: none
+		sourceColumn: CF_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_CASH_FLOW = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_CASH_FLOW_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_CASH_FLOW_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_CASH_FLOW_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

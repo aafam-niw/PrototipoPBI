@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_GBL_DIM_EXCEPTIONS
+	lineageTag: d77dff5c-6ff7-4e93-92d2-3efb63dbd471
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 354131b7-5819-4898-9f08-c80320925e06
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXCEPTION_DESC
+		lineageTag: f8bb1413-3071-4c5b-b7c4-d564d9fcf122
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_EXCEPTIONS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_EXCEPTIONS'[PT_EXCEPTION_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_EXCEPTIONS'[EN_EXCEPTION_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_EXCEPTIONS'[ES_EXCEPTION_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_EXCEPTIONS'[FR_EXCEPTION_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = f0f9e0d9bad444a793fc2a616a620d06
+

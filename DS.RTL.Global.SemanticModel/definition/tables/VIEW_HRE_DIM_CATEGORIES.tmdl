@@ -1,0 +1,257 @@
+table VIEW_HRE_DIM_CATEGORIES
+	isHidden
+	lineageTag: 539fd1c3-9b86-4612-ab6d-a5feeef9a6ba
+
+	column CATEGORY_CODE
+		dataType: string
+		isHidden
+		isKey
+		isNullable: false
+		lineageTag: 6e623828-d4fb-4608-b2a8-e55ed42b1152
+		summarizeBy: none
+		sourceColumn: CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: bf954b64-d200-414f-a8c6-56819b7676d7
+		summarizeBy: none
+		sourceColumn: PT_CATEGORY_LEVEL_1_DESC
+		sortByColumn: CATEGORY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CATEGORY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 06da71eb-8070-4020-bb7c-0bea5e31fd4a
+		summarizeBy: none
+		sourceColumn: PT_CATEGORY_LEVEL_2_DESC
+		sortByColumn: CATEGORY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 5c4b4308-ccae-4636-b609-b07050f2e470
+		summarizeBy: none
+		sourceColumn: PT_CATEGORY_DESC
+		sortByColumn: CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 33fe478f-8a90-4f04-b282-eb5d03e543d2
+		summarizeBy: none
+		sourceColumn: EN_CATEGORY_LEVEL_1_DESC
+		sortByColumn: CATEGORY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CATEGORY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 1514266c-7297-4842-aaf3-ea2453c70c34
+		summarizeBy: none
+		sourceColumn: EN_CATEGORY_LEVEL_2_DESC
+		sortByColumn: CATEGORY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 6e540b45-58d4-4c6d-b11a-05efa1968da6
+		summarizeBy: none
+		sourceColumn: EN_CATEGORY_DESC
+		sortByColumn: CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 055cf384-b4b8-466a-b7be-7e962bc36343
+		summarizeBy: none
+		sourceColumn: ES_CATEGORY_LEVEL_1_DESC
+		sortByColumn: CATEGORY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CATEGORY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 1a32195d-3dbc-4c65-ba24-2899785dde48
+		summarizeBy: none
+		sourceColumn: ES_CATEGORY_LEVEL_2_DESC
+		sortByColumn: CATEGORY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 6d7d3337-47b5-408c-b9c7-65fbdc4b1fc3
+		summarizeBy: none
+		sourceColumn: ES_CATEGORY_DESC
+		sortByColumn: CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CATEGORY_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 57a6c330-6332-4fc1-98ed-1ed0a9500ed8
+		summarizeBy: none
+		sourceColumn: FR_CATEGORY_LEVEL_1_DESC
+		sortByColumn: CATEGORY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CATEGORY_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 0045e2f9-8617-491f-a741-31bbe9ac3afe
+		summarizeBy: none
+		sourceColumn: FR_CATEGORY_LEVEL_2_DESC
+		sortByColumn: CATEGORY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 053395fe-1eea-4b17-8784-b544daa7eb01
+		summarizeBy: none
+		sourceColumn: FR_CATEGORY_DESC
+		sortByColumn: CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 251b1429-6072-465d-9aaf-d8e381214c37
+		summarizeBy: none
+		sourceColumn: CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 21e279a0-4c99-4be6-8827-ad233b19f5ee
+		summarizeBy: none
+		sourceColumn: CATEGORY_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b12de27e-120c-4e46-a44f-d2ce09884432
+		summarizeBy: none
+		sourceColumn: CATEGORY_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_HRE_DIM_CATEGORIES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_HRE_DIM_CATEGORIES_MPBI = Source{[Schema="PBI",Item="VIEW_HRE_DIM_CATEGORIES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_HRE_DIM_CATEGORIES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

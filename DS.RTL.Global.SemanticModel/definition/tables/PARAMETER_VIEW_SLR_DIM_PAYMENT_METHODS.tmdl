@@ -1,0 +1,67 @@
+table PARAMETER_VIEW_SLR_DIM_PAYMENT_METHODS
+	lineageTag: 3d4d12e1-47db-44df-8808-b4fd7cb353a8
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 780dd25f-d5d7-41d5-b931-95191d182b47
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_DESC
+		lineageTag: 339f6eb5-8815-4d55-8e95-42a1ade1a65b
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_SOURCE
+		lineageTag: 2c2be5c3-8421-4db9-955f-137e6330b322
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_SLR_DIM_PAYMENT_METHODS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[PT_PAYMENT_METHOD_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[PT_PAYMENT_METHOD_SOURCE])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[EN_PAYMENT_METHOD_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[EN_PAYMENT_METHOD_SOURCE])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[ES_PAYMENT_METHOD_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[ES_PAYMENT_METHOD_SOURCE])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[FR_PAYMENT_METHOD_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[FR_PAYMENT_METHOD_SOURCE])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 9ea437daca58479994b593cab58ac75a
+

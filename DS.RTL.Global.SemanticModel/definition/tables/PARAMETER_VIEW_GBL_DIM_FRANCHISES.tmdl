@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_GBL_DIM_FRANCHISES
+	lineageTag: fa8bb887-92d0-4293-887f-4b6de5af9a7a
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 4202e859-c590-4226-ac8e-48d8dd563ec3
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_DESC
+		lineageTag: c0dfd5b9-09c4-4e65-af9e-43bd719fa25f
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_FRANCHISES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_FRANCHISES'[PT_FRANCHISE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_FRANCHISES'[EN_FRANCHISE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_FRANCHISES'[ES_FRANCHISE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_FRANCHISES'[FR_FRANCHISE_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 13db1db0de7143759eb6a4bfeff00968
+

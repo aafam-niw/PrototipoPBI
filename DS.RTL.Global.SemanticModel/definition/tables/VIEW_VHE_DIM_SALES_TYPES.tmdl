@@ -1,0 +1,237 @@
+table VIEW_VHE_DIM_SALES_TYPES
+	isHidden
+	lineageTag: 35a56277-7a39-4a03-b022-df4e9eb98371
+
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 594e642b-878a-4406-8b23-3a8b16fc0aba
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PT_SALES_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 57eebf3d-5415-4e0d-9469-75e7f0de7649
+		summarizeBy: none
+		sourceColumn: PT_SALES_TYPE_LEVEL_1_DESC
+		sortByColumn: SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 5ca9ee34-7b73-4ea8-b96f-472c9117023d
+		summarizeBy: none
+		sourceColumn: PT_SALES_TYPE_DESC
+		sortByColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SALES_TYPE_GROUP
+		dataType: string
+		isHidden
+		lineageTag: 560b57bd-d364-4770-9a52-e9e9a574287b
+		summarizeBy: none
+		sourceColumn: PT_SALES_TYPE_GROUP
+		sortByColumn: SALES_TYPE_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SALES_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: f44a03c2-049e-4567-95c1-8fa62ab74353
+		summarizeBy: none
+		sourceColumn: ES_SALES_TYPE_LEVEL_1_DESC
+		sortByColumn: SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: d25e1bcf-a812-4217-90f9-ae90380ebfbc
+		summarizeBy: none
+		sourceColumn: ES_SALES_TYPE_DESC
+		sortByColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SALES_TYPE_GROUP
+		dataType: string
+		isHidden
+		lineageTag: 587ef5fe-b66c-48a4-bea5-129373dc3e0a
+		summarizeBy: none
+		sourceColumn: ES_SALES_TYPE_GROUP
+		sortByColumn: SALES_TYPE_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SALES_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 2b1ee47b-e4ef-4afb-b65e-25dc6fe2aed1
+		summarizeBy: none
+		sourceColumn: EN_SALES_TYPE_LEVEL_1_DESC
+		sortByColumn: SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: a0cea584-6155-4f7e-8163-6460b60eca39
+		summarizeBy: none
+		sourceColumn: EN_SALES_TYPE_DESC
+		sortByColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SALES_TYPE_GROUP
+		dataType: string
+		isHidden
+		lineageTag: 84458220-6af2-40aa-b48b-c07db1dd8478
+		summarizeBy: none
+		sourceColumn: EN_SALES_TYPE_GROUP
+		sortByColumn: SALES_TYPE_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SALES_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 07122f2c-66d8-460e-b6db-46bb4e2043b4
+		summarizeBy: none
+		sourceColumn: FR_SALES_TYPE_LEVEL_1_DESC
+		sortByColumn: SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6ff947b2-0358-4b42-8685-0993b5ab2bf0
+		summarizeBy: none
+		sourceColumn: FR_SALES_TYPE_DESC
+		sortByColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SALES_TYPE_GROUP
+		dataType: string
+		isHidden
+		lineageTag: 689e43e3-b086-42a9-80dd-542759f9a92c
+		summarizeBy: none
+		sourceColumn: FR_SALES_TYPE_GROUP
+		sortByColumn: SALES_TYPE_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bdc2cb64-6760-4784-915b-b52095adbd81
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d756493d-9ca1-4ee1-a339-a00c9bfa47c8
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_GROUP_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c097b321-79f1-41dc-98b6-4b0fc17614d7
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_SALES_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_SALES_TYPES_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_SALES_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_SALES_TYPES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

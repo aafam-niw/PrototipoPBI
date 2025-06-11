@@ -1,0 +1,397 @@
+﻿/// DW: PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+table VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+	isHidden
+	lineageTag: e095d7c2-5684-445c-9f90-9202f278adb6
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 889751c9-ba94-4077-8cda-833619f38e00
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: c347c857-274e-4260-8f07-18d01aaeac49
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.FRANCHISE_CODE
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 082b5863-2f9d-4436-8964-90235c91c728
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.ACTIVITY_CODE
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 69c1a122-ee84-412d-a72a-a034cc2d14ac
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.SALES_TYPE_CODE
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: e8c7d53a-f6d3-4483-8333-78913a715a41
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.VALUE_TYPE_CODE
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: da73f3ce-ece2-4f7e-af94-78961471d159
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_CODE
+	column PL_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: c1195f38-cd4c-4cc5-b3ec-25928b43e1a3
+		summarizeBy: none
+		sourceColumn: PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL_BUDGET.PL_IFRS_CODE
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 7ec47b56-d9b0-4b3b-8bd1-67ad2ceb85f4
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column COST_CENTRE_TYPE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: f10bb66b-98cd-4c85-a4a2-24d86d484bd7
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: af963020-7f38-4793-b06a-09525c4dce8b
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: cd7aac41-dd0c-4ef6-9295-90887211057e
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column VALUE
+		dataType: decimal
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b21e638c-9607-443c-9052-0ace7c637afd
+		summarizeBy: none
+		sourceColumn: VALUE
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IFRS_VALUE
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: db3f209d-403c-4dc5-bf30-73ec8d7d111f
+		summarizeBy: none
+		sourceColumn: IFRS_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: deb8546e-53b5-45fe-b8fe-0278b3262096
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_DMS_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d6bd42a9-0ca3-437e-bc1a-173e53c8d8d0
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DMS_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column HRE_COST_INCLUDED
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9431a266-54b4-4f44-80e0-43f74e632f65
+		summarizeBy: none
+		sourceColumn: HRE_COST_INCLUDED
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SYTNER_VALUE
+		dataType: double
+		isHidden
+		lineageTag: 76017fd2-b8ec-4ea9-9c2e-8e3ac76b069e
+		summarizeBy: none
+		sourceColumn: SYTNER_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PL_SYTNER_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f63d8a5f-5a01-44d4-914c-3a8fb4af2bd4
+		summarizeBy: none
+		sourceColumn: PL_SYTNER_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ac5b922b-afd4-4bcf-9f2a-b8dbb3f09e2f
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4ce2a1f5-a3a2-4279-a68f-cde812597eba
+		summarizeBy: none
+		sourceColumn: TIE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOSED_PERIOD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ae6063d8-f139-4f11-8c36-8776e9ec7427
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column HRE_COST_CESSION_INCLUDED
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8b87bf07-559a-4dfc-8081-93757a146d0d
+		summarizeBy: sum
+		sourceColumn: HRE_COST_CESSION_INCLUDED
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_PL_CODE
+		dataType: string
+		isHidden
+		lineageTag: c34ac50c-9ad7-44c2-a2b8-a613377cfc17
+		summarizeBy: none
+		sourceColumn: HRE_COST_PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b019ce32-d7d2-4ff0-a518-b991e662e05c
+		summarizeBy: sum
+		sourceColumn: HRE_COST_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

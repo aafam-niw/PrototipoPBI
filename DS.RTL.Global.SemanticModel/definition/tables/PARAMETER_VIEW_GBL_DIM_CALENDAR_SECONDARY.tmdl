@@ -1,0 +1,119 @@
+table PARAMETER_VIEW_GBL_DIM_CALENDAR_SECONDARY
+	lineageTag: aa45afed-8276-4ac7-abaf-5580b2ec01c9
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: d802792d-351c-4e22-80f1-6db2ef0f4a7c
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		lineageTag: 27e6145e-871c-4016-8456-df37ccc45fe8
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENT_YEAR
+		lineageTag: 9305a18f-5de3-4554-bbc7-1040ca9fa113
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE
+		lineageTag: 821c8a76-f7e0-46e1-985d-4c1a24352615
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_MONTH_SHORT_DESC
+		lineageTag: f980bc52-1b49-454c-a07a-2d33f256f373
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH_DESC
+		lineageTag: e087bfe7-1683-4d7d-b8c1-b49d54937067
+		summarizeBy: none
+		sourceColumn: [Value6]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_CALENDAR_SECONDARY = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[YEAR]),
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[PT_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[DATE]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[PT_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[PT_MONTH_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[YEAR]),
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[EN_CURRENT_YEAR]),
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[DATE]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[EN_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[EN_MONTH_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[YEAR]),
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[ES_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[DATE]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[ES_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[ES_MONTH_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[YEAR]),
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[FR_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[DATE]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[FR_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR_SECONDARY'[FR_MONTH_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 0419b53a30574fccb7db0bb8342044d1
+

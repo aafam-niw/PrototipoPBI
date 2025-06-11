@@ -1,0 +1,73 @@
+table PARAMETER_GLOSSARY
+	isHidden
+	lineageTag: 0922c3ac-d289-4499-9b5d-34620073b6b3
+
+	column PARAMETER_GLOSSARY
+		isHidden
+		lineageTag: 0c97208f-f0c0-418e-84a9-98379b9ee159
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_GLOSSARY Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_GLOSSARY Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GLOSSARY Fields'
+		isHidden
+		lineageTag: a0d5597c-1449-48e8-979b-58f2b686b268
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_GLOSSARY Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GLOSSARY Order'
+		isHidden
+		formatString: 0
+		lineageTag: 97733cf7-8a9b-43de-b649-47c3b5ea5fcd
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 01e5ea90-2963-42ec-a9e2-931ac9ef3a12
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_GLOSSARY = calculated
+		mode: import
+		source = ```
+				{
+				    ("Item", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[EN_TRANSLATION]), 1, "en-US"),
+				    ("Description", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[EN_DESCRIPTION]), 2, "en-US"),
+				     
+				    
+				    ("Item", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[PT_TRANSLATION]), 1, "pt-PT"),
+				    ("Descrição", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[PT_DESCRIPTION]), 2, "pt-PT"),
+				        
+				    
+				    ("Ítem", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[ES_TRANSLATION]), 1, "es-ES"),
+				    ("Descripción", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[ES_DESCRIPTION]), 2, "es-ES"),
+				
+				    
+				    ("Élément", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[FR_TRANSLATION]), 1, "fr-FR"),
+				    ("Description", NAMEOF(VIEW_GBL_SETUP_DESCRIPTIONS[FR_DESCRIPTION]), 2, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 3d3d01129e3b43a1b226d48dec5b075d
+

@@ -1,0 +1,124 @@
+﻿table VIEW_SLR_DIM_DTDMS_AREA_CODES
+	isHidden
+	lineageTag: fe207a2b-7ec1-4c46-9e58-f9006322a4aa
+
+	column AREA_CODE_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 5a024873-674c-4fd5-b4de-0f7168d7f021
+		summarizeBy: none
+		sourceColumn: AREA_CODE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA_CODE
+		dataType: string
+		isHidden
+		lineageTag: 7ac262d9-7e41-42a3-a8af-27533abdc191
+		summarizeBy: none
+		sourceColumn: AREA_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA_CODE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 74aa339c-563e-4136-a302-71f3dc8a397e
+		summarizeBy: none
+		sourceColumn: AREA_CODE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_AREA_CODES"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

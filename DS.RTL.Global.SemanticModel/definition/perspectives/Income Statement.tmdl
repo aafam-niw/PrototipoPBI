@@ -1,0 +1,84 @@
+perspective 'Income Statement'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable MEASURE_TABLE
+
+	perspectiveTable PARAMETER_DRPL_MEASURES
+
+		perspectiveColumn Measures
+
+	perspectiveTable VIEW_NLR_DIM_DTDMS_COST_CENTRES
+
+		perspectiveColumn COST_CENTRE_DESC
+
+	perspectiveTable VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+		perspectiveColumn NLR_ACCOUNT_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_PL
+
+		perspectiveColumn PL_DESC
+
+		perspectiveColumn PL_LEVEL_1_DESC
+
+		perspectiveColumn PL_LEVEL_2_DESC
+
+		perspectiveColumn PL_LEVEL_3_DESC
+
+		perspectiveColumn PL_LEVEL_4_DESC
+
+		perspectiveColumn PL_LEVEL_5_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_SITES
+
+		perspectiveColumn SITE_DESC
+
+		perspectiveColumn SITE_LEVEL_1_DESC
+
+		perspectiveColumn SITE_LEVEL_2_DESC
+
+		perspectiveColumn SITE_LEVEL_3_DESC
+
+		perspectiveColumn SITE_LEVEL_4_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+
+		perspectiveColumn ACTIVITY_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_1_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_2_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_FRANCHISES
+
+		perspectiveColumn FRANCHISE_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_SALES_TYPES
+
+		perspectiveColumn SALES_TYPE_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COST_CENTRE_TYPES
+
+		perspectiveColumn COST_CENTRE_TYPE_DESC
+

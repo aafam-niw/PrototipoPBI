@@ -1,0 +1,76 @@
+table PARAMETER_VHE_STOCK_INDICADORES
+	isHidden
+	lineageTag: cb53be4c-815b-4354-af03-877bf6b8ed45
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: a6ec89e2-c75b-431a-8f9a-d467154454aa
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: db309a18-7d3c-4e45-bd9c-e2c4b54e6316
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		lineageTag: 69c16c8d-f3e4-4b32-a757-6afc80d2121c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 31f097d3-d325-4981-a5da-9166c2b0cc49
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_STOCK_INDICADORES = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    {
+				        { 1, "Real", "VHE Stock CY", "pt-PT"},
+				        { 2, "AA", "VHE Stock LY", "pt-PT"},
+				        { 3, "Δ AA", "VHE Stock Delta LY", "pt-PT"},
+				        { 4, "Δ AA %", "VHE Stock Delta LY %", "pt-PT"},
+				
+				        { 1, "CY", "VHE Stock CY", "en-US"},
+				        { 2, "LY", "VHE Stock LY", "en-US"},
+				        { 3, "Δ LY", "VHE Stock Delta LY", "en-US"},
+				        { 4, "Δ LY %", "VHE Stock Delta LY %", "en-US"},
+				
+				        { 1, "Real", "VHE Stock CY", "es-ES"},
+				        { 2, "AA", "VHE Stock LY", "es-ES"},
+				        { 3, "Δ AA", "VHE Stock Delta LY", "es-ES"},
+				        { 4, "Δ AA %", "VHE Stock Delta LY %", "es-ES"},
+				
+				        { 1, "Réel", "VHE Stock CY", "fr-FR"},
+				        { 2, "AD", "VHE Stock LY", "fr-FR"},
+				        { 3, "Δ AD", "VHE Stock Delta LY", "fr-FR"},
+				        { 4, "Δ AD %", "VHE Stock Delta LY %", "fr-FR"}
+				    }
+				)
+
+	annotation PBI_Id = 4776082aa6f4471aa33ea3a3e60a3b57
+

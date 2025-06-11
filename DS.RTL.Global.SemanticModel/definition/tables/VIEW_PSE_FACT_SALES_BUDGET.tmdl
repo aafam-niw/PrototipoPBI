@@ -1,0 +1,197 @@
+table VIEW_PSE_FACT_SALES_BUDGET
+	lineageTag: 2e072c7a-aaf3-4415-8581-d283c3519bc2
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 024b8251-2cae-43a7-b112-da95030cc511
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: eb13f885-9803-410f-be56-40f087f9f7aa
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_AGE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 16860813-0069-41cd-8297-2fc318cfd93d
+		summarizeBy: sum
+		sourceColumn: VEHICLE_AGE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column KMS
+		dataType: double
+		lineageTag: 590cf86c-c28d-48e7-b5d1-bc0c2ba0ffc3
+		summarizeBy: sum
+		sourceColumn: KMS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROUTE
+		dataType: string
+		lineageTag: 00f5d560-2129-4e5e-9141-006d9e78d5fa
+		summarizeBy: none
+		sourceColumn: ROUTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 70195b1c-b5a0-480f-9618-7629631271ae
+		summarizeBy: sum
+		sourceColumn: DEPARTMENT_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c125286-0a0e-4511-b5cd-8caf9c2b26bc
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b140242-b55d-448e-8ebd-32f6de3e14e4
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_GROUP_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f72655e-a3f0-4493-99e2-c58fbc380ca3
+		summarizeBy: sum
+		sourceColumn: PRODUCT_GROUP_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PARTS_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b2f96e9-1f50-4451-bde4-9afed1b0df36
+		summarizeBy: sum
+		sourceColumn: PARTS_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_VALUE
+		dataType: double
+		lineageTag: 03d87a2a-ab31-464d-9287-7b48535a56dc
+		summarizeBy: sum
+		sourceColumn: COST_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INVOICED_HOURS
+		dataType: double
+		lineageTag: 58316be0-5f26-43ce-bd1d-0e560e34e30a
+		summarizeBy: sum
+		sourceColumn: INVOICED_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column REAL_HOURS
+		dataType: double
+		lineageTag: 46af6c52-0ea7-4504-8e3c-22ba365c4846
+		summarizeBy: sum
+		sourceColumn: REAL_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LINE_TYPE_CODE
+		dataType: string
+		lineageTag: 06a09509-c29c-4ed6-a7d8-f20673484696
+		summarizeBy: none
+		sourceColumn: LINE_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_DOCUMENT_DATE
+		dataType: string
+		lineageTag: 2c5969db-0f1f-499d-8ea9-c8a5218dd764
+		summarizeBy: none
+		sourceColumn: SLR_DOCUMENT_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MENU_DIFFERENCE
+		dataType: double
+		lineageTag: f11965a4-fcbd-442f-9620-0dc66c633f5c
+		summarizeBy: sum
+		sourceColumn: MENU_DIFFERENCE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SALES_TYPES_SERVICE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d25f351-a83c-4706-950a-360613c0ec71
+		summarizeBy: sum
+		sourceColumn: SALES_TYPES_SERVICE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPES_PARTS_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 6488df64-4ff0-4ede-9b53-39cc8e5472f4
+		summarizeBy: sum
+		sourceColumn: SALES_TYPES_PARTS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FEE_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 01896628-8f39-496c-a2bd-9df032a8ecd5
+		summarizeBy: sum
+		sourceColumn: FEE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: 577eae1d-9f3d-497f-8e85-44634442ddef
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PSE_FACT_SALES_BUDGET = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PSE_FACT_SALES_BUDGET"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

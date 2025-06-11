@@ -1,0 +1,69 @@
+table VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG
+	isHidden
+	lineageTag: ef02ff28-a822-4233-b9d4-98665a405318
+
+	column PL_IFRS_CALCULATION_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 1594b0f5-0a26-4b68-ad48-e3a15642fd50
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CALCULATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 2de2593d-bc1f-4f3e-9b7c-171d5e2db65b
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_1_CODE_SOURCE_FORCALCULATION
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b581fd82-8920-4539-abf2-35640df391b3
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_1_CODE_SOURCE_FORCALCULATION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_CODE_SOURCE_SIGNAL_FORCALCULATIONS
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5b7e9df4-95a8-4754-8fdb-ac38e440efe6
+		summarizeBy: sum
+		sourceColumn: PL_IFRS_CODE_SOURCE_SIGNAL_FORCALCULATIONS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar),
+				    PBI_VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

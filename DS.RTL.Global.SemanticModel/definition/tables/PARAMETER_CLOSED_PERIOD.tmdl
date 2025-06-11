@@ -1,0 +1,73 @@
+table PARAMETER_CLOSED_PERIOD
+	isHidden
+	lineageTag: 45aad644-61d1-47ce-9032-a5b864f86a48
+
+	column PARAMETER_CLOSED_PERIOD
+		isHidden
+		lineageTag: 8d1baabb-82b4-4142-a682-07a40edf5f4f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_CLOSED_PERIOD Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_CLOSED_PERIOD Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CLOSED_PERIOD Fields'
+		isHidden
+		lineageTag: 272f5901-66a1-41c8-8aab-34bc1485cb76
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_CLOSED_PERIOD Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CLOSED_PERIOD Order'
+		isHidden
+		formatString: 0
+		lineageTag: 291fd117-40e3-4257-b54f-b3bcf51341d9
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b994640b-5a92-41c9-a03a-6a7f39ab3b25
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_CLOSED_PERIOD = calculated
+		mode: import
+		source = ```
+				{
+				    ("Client", NAMEOF(VIEW_GBL_DIM_CLIENTS[DESCRIPTION]), 1, "en-US"),
+				    ("Closed Period", NAMEOF(VIEW_NLR_SETUP_CLOSED_PERIODS_USERS[NLR_ClosedDate]), 2, "en-US"),
+				     
+				    
+				    ("Cliente", NAMEOF(VIEW_GBL_DIM_CLIENTS[DESCRIPTION]), 1, "pt-PT"),
+				    ("Período Fechado", NAMEOF(VIEW_NLR_SETUP_CLOSED_PERIODS_USERS[NLR_ClosedDate]), 2, "pt-PT"),
+				        
+				    
+				    ("Cliente", NAMEOF(VIEW_GBL_DIM_CLIENTS[DESCRIPTION]), 1, "es-ES"),
+				    ("Periodo Cerrado", NAMEOF(VIEW_NLR_SETUP_CLOSED_PERIODS_USERS[NLR_ClosedDate]), 2, "es-ES"),
+				
+				    
+				    ("Client", NAMEOF(VIEW_GBL_DIM_CLIENTS[DESCRIPTION]), 1, "fr-FR"),
+				    ("Période Fermée", NAMEOF(VIEW_NLR_SETUP_CLOSED_PERIODS_USERS[NLR_ClosedDate]), 2, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 6b5013d0e8ed44108d18470ad20bf2dd
+

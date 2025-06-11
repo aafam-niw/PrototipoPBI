@@ -1,0 +1,47 @@
+table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_VALUETYPE_2
+	isHidden
+	lineageTag: dcce72bc-dbb6-4dba-9b1f-3532826abe23
+
+	column O365_USER
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: a233e40d-bc7c-4e9b-8418-b98e6e7f6596
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 2c682371-3740-42b1-97de-a2d2ef1f6c7f
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_VALUETYPE_2 = m
+		mode: import
+		queryGroup: Security
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.RTL.GLOBAL_DIM_GBL.VALUETYPE_2 = Source{[Schema="SCY",Item="VIEW_DS.RTL.GLOBAL_DIM_GBL.VALUETYPE_2"]}[Data]
+				in
+				    SCY_View_DS.RTL.GLOBAL_DIM_GBL.VALUETYPE_2
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

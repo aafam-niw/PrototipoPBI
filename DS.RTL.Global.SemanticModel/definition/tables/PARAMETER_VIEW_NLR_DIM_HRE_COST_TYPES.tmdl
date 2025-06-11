@@ -1,0 +1,85 @@
+table PARAMETER_VIEW_NLR_DIM_HRE_COST_TYPES
+	lineageTag: cd64be57-ab62-4764-b41b-9ab7fb0c161b
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 1954a7e6-b044-409a-a81c-4d36e5b146b2
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_DESC
+		lineageTag: d289bd3e-052d-40ff-8fc5-790eff173f9f
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_LEVEL_1_DESC
+		lineageTag: 30b45796-66d0-4d99-9b65-ad9094a67bc0
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_LEVEL_2_DESC
+		lineageTag: 9c434d34-5d28-45cc-aa64-7b592d17064c
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_HRE_COST_TYPES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[PT_HRE_COST_TYPE_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[PT_HRE_COST_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[PT_HRE_COST_TYPE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[EN_HRE_COST_TYPE_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[EN_HRE_COST_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[EN_HRE_COST_TYPE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[ES_HRE_COST_TYPE_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[ES_HRE_COST_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[ES_HRE_COST_TYPE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[FR_HRE_COST_TYPE_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[FR_HRE_COST_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_HRE_COST_TYPES'[FR_HRE_COST_TYPE_LEVEL_2_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 2ce16d12d48e488fae3af16fa09b7628
+

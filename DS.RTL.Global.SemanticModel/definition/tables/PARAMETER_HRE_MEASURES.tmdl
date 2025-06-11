@@ -1,0 +1,108 @@
+table PARAMETER_HRE_MEASURES
+	lineageTag: adfdea1a-d439-4880-931b-09bfcc26f59a
+
+	column PARAMETER_HRE_MEASURES
+		lineageTag: 8ba481ca-1c25-46be-aaf3-da786422fe36
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_HRE_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_HRE_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_MEASURES Fields'
+		isHidden
+		lineageTag: 68ebc4d1-aeac-4588-86ec-3aeea9fb6cce
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_HRE_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 18850847-1a02-45bd-ab53-e0ff06ea34b2
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b0584a97-3df5-4cca-b347-d8869a0b5b87
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 099784f6-f957-4c75-aa47-438cb1232469
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_HRE_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([HRE CY]), 0, "pt-PT", 2),
+				    ("Real M", NAMEOF([HRE CY M]), 1, "pt-PT", 2),
+				    ("Orç", NAMEOF([HRE Bgt]), 2, "pt-PT", 3),
+				    ("Orç M", NAMEOF([HRE Bgt M]), 3, "pt-PT", 3),
+				    ("Δ Orç %", NAMEOF([HRE Delta Bgt]), 4, "pt-PT", 3),
+				    ("AA", NAMEOF([HRE LY]), 5, "pt-PT", 2),
+				    ("AA M", NAMEOF([HRE LY M]), 6, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([HRE Delta LY]), 7, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([HRE CY]), 0, "en-US", 2),
+				    ("CY M", NAMEOF([HRE CY M]), 1, "en-US", 2),
+				    ("Bgt", NAMEOF([HRE Bgt]), 2, "en-US", 3),
+				    ("Bgt M", NAMEOF([HRE Bgt M]), 3, "en-US", 3),
+				    ("Δ Bgt %", NAMEOF([HRE Delta Bgt]), 4, "en-US", 3),
+				    ("LY", NAMEOF([HRE LY]), 5, "en-US", 2),
+				    ("LY M", NAMEOF([HRE LY M]), 6, "en-US", 2),
+				    ("Δ LY %", NAMEOF([HRE Delta LY]), 7, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([HRE CY]), 0, "es-ES", 2),
+				    ("Real M", NAMEOF([HRE CY M]), 1, "es-ES", 2),
+				    ("Ppto", NAMEOF([HRE Bgt]), 2, "es-ES", 3),
+				    ("Ppto M", NAMEOF([HRE Bgt M]), 3, "es-ES", 3),
+				    ("Δ Ppto %", NAMEOF([HRE Delta Bgt]), 4, "es-ES", 3),
+				    ("AA", NAMEOF([HRE LY]), 5, "es-ES", 2),
+				    ("AA M", NAMEOF([HRE LY M]), 6, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([HRE Delta LY]), 7, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([HRE CY]), 0, "fr-FR", 2),
+				    ("Réel M", NAMEOF([HRE CY M]), 1, "fr-FR", 2),
+				    ("Bgt", NAMEOF([HRE Bgt]), 2, "fr-FR", 3),
+				    ("Bgt M", NAMEOF([HRE Bgt M]), 3, "fr-FR", 3),
+				    ("Δ Bgt %", NAMEOF([HRE Delta Bgt]), 4, "fr-FR", 3),
+				    ("AD", NAMEOF([HRE LY]), 5, "fr-FR", 2),
+				    ("AD M", NAMEOF([HRE LY M]), 6, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([HRE Delta LY]), 7, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 51d4ccd9d2f34bd79c258bc8213e1858
+

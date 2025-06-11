@@ -1,0 +1,251 @@
+table VIEW_NLR_DIM_HRE_COST_TYPES
+	isHidden
+	lineageTag: 441e2dda-99ed-4127-a995-e03de9a75a8c
+
+	column HRE_COST_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1d408f30-9745-4a17-9230-ff29bddbb7d8
+		summarizeBy: none
+		sourceColumn: HRE_COST_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_HRE_COST_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 9f62d249-dce9-4da0-9d03-afe735710171
+		summarizeBy: none
+		sourceColumn: PT_HRE_COST_TYPE_LEVEL_1_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_HRE_COST_TYPE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: dc577308-41e2-4792-a3a8-40b252297b2b
+		summarizeBy: none
+		sourceColumn: PT_HRE_COST_TYPE_LEVEL_2_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_HRE_COST_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 8d2d762a-be9f-448f-bc13-887529fe992d
+		summarizeBy: none
+		sourceColumn: PT_HRE_COST_TYPE_DESC
+		sortByColumn: HRE_COST_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_HRE_COST_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: fa94eb56-97e5-429e-8728-b3cab504ccf6
+		summarizeBy: none
+		sourceColumn: ES_HRE_COST_TYPE_LEVEL_1_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_HRE_COST_TYPE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: efbd5b20-544c-431a-9bd7-f8afc6cafd48
+		summarizeBy: none
+		sourceColumn: ES_HRE_COST_TYPE_LEVEL_2_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_HRE_COST_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: c6487b0a-28fb-4996-902f-3af6afce27f1
+		summarizeBy: none
+		sourceColumn: ES_HRE_COST_TYPE_DESC
+		sortByColumn: HRE_COST_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_HRE_COST_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: a85d1cd6-53e0-4e48-8d5f-b131b14f72d0
+		summarizeBy: none
+		sourceColumn: EN_HRE_COST_TYPE_LEVEL_1_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_HRE_COST_TYPE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 2e6ad0e9-b3ac-45d7-ab8e-22be58fe748f
+		summarizeBy: none
+		sourceColumn: EN_HRE_COST_TYPE_LEVEL_2_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_HRE_COST_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ede43489-5029-4768-86a4-e3bd8318d7ba
+		summarizeBy: none
+		sourceColumn: EN_HRE_COST_TYPE_DESC
+		sortByColumn: HRE_COST_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_HRE_COST_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: f89b9938-e19a-46a7-ac0d-081ac73c508e
+		summarizeBy: none
+		sourceColumn: FR_HRE_COST_TYPE_LEVEL_1_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_HRE_COST_TYPE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 31a7ca94-ac97-415e-becc-089a75cb1f91
+		summarizeBy: none
+		sourceColumn: FR_HRE_COST_TYPE_LEVEL_2_DESC
+		sortByColumn: HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_HRE_COST_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 9f493850-acc8-45d9-a371-b49f0335fd32
+		summarizeBy: none
+		sourceColumn: FR_HRE_COST_TYPE_DESC
+		sortByColumn: HRE_COST_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e26852df-999f-4499-a23a-ee0b7ef873d1
+		summarizeBy: sum
+		sourceColumn: HRE_COST_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bd12b267-fbdb-4da1-8f96-554e6a64f995
+		summarizeBy: sum
+		sourceColumn: HRE_COST_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: af40dea6-5f8f-41b0-9dff-b8ffd65d3345
+		summarizeBy: sum
+		sourceColumn: HRE_COST_TYPE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_HRE_COST_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_HRE_COST_TYPES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_HRE_COST_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_HRE_COST_TYPES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

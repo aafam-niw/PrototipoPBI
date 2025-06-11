@@ -1,0 +1,38 @@
+perspective 'Balance IFRS'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_BL_IFRS_MEASURES
+
+		perspectiveColumn PARAMETER_BL_IFRS_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_BL_IFRS
+
+		perspectiveColumn BL_IFRS_LEVEL_1_DESC
+
+		perspectiveColumn BL_IFRS_LEVEL_2_DESC
+
+		perspectiveColumn BL_IFRS_LEVEL_3_DESC
+
+		perspectiveColumn BL_IFRS_LEVEL_4_DESC
+
+		perspectiveColumn BL_IFRS_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+

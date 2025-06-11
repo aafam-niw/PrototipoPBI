@@ -1,0 +1,44 @@
+perspective 'Payment Methods'
+
+	perspectiveTable PARAMETER_PAYMENT_MEASURES
+
+		perspectiveColumn PARAMETER_PAYMENT_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_SLR_DIM_PAYMENT_METHODS
+
+		perspectiveColumn PAYMENT_METHOD_DESC
+
+		perspectiveColumn PAYMENT_METHOD_SOURCE
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+
+		perspectiveColumn ACTIVITY_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_1_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_2_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_3_DESC
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+		perspectiveColumn Ordinal
+

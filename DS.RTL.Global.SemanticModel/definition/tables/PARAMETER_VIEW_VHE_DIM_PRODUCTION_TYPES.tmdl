@@ -1,0 +1,67 @@
+table PARAMETER_VIEW_VHE_DIM_PRODUCTION_TYPES
+	lineageTag: c39201be-7956-441c-9444-2862844dddee
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 96545f15-5f21-4586-a373-69fd008d0b7c
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCTION_TYPE_DESC
+		lineageTag: df53e448-bd93-4522-acaf-6b6ab9d51175
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCTION_TYPE_LEVEL_1_DESC
+		lineageTag: 30db6dbb-53d4-43c3-8ae5-0ff096f15611
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_PRODUCTION_TYPES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[PT_PRODUCTION_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[PT_PRODUCTION_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[EN_PRODUCTION_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[EN_PRODUCTION_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[ES_PRODUCTION_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[ES_PRODUCTION_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[FR_PRODUCTION_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_PRODUCTION_TYPES'[FR_PRODUCTION_TYPE_LEVEL_1_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = f0bc069cf1b7423eab12c987bd714029
+

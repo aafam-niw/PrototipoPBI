@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_GBL_DIM_POSITIONS
+	lineageTag: b49bd5e4-3523-47bf-a92b-33025a3170f4
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 84c63113-2430-4766-a50e-7231b2298690
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column POSITION_DESC
+		lineageTag: abf5f676-56d3-40ee-856f-1431acb1b416
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_POSITIONS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_POSITIONS'[PT_POSITION_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_POSITIONS'[EN_POSITION_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_POSITIONS'[ES_POSITION_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_POSITIONS'[FR_POSITION_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 2ddcc085fb69436d9f8b32a755f85e6e
+

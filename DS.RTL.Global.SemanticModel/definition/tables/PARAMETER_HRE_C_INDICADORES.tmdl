@@ -1,0 +1,120 @@
+table PARAMETER_HRE_C_INDICADORES
+	isHidden
+	lineageTag: 86a21c18-5e51-4599-91ef-2657fbaca589
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: 89242bed-a00c-4784-b1e4-cd5166c881a4
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 6b93396b-c5b1-4c35-9ab5-8e6091a96799
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b08f67f5-5933-4e97-ab5a-878a9b0fb0b3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1e02ee76-b4a7-4441-bcc5-5e2624b26581
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 36045c60-a2d2-4d24-9bdf-95857282a291
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_HRE_C_INDICADORES = calculated
+		mode: import
+		source = ```
+				
+				 DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Real", "HRE_C CY", "pt-PT", 2 },
+				        { 2, "Orç", "HRE_C Bgt", "pt-PT", 3 },
+				        { 3, "Δ Orç", "HRE_C Delta Bgt", "pt-PT", 3 },
+				        { 4, "Δ Orç %", "HRE_C Delta Bgt %", "pt-PT", 3 },
+				        { 5, "Orç Adm", "HRE_C Bgt Adm", "pt-PT", 4 },
+				        { 6, "Δ Orç Adm", "HRE_C Delta Bgt Adm", "pt-PT", 4 },
+				        { 7, "Δ Orç Adm %", "HRE_C Delta Bgt Adm %", "pt-PT", 4 },
+				        { 8, "AA", "HRE_C LY", "pt-PT", 2 },
+				        { 9, "Δ AA", "HRE_C Delta LY", "pt-PT", 2 },
+				        { 10, "Δ AA %", "HRE_C Delta LY %", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "HRE_C CY", "en-US", 2 },
+				        { 2, "Bgt", "HRE_C Bgt", "en-US", 3 },
+				        { 3, "Δ Bgt", "HRE_C Delta Bgt", "en-US", 3 },
+				        { 4, "Δ Bgt %", "HRE_C Delta Bgt %", "en-US", 3 },
+				        { 5, "Bgt Adm", "HRE_C Bgt Adm", "en-US", 4 },
+				        { 6, "Δ Bgt Adm", "HRE_C Delta Bgt Adm", "en-US", 4 },
+				        { 7, "Δ Bgt Adm %", "HRE_C Delta Bgt Adm %", "en-US", 4 },
+				        { 8, "LY", "HRE_C LY", "en-US", 2 },
+				        { 9, "Δ LY", "HRE_C Delta LY", "en-US", 2 },
+				        { 10, "Δ LY %", "HRE_C Delta LY %", "en-US", 2 },
+				
+				
+				        { 1, "Real", "HRE_C CY", "es-ES", 2 },
+				        { 2, "Ppto", "HRE_C Bgt", "es-ES", 3 },
+				        { 3, "Δ Ppto", "HRE_C Delta Bgt", "es-ES", 3 },
+				        { 4, "Δ Ppto %", "HRE_C Delta Bgt %", "es-ES", 3 },
+				        { 5, "Ppto Adm", "HRE_C Bgt Adm", "es-ES", 4 },
+				        { 6, "Δ Ppto Adm", "HRE_C Delta Bgt Adm", "es-ES", 4 },
+				        { 7, "Δ Ppto Adm %", "HRE_C Delta Bgt Adm %", "es-ES", 4 },
+				        { 8, "AA", "HRE_C LY", "es-ES", 2 },
+				        { 9, "Δ AA", "HRE_C Delta LY", "es-ES", 2 },
+				        { 10, "Δ AA %", "HRE_C Delta LY %", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "HRE_C CY", "fr-FR", 2 },
+				        { 2, "Bgt", "HRE_C Bgt", "fr-FR", 3 },
+				        { 3, "Δ Bgt", "HRE_C Delta Bgt", "fr-FR", 3 },
+				        { 4, "Δ Bgt %", "HRE_C Delta Bgt %", "fr-FR", 3 },
+				        { 5, "Bgt Adm", "HRE_C Bgt Adm", "fr-FR", 4 },
+				        { 6, "Δ Bgt Adm", "HRE_C Delta Bgt Adm", "fr-FR", 4 },
+				        { 7, "Δ Bgt Adm %", "HRE_C Delta Bgt Adm %", "fr-FR", 4 },
+				        { 8, "AD", "HRE_C LY", "fr-FR", 2 },
+				        { 9, "Δ AD", "HRE_C Delta LY", "fr-FR", 2 },
+				        { 10, "Δ AD %", "HRE_C Delta LY %", "fr-FR", 2 }
+				    }
+				)
+				
+				
+				```
+
+	annotation PBI_Id = d369394d55b94b6492a819185d5dc22f
+

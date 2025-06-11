@@ -1,0 +1,160 @@
+table PARAMETER_VHE_PRD_FIELDS
+	isHidden
+	lineageTag: 7ba2dd8b-c89d-49c4-9103-ba7e4abc7a19
+
+	column PARAMETER_VHE_PRD_FIELDS
+		isHidden
+		lineageTag: 7099f7e4-6628-42e8-ab0c-0771ceeab0af
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_PRD_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_PRD_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PRD_FIELDS Fields'
+		isHidden
+		lineageTag: 26b96646-1469-4ef4-a1a3-51b5d264798a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_PRD_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PRD_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 9f53a741-a734-4e98-82c8-70e810ea8cca
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 3cee0715-20f6-4f5b-b3c0-38f4d85b1152
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_PRD_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 1, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 2, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 3, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 4, "en-US"),
+				    ("Site Level 1", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_1_DESC]), 5, "en-US"),
+				    ("Site Level 2", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_2_DESC]), 6, "en-US"),
+				    ("Site Level 3", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_3_DESC]), 7, "en-US"),
+				    ("Site Level 4", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_4_DESC]), 8, "en-US"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_DESC]), 9, "en-US"),
+				    ("Brand", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[EN_FRANCHISE_DESC]), 10, "en-US"),
+				    ("Vehicle Area", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[EN_VHE_TYPE_DESC]), 11, "en-US"),
+				    ("Sales Channels Level 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[EN_SALES_TYPE_LEVEL_1_DESC]), 12, "en-US"),
+				    ("Sales Channels", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[EN_SALES_TYPE_DESC]), 13, "en-US"),
+				    ("Sallers", NAMEOF(VIEW_GBL_DIM_USERS[USER_NAME]), 14, "en-US"),
+				    ("Positions", NAMEOF(VIEW_GBL_DIM_POSITIONS[EN_POSITION_DESC]), 15, "en-US"),
+				    ("Sales Managers", NAMEOF(VIEW_GBL_DIM_SALES_EXECUTIVES[SALES_EXECUTIVE_NAME]), 16, "en-US"),
+				    ("Source Level 1", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_LEVEL_1_DESC]),17, "en-US"),
+				    ("Source Level 2", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_LEVEL_2_DESC]), 18, "en-US"),
+				    ("Source", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_DESC]), 19, "en-US"),
+				    ("Production Type Level 1", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[EN_PRODUCTION_TYPE_LEVEL_1_DESC]), 20, "en-US"),
+				    ("Production Type", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[EN_PRODUCTION_TYPE_DESC]), 21, "en-US"),
+				    ("Registered", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[EN_REGISTERED_VEHICLE_DESC]), 22, "en-US"),
+				    ("Year", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "en-US"),
+				    ("Year-Month", NAMEOF(VIEW_GBL_DIM_CALENDAR[EN_YEAR_MONTH_SHORT_DESC]), 24, "en-US"),
+				    
+				    
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 3, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 4, "pt-PT"),
+				    ("Polo Nível 1", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_1_DESC]), 5, "pt-PT"),
+				    ("Polo Nível 2", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_2_DESC]), 6, "pt-PT"),
+				    ("Polo Nível 3", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_3_DESC]), 7, "pt-PT"),
+				    ("Polo Nível 4", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_4_DESC]), 8, "pt-PT"),
+				    ("Polo", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_DESC]), 9, "pt-PT"),
+				    ("Marca", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[PT_FRANCHISE_DESC]), 10, "pt-PT"),
+				    ("Área Viaturas", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[PT_VHE_TYPE_DESC]), 11, "pt-PT"),
+				    ("Canais de Venda Nível 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[PT_SALES_TYPE_LEVEL_1_DESC]), 12, "pt-PT"),
+				    ("Canais de Venda", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[PT_SALES_TYPE_DESC]), 13, "pt-PT"),
+				    ("Vendedores", NAMEOF(VIEW_GBL_DIM_USERS[USER_NAME]), 14, "pt-PT"),
+				    ("Posições", NAMEOF(VIEW_GBL_DIM_POSITIONS[PT_POSITION_DESC]), 15, "pt-PT"),
+				    ("Chefes de Vendas", NAMEOF(VIEW_GBL_DIM_SALES_EXECUTIVES[SALES_EXECUTIVE_NAME]), 16, "pt-PT"),
+				    ("Proveniências Nível 1", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_LEVEL_1_DESC]), 17, "pt-PT"),
+				    ("Proveniências Nível 2", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_LEVEL_2_DESC]), 18, "pt-PT"),
+				    ("Proveniências", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_DESC]), 19, "pt-PT"),
+				    ("Tipo de Produção Nível 1", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[PT_PRODUCTION_TYPE_LEVEL_1_DESC]), 20, "pt-PT"),
+				    ("Tipo de Produção", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[PT_PRODUCTION_TYPE_DESC]), 21, "pt-PT"),
+				    ("Matriculados", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[PT_REGISTERED_VEHICLE_DESC]), 22, "pt-PT"),
+				    ("Ano", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "pt-PT"),
+				    ("Ano-Mês", NAMEOF(VIEW_GBL_DIM_CALENDAR[PT_YEAR_MONTH_SHORT_DESC]), 24, "pt-PT"),
+				    
+				    
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 3, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 4, "es-ES"),
+				    ("Sitio Nivel 1", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_1_DESC]), 5, "es-ES"),
+				    ("Sitio Nivel 2", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_2_DESC]), 6, "es-ES"),
+				    ("Sitio Nivel 3", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_3_DESC]), 7, "es-ES"),
+				    ("Sitio Nivel 4", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_4_DESC]), 8, "es-ES"),
+				    ("Sitio", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_DESC]), 9, "es-ES"),
+				    ("Franquicia", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[ES_FRANCHISE_DESC]), 10, "es-ES"),
+				    ("Área Vehículos", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[ES_VHE_TYPE_DESC]), 11, "es-ES"),
+				    ("Canales de Venta Nivel 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[ES_SALES_TYPE_LEVEL_1_DESC]), 12, "es-ES"),
+				    ("Canales de Venta", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[ES_SALES_TYPE_DESC]), 13, "es-ES"),
+				    ("Vendedores", NAMEOF(VIEW_GBL_DIM_USERS[USER_NAME]), 14, "es-ES"),
+				    ("Posiciones", NAMEOF(VIEW_GBL_DIM_POSITIONS[ES_POSITION_DESC]), 15, "es-ES"),
+				    ("Jefes de Ventas", NAMEOF(VIEW_GBL_DIM_SALES_EXECUTIVES[SALES_EXECUTIVE_NAME]), 16, "es-ES"),
+				    ("Procedencias Nivel 1", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_LEVEL_1_DESC]), 17, "es-ES"),
+				    ("Procedencias Nivel 2", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_LEVEL_2_DESC]), 18, "es-ES"),
+				    ("Procedencias", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_DESC]), 19, "es-ES"),
+				    ("Tipo de Producción Nivel 1", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[ES_PRODUCTION_TYPE_LEVEL_1_DESC]), 20, "es-ES"),
+				    ("Tipo de Producción", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[ES_PRODUCTION_TYPE_DESC]), 21, "es-ES"),
+				    ("Matriculados", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[ES_REGISTERED_VEHICLE_DESC]), 22, "es-ES"),
+				    ("Año", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "es-ES"),
+				    ("Año-Mes", NAMEOF(VIEW_GBL_DIM_CALENDAR[ES_YEAR_MONTH_SHORT_DESC]), 24, "es-ES"),
+				
+				    
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 3, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 4, "fr-FR"),
+				    ("Site Niveau 1", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 5, "fr-FR"),
+				    ("Site Niveau 2", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 6, "fr-FR"),
+				    ("Site Niveau 3", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 7, "fr-FR"),
+				    ("Site Niveau 4", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 8, "fr-FR"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_DESC]), 9, "fr-FR"),
+				    ("Franchise", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[FR_FRANCHISE_DESC]), 10, "fr-FR"),
+				    ("Zone Véhicules", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[FR_VHE_TYPE_DESC]), 11, "fr-FR"),
+				    ("Canaux de Vente Niveau 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[FR_SALES_TYPE_LEVEL_1_DESC]), 12, "fr-FR"),
+				    ("Canaux de Vente", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[FR_SALES_TYPE_DESC]), 13, "fr-FR"),
+				    ("Vendeurs", NAMEOF(VIEW_GBL_DIM_USERS[USER_NAME]), 14, "fr-FR"),
+				    ("Positions", NAMEOF(VIEW_GBL_DIM_POSITIONS[FR_POSITION_DESC]), 15, "fr-FR"),
+				    ("Chefs des Ventes", NAMEOF(VIEW_GBL_DIM_SALES_EXECUTIVES[SALES_EXECUTIVE_NAME]), 16, "fr-FR"),
+				    ("Provenance Niveau 1", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_LEVEL_1_DESC]), 17, "fr-FR"),
+				    ("Provenance Niveau 2", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_LEVEL_2_DESC]), 18, "fr-FR"),
+				    ("Provenance", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_DESC]), 19, "fr-FR"),
+				    ("Type de Production Niveau 1", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[FR_PRODUCTION_TYPE_LEVEL_1_DESC]), 20, "fr-FR"),
+				    ("Type de Production", NAMEOF(VIEW_VHE_DIM_PRODUCTION_TYPES[FR_PRODUCTION_TYPE_DESC]), 21, "fr-FR"),
+				    ("Immatriculés", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[FR_REGISTERED_VEHICLE_DESC]), 22, "fr-FR"),
+				    ("Année", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "fr-FR"),
+				    ("Année-Mois", NAMEOF(VIEW_GBL_DIM_CALENDAR[FR_YEAR_MONTH_SHORT_DESC]), 24, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 5d7c7ca2997f45d198f6f02b9693868e
+

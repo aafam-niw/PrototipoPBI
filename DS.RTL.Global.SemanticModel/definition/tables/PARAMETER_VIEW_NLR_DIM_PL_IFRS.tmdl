@@ -1,0 +1,119 @@
+table PARAMETER_VIEW_NLR_DIM_PL_IFRS
+	lineageTag: f55ee71c-efc9-4c27-b403-561619fd26d0
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 674f2384-d3f6-4ffc-9bf9-bf5922b05605
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_DESC
+		lineageTag: 4d5ea7ab-8c57-4564-b542-9b730c4eb4c6
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_1_DESC
+		lineageTag: c3dfa813-3cd5-40d0-8afb-978ed66022c4
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_2_DESC
+		lineageTag: f0b11795-c151-4244-8ffe-88584d577969
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_3_DESC
+		lineageTag: bbb8d710-aa92-4820-bf87-b9c34d05a7a7
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_4_DESC
+		lineageTag: b695db34-867d-4e3d-ae49-54d5f6fa7f99
+		summarizeBy: none
+		sourceColumn: [Value6]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_PL_IFRS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[PT_PL_IFRS_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[PT_PL_IFRS_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[PT_PL_IFRS_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[PT_PL_IFRS_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[PT_PL_IFRS_LEVEL_4_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[EN_PL_IFRS_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[EN_PL_IFRS_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[EN_PL_IFRS_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[EN_PL_IFRS_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[EN_PL_IFRS_LEVEL_4_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[ES_PL_IFRS_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[ES_PL_IFRS_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[ES_PL_IFRS_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[ES_PL_IFRS_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[ES_PL_IFRS_LEVEL_4_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[FR_PL_IFRS_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[FR_PL_IFRS_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[FR_PL_IFRS_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[FR_PL_IFRS_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_IFRS'[FR_PL_IFRS_LEVEL_4_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 496ba15b05464cb1a5e6a0975ab699d6
+

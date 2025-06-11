@@ -1,0 +1,225 @@
+﻿table VIEW_GBL_DTBI_RATES
+	isHidden
+	lineageTag: d4c275ce-e6f0-479c-be92-9b7d48b2da37
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 971f3a16-7c92-4002-8d8a-64978e5543a1
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_AVG_YTD
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: d164d86d-d748-4b1a-967f-36db24e78620
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_AVG_YTD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE_AVG_MTD
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 61dd23ae-80d5-4173-a4ab-a52b000e3649
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_AVG_MTD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE_EOM
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: e87891eb-423e-4044-a714-29c571b3f79a
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_EOM
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE_AVG_BDT
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: a9d7babd-80f2-4e70-9b98-d1c06a1aea90
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_AVG_BDT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLIENT_ID_AUX
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 6243e57c-ffff-46e3-b3dc-5a42e72ee6d3
+		summarizeBy: sum
+		sourceColumn: CLIENT_ID_AUX
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENVIRONMENT_AUX
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: e8fbffc8-dc71-4d79-9ca0-5a06e9e479f7
+		summarizeBy: sum
+		sourceColumn: ENVIRONMENT_AUX
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE_AUX
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: efd67072-c10a-4085-871f-2c64d85c7fbc
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE_CODE_AUX
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_AUX
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 82509076-78da-4f07-8851-4b608b9696f7
+		summarizeBy: none
+		sourceColumn: DATE_AUX
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CURRENCY_RATE_EOM_BDT
+		dataType: double
+		lineageTag: b42d9ca4-e801-4325-9e7f-9b1a0e7415a8
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_EOM_BDT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_GBL_DTBI_RATES = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_RATES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_RATES
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["ENSURE_TABLES_HAVE_RELATIONSHIPS"]}
+
+
+

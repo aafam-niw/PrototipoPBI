@@ -1,0 +1,351 @@
+﻿table VIEW_SLR_FACT_OPEN_DOCUMENTS
+	isHidden
+	lineageTag: 3b4758e1-484b-41bb-b95c-d0fdfd73175f
+
+	column CONTROL_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c8c84224-b641-4fbf-9265-bfc867451d87
+		summarizeBy: none
+		sourceColumn: CONTROL_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA_CODE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8740d0e-eb8d-4041-8680-dc30dda734ed
+		summarizeBy: none
+		sourceColumn: AREA_CODE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: 90ce18de-86b1-430b-a715-da866a21045c
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 4cbf5639-ef5f-4bc8-b412-e1f11ceb57b8
+		summarizeBy: none
+		sourceColumn: DOCUMENT_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DUE_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: e7609194-9881-451a-b547-be6a3eea8c83
+		summarizeBy: none
+		sourceColumn: DUE_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DUE_MONTH
+		dataType: string
+		isHidden
+		lineageTag: 46140202-4dcf-4f0c-a6c7-73a22b564996
+		summarizeBy: none
+		sourceColumn: DUE_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DUE_YEAR
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6c187e5d-f286-4252-aca2-d143ef339082
+		summarizeBy: none
+		sourceColumn: DUE_YEAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PENDING_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 56cee63c-05f2-4188-b8ba-e9104e7f9231
+		summarizeBy: none
+		sourceColumn: PENDING_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b4dc4ca5-e45f-427f-b897-56b0dde8364e
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0ae8ada9-dbb9-4d33-867f-7042c9b40d45
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_AGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 31d2deb7-6004-4d54-881a-40e140f9e7db
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_AGE_2_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c3fd190-9028-4c0b-841e-10ec1a89659a
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_2_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_AGGREGATION_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a5a08a34-50c0-482c-8998-2bf7c8c2a727
+		summarizeBy: none
+		sourceColumn: CUSTOMER_AGGREGATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 30b3ccf9-dbe8-47f7-b0d9-1e38f454f44c
+		summarizeBy: none
+		sourceColumn: CUSTOMER_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_GROUP_CODE
+		dataType: string
+		isHidden
+		lineageTag: a73d0641-5ffe-4a3d-9b4c-bd63dcbe6475
+		summarizeBy: none
+		sourceColumn: CUSTOMER_GROUP_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OPEN_VALUE
+		dataType: double
+		isHidden
+		lineageTag: 0c7f11b7-606a-4404-b8f0-2f265b7a7955
+		summarizeBy: none
+		sourceColumn: OPEN_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PENDING_YEAR_MONTH
+		dataType: string
+		isHidden
+		lineageTag: 7ea3b97a-b112-4282-8274-7dde8a4459e9
+		summarizeBy: none
+		sourceColumn: PENDING_YEAR_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d377b563-4811-4a67-8965-51292fc28085
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ddace2a2-21d0-4bda-a267-3dd5af5b6529
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f8e58d0b-3e24-4be1-ade9-e907a69e9e81
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_MONTH
+		dataType: string
+		isHidden
+		lineageTag: 549dffa6-3490-4ed7-810e-1ff936947186
+		summarizeBy: none
+		sourceColumn: DOCUMENT_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_YEAR
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3175d5cc-f712-4a04-9966-d3868974cb31
+		summarizeBy: sum
+		sourceColumn: DOCUMENT_YEAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_ACCOUNT_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: 368b0b24-624f-463c-9842-bd1bb5d278ef
+		summarizeBy: sum
+		sourceColumn: SLR_ACCOUNT_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_SLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

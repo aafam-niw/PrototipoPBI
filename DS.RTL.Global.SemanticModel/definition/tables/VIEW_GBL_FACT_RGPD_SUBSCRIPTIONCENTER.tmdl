@@ -1,0 +1,317 @@
+table VIEW_GBL_FACT_RGPD_SUBSCRIPTIONCENTER
+	lineageTag: c442f2cb-41b5-40ce-bde7-1f355ffc966d
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d8a938a-eef0-4b82-b48c-f3c6d7caa577
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNAL_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b219eed-aee1-45cd-ab9e-8d32b08c7905
+		summarizeBy: count
+		sourceColumn: INTERNAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 105e0144-201b-4a72-9a65-72cf096b7d62
+		summarizeBy: sum
+		sourceColumn: CLIENT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_NAME
+		dataType: string
+		lineageTag: cd667233-fd6a-4b1e-bda3-6493cae8c69b
+		summarizeBy: none
+		sourceColumn: CLIENT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_CODE_ORIGIN
+		dataType: int64
+		formatString: 0
+		lineageTag: 53f16eb1-34cd-4e0d-b8bb-8f957a537f54
+		summarizeBy: sum
+		sourceColumn: CLIENT_CODE_ORIGIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_NAME_ORIGIN
+		dataType: string
+		lineageTag: 9e67b27f-e236-43ab-8a88-5847a6646ee2
+		summarizeBy: none
+		sourceColumn: CLIENT_NAME_ORIGIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTACT_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fa76e10-646c-46ec-b3f0-2fbdb60ae046
+		summarizeBy: sum
+		sourceColumn: CONTACT_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTACT_TYPE_DESC
+		dataType: string
+		lineageTag: 6b3343c1-c847-48b7-a67a-dec7b24a8346
+		summarizeBy: none
+		sourceColumn: CONTACT_TYPE_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHANNEL_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: e4b737e5-151b-4da6-91b8-7108764b5a6b
+		summarizeBy: sum
+		sourceColumn: CHANNEL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHANNEL_DESC
+		dataType: string
+		lineageTag: 5e6c2cf2-0fc2-4edc-b232-758f5e629f83
+		summarizeBy: none
+		sourceColumn: CHANNEL_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHANNEL_VALUE
+		dataType: string
+		lineageTag: 7a2f9d69-9f02-4869-b1de-c11326f366b7
+		summarizeBy: none
+		sourceColumn: CHANNEL_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column AUTHORIZE
+		dataType: string
+		lineageTag: fd11afda-7b5c-43a5-9595-3a8385914ecf
+		summarizeBy: none
+		sourceColumn: AUTHORIZE
+
+		annotation SummarizationSetBy = Automatic
+
+	column AUTHORIZE_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 944c7685-af6f-4545-bf84-6ba10c7743e7
+		summarizeBy: none
+		sourceColumn: AUTHORIZE_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column AUTHORIZE_DATE_VARCHAR
+		dataType: string
+		lineageTag: a6f3cd95-213d-4e85-9372-3068d7e53729
+		summarizeBy: none
+		sourceColumn: AUTHORIZE_DATE_VARCHAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXPIRE_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ee364a17-3e44-424d-9dc1-571cca5448b3
+		summarizeBy: none
+		sourceColumn: EXPIRE_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CERTIFIED
+		dataType: string
+		lineageTag: 70868a0d-336a-493b-be67-3e581bd4b784
+		summarizeBy: none
+		sourceColumn: CERTIFIED
+
+		annotation SummarizationSetBy = Automatic
+
+	column BRAND
+		dataType: string
+		lineageTag: 02506786-efe1-455d-8969-5c485648dd04
+		summarizeBy: none
+		sourceColumn: BRAND
+
+		annotation SummarizationSetBy = Automatic
+
+	column INSTALLATION
+		dataType: string
+		lineageTag: 768f6ce2-0264-4b53-ae35-9aa60306cfe1
+		summarizeBy: none
+		sourceColumn: INSTALLATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA
+		dataType: string
+		lineageTag: 8ba50bed-c5a2-4b3a-ba5b-9755f1d25235
+		summarizeBy: none
+		sourceColumn: AREA
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 65d49f15-4292-46c8-b787-8694df4d4cdc
+		summarizeBy: sum
+		sourceColumn: QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 9583f7b2-50ed-4813-80ea-7a7a136b422f
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: ec07daa1-9c5e-4a29-b616-d30f0931d68d
+		summarizeBy: sum
+		sourceColumn: SITE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 4248f552-d7b5-40ec-a138-1f4f1aea881c
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_NAME
+		dataType: string
+		lineageTag: 16c87ab5-6469-4238-9e48-9dea70e56820
+		summarizeBy: none
+		sourceColumn: CUSTOMER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAT_NUMBER
+		dataType: string
+		lineageTag: 300d37aa-276a-4689-a30a-fddae01549e5
+		summarizeBy: none
+		sourceColumn: VAT_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMAIL
+		dataType: string
+		lineageTag: 565d6079-15a9-481b-a846-c0c188d01888
+		summarizeBy: none
+		sourceColumn: EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOBILE
+		dataType: string
+		lineageTag: 335366ac-0592-474c-8ed2-1b317bf0b86f
+		summarizeBy: none
+		sourceColumn: MOBILE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PREFERED_DEALER
+		dataType: string
+		lineageTag: 7a03872c-bb36-4f8b-b45e-866d7f07396e
+		summarizeBy: none
+		sourceColumn: PREFERED_DEALER
+
+		annotation SummarizationSetBy = Automatic
+
+	column PREFERED_INSTALLALION
+		dataType: string
+		lineageTag: 8628b345-3f88-4d5a-9e53-c5133316f620
+		summarizeBy: none
+		sourceColumn: PREFERED_INSTALLALION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 919286f2-76b9-4626-b31c-239bc21d40f8
+		summarizeBy: none
+		sourceColumn: CREATION_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LAST_CHANGE_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f968e07f-ae25-496a-b646-d1488e098da7
+		summarizeBy: none
+		sourceColumn: LAST_CHANGE_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column RECORD_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8ff83dde-aee8-4feb-a1fb-4be94216f1f8
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LAST_MODIFIED_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f035653d-ac16-4460-b5d3-3c29344ca770
+		summarizeBy: none
+		sourceColumn: LAST_MODIFIED_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column OLD_RECORD
+		dataType: int64
+		formatString: 0
+		lineageTag: 93559c35-aa2d-4287-a428-fd2438cae608
+		summarizeBy: sum
+		sourceColumn: OLD_RECORD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_FACT_RGPD_SUBSCRIPTIONCENTER = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_GBL_FACT_RGPD_SUBSCRIPTIONCENTER"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,206 @@
+table VIEW_VHE_FACT_PRODUCTION
+	lineageTag: eb57ebc0-b289-45a9-884c-e6ab55f42568
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: cc0d0a38-e641-4aa5-b4df-50f461e086f8
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: 9b7af981-18ee-4cf8-b5aa-7d6f9bd03e87
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1f22fca0-6b0f-417e-a9dc-aff1a6545a6c
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 474360fe-0fea-454e-873c-ff9acef60654
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f57c9c50-eedb-44a5-9d5a-c834d6862d99
+		summarizeBy: none
+		sourceColumn: MODEL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_TYPE
+		dataType: string
+		isHidden
+		lineageTag: 94afb743-8102-4736-9d47-108bb5915b5c
+		summarizeBy: none
+		sourceColumn: VHE_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e00a945f-e3c6-4668-8223-42b1ec8e96d1
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7d52fee3-b82b-4a79-951e-3803cac648f3
+		summarizeBy: none
+		sourceColumn: SOURCE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCTION_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5ee2a771-276b-477a-b9df-50d795269026
+		summarizeBy: none
+		sourceColumn: PRODUCTION_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: c9bccff8-f2b7-4bda-8e88-98aae3af78c3
+		summarizeBy: sum
+		sourceColumn: QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTERED_VEHICLE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 96f67052-1781-41b4-a62c-523ea01570b0
+		summarizeBy: none
+		sourceColumn: REGISTERED_VEHICLE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1dde07c0-f1a8-475e-a458-9d504aa7fe77
+		summarizeBy: none
+		sourceColumn: USER_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column POSITION_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 22d99a2d-7bd7-4340-b5ec-db17643686dd
+		summarizeBy: none
+		sourceColumn: POSITION_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_EXECUTIVE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 70aa9a0b-16be-442a-9f2f-f752e95c6e8e
+		summarizeBy: none
+		sourceColumn: SALES_EXECUTIVE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 06e17e85-abff-415a-8734-5f465de14781
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6722af5e-a0ae-4263-ae99-11cdccd24cf3
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_FACT_PRODUCTION = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_VHE_FACT_PRODUCTION = Source{[Schema="PBI",Item="VIEW_VHE_FACT_PRODUCTION"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_PRODUCTION
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

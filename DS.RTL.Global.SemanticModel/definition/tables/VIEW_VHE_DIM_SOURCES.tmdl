@@ -1,0 +1,231 @@
+table VIEW_VHE_DIM_SOURCES
+	isHidden
+	lineageTag: 7ace6e21-2b00-4e02-b80a-aa1230cf4cce
+
+	column SOURCE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 0092ce03-67ec-4d35-85a1-7c328593f2c1
+		summarizeBy: none
+		sourceColumn: SOURCE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SOURCE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: b66bcb0b-a1ae-44a6-bb96-985023390686
+		summarizeBy: none
+		sourceColumn: PT_SOURCE_LEVEL_1_DESC
+		sortByColumn: SOURCE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SOURCE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0ea9b0b7-da3e-4161-a2b1-016737ed71ce
+		summarizeBy: none
+		sourceColumn: PT_SOURCE_LEVEL_2_DESC
+		sortByColumn: SOURCE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SOURCE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 9e40a855-7c13-43ac-bac7-280936444bc7
+		summarizeBy: none
+		sourceColumn: PT_SOURCE_DESC
+		sortByColumn: SOURCE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SOURCE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 8e3cdcfc-d5f4-45cb-88bc-8ae6aa32f482
+		summarizeBy: none
+		sourceColumn: EN_SOURCE_LEVEL_1_DESC
+		sortByColumn: SOURCE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SOURCE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: a6d08d1a-bdc8-4086-a5d8-ccdb5e35b7e8
+		summarizeBy: none
+		sourceColumn: EN_SOURCE_LEVEL_2_DESC
+		sortByColumn: SOURCE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SOURCE_DESC
+		dataType: string
+		isHidden
+		lineageTag: d974f4a3-5a4d-4837-873d-06db812db447
+		summarizeBy: none
+		sourceColumn: EN_SOURCE_DESC
+		sortByColumn: SOURCE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SOURCE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: a504e603-51a0-44d4-8a8c-bf59eaaa7e6b
+		summarizeBy: none
+		sourceColumn: ES_SOURCE_LEVEL_1_DESC
+		sortByColumn: SOURCE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SOURCE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0c54f570-cc9c-46a0-b744-469aee9da5b8
+		summarizeBy: none
+		sourceColumn: ES_SOURCE_LEVEL_2_DESC
+		sortByColumn: SOURCE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SOURCE_DESC
+		dataType: string
+		isHidden
+		lineageTag: f071e97e-7e28-4bf6-8710-82a157ecb622
+		summarizeBy: none
+		sourceColumn: ES_SOURCE_DESC
+		sortByColumn: SOURCE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SOURCE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: d1018a96-1f76-4478-a61e-4d33eea3a143
+		summarizeBy: none
+		sourceColumn: FR_SOURCE_LEVEL_1_DESC
+		sortByColumn: SOURCE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SOURCE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 51aeb4b4-6197-4888-b14a-72f1beb9fadd
+		summarizeBy: none
+		sourceColumn: FR_SOURCE_LEVEL_2_DESC
+		sortByColumn: SOURCE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SOURCE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 63faa05b-221a-4039-8f99-838ae5ac2101
+		summarizeBy: none
+		sourceColumn: FR_SOURCE_DESC
+		sortByColumn: SOURCE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cbc6f2a7-d5e9-41a8-86e5-d6197644c503
+		summarizeBy: sum
+		sourceColumn: SOURCE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: f454af68-0b78-4789-979c-d532bdf11973
+		summarizeBy: sum
+		sourceColumn: SOURCE_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 6fd884e6-f7a9-4f04-96b0-3a951c57dc5a
+		summarizeBy: sum
+		sourceColumn: SOURCE_LEVEL_2_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_SOURCES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_SOURCES_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_SOURCES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_SOURCES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_REGISTERED_VEHICLE
+	lineageTag: d22444c3-536c-49af-bf5b-ca7e1038f492
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: b02349ed-1c7c-49de-8876-8647267ead3e
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTERED_VEHICLE_DESC
+		lineageTag: 1c3cc647-905f-4bc9-af5d-66871f792be1
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_REGISTERED_VEHICLE = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTERED_VEHICLE'[PT_REGISTERED_VEHICLE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTERED_VEHICLE'[EN_REGISTERED_VEHICLE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTERED_VEHICLE'[ES_REGISTERED_VEHICLE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTERED_VEHICLE'[FR_REGISTERED_VEHICLE_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = df60d82d55bd408e99098624995f6ba2
+

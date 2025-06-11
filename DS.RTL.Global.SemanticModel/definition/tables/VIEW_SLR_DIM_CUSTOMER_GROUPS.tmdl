@@ -1,0 +1,181 @@
+table VIEW_SLR_DIM_CUSTOMER_GROUPS
+	isHidden
+	lineageTag: e6cb226c-ea98-4800-aa1e-ab86af0038e1
+
+	column CUSTOMER_GROUP_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: bcd4a696-f162-4c83-ac66-bb206b0f0dfd
+		summarizeBy: none
+		sourceColumn: CUSTOMER_GROUP_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_GROUP_LEVEL_1_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 55f04b65-dc65-40ee-b655-a6c3314f3c6e
+		summarizeBy: none
+		sourceColumn: CUSTOMER_GROUP_LEVEL_1_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: c0085921-5668-40d3-a0fd-3ec247e170f6
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_GROUP_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 99e35202-326c-49fd-bc37-50aaf7c697f9
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_GROUP_DESC
+		sortByColumn: CUSTOMER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 61f8e50c-c378-4ace-9a50-f6fac274480d
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_GROUP_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: a2a7134c-2657-4cc7-842c-44035f70d853
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_GROUP_DESC
+		sortByColumn: CUSTOMER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 954b1a45-5feb-4d8d-8765-09cd85e51511
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_GROUP_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: dc1170ff-7f69-4fa4-9c05-6a66f2d28971
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_GROUP_DESC
+		sortByColumn: CUSTOMER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: ccb00a85-33a4-4454-9059-3aaab302714c
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_GROUP_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6c60a17c-abc9-48cf-8948-e85f96f9330d
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_GROUP_DESC
+		sortByColumn: CUSTOMER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_GROUP_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b5ad1463-bac0-4f16-90e0-117586dfa6e9
+		summarizeBy: none
+		sourceColumn: CUSTOMER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a011384-08ac-44e3-b415-4558685df3c3
+		summarizeBy: none
+		sourceColumn: CUSTOMER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_CUSTOMER_GROUPS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_CUSTOMER_GROUPS_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_CUSTOMER_GROUPS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_CUSTOMER_GROUPS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

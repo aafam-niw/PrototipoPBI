@@ -1,0 +1,160 @@
+table PARAMETER_DEBT_FIELDS
+	isHidden
+	lineageTag: d8c6f417-e6da-47cf-95b4-57abe4b5009d
+
+	column PARAMETER_DEBT_FIELDS
+		isHidden
+		lineageTag: c8bc2d6d-75a5-4788-b3a1-bc708dd95ba5
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_DEBT_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_DEBT_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_DEBT_FIELDS Fields'
+		isHidden
+		lineageTag: 39ff7de0-58f0-4004-899f-0e5d4df567ff
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_DEBT_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_DEBT_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: f0072d07-312f-49d6-ae6d-8d775e21ea23
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 0e34dbeb-8fbc-4479-8488-086e7b438b40
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_DEBT_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 1, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 2, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 3, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 4, "en-US"),
+				    ("Site Level 1", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_1_DESC]), 5, "en-US"),
+				    ("Site Level 2", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_2_DESC]), 6, "en-US"),
+				    ("Site Level 3", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_3_DESC]), 7, "en-US"),
+				    ("Site Level 4", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_4_DESC]), 8, "en-US"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_DESC]), 9, "en-US"),
+				    ("Activity Level 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_1_DESC]), 10, "en-US"),
+				    ("Activity Level 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_2_DESC]), 11, "en-US"),
+				    ("Activity Level 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_3_DESC]), 12, "en-US"),
+				    ("Activity", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_DESC]), 13, "en-US"),
+				    ("Brand", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[EN_FRANCHISE_DESC]), 14, "en-US"),
+				    ("Account Type", NAMEOF(VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE[CONTROL_ACCOUNT_TYPE_DESC]), 15, "en-US"),
+				    ("Customer Categories", NAMEOF(VIEW_SLR_DIM_CUSTOMER_AGGREGATION[EN_CUSTOMER_AGGREGATION_DESC]), 16, "en-US"),
+				    ("Customers Level 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[EN_CUSTOMER_TYPE_LEVEL_1_DESC]), 17, "en-US"),
+				    ("Customers", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[EN_CUSTOMER_TYPE_DESC]), 18, "en-US"),
+				    ("Area Code", NAMEOF(VIEW_SLR_DIM_DTDMS_AREA_CODES[AREA_CODE_DESC]), 19, "en-US"),
+				    ("Suppliers Level 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[EN_CUSTOMER_GROUP_LEVEL_1_DESC]), 20, "en-US"),
+				    ("Suppliers", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[EN_CUSTOMER_GROUP_DESC]), 21, "en-US"),
+				    ("Document Date", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DOCUMENT_MONTH]), 22, "en-US"),
+				    ("Analysis Date", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 23, "en-US"),
+				    ("Due Date", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DUE_MONTH]), 24, "en-US"),
+				    
+				    
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 3, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 4, "pt-PT"),
+				    ("Polo Nível 1", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_1_DESC]), 5, "pt-PT"),
+				    ("Polo Nível 2", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_2_DESC]), 6, "pt-PT"),
+				    ("Polo Nível 3", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_3_DESC]), 7, "pt-PT"),
+				    ("Polo Nível 4", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_4_DESC]), 8, "pt-PT"),
+				    ("Polo", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_DESC]), 9, "pt-PT"),
+				    ("Atividade Nível 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_1_DESC]), 10, "pt-PT"),
+				    ("Atividade Nível 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_2_DESC]), 11, "pt-PT"),
+				    ("Atividade Nível 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_3_DESC]), 12, "pt-PT"),
+				    ("Atividade", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_DESC]), 13, "pt-PT"),
+				    ("Marca", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[PT_FRANCHISE_DESC]), 14, "pt-PT"),
+				    ("Tipo Conta", NAMEOF(VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE[CONTROL_ACCOUNT_TYPE_DESC]), 15, "pt-PT"),
+				    ("Categorias Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_AGGREGATION[PT_CUSTOMER_AGGREGATION_DESC]), 16, "pt-PT"),
+				    ("Clientes Nível 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[PT_CUSTOMER_TYPE_LEVEL_1_DESC]), 17, "pt-PT"),
+				    ("Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[PT_CUSTOMER_TYPE_DESC]), 18, "pt-PT"),
+				    ("Código de Área", NAMEOF(VIEW_SLR_DIM_DTDMS_AREA_CODES[AREA_CODE_DESC]), 19, "pt-PT"),
+				    ("Fornecedores Nível 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[PT_CUSTOMER_GROUP_LEVEL_1_DESC]), 20, "pt-PT"),
+				    ("Fornecedores", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[PT_CUSTOMER_GROUP_DESC]), 21, "pt-PT"),
+				    ("Data Documento", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DOCUMENT_MONTH]), 22, "pt-PT"),
+				    ("Data Análise", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 23, "pt-PT"),
+				    ("Data Vencimento", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DUE_MONTH]), 24, "pt-PT"),
+				    
+				    
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 3, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 4, "es-ES"),
+				    ("Sitio Nivel 1", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_1_DESC]), 5, "es-ES"),
+				    ("Sitio Nivel 2", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_2_DESC]), 6, "es-ES"),
+				    ("Sitio Nivel 3", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_3_DESC]), 7, "es-ES"),
+				    ("Sitio Nivel 4", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_4_DESC]), 8, "es-ES"),
+				    ("Sitio", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_DESC]), 9, "es-ES"),
+				    ("Actividad Nivel 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_1_DESC]), 10, "es-ES"),
+				    ("Actividad Nivel 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_2_DESC]), 11, "es-ES"),
+				    ("Actividad Nivel 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_3_DESC]), 12, "es-ES"),
+				    ("Actividad", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_DESC]), 13, "es-ES"),
+				    ("Franquicia", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[ES_FRANCHISE_DESC]), 14, "es-ES"),
+				    ("Tipo Cuenta", NAMEOF(VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE[CONTROL_ACCOUNT_TYPE_DESC]), 15, "es-ES"),
+				    ("Categorías Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_AGGREGATION[ES_CUSTOMER_AGGREGATION_DESC]), 16, "es-ES"),
+				    ("Clientes Nivel 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[ES_CUSTOMER_TYPE_LEVEL_1_DESC]), 17, "es-ES"),
+				    ("Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[ES_CUSTOMER_TYPE_DESC]), 18, "es-ES"),
+				    ("Código de Área", NAMEOF(VIEW_SLR_DIM_DTDMS_AREA_CODES[AREA_CODE_DESC]), 19, "es-ES"),
+				    ("Proveedores Nivel 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[ES_CUSTOMER_GROUP_LEVEL_1_DESC]), 20, "es-ES"),
+				    ("Proveedores", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[ES_CUSTOMER_GROUP_DESC]), 21, "es-ES"),
+				    ("Fecha de Documento", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DOCUMENT_MONTH]), 22, "es-ES"),
+				    ("Fecha de Análisis", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 23, "es-ES"),
+				    ("Fecha de Vencimiento", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DUE_MONTH]), 24, "es-ES"),
+				
+				    
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 3, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 4, "fr-FR"),
+				    ("Site Niveau 1", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 5, "fr-FR"),
+				    ("Site Niveau 2", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 6, "fr-FR"),
+				    ("Site Niveau 3", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 7, "fr-FR"),
+				    ("Site Niveau 4", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 8, "fr-FR"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_DESC]), 9, "fr-FR"),
+				    ("Activité Niveau 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_1_DESC]), 10, "fr-FR"),
+				    ("Activité Niveau 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_2_DESC]), 11, "fr-FR"),
+				    ("Activité Niveau 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_3_DESC]), 12, "fr-FR"),
+				    ("Activité", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_DESC]), 13, "fr-FR"),
+				    ("Franchise", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[FR_FRANCHISE_DESC]), 14, "fr-FR"),
+				    ("Type Compte", NAMEOF(VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE[CONTROL_ACCOUNT_TYPE_DESC]), 15, "fr-FR"),
+				    ("Catégories Clients", NAMEOF(VIEW_SLR_DIM_CUSTOMER_AGGREGATION[FR_CUSTOMER_AGGREGATION_DESC]), 16, "fr-FR"),
+				    ("Clients Niveau 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[FR_CUSTOMER_TYPE_LEVEL_1_DESC]), 17, "fr-FR"),
+				    ("Clients", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[FR_CUSTOMER_TYPE_DESC]), 18, "fr-FR"),
+				    ("Code de Zone", NAMEOF(VIEW_SLR_DIM_DTDMS_AREA_CODES[AREA_CODE_DESC]), 19, "fr-FR"),
+				    ("Fournisseurs Niveau 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[FR_CUSTOMER_GROUP_LEVEL_1_DESC]), 20, "fr-FR"),
+				    ("Fournisseurs", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[FR_CUSTOMER_GROUP_DESC]), 21, "fr-FR"),
+				    ("Date du Document", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DOCUMENT_MONTH]), 22, "fr-FR"),
+				    ("Date d'Analyse", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 23, "fr-FR"),
+				    ("Date d'Échéance", NAMEOF(VIEW_SLR_FACT_OPEN_DOCUMENTS[DUE_MONTH]), 24, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 9456a3d12198439e9d360abec0194bd1
+

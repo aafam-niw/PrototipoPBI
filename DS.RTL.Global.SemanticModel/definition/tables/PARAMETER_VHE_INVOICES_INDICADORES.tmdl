@@ -1,0 +1,98 @@
+table PARAMETER_VHE_INVOICES_INDICADORES
+	isHidden
+	lineageTag: 6016b6d7-97f8-4597-b9ac-0412cfbe2e3d
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: 210ddd72-477d-404a-9b92-0de201afb4d3
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 175d15e4-78aa-4bc8-9c64-c8d8a987007d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		lineageTag: 97792fc9-d56c-4064-bac3-d66108add734
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: cd0f686a-f632-41a9-a4a0-758eefad2172
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		lineageTag: 20f0a078-8f37-4367-8590-7561f070bd53
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_INVOICES_INDICADORES = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Nº Viaturas Real", "VHE QTY CY", "pt-PT", 2 },
+				        { 2, "Nº Viaturas AA", "VHE QTY CY", "pt-PT", 2 },
+				        { 3, "Valor Real", "VHE Value CY", "pt-PT", 2 },
+				        { 4, "Valor AA", "VHE Value CY", "pt-PT", 2 },
+				        { 5, "Nº DOC Real", "VHE DOC CY", "pt-PT", 2 },
+				        { 6, "Nº DOC AA", "VHE DOC CY", "pt-PT", 2 },
+				
+				
+				        { 1, "Nº Vehicles CY", "VHE QTY CY", "en-US", 2 },
+				        { 2, "Nº Vehicles LY", "VHE QTY CY", "en-US", 2 },
+				        { 3, "Value CY", "VHE Value CY", "en-US", 2 },
+				        { 4, "Value LY", "VHE Value CY", "en-US", 2 },
+				        { 5, "Nº DOC CY", "VHE DOC CY", "en-US", 2 },
+				        { 6, "Nº DOC LY", "VHE DOC CY", "en-US", 2 },
+				
+				
+				        { 1, "Nº Vehículos Real", "VHE QTY CY", "es-ES", 2 },
+				        { 2, "Nº Vehículos AA", "VHE QTY CY", "es-ES", 2 },
+				        { 3, "Valor Real", "VHE Value CY", "es-ES", 2 },
+				        { 4, "Valor AA", "VHE Value CY", "es-ES", 2 },
+				        { 5, "Nº DOC Real", "VHE DOC CY", "es-ES", 2 },
+				        { 6, "Nº DOC AA", "VHE DOC CY", "es-ES", 2 },
+				
+				
+				        { 1, "Nº Véhicules Réel", "VHE QTY CY", "fr-FR", 2 },
+				        { 2, "Nº Véhicules AD", "VHE QTY CY", "fr-FR", 2 },
+				        { 3, "Valeur Réel", "VHE Value CY", "fr-FR", 2 },
+				        { 4, "Valeur AD", "VHE Value CY", "fr-FR", 2 },
+				        { 5, "Nº DOC Réel", "VHE DOC CY", "fr-FR", 2 },
+				        { 6, "Nº DOC AD", "VHE DOC CY", "fr-FR", 2 }
+				    }
+				)
+
+	annotation PBI_Id = a8bacf3539c2442e9168a2cb669dfc68
+

@@ -1,0 +1,328 @@
+﻿table VIEW_PLR_FACT_OPEN_DOCUMENTS
+	isHidden
+	lineageTag: 40ee4f35-6229-4020-a0c1-8dd28c164ad3
+
+	column CONTROL_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 036e99c0-d143-4013-aec3-77aac721315b
+		summarizeBy: none
+		sourceColumn: CONTROL_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: 5f421bfe-1dba-43ed-837e-d0ab34e9e9bc
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PLR_ACCOUNT
+		dataType: string
+		isHidden
+		lineageTag: 2134aeb5-56e4-45b4-9a20-d616f303ad4b
+		summarizeBy: none
+		sourceColumn: PLR_ACCOUNT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SUPPLIER_AGGREGATION_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f9508715-dbae-4df3-b657-2a5e4a611120
+		summarizeBy: none
+		sourceColumn: SUPPLIER_AGGREGATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SUPPLIER_GROUP_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eda60c6f-7543-41e4-9967-71424cfb382d
+		summarizeBy: none
+		sourceColumn: SUPPLIER_GROUP_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4fccca56-cdf4-4cef-a17f-d59f08e2d307
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cb2ad56c-a915-457f-80e3-faa6968e5f38
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ef0021fb-fd14-4609-b320-3b804a1c008d
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column DOCUMENT_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: e5ae6f5e-9475-4531-b70b-20c66711ee74
+		summarizeBy: none
+		sourceColumn: DOCUMENT_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DOCUMENT_MONTH
+		dataType: string
+		isHidden
+		lineageTag: e8a75d94-77ec-4629-8707-72c4e0c297b1
+		summarizeBy: none
+		sourceColumn: DOCUMENT_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column DOCUMENT_YEAR
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2d2da69b-ea22-4be3-bf4c-b70a5f44585e
+		summarizeBy: none
+		sourceColumn: DOCUMENT_YEAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column DUE_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: f971e37a-b794-4d49-be53-e642b70c7f0d
+		summarizeBy: none
+		sourceColumn: DUE_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DUE_MONTH
+		dataType: string
+		isHidden
+		lineageTag: 7f0cd25d-5c0b-4a18-bb8d-45abe69a99e1
+		summarizeBy: none
+		sourceColumn: DUE_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column DUE_YEAR
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f9bfb207-aa73-4351-befb-c315ae1f423f
+		summarizeBy: none
+		sourceColumn: DUE_YEAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PENDING_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: cc0681e0-f1b2-4874-b972-a6e2c4b2204d
+		summarizeBy: none
+		sourceColumn: PENDING_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column OPEN_VALUE
+		dataType: double
+		isHidden
+		lineageTag: 2dcf2d6a-96ef-4fe7-9137-b248feeb0af3
+		summarizeBy: none
+		sourceColumn: OPEN_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DOCUMENT_AGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 31fd852d-352c-4f3b-bf01-8abc731bbf08
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c335c203-c0c1-4ad1-80fc-3c4cde808049
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 13d913fb-40ac-4de0-83c2-ec8b4ed21cb5
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column CLOSED_PERIOD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bfedadc8-c790-419c-8395-1d7ad63b1238
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PLR_ACCOUNT_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: 57ff0b6a-e9db-48ea-add7-cd7077ee9375
+		summarizeBy: sum
+		sourceColumn: PLR_ACCOUNT_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS = Source{[Schema="PBI",Item="VIEW_PLR_FACT_OPEN_DOCUMENTS"]}[Data]
+				in
+				    PBI_VIEW_PLR_FACT_OPEN_DOCUMENTS
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

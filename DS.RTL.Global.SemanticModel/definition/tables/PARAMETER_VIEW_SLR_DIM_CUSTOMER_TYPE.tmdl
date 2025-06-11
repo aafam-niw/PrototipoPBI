@@ -1,0 +1,85 @@
+table PARAMETER_VIEW_SLR_DIM_CUSTOMER_TYPE
+	lineageTag: 94f45082-2774-43f4-ba50-719837e662a7
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 9f23b312-1fc7-46c7-8316-789695478e1f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_DESC
+		lineageTag: 85397979-feda-41aa-a367-3cbead01db15
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_LEVEL_1_DESC
+		lineageTag: d9d531d2-59af-4c2a-911b-9cf8603b649e
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+		lineageTag: c95e4c55-09d7-4b61-9706-ea728cc378c0
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_SLR_DIM_CUSTOMER_TYPE = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[PT_CUSTOMER_TYPE_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[PT_CUSTOMER_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[PT_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[EN_CUSTOMER_TYPE_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[EN_CUSTOMER_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[EN_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[ES_CUSTOMER_TYPE_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[ES_CUSTOMER_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[ES_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[FR_CUSTOMER_TYPE_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[FR_CUSTOMER_TYPE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_TYPE'[FR_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 6d5edfa6c93e431583a0158bd69f6b0d
+

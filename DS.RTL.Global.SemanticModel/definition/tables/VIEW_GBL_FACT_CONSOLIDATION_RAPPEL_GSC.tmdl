@@ -1,0 +1,493 @@
+table VIEW_GBL_FACT_CONSOLIDATION_RAPPEL_GSC
+	lineageTag: 676532ce-1478-4691-b1c1-ffabf7e3bf73
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: be8dde74-bf4a-47fb-b0eb-140aaa4782f3
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_DATE
+		dataType: string
+		lineageTag: d347ccf2-7174-4aad-9ffd-ffa4904d1299
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: d1b44fc6-fb8d-4179-8a83-8a35f4f022ee
+		summarizeBy: sum
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 6b762cb7-a628-4717-80ce-767997e65442
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTRACT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 14b0b3fd-3c71-4f51-b453-f0d222853451
+		summarizeBy: count
+		sourceColumn: CONTRACT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 5da1aefe-24a6-4e4c-9763-c01b311e4dea
+		summarizeBy: sum
+		sourceColumn: CLIENT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column GROUP_VAT
+		dataType: string
+		lineageTag: 07ec4a33-916f-4a42-a22b-bf22d0686434
+		summarizeBy: none
+		sourceColumn: GROUP_VAT
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAT_NUMBER
+		dataType: string
+		lineageTag: 31a31a7e-1a54-4abd-871f-8f41b321a51e
+		summarizeBy: none
+		sourceColumn: VAT_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAT_NUMBER_DESCRIPTION
+		dataType: string
+		lineageTag: 860d7684-20f2-4a25-b6e0-172e25b5b1d7
+		summarizeBy: none
+		sourceColumn: VAT_NUMBER_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTRACT_INITIAL_PERIOD
+		dataType: string
+		lineageTag: 05f52aed-e542-48ef-89eb-7132bd57963f
+		summarizeBy: none
+		sourceColumn: CONTRACT_INITIAL_PERIOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTRACT_FINAL_PERIOD
+		dataType: string
+		lineageTag: d0176fc8-4105-4782-82c8-d62a666ffd9d
+		summarizeBy: none
+		sourceColumn: CONTRACT_FINAL_PERIOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTRACT_YEAR
+		dataType: string
+		lineageTag: 0b1de666-9c74-4907-a6e2-928142863f48
+		summarizeBy: none
+		sourceColumn: CONTRACT_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 49e59ef5-247f-4a88-893c-39c1f1bbf200
+		summarizeBy: sum
+		sourceColumn: RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA
+		dataType: string
+		lineageTag: 4d5bec11-a590-4964-8716-c7de123f438a
+		summarizeBy: none
+		sourceColumn: AREA
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 6189cb96-c0da-4bc9-9077-b638573acf7e
+		summarizeBy: sum
+		sourceColumn: SITE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PSE_CODE
+		dataType: string
+		lineageTag: 7655b78a-16ce-45ee-a007-dc760930f608
+		summarizeBy: none
+		sourceColumn: PSE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: 5b898d86-4827-49e2-8c15-0af265cb3bc6
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DPT_TYPE_ORIGINAL
+		dataType: int64
+		formatString: 0
+		lineageTag: b3a908b7-f4d1-4340-88a0-29bfc422b482
+		summarizeBy: sum
+		sourceColumn: DPT_TYPE_ORIGINAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column DPT_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: cdd521a3-e3c8-4a14-a90e-5e0fa784331a
+		summarizeBy: sum
+		sourceColumn: DPT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DPT_CODE
+		dataType: string
+		lineageTag: 001a8f7c-e71d-4b21-9da7-63ae74fc324a
+		summarizeBy: none
+		sourceColumn: DPT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LINE_POSTING
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c6ef50f-a2d0-4287-a65c-52cc48285e5f
+		summarizeBy: sum
+		sourceColumn: LINE_POSTING
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_DOCUMENT_YEAR
+		dataType: string
+		lineageTag: d591059e-3d03-4b36-a01c-3e8d407578d8
+		summarizeBy: none
+		sourceColumn: SLR_DOCUMENT_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_DOCUMENT_PERIOD
+		dataType: string
+		lineageTag: 51a04d28-cd5c-4e1c-8aff-3811e2fc392f
+		summarizeBy: none
+		sourceColumn: SLR_DOCUMENT_PERIOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_DOCUMENT_ACCOUNT
+		dataType: string
+		lineageTag: 3e9e2658-3bdb-4e32-8ab1-799434f4cb3a
+		summarizeBy: none
+		sourceColumn: SLR_DOCUMENT_ACCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_CUSTOMER_ACCOUNT
+		dataType: string
+		lineageTag: 0a43fc16-84c0-464d-b879-6b8072009e4e
+		summarizeBy: none
+		sourceColumn: SLR_CUSTOMER_ACCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_ACCOUNT
+		dataType: string
+		lineageTag: 41c670ab-00a1-4c26-a655-e6efa8e48098
+		summarizeBy: none
+		sourceColumn: SLR_ACCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER
+		dataType: string
+		lineageTag: a8f6e7bd-c794-456a-a61d-7fbafd5587e5
+		summarizeBy: none
+		sourceColumn: CUSTOMER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_DOCUMENT
+		dataType: string
+		lineageTag: ea2c4305-0cd4-4e9c-b3e7-a9bd8347b0ce
+		summarizeBy: none
+		sourceColumn: SLR_DOCUMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTRATION_NUMBER
+		dataType: string
+		lineageTag: 44d34082-2718-4fe0-bf00-3782efe39180
+		summarizeBy: none
+		sourceColumn: REGISTRATION_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_NUMBER
+		dataType: string
+		lineageTag: 428f8e57-4dd5-41db-848f-bbc4f6435860
+		summarizeBy: none
+		sourceColumn: VHE_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIP_NUMBER
+		dataType: string
+		lineageTag: 2f35ef05-a708-4f4b-ad1b-9ce5c4bcbda5
+		summarizeBy: none
+		sourceColumn: WIP_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_1_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b3ada5e-1cd9-494f-a226-1074f2d3f09a
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_1_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_2_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: d6f2c623-56cc-40b5-b4a2-f974277b0d65
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_2_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_3_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: f0ccd6b2-b245-4ab5-a588-0e119e4597a7
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_LEVEL_3_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: d0956f15-c1ef-4092-8d7f-185a2025df29
+		summarizeBy: sum
+		sourceColumn: ACTIVITY_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f396ab5-9be1-49dc-b70c-b1001e9b056b
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAPPEL_PAYMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: 514eecaf-fe1e-465e-8918-27fa11a151a9
+		summarizeBy: sum
+		sourceColumn: RAPPEL_PAYMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAPPEL_PERCENTAGE
+		dataType: double
+		lineageTag: 9e23ce2d-433a-498e-a890-a0cea9d8ca18
+		summarizeBy: sum
+		sourceColumn: RAPPEL_PERCENTAGE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RAPPEL_PERCENTAGE_ADICIONAL
+		dataType: double
+		lineageTag: 1aa14068-c657-4415-a6d1-7d37bdd65f7a
+		summarizeBy: sum
+		sourceColumn: RAPPEL_PERCENTAGE_ADICIONAL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RAPPEL_FIXEDVALUE
+		dataType: double
+		lineageTag: dd3a15a3-3a60-4d11-a947-dd47fe119196
+		summarizeBy: sum
+		sourceColumn: RAPPEL_FIXEDVALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SELL_VALUE
+		dataType: double
+		lineageTag: bb1b8cd1-64c6-4f17-9b28-2be8c34b95f9
+		summarizeBy: sum
+		sourceColumn: SELL_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GROSS_MARGIN
+		dataType: double
+		lineageTag: a583d9a1-39a8-428b-8afe-d639bcb53a84
+		summarizeBy: sum
+		sourceColumn: GROSS_MARGIN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RAPPEL_MONTH
+		dataType: double
+		lineageTag: bb28e93b-4326-4e68-a66d-125cb469be1e
+		summarizeBy: sum
+		sourceColumn: RAPPEL_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RAPPEL_ADJUSTMENTS
+		dataType: double
+		lineageTag: 83512d2b-81de-42c5-a728-ef159014f9d4
+		summarizeBy: sum
+		sourceColumn: RAPPEL_ADJUSTMENTS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NUMBER_WIPS
+		dataType: double
+		lineageTag: afbaeffa-65c2-482d-a9e9-711c6dc9bd83
+		summarizeBy: sum
+		sourceColumn: NUMBER_WIPS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NUMBER_VEHICLES_INVOICED
+		dataType: double
+		lineageTag: 18a61e0d-4d79-47cd-9d01-74cd5acdd046
+		summarizeBy: sum
+		sourceColumn: NUMBER_VEHICLES_INVOICED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NUMBER_VEHICLES_DELIVERED
+		dataType: double
+		lineageTag: c36b675f-96f3-44e3-917d-a32dd04c9f29
+		summarizeBy: sum
+		sourceColumn: NUMBER_VEHICLES_DELIVERED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PAID_VALUE_INFO
+		dataType: double
+		lineageTag: 3c823ec6-c974-4402-b47d-994f1c657a0c
+		summarizeBy: sum
+		sourceColumn: PAID_VALUE_INFO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CUSTOMER_DETAIL
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5673cc81-e054-43fa-a7e3-b0ed25bdf1ab
+		summarizeBy: none
+		sourceColumn: CUSTOMER_DETAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column INDIRECTCHANNEL_FLAG
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 48282ab2-1dc0-4106-898d-df901dacaa87
+		summarizeBy: none
+		sourceColumn: INDIRECTCHANNEL_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_AGE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dc779de-cf31-470b-ae9e-7ad88c1b5f47
+		summarizeBy: sum
+		sourceColumn: VEHICLE_AGE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column KMS
+		dataType: double
+		lineageTag: 198b11e4-23e6-420b-bc93-799b04e0a8df
+		summarizeBy: sum
+		sourceColumn: KMS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE
+		dataType: double
+		lineageTag: b61a7a41-897a-45d3-adc2-2b28fa9b9593
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LANGUAGE
+		dataType: string
+		lineageTag: e4fc5a23-72ee-4098-ad98-c6d7170eef55
+		summarizeBy: none
+		sourceColumn: LANGUAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_FACT_CONSOLIDATION_RAPPEL_GSC = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_GBL_FACT_CONSOLIDATION_RAPPEL_GSC"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

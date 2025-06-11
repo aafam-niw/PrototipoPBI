@@ -1,0 +1,404 @@
+table VIEW_NLR_DIM_PL_IFRS
+	isHidden
+	lineageTag: e204f7e1-4cb2-446e-8a6f-5e9647e151fe
+
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f3caf6e6-53a6-4839-8693-90333b3553e3
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PL_IFRS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 131473c6-9f31-46a1-9ea6-b90161511ff6
+		summarizeBy: none
+		sourceColumn: PT_PL_IFRS_LEVEL_1_DESC
+		sortByColumn: PL_IFRS_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PL_IFRS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 75e3d6a4-358c-4624-b775-7d99c73cc191
+		summarizeBy: none
+		sourceColumn: PT_PL_IFRS_LEVEL_2_DESC
+		sortByColumn: PL_IFRS_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PL_IFRS_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 7a9238c3-2607-48da-8aad-b55e7f9c3dbc
+		summarizeBy: none
+		sourceColumn: PT_PL_IFRS_LEVEL_3_DESC
+		sortByColumn: PL_IFRS_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PL_IFRS_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 7d06014a-77b1-414d-ae12-715b4b13c47b
+		summarizeBy: none
+		sourceColumn: PT_PL_IFRS_LEVEL_4_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PL_IFRS_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(150)
+		lineageTag: 67e41790-8bf9-474c-8334-67fd9fef61a6
+		summarizeBy: none
+		sourceColumn: PT_PL_IFRS_DESC
+		sortByColumn: PL_IFRS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PL_IFRS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 827b790b-c33c-4af3-bdd8-acb0f28d1b72
+		summarizeBy: none
+		sourceColumn: ES_PL_IFRS_LEVEL_1_DESC
+		sortByColumn: PL_IFRS_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PL_IFRS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 5fa738a2-432f-47ea-9021-99f37b6191a9
+		summarizeBy: none
+		sourceColumn: ES_PL_IFRS_LEVEL_2_DESC
+		sortByColumn: PL_IFRS_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PL_IFRS_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: e2be95e2-5b0a-449c-89aa-e00ea980eff3
+		summarizeBy: none
+		sourceColumn: ES_PL_IFRS_LEVEL_3_DESC
+		sortByColumn: PL_IFRS_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PL_IFRS_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 139c8eaf-9833-41c7-a008-265f1dd82f13
+		summarizeBy: none
+		sourceColumn: ES_PL_IFRS_LEVEL_4_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PL_IFRS_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(150)
+		lineageTag: c9936867-af0a-44e0-b822-7c6f5bf0e8f7
+		summarizeBy: none
+		sourceColumn: ES_PL_IFRS_DESC
+		sortByColumn: PL_IFRS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PL_IFRS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 16d8ec29-4816-4278-b7d0-aaee3e9060fb
+		summarizeBy: none
+		sourceColumn: EN_PL_IFRS_LEVEL_1_DESC
+		sortByColumn: PL_IFRS_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PL_IFRS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 55972a26-cbc9-43fc-9799-6c3970118c9d
+		summarizeBy: none
+		sourceColumn: EN_PL_IFRS_LEVEL_2_DESC
+		sortByColumn: PL_IFRS_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PL_IFRS_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 13f97dab-ecf2-4232-ad74-9306240f78f2
+		summarizeBy: none
+		sourceColumn: EN_PL_IFRS_LEVEL_3_DESC
+		sortByColumn: PL_IFRS_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PL_IFRS_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: f5037675-4854-4510-8735-c30868e0b359
+		summarizeBy: none
+		sourceColumn: EN_PL_IFRS_LEVEL_4_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PL_IFRS_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ce3b677a-ea63-48a9-a9f0-66d4b2230089
+		summarizeBy: none
+		sourceColumn: EN_PL_IFRS_DESC
+		sortByColumn: PL_IFRS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PL_IFRS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 320d39de-1a7e-4860-ae61-14728fc8f0a0
+		summarizeBy: none
+		sourceColumn: FR_PL_IFRS_LEVEL_1_DESC
+		sortByColumn: PL_IFRS_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PL_IFRS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 33463e97-1261-433c-b41f-a77aa66af069
+		summarizeBy: none
+		sourceColumn: FR_PL_IFRS_LEVEL_2_DESC
+		sortByColumn: PL_IFRS_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PL_IFRS_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: 0ac32052-d156-4c6f-b07d-6e353b1e7ce9
+		summarizeBy: none
+		sourceColumn: FR_PL_IFRS_LEVEL_3_DESC
+		sortByColumn: PL_IFRS_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PL_IFRS_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(150)
+		lineageTag: fd2f0579-4ac9-4b05-9e0d-714c33c93dad
+		summarizeBy: none
+		sourceColumn: FR_PL_IFRS_LEVEL_4_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PL_IFRS_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(150)
+		lineageTag: 4a1dc65b-c0c2-452c-b46a-1bd0b3d3d08f
+		summarizeBy: none
+		sourceColumn: FR_PL_IFRS_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ec14a2be-b438-4e67-adfb-77a8cb613fde
+		summarizeBy: none
+		sourceColumn: PL_IFRS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 39fb6915-e58c-4c12-abe0-19dcc4226940
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 50382071-0eed-4d94-adf7-2a2875c8c8f5
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_4_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 86e4e2e5-1051-476b-9b60-13d52c5690e0
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_1_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 89da269c-c4c6-49cf-9663-fa7f26081cbf
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_1_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_2_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c8773741-f25c-4417-b427-e95cf324a17b
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_2_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_IFRS_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 02941248-b59f-45ad-b51b-8950b6a2d4ba
+		summarizeBy: none
+		sourceColumn: PL_IFRS_LEVEL_2_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_PL_IFRS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_PL_IFRS_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_PL_IFRS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_PL_IFRS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

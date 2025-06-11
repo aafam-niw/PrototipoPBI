@@ -1,0 +1,381 @@
+table VIEW_GBL_DIM_CALENDAR
+	isHidden
+	lineageTag: 6dc6f7f3-e789-447b-9662-9f05aecdfb7c
+	dataCategory: Time
+
+	column DATE
+		dataType: dateTime
+		isHidden
+		isKey
+		isNullable: false
+		formatString: mm/dd/yyyy
+		sourceProviderType: date
+		lineageTag: 453c54ab-c79f-47c2-9738-7f366c7e6e76
+		summarizeBy: none
+		sourceColumn: DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DAY
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 82358566-ccd7-454d-9845-28f3efc0d8da
+		summarizeBy: sum
+		sourceColumn: DAY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column WORKING_DAY
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8ffaf287-9827-42dd-8e4a-a3f54c50eff0
+		summarizeBy: sum
+		sourceColumn: WORKING_DAY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d508f1e2-dab1-402b-87d8-b35f9c027e11
+		summarizeBy: sum
+		sourceColumn: MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MONTH_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 95ed2c62-f212-4be5-b46f-3ce92282fbe3
+		summarizeBy: none
+		sourceColumn: PT_MONTH_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MONTH_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 526c4334-e7bd-4457-8e47-5b3e6eb58301
+		summarizeBy: none
+		sourceColumn: EN_MONTH_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MONTH_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 2d672c99-cfbd-49a6-86b7-bbacbc0e10be
+		summarizeBy: none
+		sourceColumn: ES_MONTH_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MONTH_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: f36ac41c-84d4-421c-a4f7-2a780082f5a9
+		summarizeBy: none
+		sourceColumn: FR_MONTH_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_MONTH
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ecba530f-5fd1-4086-8a25-ed1407f38e82
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["MONTH_(AS_A_STRING)_MUST_BE_SORTED"]}
+
+	column PT_YEAR_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: cec75c0a-b9e9-4d2e-9c21-dbfc754b9504
+		summarizeBy: none
+		sourceColumn: PT_YEAR_MONTH_SHORT_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_YEAR_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a657ff29-050d-4107-a89a-6eb76f286b67
+		summarizeBy: none
+		sourceColumn: EN_YEAR_MONTH_SHORT_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_YEAR_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a405b4fe-d9b7-4a39-a5c0-74041ccd10f5
+		summarizeBy: none
+		sourceColumn: ES_YEAR_MONTH_SHORT_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_YEAR_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 0438dea9-3f23-46d4-b0a3-fe0376b653a6
+		summarizeBy: none
+		sourceColumn: FR_YEAR_MONTH_SHORT_DESC
+		sortByColumn: YEAR_MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7ac37bca-d37b-4b14-be4c-094450ac7598
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CURRENT_YEAR
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(9)
+		lineageTag: 4d7078cf-c211-4bb1-94ea-f01d12d9cb74
+		summarizeBy: none
+		sourceColumn: PT_CURRENT_YEAR
+		sortByColumn: YEAR_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CURRENT_YEAR
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(12)
+		lineageTag: 6178438f-2337-493d-8594-63ff328bb339
+		summarizeBy: none
+		sourceColumn: EN_CURRENT_YEAR
+		sortByColumn: YEAR_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CURRENT_YEAR
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(10)
+		lineageTag: f1bc20bf-36ce-4188-9768-fb3dea308f95
+		summarizeBy: none
+		sourceColumn: ES_CURRENT_YEAR
+		sortByColumn: YEAR_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CURRENT_YEAR
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(14)
+		lineageTag: 32bfe296-a3e3-40d7-97af-1d70af271f51
+		summarizeBy: none
+		sourceColumn: FR_CURRENT_YEAR
+		sortByColumn: YEAR_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 523b51e5-8721-48a7-9b45-348ced3ed461
+		summarizeBy: none
+		sourceColumn: PT_MONTH_SHORT_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 157eb4b6-568e-4582-856d-61d34d06adab
+		summarizeBy: none
+		sourceColumn: EN_MONTH_SHORT_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		lineageTag: df27c1b0-0800-4fbf-b9fe-6d896826b948
+		summarizeBy: none
+		sourceColumn: ES_MONTH_SHORT_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MONTH_SHORT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 386b5d09-6c7d-4f6e-9350-7720e3a99354
+		summarizeBy: none
+		sourceColumn: FR_MONTH_SHORT_DESC
+		sortByColumn: MONTH
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 10821d89-db6b-4f5a-81cc-ea36fce9f55d
+		summarizeBy: sum
+		sourceColumn: YEAR_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOMONTH
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 8f704ff7-43e2-4d67-a5d7-46a11e725851
+		summarizeBy: none
+		sourceColumn: SOMONTH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition VIEW_GBL_DIM_CALENDAR = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar),
+				    PBI_VIEW_GBL_DIM_CALENDAR_MPBI = Source{[Schema="PBI",Item="VIEW_GBL_DIM_CALENDAR_MPBI"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_CALENDAR_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

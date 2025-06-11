@@ -1,0 +1,32 @@
+perspective 'Cash Flow'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_CF_MEASURES
+
+		perspectiveColumn PARAMETER_CF_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_CASH_FLOW
+
+		perspectiveColumn CF_DESC
+
+		perspectiveColumn CF_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+

@@ -1,0 +1,44 @@
+table VIEW_RTG_DIM_CUSTOMERS
+	isHidden
+	lineageTag: 98b3948f-142c-4d95-9776-2fa5a3d237ce
+
+	column CUSTOMER_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 66f722c9-2208-458f-aaee-bb0ea97e3510
+		summarizeBy: none
+		sourceColumn: CUSTOMER_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_DESC
+		dataType: string
+		isHidden
+		lineageTag: 00b97737-1622-4794-b070-fc64ac019fb4
+		summarizeBy: none
+		sourceColumn: CUSTOMER_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_RTG_DIM_CUSTOMERS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_DIM_CUSTOMERS_MPBI = Source{[Schema="PBI",Item="VIEW_RTG_DIM_CUSTOMERS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_RTG_DIM_CUSTOMERS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

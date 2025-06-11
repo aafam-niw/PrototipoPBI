@@ -1,0 +1,211 @@
+﻿table VIEW_NLR_FACT_GM
+	isHidden
+	lineageTag: 1fcf39db-e55b-4eb7-bead-bfa782a08547
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: f7ca13aa-4a6d-44da-9bfb-b346d28860fe
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: aa44d1e9-f36a-4fff-865e-59745fb5021b
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 0916e419-d06b-4a1c-b961-0a058815d9ed
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: a1ed5e23-2227-4383-ac4b-d1da88e86187
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GM_MEASURE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 1a4ba35f-4331-40fb-bee7-88727a556d26
+		summarizeBy: none
+		sourceColumn: GM_MEASURE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GM_VALUE
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 40f5eb2c-b053-42c4-a800-36c00f1805f0
+		summarizeBy: none
+		sourceColumn: GM_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f133cc0f-0e8d-4620-a82f-2cac2bb6c1c8
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 11564b06-3463-41ee-b475-68623db241d9
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAT_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2cc8dfc6-18b0-44f8-97fa-31910f6b25e7
+		summarizeBy: none
+		sourceColumn: VAT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOSED_PERIOD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c973fb91-6c21-46ab-9a14-3ce3072a89cc
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_NLR_FACT_GM = Source{[Schema="PBI",Item="VIEW_NLR_FACT_GM"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_GM
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

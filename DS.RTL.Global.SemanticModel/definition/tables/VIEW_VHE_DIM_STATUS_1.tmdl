@@ -1,0 +1,195 @@
+table VIEW_VHE_DIM_STATUS_1
+	isHidden
+	lineageTag: 96916157-62cb-4e05-ac2f-e0bb310a0405
+
+	column STATUS_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 1921f4cb-f772-4251-857d-b1c147d50e12
+		summarizeBy: sum
+		sourceColumn: STATUS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_STATUS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0d3b29bc-c817-4761-927a-1a66446ffacd
+		summarizeBy: none
+		sourceColumn: PT_STATUS_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_STATUS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: f4321fa8-5814-40db-a4b2-4e6bff9dd69b
+		summarizeBy: none
+		sourceColumn: PT_STATUS_LEVEL_2_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_STATUS_DESC
+		dataType: string
+		isHidden
+		lineageTag: d48e124d-570a-4f0d-9ba2-027a7e250792
+		summarizeBy: none
+		sourceColumn: PT_STATUS_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_STATUS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 15a55c4f-b8bf-463f-951d-c73bc95a1f9b
+		summarizeBy: none
+		sourceColumn: EN_STATUS_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_STATUS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1ee5207b-2c8a-492a-9303-edbd86628dac
+		summarizeBy: none
+		sourceColumn: EN_STATUS_LEVEL_2_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_STATUS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 9f64e38d-5e27-452c-b083-364015da408d
+		summarizeBy: none
+		sourceColumn: EN_STATUS_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_STATUS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 432145ce-593b-4e09-b078-88e1ccf772ba
+		summarizeBy: none
+		sourceColumn: ES_STATUS_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_STATUS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1e3e313c-5519-4f65-8ad1-348598d94cb7
+		summarizeBy: none
+		sourceColumn: ES_STATUS_LEVEL_2_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_STATUS_DESC
+		dataType: string
+		isHidden
+		lineageTag: d219444b-3693-4390-98c9-2ab749b08408
+		summarizeBy: none
+		sourceColumn: ES_STATUS_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_STATUS_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: b4bf2cfe-c9ce-4645-89ab-a1d391559eea
+		summarizeBy: none
+		sourceColumn: FR_STATUS_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_STATUS_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		lineageTag: 89dd4dba-f82b-4c26-8945-bb8bb6fc4dde
+		summarizeBy: none
+		sourceColumn: FR_STATUS_LEVEL_2_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_STATUS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0fdb3e9a-2eda-4948-b8b0-3d6712524a32
+		summarizeBy: none
+		sourceColumn: FR_STATUS_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5d2a2fa2-6274-49c4-83b3-679c16491b1b
+		summarizeBy: sum
+		sourceColumn: STATUS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f84f74e-4a87-42f5-8204-33a7b9f06440
+		summarizeBy: sum
+		sourceColumn: STATUS_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 36ca0c78-1c07-43bd-b089-61c07d73539c
+		summarizeBy: sum
+		sourceColumn: STATUS_LEVEL_2_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_STATUS_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_STATUS_1_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_STATUS_1_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_STATUS_1_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

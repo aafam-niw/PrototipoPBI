@@ -1,0 +1,66 @@
+table VIEW_NLR_DIM_CLOSED_PERIODS
+	lineageTag: e3946343-bc01-4b46-bfb6-3ffca40df7a7
+
+	column CLOSED_PERIOD
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a7be48a-30ec-4152-ab84-82ca84750c4c
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CLOSED_PERIOD_DESC
+		dataType: string
+		lineageTag: cc2a466a-f488-4da5-82a8-af6389e381c1
+		summarizeBy: none
+		sourceColumn: PT_CLOSED_PERIOD_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CLOSED_PERIOD_DESC
+		dataType: string
+		lineageTag: e32fbca3-18b0-4666-a93d-cd9c0b0603f6
+		summarizeBy: none
+		sourceColumn: EN_CLOSED_PERIOD_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CLOSED_PERIOD_DESC
+		dataType: string
+		lineageTag: d196335c-3e38-4df0-89d2-4c9672b04607
+		summarizeBy: none
+		sourceColumn: ES_CLOSED_PERIOD_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CLOSED_PERIOD_DESC
+		dataType: string
+		lineageTag: 118d7e4e-a381-433e-ad57-6654479187eb
+		summarizeBy: none
+		sourceColumn: FR_CLOSED_PERIOD_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOSED_PERIOD_TEXT
+		dataType: string
+		lineageTag: bcd622ae-164a-41de-9e2a-8af2ff718c07
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD_TEXT
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_CLOSED_PERIODS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_CLOSED_PERIODS_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_CLOSED_PERIODS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_CLOSED_PERIODS_MPBI
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

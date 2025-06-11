@@ -1,0 +1,56 @@
+table VIEW_RTG_DIM_VEHICLE_GROUP
+	isHidden
+	lineageTag: 4bb9be87-4ac2-4d06-bc9d-1006ac6e5c3f
+
+	column VEHICLE_GROUP_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: e98a0527-196b-4aca-bc9d-ec4ca177424f
+		summarizeBy: none
+		sourceColumn: VEHICLE_GROUP_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_GROUP_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f0c71ee5-fb71-4192-8965-0fa7d55057e5
+		summarizeBy: none
+		sourceColumn: VEHICLE_GROUP_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 4a37c9ab-d475-4656-b604-5e90ae383b00
+		summarizeBy: none
+		sourceColumn: VEHICLE_GROUP_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_RTG_DIM_VEHICLE_GROUP = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_DIM_VEHICLE_GROUP_MPBI = Source{[Schema="PBI",Item="VIEW_RTG_DIM_VEHICLE_GROUP_MPBI"]}[Data]
+				in
+				    PBI_VIEW_RTG_DIM_VEHICLE_GROUP_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

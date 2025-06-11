@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_NLR_DIM_TIES
+	lineageTag: c30bf3da-a077-43f7-a8f8-69b10eaa5bd5
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 0fa33d62-263d-446c-9ae3-0fa2435e4c68
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIE_DESC
+		lineageTag: b46406a4-57cb-4f91-9443-83a5f90d595d
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_TIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_TIES'[PT_TIE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_TIES'[EN_TIE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_TIES'[ES_TIE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_TIES'[FR_TIE_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 57a78af9e91a48348903e5899167146f
+

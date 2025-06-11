@@ -1,0 +1,55 @@
+table VIEW_RTG_DIM_USER_EMPLOYEE
+	isHidden
+	lineageTag: eb290a1c-ca64-4967-9172-2fd9a037c62e
+
+	column USER_EMPLOYEE_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 8387f141-ece2-4738-8b56-05351358cff8
+		summarizeBy: none
+		sourceColumn: USER_EMPLOYEE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_EMPLOYEE_CODE
+		dataType: string
+		isHidden
+		lineageTag: d27a5920-bf89-40fd-ab56-b7c4569a4d8c
+		summarizeBy: none
+		sourceColumn: USER_EMPLOYEE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_DISPLAY
+		dataType: string
+		isHidden
+		lineageTag: 70f56012-fcf4-4dcb-bf3c-077b4cbbcaf2
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DISPLAY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_RTG_DIM_USER_EMPLOYEE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_DIM_USER_EMPLOYEE_MPBI = Source{[Schema="PBI",Item="VIEW_RTG_DIM_USER_EMPLOYEE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_RTG_DIM_USER_EMPLOYEE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

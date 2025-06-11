@@ -1,0 +1,100 @@
+table VIEW_VHE_DIM_VEHICLE_TYPES
+	isHidden
+	lineageTag: 026e2c12-6f75-4b10-9a82-4fc5eb0bec84
+
+	column VHE_TYPE
+		dataType: string
+		isHidden
+		isKey
+		lineageTag: d51f040c-a797-475b-bb31-61ff06302a7d
+		summarizeBy: none
+		sourceColumn: VHE_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_VHE_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 13c84840-89ba-40a2-9edc-b730ddd88716
+		summarizeBy: none
+		sourceColumn: PT_VHE_TYPE_DESC
+		sortByColumn: VHE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_VHE_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1efa8f63-a80d-4b16-b030-6369fbf30c8f
+		summarizeBy: none
+		sourceColumn: EN_VHE_TYPE_DESC
+		sortByColumn: VHE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_VHE_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: c1461968-f09f-41b3-a10e-2adc341ca1c2
+		summarizeBy: none
+		sourceColumn: ES_VHE_TYPE_DESC
+		sortByColumn: VHE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_VHE_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 781ebdab-438e-4b44-a1e6-c3eb32fb82aa
+		summarizeBy: none
+		sourceColumn: FR_VHE_TYPE_DESC
+		sortByColumn: VHE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1f17a647-02e1-4421-b3ed-ad963c76e871
+		summarizeBy: sum
+		sourceColumn: VHE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_VEHICLE_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_VEHICLE_TYPES_MBPI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_VEHICLE_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_VEHICLE_TYPES_MBPI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

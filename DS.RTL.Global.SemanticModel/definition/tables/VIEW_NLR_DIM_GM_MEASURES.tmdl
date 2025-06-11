@@ -1,0 +1,125 @@
+table VIEW_NLR_DIM_GM_MEASURES
+	isHidden
+	lineageTag: bc34fc79-bca5-4574-bd81-d32b031e5495
+
+	column GM_MEASURE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ba87cb82-5678-4c74-a4c3-1fe332be7ca0
+		summarizeBy: none
+		sourceColumn: GM_MEASURE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_GM_MEASURE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: e83cb856-baf7-4c61-b022-27948f4f6cbc
+		summarizeBy: none
+		sourceColumn: PT_GM_MEASURE_DESC
+		sortByColumn: GM_MEASURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_GM_MEASURE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a37273c0-3de0-43a4-b071-fee1e9697e35
+		summarizeBy: none
+		sourceColumn: ES_GM_MEASURE_DESC
+		sortByColumn: GM_MEASURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_GM_MEASURE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: eb07a865-66ef-41cf-b36d-2e9ff70c44d2
+		summarizeBy: none
+		sourceColumn: EN_GM_MEASURE_DESC
+		sortByColumn: GM_MEASURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_GM_MEASURE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 30c5549a-023d-4b8f-a0a0-08daf55f1278
+		summarizeBy: none
+		sourceColumn: FR_GM_MEASURE_DESC
+		sortByColumn: GM_MEASURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column GM_MEASURE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 61f6b73a-e074-458b-94b4-998d1aa076fd
+		summarizeBy: none
+		sourceColumn: GM_MEASURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VISIBLE_TO_CUSTOMER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b0556237-5127-4fd6-a585-7b833c353fac
+		summarizeBy: none
+		sourceColumn: VISIBLE_TO_CUSTOMER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_GM_MEASURES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_GM_MEASURES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_GM_MEASURES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_GM_MEASURES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

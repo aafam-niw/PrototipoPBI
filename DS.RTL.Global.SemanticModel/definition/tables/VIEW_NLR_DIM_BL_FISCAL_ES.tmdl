@@ -1,0 +1,402 @@
+table VIEW_NLR_DIM_BL_FISCAL_ES
+	isHidden
+	lineageTag: d98529e4-c1a4-40d8-a048-01057d16c04b
+
+	column BL_FISCAL_ES_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bf7f8ed9-129d-4eef-b493-acfb59569ce8
+		summarizeBy: none
+		sourceColumn: BL_FISCAL_ES_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_BL_FISCAL_ES_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: afbff4f9-ff85-4f86-8e99-f0031a91aa3a
+		summarizeBy: none
+		sourceColumn: PT_BL_FISCAL_ES_LEVEL_1_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_BL_FISCAL_ES_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: da32b27c-1940-4484-80d0-8d5fe5c5b50d
+		summarizeBy: none
+		sourceColumn: PT_BL_FISCAL_ES_LEVEL_2_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_BL_FISCAL_ES_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 926675fc-562c-4d89-b04b-a476960e01e1
+		summarizeBy: none
+		sourceColumn: PT_BL_FISCAL_ES_LEVEL_3_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_BL_FISCAL_ES_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 1e88c318-c99a-4ee9-adfe-9828e06afc12
+		summarizeBy: none
+		sourceColumn: PT_BL_FISCAL_ES_LEVEL_4_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_BL_FISCAL_ES_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 5104a021-0d13-42c5-be80-94f9bf6d014f
+		summarizeBy: none
+		sourceColumn: PT_BL_FISCAL_ES_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_BL_FISCAL_ES_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 2a3c728a-06bf-49c0-b00c-79688693d04a
+		summarizeBy: none
+		sourceColumn: ES_BL_FISCAL_ES_LEVEL_1_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_BL_FISCAL_ES_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: d221cf79-2867-41ac-b637-e609c9b5fde8
+		summarizeBy: none
+		sourceColumn: ES_BL_FISCAL_ES_LEVEL_2_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_BL_FISCAL_ES_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 1599c944-4a7e-4235-a9f5-9edc6f8c125c
+		summarizeBy: none
+		sourceColumn: ES_BL_FISCAL_ES_LEVEL_3_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_BL_FISCAL_ES_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 7807dbfa-4b0d-4473-b6fd-a1a1c2ba524f
+		summarizeBy: none
+		sourceColumn: ES_BL_FISCAL_ES_LEVEL_4_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_BL_FISCAL_ES_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: e34bbea3-738a-4d60-8f08-ce70349d40f0
+		summarizeBy: none
+		sourceColumn: ES_BL_FISCAL_ES_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_BL_FISCAL_ES_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: f38d3f0c-877a-46fe-b605-0441d14bea66
+		summarizeBy: none
+		sourceColumn: EN_BL_FISCAL_ES_LEVEL_1_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_BL_FISCAL_ES_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 4ffd5257-7732-4fd7-a3f6-0f4aab9a48ff
+		summarizeBy: none
+		sourceColumn: EN_BL_FISCAL_ES_LEVEL_2_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_BL_FISCAL_ES_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 3585c59c-d633-492b-a7fc-7d228931d1f8
+		summarizeBy: none
+		sourceColumn: EN_BL_FISCAL_ES_LEVEL_3_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_BL_FISCAL_ES_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: cc731741-ecea-4620-957b-37295e390dd0
+		summarizeBy: none
+		sourceColumn: EN_BL_FISCAL_ES_LEVEL_4_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_BL_FISCAL_ES_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 6c20e650-5fe9-4e29-941b-300990104e87
+		summarizeBy: none
+		sourceColumn: EN_BL_FISCAL_ES_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_BL_FISCAL_ES_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 91db1aa0-6d19-4607-88a1-bf67732af622
+		summarizeBy: none
+		sourceColumn: FR_BL_FISCAL_ES_LEVEL_1_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_BL_FISCAL_ES_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: fec1829f-91bd-46d8-adca-39dea8aab352
+		summarizeBy: none
+		sourceColumn: FR_BL_FISCAL_ES_LEVEL_2_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_BL_FISCAL_ES_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 4beae5f4-5445-4325-a350-08f07ddc2a1d
+		summarizeBy: none
+		sourceColumn: FR_BL_FISCAL_ES_LEVEL_3_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_BL_FISCAL_ES_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 90e2afb6-d99d-4211-85b5-98218a5a0239
+		summarizeBy: none
+		sourceColumn: FR_BL_FISCAL_ES_LEVEL_4_DESC
+		sortByColumn: BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_BL_FISCAL_ES_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 8a110dea-36dd-453e-af21-97f31dc1d908
+		summarizeBy: none
+		sourceColumn: FR_BL_FISCAL_ES_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0ad0367c-cb34-4861-a6da-093f89844f61
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3d6f0aac-2e43-4335-939e-7e9345f6ea23
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ee61ca47-fdc7-4537-9c8c-d809b9c8a824
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cba88c11-5e47-4f0d-aaf1-7873ba037154
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2f2bf24c-42f6-4282-9f2d-60ba444606de
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BL_FISCAL_ES_LEVEL_1_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: e77d1e58-57ad-4a3b-a6f7-572e66025ad5
+		summarizeBy: sum
+		sourceColumn: BL_FISCAL_ES_LEVEL_1_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_BL_FISCAL_ES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_BL_FISCAL_ES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_BL_FISCAL_ES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_BL_FISCAL_ES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

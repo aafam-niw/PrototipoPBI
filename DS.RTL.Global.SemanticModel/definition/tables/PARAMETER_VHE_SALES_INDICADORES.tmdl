@@ -1,0 +1,102 @@
+table PARAMETER_VHE_SALES_INDICADORES
+	isHidden
+	lineageTag: f6a94dfc-3d8e-497d-9b46-b16a390b537b
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: a5dbf1e9-1372-49aa-ba71-2eaa63157a32
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 4decad69-0181-4d8f-b426-ac57096570aa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		lineageTag: 1b634e10-7d32-4cf1-9b1d-6efd96789464
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: f07a4a58-16ff-452b-8777-5527c26bc42c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		lineageTag: afbdc197-178e-4a5b-ac6f-21bc53c0161f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_SALES_INDICADORES = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Real", "VHE Sales CY", "pt-PT", 2 },
+				        { 2, "Orç", "VHE Sales Bgt", "pt-PT", 3 },
+				        { 3, "Δ Orç %", "VHE Sales Delta Bgt %", "pt-PT", 3 },
+				        { 4, "Orç Adm", "VHE Sales Bgt Adm", "pt-PT", 4 },
+				        { 5, "Δ Orç Adm %", "VHE Sales Delta Bgt Adm %", "pt-PT", 4 },
+				        { 6, "AA", "VHE Sales LY", "pt-PT", 2 },
+				        { 7, "Δ AA %", "VHE Sales Delta LY %", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "VHE Sales CY", "en-US", 2 },
+				        { 2, "Bgt", "VHE Sales Bgt", "en-US", 3 },
+				        { 3, "Δ Bgt %", "VHE Sales Delta Bgt %", "en-US", 3 },
+				        { 4, "Bgt Adm", "VHE Sales Bgt Adm", "en-US", 4 },
+				        { 5, "Δ Bgt Adm %", "VHE Sales Delta Bgt Adm %", "en-US", 4 },
+				        { 6, "LY", "VHE Sales LY", "en-US", 2 },
+				        { 7, "Δ LY %", "VHE Sales Delta LY %", "en-US", 2 },
+				
+				
+				        { 1, "Real", "VHE Sales CY", "es-ES", 2 },
+				        { 2, "Ppto", "VHE Sales Bgt", "es-ES", 3 },
+				        { 3, "Δ Ppto %", "VHE Sales Delta Bgt %", "es-ES", 3 },
+				        { 4, "Ppto Adm", "VHE Sales Bgt Adm", "es-ES", 4 },
+				        { 5, "Δ Ppto Adm %", "VHE Sales Delta Bgt Adm %", "es-ES", 4 },
+				        { 6, "AA", "VHE Sales LY", "es-ES", 2 },
+				        { 7, "Δ AA %", "VHE Sales Delta LY %", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "VHE Sales CY", "fr-FR", 2 },
+				        { 2, "Bgt", "VHE Sales Bgt", "fr-FR", 3 },
+				        { 3, "Δ Bgt %", "VHE Sales Delta Bgt %", "fr-FR", 3 },
+				        { 4, "Bgt Adm", "VHE Sales Bgt Adm", "fr-FR", 4 },
+				        { 5, "Δ Bgt Adm %", "VHE Sales Delta Bgt Adm %", "fr-FR", 4 },
+				        { 6, "AD", "VHE Sales LY", "fr-FR", 2 },
+				        { 7, "Δ AD %", "VHE Sales Delta LY %", "fr-FR", 2 }
+				    }
+				)
+
+	annotation PBI_Id = b8d21d3308864ba2bd5fb48b59266ab1
+

@@ -1,0 +1,139 @@
+﻿table VIEW_GBL_DIM_POSITIONS
+	isHidden
+	lineageTag: 661cc422-c14b-424b-afd0-8a5bfa85f939
+
+	column POSITION_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 158f5639-3397-4cdc-b0e4-7406998469f0
+		summarizeBy: none
+		sourceColumn: POSITION_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_POSITION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 2b9d8fab-23fb-4f91-b039-074acb042db1
+		summarizeBy: none
+		sourceColumn: PT_POSITION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_POSITION_DESC
+		dataType: string
+		isHidden
+		lineageTag: f0c23f4a-9677-42b4-b8e1-1d75d9ad51b7
+		summarizeBy: none
+		sourceColumn: EN_POSITION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_POSITION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 605025c2-6010-4d16-bea9-ae19e09940bc
+		summarizeBy: none
+		sourceColumn: ES_POSITION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_POSITION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 3b5dfd1a-100b-45a1-a626-5c08428de105
+		summarizeBy: none
+		sourceColumn: FR_POSITION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_GBL_DIM_POSITIONS = Source{[Schema="PBI",Item="VIEW_GBL_DIM_POSITIONS"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_POSITIONS
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

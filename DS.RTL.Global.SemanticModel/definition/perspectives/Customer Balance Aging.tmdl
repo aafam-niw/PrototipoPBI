@@ -1,0 +1,76 @@
+perspective 'Customer Balance Aging'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_DEBT_MEASURES
+
+		perspectiveColumn PARAMETER_DEBT_MEASURES
+
+	perspectiveTable VIEW_SLR_DIM_DTDMS_AREA_CODES
+
+		perspectiveColumn AREA_CODE_DESC
+
+	perspectiveTable VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+		perspectiveColumn CONTROL_ACCOUNT_TYPE_DESC
+
+	perspectiveTable VIEW_SLR_FACT_OPEN_DOCUMENTS
+
+		perspectiveColumn DUE_DATE
+
+		perspectiveColumn PENDING_DATE
+
+		perspectiveColumn DOCUMENT_DATE
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_SITES
+
+		perspectiveColumn SITE_DESC
+
+		perspectiveColumn SITE_LEVEL_1_DESC
+
+		perspectiveColumn SITE_LEVEL_2_DESC
+
+		perspectiveColumn SITE_LEVEL_3_DESC
+
+		perspectiveColumn SITE_LEVEL_4_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+
+		perspectiveColumn ACTIVITY_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_1_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_2_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_FRANCHISES
+
+		perspectiveColumn FRANCHISE_DESC
+
+	perspectiveTable PARAMETER_VIEW_SLR_DIM_CUSTOMER_TYPE
+
+		perspectiveColumn CUSTOMER_TYPE_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VIEW_SLR_DIM_CUSTOMER_GROUPS
+
+		perspectiveColumn CUSTOMER_GROUP_LEVEL_1_DESC
+

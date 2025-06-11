@@ -1,0 +1,140 @@
+table PARAMETER_VHE_INVOICES_FIELDS
+	isHidden
+	lineageTag: 3d2b0ddc-030f-44fc-b322-c6eebe76be67
+
+	column PARAMETER_VHE_INVOICES_FIELDS
+		isHidden
+		lineageTag: 11973c9a-7518-404a-ac63-3c9e00ba233f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_INVOICES_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_INVOICES_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_INVOICES_FIELDS Fields'
+		isHidden
+		lineageTag: 075d806f-f7d2-4cdf-96d5-9df732baa330
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_INVOICES_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_INVOICES_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: b22a645d-e738-4585-b201-29d707aea9e5
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: b6f99caf-cf37-4da8-a2d8-606160a69e3a
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_INVOICES_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 1, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 2, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 3, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 4, "en-US"),
+				    ("Site Level 1", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_1_DESC]), 5, "en-US"),
+				    ("Site Level 2", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_2_DESC]), 6, "en-US"),
+				    ("Site Level 3", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_3_DESC]), 7, "en-US"),
+				    ("Site Level 4", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_4_DESC]), 8, "en-US"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_DESC]), 9, "en-US"),
+				    ("Brand", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[EN_FRANCHISE_DESC]), 10, "en-US"),
+				    ("Payment Method", NAMEOF(VIEW_RTG_FACT_RENTING_SALES[PAYMENT_TYPE]), 11, "en-US"),
+				    ("Vehicle Group", NAMEOF(VIEW_RTG_DIM_VEHICLE_GROUP[VEHICLE_GROUP_DESC]), 12, "en-US"),
+				    ("Model", NAMEOF(VIEW_VHE_DIM_MODELS[EN_MODEL_DESC]), 13, "en-US"),
+				    ("Customer Type Level 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[EN_CUSTOMER_TYPE_LEVEL_1_DESC]), 14, "en-US"),
+				    ("Customer Type", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[EN_CUSTOMER_TYPE_DESC]), 15, "en-US"),
+				    ("Customer Group", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[EN_CUSTOMER_GROUP_DESC]), 16, "en-US"),
+				    ("Customer", NAMEOF(VIEW_RTG_DIM_CUSTOMERS[CUSTOMER_DESC]), 17, "en-US"),
+				    ("Year", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "en-US"),
+				    ("Year-Month", NAMEOF(VIEW_GBL_DIM_CALENDAR[EN_YEAR_MONTH_SHORT_DESC]), 24, "en-US"),
+				    
+				    
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 3, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 4, "pt-PT"),
+				    ("Polo Nível 1", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_1_DESC]), 5, "pt-PT"),
+				    ("Polo Nível 2", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_2_DESC]), 6, "pt-PT"),
+				    ("Polo Nível 3", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_3_DESC]), 7, "pt-PT"),
+				    ("Polo Nível 4", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_4_DESC]), 8, "pt-PT"),
+				    ("Polo", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_DESC]), 9, "pt-PT"),
+				    ("Marca", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[PT_FRANCHISE_DESC]), 10, "pt-PT"),
+				    ("Forma de Pagamento", NAMEOF(VIEW_RTG_FACT_RENTING_SALES[PAYMENT_TYPE]), 11, "pt-PT"),
+				    ("Grupo de Viaturas", NAMEOF(VIEW_RTG_DIM_VEHICLE_GROUP[VEHICLE_GROUP_DESC]), 12, "pt-PT"),
+				    ("Modelo", NAMEOF(VIEW_VHE_DIM_MODELS[PT_MODEL_DESC]), 13, "pt-PT"),
+				    ("Tipo de Cliente Nível 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[PT_CUSTOMER_TYPE_LEVEL_1_DESC]), 14, "pt-PT"),
+				    ("Tipo de Cliente", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[PT_CUSTOMER_TYPE_DESC]), 15, "pt-PT"),
+				    ("Grupo de Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[PT_CUSTOMER_GROUP_DESC]), 16, "pt-PT"),
+				    ("Cliente", NAMEOF(VIEW_RTG_DIM_CUSTOMERS[CUSTOMER_DESC]), 17, "pt-PT"),
+				    ("Ano", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "pt-PT"),
+				    ("Ano-Mês", NAMEOF(VIEW_GBL_DIM_CALENDAR[PT_YEAR_MONTH_SHORT_DESC]), 24, "pt-PT"),
+				    
+				    
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 3, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 4, "es-ES"),
+				    ("Sitio Nivel 1", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_1_DESC]), 5, "es-ES"),
+				    ("Sitio Nivel 2", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_2_DESC]), 6, "es-ES"),
+				    ("Sitio Nivel 3", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_3_DESC]), 7, "es-ES"),
+				    ("Sitio Nivel 4", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_4_DESC]), 8, "es-ES"),
+				    ("Sitio", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_DESC]), 9, "es-ES"),
+				    ("Franquicia", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[ES_FRANCHISE_DESC]), 10, "es-ES"),
+				    ("Forma de Pago", NAMEOF(VIEW_RTG_FACT_RENTING_SALES[PAYMENT_TYPE]), 11, "es-ES"),
+				    ("Grupo de Vehículos", NAMEOF(VIEW_RTG_DIM_VEHICLE_GROUP[VEHICLE_GROUP_DESC]), 12, "es-ES"),
+				    ("Modelo", NAMEOF(VIEW_VHE_DIM_MODELS[ES_MODEL_DESC]), 13, "es-ES"),
+				    ("Tipo de Cliente Nivel 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[ES_CUSTOMER_TYPE_LEVEL_1_DESC]), 14, "es-ES"),
+				    ("Tipo de Cliente", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[ES_CUSTOMER_TYPE_DESC]), 15, "es-ES"),
+				    ("Grupo de Clientes", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[ES_CUSTOMER_GROUP_DESC]), 16, "es-ES"),
+				    ("Cliente", NAMEOF(VIEW_RTG_DIM_CUSTOMERS[CUSTOMER_DESC]), 17, "es-ES"),
+				    ("Año", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "es-ES"),
+				    ("Año-Mes", NAMEOF(VIEW_GBL_DIM_CALENDAR[ES_YEAR_MONTH_SHORT_DESC]), 24, "es-ES"),
+				
+				    
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 3, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 4, "fr-FR"),
+				    ("Site Niveau 1", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 5, "fr-FR"),
+				    ("Site Niveau 2", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 6, "fr-FR"),
+				    ("Site Niveau 3", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 7, "fr-FR"),
+				    ("Site Niveau 4", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 8, "fr-FR"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_DESC]), 9, "fr-FR"),
+				    ("Franchise", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[FR_FRANCHISE_DESC]), 10, "fr-FR"),
+				    ("Mode de Paiement", NAMEOF(VIEW_RTG_FACT_RENTING_SALES[PAYMENT_TYPE]), 11, "fr-FR"),
+				    ("Groupe de Véhicules", NAMEOF(VIEW_RTG_DIM_VEHICLE_GROUP[VEHICLE_GROUP_DESC]), 12, "fr-FR"),
+				    ("Modèle", NAMEOF(VIEW_VHE_DIM_MODELS[FR_MODEL_DESC]), 13, "fr-FR"),
+				    ("Type de Client Niveau 1", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[FR_CUSTOMER_TYPE_LEVEL_1_DESC]), 14, "fr-FR"),
+				    ("Type de Client", NAMEOF(VIEW_SLR_DIM_CUSTOMER_TYPE[FR_CUSTOMER_TYPE_DESC]), 15, "fr-FR"),
+				    ("Groupe de Clients", NAMEOF(VIEW_SLR_DIM_CUSTOMER_GROUPS[FR_CUSTOMER_GROUP_DESC]), 16, "fr-FR"),
+				    ("Client", NAMEOF(VIEW_RTG_DIM_CUSTOMERS[CUSTOMER_DESC]), 17, "fr-FR"),
+				    ("Année", NAMEOF(VIEW_GBL_DIM_CALENDAR[YEAR]), 23, "fr-FR"),
+				    ("Année-Mois", NAMEOF(VIEW_GBL_DIM_CALENDAR[FR_YEAR_MONTH_SHORT_DESC]), 24, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 0efdbb1737ce47c394632bb787b08b29
+

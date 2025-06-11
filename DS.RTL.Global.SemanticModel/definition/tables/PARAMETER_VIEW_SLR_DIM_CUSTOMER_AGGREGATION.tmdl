@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_SLR_DIM_CUSTOMER_AGGREGATION
+	lineageTag: a43757dd-5253-429a-ba60-633033c6b3f7
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: f4298c20-58e3-4fe4-a84e-c9c5b8c7bb7b
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_AGGREGATION_DESC
+		lineageTag: d56fae71-0167-45bb-8bed-d8d5561c8697
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_SLR_DIM_CUSTOMER_AGGREGATION = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_AGGREGATION'[PT_CUSTOMER_AGGREGATION_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_AGGREGATION'[EN_CUSTOMER_AGGREGATION_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_AGGREGATION'[ES_CUSTOMER_AGGREGATION_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_SLR_DIM_CUSTOMER_AGGREGATION'[FR_CUSTOMER_AGGREGATION_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 1184ecd5f13c4a3fb4a498f73666e3d0
+

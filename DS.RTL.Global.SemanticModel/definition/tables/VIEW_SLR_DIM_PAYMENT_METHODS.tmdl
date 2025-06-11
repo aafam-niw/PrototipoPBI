@@ -1,0 +1,179 @@
+table VIEW_SLR_DIM_PAYMENT_METHODS
+	isHidden
+	lineageTag: c45a3d09-3f04-4588-95e4-1f2e7759a2e0
+
+	column PAYMENT_METHOD_CODE
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ea30dba9-cd14-4956-bb97-758d812e6a86
+		summarizeBy: none
+		sourceColumn: PAYMENT_METHOD_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PAYMENT_METHOD_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 3106d96c-7660-4450-84a7-c925b8b3d84c
+		summarizeBy: none
+		sourceColumn: PT_PAYMENT_METHOD_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PAYMENT_METHOD_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 3f87ee8c-ccfc-41a8-9123-a0cdecd54ae3
+		summarizeBy: none
+		sourceColumn: EN_PAYMENT_METHOD_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PAYMENT_METHOD_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: b35f581f-0127-43ad-bb6c-f90563ab8926
+		summarizeBy: none
+		sourceColumn: ES_PAYMENT_METHOD_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PAYMENT_METHOD_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: d4bd85f9-0a0a-4049-9715-fd76c192ec15
+		summarizeBy: none
+		sourceColumn: FR_PAYMENT_METHOD_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f9527d6d-2d42-480b-8843-3444466fa4d6
+		summarizeBy: none
+		sourceColumn: PAYMENT_METHOD_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_CODE_DMS
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(5)
+		lineageTag: 596713d1-e60c-4dc4-a020-79fd69ada509
+		summarizeBy: none
+		sourceColumn: PAYMENT_METHOD_CODE_DMS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2371c96d-d597-4c84-bcd9-f28634312fc6
+		summarizeBy: none
+		sourceColumn: PAYMENT_METHOD_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PAYMENT_METHOD_SOURCE
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(25)
+		lineageTag: 1fa4fc76-c524-49b8-8e61-a31d50ea007c
+		summarizeBy: none
+		sourceColumn: PT_PAYMENT_METHOD_SOURCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PAYMENT_METHOD_SOURCE
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(25)
+		lineageTag: bdd09778-b261-4ee7-914c-03360e536fc5
+		summarizeBy: none
+		sourceColumn: EN_PAYMENT_METHOD_SOURCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PAYMENT_METHOD_SOURCE
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(25)
+		lineageTag: 3a7a29a2-6a54-484f-9b46-06520e88bf8a
+		summarizeBy: none
+		sourceColumn: ES_PAYMENT_METHOD_SOURCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PAYMENT_METHOD_SOURCE
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(25)
+		lineageTag: 9757e132-f0da-4e58-b425-f40cb56063e0
+		summarizeBy: none
+		sourceColumn: FR_PAYMENT_METHOD_SOURCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_PAYMENT_METHODS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_PAYMENT_METHODS_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_PAYMENT_METHODS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_PAYMENT_METHODS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

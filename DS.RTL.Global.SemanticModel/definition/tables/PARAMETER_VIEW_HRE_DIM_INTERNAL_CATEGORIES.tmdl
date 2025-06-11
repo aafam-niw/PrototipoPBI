@@ -1,0 +1,68 @@
+table PARAMETER_VIEW_HRE_DIM_INTERNAL_CATEGORIES
+	lineageTag: d5956251-878f-4372-a5cb-6fb8d2dff9ca
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 1fd818db-2bbe-4546-b487-47f8bf0b1e04
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNAL_CATEGORY_DESC
+		lineageTag: e042de31-6f4f-4b1d-b049-f77885bd4e9e
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNAL_CATEGORY_LEVEL_1_DESC
+		lineageTag: d3c18692-0c5e-4860-bcd5-2164626eed9d
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_HRE_DIM_INTERNAL_CATEGORIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[PT_INTERNAL_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[PT_INTERNAL_CATEGORY_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[EN_INTERNAL_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[EN_INTERNAL_CATEGORY_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[ES_INTERNAL_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[ES_INTERNAL_CATEGORY_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[FR_INTERNAL_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_INTERNAL_CATEGORIES'[FR_INTERNAL_CATEGORY_LEVEL_1_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = e37051f49f4840e68f7f03401c21952d
+

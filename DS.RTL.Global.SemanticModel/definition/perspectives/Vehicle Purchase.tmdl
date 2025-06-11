@@ -1,0 +1,72 @@
+perspective 'Vehicle Purchase'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_MEASURES
+
+		perspectiveColumn MEASURE_LEVEL_1_DESC
+
+		perspectiveColumn MEASURE_LEVEL_2_DESC
+
+		perspectiveColumn MEASURE_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_FRANCHISES
+
+		perspectiveColumn FRANCHISE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_TYPES
+
+		perspectiveColumn VHE_TYPE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES
+
+		perspectiveColumn VEHICLE_CLASS_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_SOURCES
+
+		perspectiveColumn SOURCE_DESC
+
+		perspectiveColumn SOURCE_LEVEL_1_DESC
+
+		perspectiveColumn SOURCE_LEVEL_2_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_STATUS_1
+
+		perspectiveColumn STATUS_DESC
+
+		perspectiveColumn STATUS_LEVEL_1_DESC
+
+		perspectiveColumn STATUS_LEVEL_2_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_EXCEPTIONS
+
+		perspectiveColumn EXCEPTION_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_DESTINATION_USAGE
+
+		perspectiveColumn DESTINATION_USAGE_DESC
+
+		perspectiveColumn DESTINATION_USAGE_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VHE_PURCHASE_MEASURES
+
+		perspectiveColumn PARAMETER_VHE_PURCHASE_MEASURE
+

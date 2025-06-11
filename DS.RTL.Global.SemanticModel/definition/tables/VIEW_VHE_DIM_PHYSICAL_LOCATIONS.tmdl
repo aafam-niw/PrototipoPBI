@@ -1,0 +1,193 @@
+table VIEW_VHE_DIM_PHYSICAL_LOCATIONS
+	isHidden
+	lineageTag: a790bf9c-0964-4129-836d-32f2af4a7601
+
+	column CLIENTE_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b83a9f3e-06ff-419e-9022-db535027c891
+		summarizeBy: none
+		sourceColumn: CLIENTE_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: b6ddd44b-bf99-463b-84df-9b2f3063ce7e
+		summarizeBy: none
+		sourceColumn: PHYSICAL_LOCATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_LEVEL_1_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 25ae8e88-7f44-4471-8b23-edcb6487d108
+		summarizeBy: none
+		sourceColumn: PHYSICAL_LOCATION_LEVEL_1_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PHYSICAL_LOCATION_DESC
+		dataType: string
+		isHidden
+		lineageTag: a1735dcf-4869-4da0-b3ea-68b0f06bf7e2
+		summarizeBy: none
+		sourceColumn: PT_PHYSICAL_LOCATION_DESC
+		sortByColumn: PHYSICAL_LOCATION_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PHYSICAL_LOCATION_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0c7b638c-e8c2-46bc-ba58-c03939bdc8ed
+		summarizeBy: none
+		sourceColumn: PT_PHYSICAL_LOCATION_LEVEL_1_DESC
+		sortByColumn: PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PHYSICAL_LOCATION_DESC
+		dataType: string
+		isHidden
+		lineageTag: b33d14bf-58aa-47d3-9988-0b263ffb4acf
+		summarizeBy: none
+		sourceColumn: ES_PHYSICAL_LOCATION_DESC
+		sortByColumn: PHYSICAL_LOCATION_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PHYSICAL_LOCATION_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 2c028f87-cced-4fa0-8c7a-70dcc4bb2aee
+		summarizeBy: none
+		sourceColumn: ES_PHYSICAL_LOCATION_LEVEL_1_DESC
+		sortByColumn: PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PHYSICAL_LOCATION_DESC
+		dataType: string
+		isHidden
+		lineageTag: fb8f93ee-bddf-48e2-83a2-bf370aa59644
+		summarizeBy: none
+		sourceColumn: EN_PHYSICAL_LOCATION_DESC
+		sortByColumn: PHYSICAL_LOCATION_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PHYSICAL_LOCATION_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 49e88d91-5360-4b84-8df2-723c1ad2e9df
+		summarizeBy: none
+		sourceColumn: EN_PHYSICAL_LOCATION_LEVEL_1_DESC
+		sortByColumn: PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PHYSICAL_LOCATION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 88086f26-652b-48f9-9b3d-a5e398efe7f6
+		summarizeBy: none
+		sourceColumn: FR_PHYSICAL_LOCATION_DESC
+		sortByColumn: PHYSICAL_LOCATION_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PHYSICAL_LOCATION_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 374efb79-e596-4944-bf79-0001b840a0bc
+		summarizeBy: none
+		sourceColumn: FR_PHYSICAL_LOCATION_LEVEL_1_DESC
+		sortByColumn: PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cf5f4c99-fdcf-4126-8f50-fe0c7078d219
+		summarizeBy: none
+		sourceColumn: PHYSICAL_LOCATION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 76ee87a7-8c88-49a8-8e95-cb990340d812
+		summarizeBy: none
+		sourceColumn: PHYSICAL_LOCATION_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_PHYSICAL_LOCATIONS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_PHYSICAL_LOCATIONS_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_PHYSICAL_LOCATIONS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_PHYSICAL_LOCATIONS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

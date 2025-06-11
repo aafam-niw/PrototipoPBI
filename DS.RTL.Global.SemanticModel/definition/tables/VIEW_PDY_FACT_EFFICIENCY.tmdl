@@ -1,0 +1,170 @@
+table VIEW_PDY_FACT_EFFICIENCY
+	lineageTag: 03beaa06-e848-484a-bd8a-c9bd4e3c15e7
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 44cf9829-0360-4811-9444-689dcdb35de5
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: f6c67e8b-f743-4c4b-8a78-12b7e782c989
+		summarizeBy: sum
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 8766d541-3b8c-44a8-845e-cbc89cb63b71
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIP_DATE_CREATED
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c40b46b1-ce7f-4ce4-8f75-c51d2206c2e3
+		summarizeBy: none
+		sourceColumn: WIP_DATE_CREATED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column WORK_TYPE_DESC
+		dataType: string
+		lineageTag: d1f0cd82-8ed0-4ea6-ab95-2d441f08819a
+		summarizeBy: none
+		sourceColumn: WORK_TYPE_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: cde01f33-07db-42ba-aa3b-2c9008589a9a
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOCKING_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 74c6c9c2-f527-4195-813f-500e285be5db
+		summarizeBy: none
+		sourceColumn: CLOCKING_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DPT_CODE
+		dataType: string
+		lineageTag: e0d1dd5f-8ad4-42c9-83d3-3269d94b874a
+		summarizeBy: none
+		sourceColumn: DPT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column OPERATION_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: a386f088-6474-40fc-b098-8eef3b1e7c5f
+		summarizeBy: sum
+		sourceColumn: OPERATION_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 184fa0a5-599f-4101-a716-675a7009f87f
+		summarizeBy: sum
+		sourceColumn: VHE_FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_FRANCHISE_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e1b346b-cf75-4db5-9f20-92448fd52cf5
+		summarizeBy: sum
+		sourceColumn: VHE_FRANCHISE_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEAM_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 704b5c7e-40ef-4d95-88fd-c9a872c93b93
+		summarizeBy: sum
+		sourceColumn: TEAM_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column RESOURCE_CODE
+		dataType: string
+		lineageTag: d7addf5b-886e-4090-80d5-ebc82667aa36
+		summarizeBy: none
+		sourceColumn: RESOURCE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fbb4c2b-132e-4269-abd5-f3c751cbcbdd
+		summarizeBy: sum
+		sourceColumn: CUSTOMER_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f46f5e7-aa7a-4dfb-9a86-20fbd0006425
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: e934cd22-056f-4c27-ad9b-bdeeab94fe2b
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a4bf1cab-5767-44cf-be02-432e2ee802ec
+		summarizeBy: count
+		sourceColumn: OBJSECURED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PDY_FACT_EFFICIENCY = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PDY_FACT_EFFICIENCY"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

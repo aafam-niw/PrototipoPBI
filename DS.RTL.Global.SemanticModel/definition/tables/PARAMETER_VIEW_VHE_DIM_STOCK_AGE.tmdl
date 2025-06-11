@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_STOCK_AGE
+	lineageTag: 36808a6b-c3fe-403d-bbb2-a411ad9a3d1e
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 1cfacedf-b239-4cf7-a10a-27b01a5e225f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_AGE_DESC
+		lineageTag: 9d7f35bd-fde1-466c-8834-90621d5f180e
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_STOCK_AGE = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_AGE'[PT_STOCK_AGE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_AGE'[EN_STOCK_AGE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_AGE'[ES_STOCK_AGE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_AGE'[FR_STOCK_AGE_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 277de975d9294ba7932ce66c4c064c6b
+

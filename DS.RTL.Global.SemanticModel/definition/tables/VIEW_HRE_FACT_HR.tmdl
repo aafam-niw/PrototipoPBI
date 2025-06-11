@@ -1,0 +1,221 @@
+﻿table VIEW_HRE_FACT_HR
+	isHidden
+	lineageTag: 1c76635a-3056-4cde-9d2e-c9dec76be73a
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 799f2a2b-9832-40bb-a542-7ec29d48f210
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 39981f7e-f44c-4ec8-905b-48119f69d469
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 61aaa4dc-f457-4432-895f-46282ae5d74d
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EMPLOYEE_DMS_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5f9b5035-1470-499d-854d-8fc6dbaf8553
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DMS_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column INTERNAL_CATEGORY_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 423b2b57-8622-41ef-86ac-9f21bedb67dc
+		summarizeBy: none
+		sourceColumn: INTERNAL_CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1df2976e-3ac2-43dc-a74e-9d1e177cd5d2
+		summarizeBy: none
+		sourceColumn: CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUNCTIONAL_CATEGORY_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 179ccfad-0a79-4a60-94a1-373619d639af
+		summarizeBy: none
+		sourceColumn: FUNCTIONAL_CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HR_NUMBER
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 6bd1a178-6771-4d2a-87ec-5f6f05a1c597
+		summarizeBy: none
+		sourceColumn: HR_NUMBER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 116ade73-cb4d-4ae3-8495-88a1265f3c0f
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ab421291-8984-4c9a-b3a0-091fb1e44e48
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 851a3d4c-683c-4a33-bc72-10e4b3078fd2
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_HRE_FACT_HR = Source{[Schema="PBI",Item="VIEW_HRE_FACT_HR"]}[Data]
+				in
+				    PBI_VIEW_HRE_FACT_HR
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

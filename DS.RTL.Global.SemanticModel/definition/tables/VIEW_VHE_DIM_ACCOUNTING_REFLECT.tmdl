@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_ACCOUNTING_REFLECT
+	isHidden
+	lineageTag: f9d28eab-ec9a-4b04-8c36-1e66ac75bc55
+
+	column ACCOUNTING_REFLECT_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 50c2b563-20e2-4101-881a-e0383175d06c
+		summarizeBy: none
+		sourceColumn: ACCOUNTING_REFLECT_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_ACCOUNTING_REFLECT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1c1aabd4-cc36-481f-b616-9c10b844077c
+		summarizeBy: none
+		sourceColumn: PT_ACCOUNTING_REFLECT_DESC
+		sortByColumn: ACCOUNTING_REFLECT_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_ACCOUNTING_REFLECT_DESC
+		dataType: string
+		isHidden
+		lineageTag: aef4fe64-e475-42a5-acc4-6a60d4a95142
+		summarizeBy: none
+		sourceColumn: EN_ACCOUNTING_REFLECT_DESC
+		sortByColumn: ACCOUNTING_REFLECT_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_ACCOUNTING_REFLECT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 57eb1245-e4d7-43b0-9435-a1536f00e766
+		summarizeBy: none
+		sourceColumn: ES_ACCOUNTING_REFLECT_DESC
+		sortByColumn: ACCOUNTING_REFLECT_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_ACCOUNTING_REFLECT_DESC
+		dataType: string
+		isHidden
+		lineageTag: dd576aea-e31c-4f09-bdc2-0a2b19b4338b
+		summarizeBy: none
+		sourceColumn: FR_ACCOUNTING_REFLECT_DESC
+		sortByColumn: ACCOUNTING_REFLECT_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACCOUNTING_REFLECT_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e4b72b88-15b9-4793-9950-f7706d05b5f1
+		summarizeBy: sum
+		sourceColumn: ACCOUNTING_REFLECT_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_ACCOUNTING_REFLECT = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_ACCOUNTING_REFLECT_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_ACCOUNTING_REFLECT_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_ACCOUNTING_REFLECT_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

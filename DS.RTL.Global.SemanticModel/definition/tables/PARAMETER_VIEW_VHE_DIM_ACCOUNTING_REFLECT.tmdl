@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_ACCOUNTING_REFLECT
+	lineageTag: e235fa62-699e-42bf-bc81-a04905dd50bd
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 55beebfa-7f04-4fef-8c11-363c787fb536
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACCOUNTING_REFLECT_DESC
+		lineageTag: d099a755-ccb8-4faa-9558-628dbbe548c4
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_ACCOUNTING_REFLECT = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_ACCOUNTING_REFLECT'[PT_ACCOUNTING_REFLECT_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_ACCOUNTING_REFLECT'[EN_ACCOUNTING_REFLECT_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_ACCOUNTING_REFLECT'[ES_ACCOUNTING_REFLECT_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_ACCOUNTING_REFLECT'[FR_ACCOUNTING_REFLECT_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 18ed559971ec4f088c5b9894ef34416d
+

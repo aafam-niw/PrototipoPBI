@@ -1,0 +1,166 @@
+table VIEW_VHE_DIM_DESTINATION_USAGE
+	isHidden
+	lineageTag: f6762db2-8cae-4bee-8326-0a9ae7d3c66f
+
+	column DESTINATION_USAGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 3cedc2ba-c6c7-42d7-a2f7-e4891e686429
+		summarizeBy: none
+		sourceColumn: DESTINATION_USAGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_DESTINATION_USAGE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 050dcbef-907e-44b3-ac95-2d88995f6dff
+		summarizeBy: none
+		sourceColumn: PT_DESTINATION_USAGE_LEVEL_1_DESC
+		sortByColumn: DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_DESTINATION_USAGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 849f7f56-c94e-4e0c-b97a-72a08a556188
+		summarizeBy: none
+		sourceColumn: PT_DESTINATION_USAGE_DESC
+		sortByColumn: DESTINATION_USAGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_DESTINATION_USAGE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: b520affa-ea02-4721-8d0e-8def710ead11
+		summarizeBy: none
+		sourceColumn: ES_DESTINATION_USAGE_LEVEL_1_DESC
+		sortByColumn: DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_DESTINATION_USAGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 803d6207-07aa-419b-ae66-3ecf1d59dabc
+		summarizeBy: none
+		sourceColumn: ES_DESTINATION_USAGE_DESC
+		sortByColumn: DESTINATION_USAGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_DESTINATION_USAGE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 90145b2a-394c-4bea-a81b-ef99ee65699f
+		summarizeBy: none
+		sourceColumn: EN_DESTINATION_USAGE_LEVEL_1_DESC
+		sortByColumn: DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_DESTINATION_USAGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6791f0a3-f605-4876-83b8-16050e3dbea7
+		summarizeBy: none
+		sourceColumn: EN_DESTINATION_USAGE_DESC
+		sortByColumn: DESTINATION_USAGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_DESTINATION_USAGE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 5f0425e2-e615-412f-92ba-1a734ca1296b
+		summarizeBy: none
+		sourceColumn: FR_DESTINATION_USAGE_LEVEL_1_DESC
+		sortByColumn: DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_DESTINATION_USAGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: f2c1e315-7022-4bd7-a1a9-ef94c698b213
+		summarizeBy: none
+		sourceColumn: FR_DESTINATION_USAGE_DESC
+		sortByColumn: DESTINATION_USAGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESTINATION_USAGE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bd162681-eddb-46a1-aff7-cf44034be781
+		summarizeBy: none
+		sourceColumn: DESTINATION_USAGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 61ba2d26-e9ef-435b-9ab0-bfc33e5b290b
+		summarizeBy: none
+		sourceColumn: DESTINATION_USAGE_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_DESTINATION_USAGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_DESTINATION_USAGE_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_DESTINATION_USAGE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_DESTINATION_USAGE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

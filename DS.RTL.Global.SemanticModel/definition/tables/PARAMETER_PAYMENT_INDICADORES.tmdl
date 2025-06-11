@@ -1,0 +1,68 @@
+table PARAMETER_PAYMENT_INDICADORES
+	isHidden
+	lineageTag: a7da67f0-04d1-4c48-9fe0-dc7c4272ace2
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: 4904a37d-ebd2-44ef-a6c9-6c1bf7156f20
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 42439ab1-4a91-4e56-b281-f79766aef534
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		lineageTag: f94f51b1-b925-4c21-b354-147823b83666
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 12a69f84-6377-4e0e-9d44-ee0853ef2eb3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_PAYMENT_INDICADORES = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    {
+				        { 1, "Real", "Payment CY", "pt-PT"},
+				        { 2, "Real %", "Payment CY %","pt-PT"},
+				
+				        { 1, "CY", "Payment CY", "en-US"},
+				        { 2, "CY %", "Payment CY %","en-US"},
+				
+				        { 1, "Real", "Payment CY", "es-ES"},
+				        { 2, "Real %", "Payment CY %","es-ES"},
+				
+				        { 1, "Réel", "Payment CY", "fr-FR"},
+				        { 2, "Réel %", "Payment CY %","fr-FR"}
+				    }
+				)
+
+	annotation PBI_Id = e8a41a42681e4af9b560f3b424db9762
+

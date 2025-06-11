@@ -1,0 +1,81 @@
+table PARAMETER_SYTNER_FIELDS
+	isHidden
+	lineageTag: 36fbeb3b-5bab-4f29-8ddc-8f1af701504e
+
+	column PARAMETER_SYTNER_FIELDS
+		isHidden
+		lineageTag: 6c032eb8-4097-4077-a638-7772f62a3ace
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_SYTNER_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_SYTNER_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_SYTNER_FIELDS Fields'
+		isHidden
+		lineageTag: 9ea9c3a6-745b-4238-a3b5-bcbee3078a79
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_SYTNER_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_SYTNER_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 5d137c75-c06c-4c35-8dfb-17d962cb5d93
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 54e534f1-8390-45ae-84db-c1d0b2ef3457
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_SYTNER_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("PL Level 1", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[EN_SYTNER_PL_LEVEL_1_DESC]), 1, "en-US"),
+				    ("PL Level 2", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[EN_SYTNER_PL_LEVEL_2_DESC]), 2, "en-US"),
+				    ("PL", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[EN_SYTNER_PL_DESC]), 3, "en-US"),
+				    ("Account", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 4, "en-US"),
+				    ("Year-Month", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 5, "en-US"),
+				      
+				    ("PL Nível 1", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[PT_SYTNER_PL_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("PL Nível 2", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[PT_SYTNER_PL_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("PL", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[PT_SYTNER_PL_DESC]), 3, "pt-PT"),
+				    ("Conta", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 4, "pt-PT"),
+				    ("Ano-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 5, "pt-PT"),
+				  
+				    ("PL Nivel 1", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[ES_SYTNER_PL_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("PL Nivel 2", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[ES_SYTNER_PL_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("PL", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[ES_SYTNER_PL_DESC]), 3, "es-ES"),
+				    ("Cuenta", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 4, "es-ES"),
+				    ("Año-Mes", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 5, "es-ES"),
+				  
+				    ("PL Niveau 1", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[FR_SYTNER_PL_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("PL Niveau 2", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[FR_SYTNER_PL_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("PL", NAMEOF(VIEW_NLR_DIM_SYTNER_PL[FR_SYTNER_PL_DESC]), 3, "fr-FR"),
+				    ("Compte", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 4, "fr-FR"),
+				    ("Année-Mois", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 5, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 8fa1b7826d704e7d89e155a03056c570
+

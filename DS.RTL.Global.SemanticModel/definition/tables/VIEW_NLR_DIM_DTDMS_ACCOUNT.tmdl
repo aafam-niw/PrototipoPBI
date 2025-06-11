@@ -1,0 +1,114 @@
+﻿table VIEW_NLR_DIM_DTDMS_ACCOUNT
+	isHidden
+	lineageTag: 609e0c40-f90b-4ee2-94de-8cd576776416
+
+	column NLR_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 6156c2f7-48d1-4886-8190-47449f70a3f9
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_ACCOUNT_DESC
+		dataType: string
+		isHidden
+		lineageTag: 5fe23705-2885-4af1-81d7-ee760eca4c0f
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT = Source{[Schema="PBI",Item="VIEW_NLR_DIM_DTDMS_ACCOUNT"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_DTDMS_ACCOUNT
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+
+

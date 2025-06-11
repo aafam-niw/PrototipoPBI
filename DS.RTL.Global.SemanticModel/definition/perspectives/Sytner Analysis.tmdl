@@ -1,0 +1,40 @@
+perspective 'Sytner Analysis'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+		perspectiveColumn Ordinal
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn USER_CULTURE
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn CURRENT_YEAR
+
+		perspectiveColumn YEAR_MONTH_SHORT_DESC
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_SYTNER_MEASURES
+
+		perspectiveColumn PARAMETER_SYTNER_MEASURES
+
+		perspectiveColumn 'PARAMETER_SYTNER_MEASURES Fields'
+
+		perspectiveColumn 'PARAMETER_SYTNER_MEASURES Order'
+
+		perspectiveColumn USER_CULTURE
+
+		perspectiveColumn VALUE_TYPE_CODE
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_SYTNER_PL
+
+		perspectiveColumn SYTNER_PL_DESC
+
+		perspectiveColumn SYTNER_PL_LEVEL_1_DESC
+
+		perspectiveColumn SYTNER_PL_LEVEL_2_DESC
+

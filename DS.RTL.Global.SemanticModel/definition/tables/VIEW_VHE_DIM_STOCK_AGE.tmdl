@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_STOCK_AGE
+	isHidden
+	lineageTag: c879b63c-e466-4d2e-98bd-f9c3964c95b1
+
+	column STOCK_AGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 6a42e9f2-8ea7-4188-af89-7240a6116fc5
+		summarizeBy: none
+		sourceColumn: STOCK_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_STOCK_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6eb49996-09a6-48c3-ae12-f85cad30030b
+		summarizeBy: none
+		sourceColumn: PT_STOCK_AGE_DESC
+		sortByColumn: STOCK_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_STOCK_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: c17e70c1-9ec5-4ab3-97d6-ce55ef99d468
+		summarizeBy: none
+		sourceColumn: EN_STOCK_AGE_DESC
+		sortByColumn: STOCK_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_STOCK_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 8ac46083-d163-4b81-a484-a5c0cb4f8fca
+		summarizeBy: none
+		sourceColumn: ES_STOCK_AGE_DESC
+		sortByColumn: STOCK_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_STOCK_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6dec4eb8-eb00-4804-b560-abeb6bba4270
+		summarizeBy: none
+		sourceColumn: FR_STOCK_AGE_DESC
+		sortByColumn: STOCK_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_AGE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 55939973-2f57-4c08-aef5-ce76d2cebe81
+		summarizeBy: sum
+		sourceColumn: STOCK_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_STOCK_AGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_STOCK_AGE_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_STOCK_AGE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_STOCK_AGE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

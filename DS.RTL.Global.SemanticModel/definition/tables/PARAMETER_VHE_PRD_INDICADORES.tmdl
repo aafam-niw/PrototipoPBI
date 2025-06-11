@@ -1,0 +1,80 @@
+table PARAMETER_VHE_PRD_INDICADORES
+	isHidden
+	lineageTag: e0cae40e-4ae0-469b-aea7-8b09235cd68c
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: 3ccf6cdb-8afb-4839-bba6-33d33df7de27
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: f16098f6-ab43-44bc-b4d6-9502aca0dc53
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		lineageTag: d93d4a94-fe0f-4020-995b-c7575f257036
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 0e638f57-f844-457b-be36-5ebe30f201ed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_PRD_INDICADORES = calculated
+		mode: import
+		source = ```
+				
+				 DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    {
+				        { 1, "Real", "VHE Sales CY", "pt-PT"},
+				        { 2, "AA", "VHE Sales LY", "pt-PT"},
+				        { 3, "Δ AA", "VHE Sales Delta LY", "pt-PT"},
+				        { 4, "Δ AA %", "VHE Sales Delta LY %", "pt-PT"},
+				
+				
+				        { 1, "CY", "VHE Sales CY", "en-US"},
+				        { 2, "LY", "VHE Sales LY", "en-US"},
+				        { 3, "Δ LY", "VHE Sales Delta LY", "en-US"},
+				        { 4, "Δ LY %", "VHE Sales Delta LY %", "en-US"},
+				
+				
+				        { 1, "Real", "VHE Sales CY", "es-ES"},
+				        { 2, "AA", "VHE Sales LY", "es-ES"},
+				        { 3, "Δ AA", "VHE Sales Delta LY", "es-ES"},
+				        { 4, "Δ AA %", "VHE Sales Delta LY %", "es-ES"},
+				
+				
+				        { 1, "Réel", "VHE Sales CY", "fr-FR"},
+				        { 2, "AD", "VHE Sales LY", "fr-FR"},
+				        { 3, "Δ AD", "VHE Sales Delta LY", "fr-FR"},
+				        { 4, "Δ AD %", "VHE Sales Delta LY %", "fr-FR"}
+				    }
+				)
+				```
+
+	annotation PBI_Id = 6724cea46f7c4d3a96536324a0c435a4
+

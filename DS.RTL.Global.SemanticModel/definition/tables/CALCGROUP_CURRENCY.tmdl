@@ -1,0 +1,245 @@
+/// DW: PBI.CALCGROUP_CURRENCY
+table CALCGROUP_CURRENCY
+	lineageTag: bb80fa90-6a05-4cb5-b340-af739961bd5f
+
+	calculationGroup
+
+		calculationItem LC = SELECTEDMEASURE()
+
+		calculationItem EUR = ```
+				
+				SWITCH(
+				    SELECTEDMEASURENAME(),
+				
+				    // Desvio
+				    "DR PL Delta Bgt", [DR PL Delta Bgt (EUR)],
+				    "DR PL Delta Bgt Adm", [DR PL Delta Bgt Adm (EUR)],
+				    "DR PL Delta LY", [DR PL Delta LY (EUR)],
+				
+				    "DR IFRS Delta Bgt", [DR IFRS Delta Bgt (EUR)],
+				    "DR IFRS Delta Bgt Adm", [DR IFRS Delta Bgt Adm (EUR)],
+				    "DR IFRS Delta LY", [DR IFRS Delta LY (EUR)],
+				
+				    "BL IFRS Delta Bgt", [BL IFRS Delta Bgt (EUR)],
+				    "BL IFRS Delta Bgt Adm", [BL IFRS Delta Bgt Adm (EUR)],
+				    "BL IFRS Delta LY", [BL IFRS Delta LY (EUR)],
+				
+				    "CF Delta LY", [CF Delta LY (EUR)],
+				
+				    --"Sytner Delta Bgt", [Sytner Delta Bgt (EUR)],
+				    --"Sytner Delta LY", [Sytner Delta LY (EUR)],
+				
+				    "GM Delta Bgt", [GM Delta Bgt (EUR)],
+				    "GM Delta Bgt Adm", [GM Delta Bgt Adm (EUR)],
+				    "GM Delta LY", [GM Delta LY (EUR)],
+				
+				    "VHE Stock Delta LY", [VHE Stock Delta LY (EUR)],
+				
+				    "HRE_C Delta LY", [HRE_C Delta LY (EUR)],
+				    "HRE_C Delta Bgt", [HRE_C Delta Bgt (EUR)],
+				    "HRE_C Delta Bgt Adm", [HRE_C Delta Bgt Adm (EUR)],
+				    
+				
+				    // Desvio %
+				    "DR PL Delta Bgt %", [DR PL Delta Bgt (EUR) %],
+				    "DR PL Delta Bgt Adm %", [DR PL Delta Bgt Adm (EUR) %],
+				    "DR PL Delta LY %", [DR PL Delta LY (EUR) %],
+				
+				    "DR IFRS Delta Bgt %", [DR IFRS Delta Bgt (EUR) %],
+				    "DR IFRS Delta Bgt Adm %", [DR IFRS Delta Bgt Adm (EUR) %],
+				    "DR IFRS Delta LY %", [DR IFRS Delta LY (EUR) %],
+				
+				    "BL IFRS Delta Bgt %", [BL IFRS Delta Bgt (EUR) %],
+				    "BL IFRS Delta Bgt Adm %", [BL IFRS Delta Bgt Adm (EUR) %],
+				    "BL IFRS Delta LY %", [BL IFRS Delta LY (EUR) %],
+				
+				    "HRE_C Delta LY %", [HRE_C Delta LY % (EUR)],
+				    "HRE_C Delta Bgt %", [HRE_C Delta Bgt % (EUR)],
+				    "HRE_C Delta Bgt Adm %", [HRE_C Delta Bgt Adm % (EUR)],
+				
+				    "OR Delta LY %", [OR Delta LY (EUR) %],
+				
+				    "BL ES Delta LY %", [BL ES Delta LY (EUR) %],
+				
+				    --"Sytner Delta Bgt %", [Sytner Delta Bgt (EUR) %],
+				    --"Sytner Delta LY %", [Sytner Delta LY (EUR) %],
+				
+				    "VHE Sales Delta Bgt %", [VHE Sales Delta Bgt (EUR) %],
+				    "VHE Sales Delta Bgt Adm %", [VHE Sales Delta Bgt Adm (EUR) %],
+				    "VHE Sales Delta LY %", [VHE Sales Delta LY (EUR) %],
+				
+				    "VHE Stock Delta LY %", [VHE Stock Delta LY (EUR) %],
+				
+				
+				    // Real
+				    "DR PL CY", [DR PL CY (EUR)],
+				    "DR PL LY", [DR PL LY (EUR)],
+				
+				    "DR IFRS CY", [DR IFRS CY (EUR)],
+				    "DR IFRS LY", [DR IFRS LY (EUR)],
+				
+				    "BL IFRS CY", [BL IFRS CY (EUR)],
+				    "BL IFRS CY Origin", [BL IFRS Origin (EUR)],
+				    "BL IFRS LY", [BL IFRS LY (EUR)],
+				
+				    "HRE_C CY", [HRE_C CY (EUR)],
+				    "HRE_C LY", [HRE_C LY (EUR)],
+				
+				    "OR CY", [OR CY (EUR)],
+				    "OR LY", [OR LY (EUR)],
+				
+				    "BL ES CY", [BL ES CY (EUR)],
+				    "BL ES LY", [BL ES LY (EUR)],
+				
+				    "CF CY", [CF CY (EUR)],
+				    "CF LY", [CF LY (EUR)],
+				
+				    --"Sytner CY", [Sytner CY (EUR)],
+				    --"Sytner LY", [Sytner LY (EUR)],
+				
+				    "GM CY", [GM CY (EUR)],
+				    "GM LY", [GM LY (EUR)],
+				
+				    "VHE Sales CY", [VHE Sales CY (EUR)],
+				    "VHE Sales LY", [VHE Sales LY (EUR)],
+				
+				    "VHE Purchase CY", [VHE Purchase CY (EUR)],
+				
+				    "VHE Stock CY", [VHE Stock CY (EUR)],
+				    "VHE Stock LY", [VHE Stock LY (EUR)],
+				
+				    "VHE Value CY", [VHE Value CY (EUR)],
+				    "VHE Value LY", [VHE Value LY (EUR)],
+				
+				
+				    // Real %
+				    "DR PL CY %", [DR PL CY (EUR) %],
+				    "DR PL LY %", [DR PL LY (EUR) %],
+				
+				    "DR IFRS CY %", [DR IFRS CY (EUR) %],
+				    "DR IFRS LY %", [DR IFRS LY (EUR) %],
+				
+				    "BL IFRS CY %", [BL IFRS CY (EUR) %],
+				    "BL IFRS LY %", [BL IFRS LY (EUR) %],
+				
+				    --"Sytner CY %", [Sytner CY (EUR) %],
+				    --"Sytner LY %", [Sytner LY (EUR) %],
+				    
+				
+				    // Budget
+				    "DR PL Bgt", [DR PL Bgt (EUR)],
+				    "DR PL Bgt Adm", [DR PL Bgt Adm (EUR)],
+				
+				    "DR IFRS Bgt", [DR IFRS Bgt (EUR)],
+				    "DR IFRS Bgt Adm", [DR IFRS Bgt Adm (EUR)],
+				
+				    "BL IFRS Bgt", [BL IFRS Bgt (EUR)],
+				    "BL IFRS Bgt Adm", [BL IFRS Bgt Adm (EUR)],
+				    "BL IFRS Bgt Origin", [BL IFRS Bgt Origin (EUR)],
+				    "BL IFRS Bgt Adm Origin", [BL IFRS Bgt Adm Origin (EUR)],
+				
+				    "HRE_C Bgt", [HRE_C Bgt (EUR)],
+				    "HRE_C Bgt Adm", [HRE_C Bgt Adm (EUR)],
+				
+				    --"Sytner Bgt", [Sytner Bgt (EUR)],
+				
+				    "GM Bgt", [GM Bgt (EUR)],
+				    "GM Bgt Adm", [GM Bgt Adm (EUR)],
+				
+				    "VHE Sales Bgt", [VHE Sales Bgt (EUR)],
+				    "VHE Sales Bgt Adm", [VHE Sales Bgt Adm (EUR)],
+				
+				
+				    // Budget %
+				    "DR PL Bgt %", [DR PL Bgt (EUR) %],
+				    "DR PL Bgt Adm %", [DR PL Bgt Adm (EUR) %],
+				
+				    "DR IFRS Bgt %", [DR IFRS Bgt (EUR) %],
+				    "DR IFRS Bgt Adm %", [DR IFRS Bgt Adm (EUR) %],
+				
+				    "BL IFRS Bgt %", [BL IFRS Bgt (EUR) %],
+				    "BL IFRS Bgt Adm %", [BL IFRS Bgt Adm (EUR) %],
+				
+				    --"Sytner Bgt %", [Sytner Bgt (EUR) %],
+				
+				
+				    // Montlhy View
+				    "Indicators DR PL", [Indicators DR PL (EUR)],
+				    "Indicators IFRS", [Indicators IFRS (EUR)],
+				    "Indicators BL IFRS", [Indicators BL IFRS (EUR)],
+				    "Indicators HRE_C", [Indicators HRE_C (EUR)],
+				    "Indicators OR", [Indicators OR (EUR)],
+				    "Indicators BL ES", [Indicators BL ES (EUR)],
+				    "Indicators CF", [Indicators CF (EUR)],
+				    "Indicators GM", [Indicators GM (EUR)],
+				    "Indicators VHE Sales", [Indicators VHE Sales (EUR)],
+				    "Indicators VHE Stock", [Indicators VHE Stock (EUR)],
+				    "Indicators VHE Invoices", [Indicators VHE Invoices (EUR)],
+				
+				
+				    // Debt
+				    "Debt", [Debt (EUR)],
+				    "Debt Suppliers", [Debt Suppliers (EUR)],
+				
+				
+				    // Payment Methods
+				    "Payment CY", [Payment CY (EUR)],
+				    "Payment CY %", [Payment CY % (EUR)],
+				    
+				
+				    // UI
+				    SELECTEDMEASURE()
+				)
+				```
+
+		calculationItem 'EUR Bt' =
+				
+				SWITCH(
+				    SELECTEDMEASURENAME(),
+				
+				    // DR Gestão
+				    "DR PL CY", [DR PL CY (BDT)],
+				    "DR PL CY %", [DR PL CY (BDT) %],
+				
+				    "DR PL LY", [DR PL LY (BDT)],
+				    "DR PL LY %", [DR PL LY (BDT) %],
+				    "DR PL Delta LY", [DR PL Delta LY (BDT)],
+				    "DR PL Delta LY %", [DR PL Delta LY (BDT) %],
+				
+				    "DR PL Bgt", [DR PL Bgt (BDT)],
+				    "DR PL Bgt %", [DR PL Bgt (BDT) %],
+				    "DR PL Delta Bgt", [DR PL Delta Bgt (BDT)],
+				    "DR PL Delta Bgt %", [DR PL Delta Bgt (BDT) %],
+				
+				    "DR PL Bgt Adm", [DR PL Bgt Adm (BDT)],
+				    "DR PL Bgt Adm %", [DR PL Bgt Adm (BDT) %],
+				    "DR PL Delta Bgt Adm", [DR PL Delta Bgt Adm (BDT)],
+				    "DR PL Delta Bgt Adm %", [DR PL Delta Bgt Adm (BDT) %],
+				
+				    "Indicators DR PL", [Indicators DR PL (BDT)],
+				
+				    // Others
+				    SELECTEDMEASURE()
+				)
+
+	/// DW:PBI.CALCGROUP_CURRENCY.Currency
+	column Currency
+		dataType: string
+		lineageTag: 09c63d81-a8d3-405f-bf09-398e48546a5b
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.CALCGROUP_CURRENCY.Ordinal
+	column Ordinal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cf2e300c-91a0-478f-979c-ef6e0c222895
+		summarizeBy: none
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

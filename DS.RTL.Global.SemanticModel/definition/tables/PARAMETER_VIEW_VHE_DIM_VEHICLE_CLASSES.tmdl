@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES
+	lineageTag: 8785f7cd-ef74-44ec-a855-aac2220af52a
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 2f12960f-abb2-42f3-a211-1f920c25b5ca
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_CLASS_DESC
+		lineageTag: 563f3721-8e17-41e0-a6be-11e093ea6dbd
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_VEHICLE_CLASSES'[PT_VEHICLE_CLASS_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_VEHICLE_CLASSES'[EN_VEHICLE_CLASS_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_VEHICLE_CLASSES'[ES_VEHICLE_CLASS_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_VEHICLE_CLASSES'[FR_VEHICLE_CLASS_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = dea0ae85e9e64950a2155e43f7db0bff
+

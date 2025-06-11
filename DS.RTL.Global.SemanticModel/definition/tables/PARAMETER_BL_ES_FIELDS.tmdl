@@ -1,0 +1,112 @@
+table PARAMETER_BL_ES_FIELDS
+	isHidden
+	lineageTag: de75d7cd-64d4-4a67-8a87-08ec3a4940b8
+
+	column PARAMETER_BL_ES_FIELDS
+		isHidden
+		lineageTag: 623e87a2-4f24-444b-b3df-7119c38ec2f0
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_BL_ES_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_BL_ES_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_BL_ES_FIELDS Fields'
+		isHidden
+		lineageTag: 01dd5591-d8fc-43cd-9ee8-bad9d95e3ec0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_BL_ES_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_BL_ES_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 151eb971-a560-4c46-8438-cbaa30c5133f
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 1790556b-6447-4382-9b15-595f2b447a3a
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_BL_ES_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("BL ES Level 1", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[EN_BL_FISCAL_ES_LEVEL_1_DESC]), 1, "en-US"),
+				    ("BL ES Level 2", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[EN_BL_FISCAL_ES_LEVEL_2_DESC]), 2, "en-US"),
+				    ("BL ES Level 3", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[EN_BL_FISCAL_ES_LEVEL_3_DESC]), 3, "en-US"),
+				    ("BL ES Level 4", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[EN_BL_FISCAL_ES_LEVEL_4_DESC]), 4, "en-US"),
+				    ("BL ES", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[EN_BL_FISCAL_ES_DESC]), 5, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 6, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 7, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 8, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 9, "en-US"),
+				    ("Account", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 10, "en-US"),
+				    ("Year", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 11, "en-US"),
+				    ("Year-Month", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 12, "en-US"),
+				    
+				    
+				    ("BL ES Nível 1", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[PT_BL_FISCAL_ES_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("BL ES Nível 2", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[PT_BL_FISCAL_ES_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("BL ES Nível 3", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[PT_BL_FISCAL_ES_LEVEL_3_DESC]), 3, "pt-PT"),
+				    ("BL ES Nível 4", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[PT_BL_FISCAL_ES_LEVEL_4_DESC]), 4, "pt-PT"),
+				    ("BL ES", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[PT_BL_FISCAL_ES_DESC]), 5, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 6, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 7, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 8, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 9, "pt-PT"),
+				    ("Conta", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 10, "pt-PT"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 11, "pt-PT"),
+				    ("Ano-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 12, "pt-PT"),
+				    
+				    
+				    ("BL ES Nivel 1", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[ES_BL_FISCAL_ES_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("BL ES Nivel 2", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[ES_BL_FISCAL_ES_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("BL ES Nivel 3", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[ES_BL_FISCAL_ES_LEVEL_3_DESC]), 3, "es-ES"),
+				    ("BL ES Nivel 4", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[ES_BL_FISCAL_ES_LEVEL_4_DESC]), 4, "es-ES"),
+				    ("BL ES", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[ES_BL_FISCAL_ES_DESC]), 5, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 6, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 7, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 8, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 9, "es-ES"),
+				    ("Cuenta", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 10, "es-ES"),
+				    ("Año", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 11, "es-ES"),
+				    ("Año-Mes", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 12, "es-ES"),
+				
+				    
+				    ("BL ES Niveau 1", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[FR_BL_FISCAL_ES_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("BL ES Niveau 2", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[FR_BL_FISCAL_ES_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("BL ES Niveau 3", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[FR_BL_FISCAL_ES_LEVEL_3_DESC]), 3, "fr-FR"),
+				    ("BL ES Niveau 4", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[FR_BL_FISCAL_ES_LEVEL_4_DESC]), 4, "fr-FR"),
+				    ("BL ES", NAMEOF('VIEW_NLR_DIM_BL_FISCAL_ES'[FR_BL_FISCAL_ES_DESC]), 5, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 6, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 7, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 8, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 9, "fr-FR"),
+				    ("Compte", NAMEOF(VIEW_NLR_DIM_DTDMS_ACCOUNT[NLR_ACCOUNT_DESC]), 10, "fr-FR"),
+				    ("Année", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 11, "fr-FR"),
+				    ("Année-Mois", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 12, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = 32307e1b0cb5419180845ef55b120f75
+

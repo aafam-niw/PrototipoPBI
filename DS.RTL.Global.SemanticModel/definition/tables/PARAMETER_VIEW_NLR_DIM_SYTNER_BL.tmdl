@@ -1,0 +1,85 @@
+table PARAMETER_VIEW_NLR_DIM_SYTNER_BL
+	lineageTag: 7b6ff5e6-23e6-4860-be57-f81a70ff1a38
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: ca9daf09-c87a-4660-a9f5-9b0f372f8dde
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_BL_DESC
+		lineageTag: 623e8def-5f9e-4564-a011-7c2610a6c79f
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_BL_LEVEL_1_DESC
+		lineageTag: cc303e23-471c-4e61-8317-7ed8cbbcc25d
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_BL_LEVEL_2_DESC
+		lineageTag: d8abdf96-d94b-46a5-92af-6285def18bac
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_SYTNER_BL = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[PT_SYTNER_BL_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[PT_SYTNER_BL_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[PT_SYTNER_BL_LEVEL_2_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[EN_SYTNER_BL_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[EN_SYTNER_BL_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[EN_SYTNER_BL_LEVEL_2_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[ES_SYTNER_BL_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[ES_SYTNER_BL_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[ES_SYTNER_BL_LEVEL_2_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[FR_SYTNER_BL_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[FR_SYTNER_BL_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_BL'[FR_SYTNER_BL_LEVEL_2_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = fda462c4096f49ec9995a8a47b1b67bd
+

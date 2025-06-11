@@ -1,0 +1,137 @@
+table PARAMETER_BL_IFRS_INDICADORES
+	isHidden
+	lineageTag: 0e704059-9d6e-4591-8fa6-3016a646eec9
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: d11de2be-c029-429d-a06e-9f9e8e2522b0
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: cb4a7bb3-a41c-4cc5-905c-c988908c47cd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: a2482387-7cb5-4967-ab83-9ca1d26afd03
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 882a547e-01e1-4a37-9bd9-4f39c9f6c6d1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: dad2b61e-1a9b-44d2-8490-e52c79df9775
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_BL_IFRS_INDICADORES = calculated
+		mode: import
+		source = ```
+				
+				
+				 DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Real", "BL IFRS CY", "pt-PT", 2 },
+				        { 2, "Real %", "BL IFRS CY %", "pt-PT", 2 },
+				        { 3, "Orç", "BL IFRS Bgt", "pt-PT", 3 },
+				        { 4, "Orç %", "BL IFRS Bgt %", "pt-PT", 3 },
+				        { 5, "Δ Orç", "BL IFRS Delta Bgt", "pt-PT", 3 },
+				        { 6, "Δ Orç %", "BL IFRS Delta Bgt %", "pt-PT", 3 },
+				        { 7, "Orç Adm", "BL IFRS Bgt Adm", "pt-PT", 4 },
+				        { 8, "Orç Adm %", "BL IFRS Bgt Adm %", "pt-PT", 4 },
+				        { 9, "Δ Orç Adm", "BL IFRS Delta Bgt Adm", "pt-PT", 4 },
+				        { 10, "Δ Orç Adm %", "BL IFRS Delta Bgt Adm %", "pt-PT", 4 },
+				        { 11, "AA", "BL IFRS LY", "pt-PT", 2 },
+				        { 12, "AA %", "BL IFRS LY %", "pt-PT", 2 },
+				        { 13, "Δ AA", "BL IFRS Delta LY", "pt-PT", 2 },
+				        { 14, "Δ AA %", "BL IFRS Delta LY %", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "BL IFRS CY", "en-US", 2 },
+				        { 2, "CY %", "BL IFRS CY %", "en-US", 2 },
+				        { 3, "Bgt", "BL IFRS Bgt", "en-US", 3 },
+				        { 4, "Bgt %", "BL IFRS Bgt %", "en-US", 3 },
+				        { 5, "Δ Bgt", "BL IFRS Delta Bgt", "en-US", 3 },
+				        { 6, "Δ Bgt %", "BL IFRS Delta Bgt %", "en-US", 3 },
+				        { 7, "Bgt Adm", "BL IFRS Bgt Adm", "en-US", 4 },
+				        { 8, "Bgt Adm %", "BL IFRS Bgt Adm %", "en-US", 4 },
+				        { 9, "Δ Bgt Adm", "BL IFRS Delta Bgt Adm", "en-US", 4 },
+				        { 10, "Δ Bgt Adm %", "BL IFRS Delta Bgt Adm %", "en-US", 4 },
+				        { 11, "LY", "BL IFRS LY", "en-US", 2 },
+				        { 12, "LY %", "BL IFRS LY %", "en-US", 2 },
+				        { 13, "Δ LY", "BL IFRS Delta LY", "en-US", 2 },
+				        { 14, "Δ LY %", "BL IFRS Delta LY %", "en-US", 2 },
+				
+				
+				        { 1, "Real", "BL IFRS CY", "es-ES", 2 },
+				        { 2, "Real %", "BL IFRS CY %", "es-ES", 2 },
+				        { 3, "Ppto", "BL IFRS Bgt", "es-ES", 3 },
+				        { 4, "Ppto %", "BL IFRS Bgt %", "es-ES", 3 },
+				        { 5, "Δ Ppto", "BL IFRS Delta Bgt", "es-ES", 3 },
+				        { 6, "Δ Ppto %", "BL IFRS Delta Bgt %", "es-ES", 3 },
+				        { 7, "Ppto Adm", "BL IFRS Bgt Adm", "es-ES", 4 },
+				        { 8, "Ppto Adm %", "BL IFRS Bgt Adm %", "es-ES", 4 },
+				        { 9, "Δ Ppto Adm", "BL IFRS Delta Bgt Adm", "es-ES", 4 },
+				        { 10, "Δ Ppto Adm %", "BL IFRS Delta Bgt Adm %", "es-ES", 4 },
+				        { 11, "AA", "BL IFRS LY", "es-ES", 2 },
+				        { 12, "AA %", "BL IFRS LY %", "es-ES", 2 },
+				        { 13, "Δ AA", "BL IFRS Delta LY", "es-ES", 2 },
+				        { 14, "Δ AA %", "BL IFRS Delta LY %", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "BL IFRS CY", "fr-FR", 2 },
+				        { 2, "Réel %", "BL IFRS CY %", "fr-FR", 2 },
+				        { 3, "Bgt", "BL IFRS Bgt", "fr-FR", 3 },
+				        { 4, "Bgt %", "BL IFRS Bgt %", "fr-FR", 3 },
+				        { 5, "Δ Bgt", "BL IFRS Delta Bgt", "fr-FR", 3 },
+				        { 6, "Δ Bgt %", "BL IFRS Delta Bgt %", "fr-FR", 3 },
+				        { 7, "Bgt Adm", "BL IFRS Bgt Adm", "fr-FR", 4 },
+				        { 8, "Bgt Adm %", "BL IFRS Bgt Adm %", "fr-FR", 4 },
+				        { 9, "Δ Bgt Adm", "BL IFRS Delta Bgt Adm", "fr-FR", 4 },
+				        { 10, "Δ Bgt Adm %", "BL IFRS Delta Bgt Adm %", "fr-FR", 4 },
+				        { 11, "AD", "BL IFRS LY", "fr-FR", 2 },
+				        { 12, "AD %", "BL IFRS LY %", "fr-FR", 2 },
+				        { 13, "Δ AD", "BL IFRS Delta LY", "fr-FR", 2 },
+				        { 14, "Δ AD %", "BL IFRS Delta LY %", "fr-FR", 2 }
+				    }
+				)
+				
+				
+				```
+
+	annotation PBI_Id = 17e54d9db31e4306a6457f9b39852bdd
+

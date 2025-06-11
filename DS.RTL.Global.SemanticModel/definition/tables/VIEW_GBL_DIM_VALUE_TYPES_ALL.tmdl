@@ -1,0 +1,112 @@
+table VIEW_GBL_DIM_VALUE_TYPES_ALL
+	isHidden
+	lineageTag: a672020a-96b7-423f-8bba-23ca923eef56
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e4bf9f99-aa25-41c8-89bd-176e54a26abe
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_VALUE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: c812fd6d-c8e2-4a79-88c8-a0f3cc11942b
+		summarizeBy: none
+		sourceColumn: PT_VALUE_TYPE_DESC
+		sortByColumn: VALUE_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_VALUE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: f50cd810-2458-44d8-a82f-0e9b1233fd3c
+		summarizeBy: none
+		sourceColumn: EN_VALUE_TYPE_DESC
+		sortByColumn: VALUE_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_VALUE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a47ef7ba-9974-4c26-b79e-db1ce74ee5e6
+		summarizeBy: none
+		sourceColumn: ES_VALUE_TYPE_DESC
+		sortByColumn: VALUE_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_VALUE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: e3d4fa70-1a87-43ff-ab41-5df7fb7f70e0
+		summarizeBy: none
+		sourceColumn: FR_VALUE_TYPE_DESC
+		sortByColumn: VALUE_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d188ff8d-b4f5-42f5-a9d7-99393668aeca
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_VALUE_TYPES_ALL = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_VALUE_TYPES_ALL_MPBI = Source{[Schema="PBI",Item="VIEW_GBL_DIM_VALUE_TYPES_ALL_MPBI"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_VALUE_TYPES_ALL_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

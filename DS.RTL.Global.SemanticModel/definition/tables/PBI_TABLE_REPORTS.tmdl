@@ -1,0 +1,117 @@
+table PBI_TABLE_REPORTS
+	isHidden
+	lineageTag: a2482435-5866-46ce-bf4a-44195cafdf0c
+
+	column PT-PT
+		isHidden
+		lineageTag: 60b360a1-b7fb-410f-8e38-dbcd42f49f43
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [PT-PT]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN-US
+		isHidden
+		lineageTag: 5830e727-ffcd-41a1-9916-014ca60dca25
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [EN-US]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES-ES
+		isHidden
+		lineageTag: d698f72b-b737-4ee8-8d83-af8106596479
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ES-ES]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR-FR
+		isHidden
+		lineageTag: cb53153e-1f84-4798-b818-82a9f3a113a7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [FR-FR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOSED_PERIODS
+		isHidden
+		formatString: 0
+		lineageTag: 0abcad77-c5da-439a-ac9c-5f17e9e50047
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CLOSED_PERIODS]
+
+		annotation SummarizationSetBy = Automatic
+
+	column GRUPO_CALCULO_PERIODOS
+		isHidden
+		formatString: 0
+		lineageTag: cbdd845a-346c-4f89-bee3-74b8354a35fe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [GRUPO_CALCULO_PERIODOS]
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPORT_NAME
+		isHidden
+		lineageTag: 80d617c8-5adc-4c7a-b5a6-3c6cba417421
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [REPORT_NAME]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CALENDAR
+		isHidden
+		formatString: 0
+		lineageTag: 1846767e-ee01-4f60-ba20-a1d365d79e45
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CALENDAR]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PBI_TABLE_REPORTS = calculated
+		mode: import
+		source =
+				
+				
+				DATATABLE(
+				    "REPORT_NAME", STRING,
+				    "PT-PT", STRING,
+				    "EN-US", STRING,
+				    "ES-ES", STRING,
+				    "FR-FR", STRING,
+				    "CLOSED_PERIODS", INTEGER,
+				    "GRUPO_CALCULO_PERIODOS", INTEGER,
+				    "CALENDAR", INTEGER,
+				    {
+				        { "P&L", "Demonstração de Resultados", "Income Statement", "Estado de Resultados", "Démonstration Résultats", 1, 1, 1 },
+				        { "P&L IFRS", "Demonstração de Resultados IFRS", "Income Statements IFRS", "Resultados Oficiales IFRS", "Démonstration Résultats IFRS", 1, 1, 1 },
+				        { "Balance IFRS", "Balanço IFRS", "Balance IFRS", "Balance IFRS", "Balance IFRS", 0, 0, 1 },
+				        { "Cash-Flow", "Fluxo de Caixa", "Cash-Flow", "Flujo de Caja", "Des Flux de Trésorerie", 0, 0, 1 },
+				        { "General KPIs", "Indicadores Gerais", "KPIs / General Indicators", "Indicadores Generales", "Indicateurs Généraux", 0, 0, 1 },
+				        { "Personnel Costs", "Custos c/ Pessoal", "Personnel Costs", "Costes de Personal", "Frais Personnel", 0, 0, 1 },
+				        { "P&L - Fiscal ES", "Demonstração de Resultados ES", "Income Statement ES", "Resultados Oficiales ES", "Démonstration Résultats ES", 1, 1, 1 },
+				        { "Balance - Fiscal ES", "Balanço Oficial ES", "Balance Official ES", "Balance Oficial ES", "Balance Officiel ES", 0, 0, 1 },
+				        { "Workforce Structure", "Estrutura de Pessoal", "Workforce Structure", "Estructura de Personal", "Structure du personnel", 0, 0, 1 },
+				        { "Customers Aging", "Antiguidade de Saldos de Clientes", "Customer Balance Aging", "Antigüedad Saldos Clientes", "Viellissement Soldes Clients", 0, 0, 1 },
+				        { "Suppliers Aging", "Antiguidade de Saldos de Fornecedores", "Supplier Balance Aging", "Antigüedad Saldos Proveedores", "Viellissement Soldes Fournisseurs", 0, 0, 1 },
+				        { "Payment Methods", "Formas de Pagamento", "Payment Methods", "Métodos de Pago", "Méthodes de Paiement", 0, 0, 1 },
+				        { "Vehicles Sales", "Vendas de Viaturas", "Vehicle Sales", "Ventas Vehículos", "Ventes de Véhicules", 0, 1, 1 },
+				        { "Vehicle Purchase", "Compras Viaturas", "Vehicle Purchase", "Compras Vehículos", "Achats de Voitures", 0, 1, 2 },
+				        { "Vehicle Stock", "Estoque Viaturas", "Vehicle Stock", "Stock Vehículos", "Stock Voitures", 0, 1, 1 },
+				        { "Vehicle Ideal Stock", "Estoque Viaturas Ideal", "Vehicle Ideal Stock", "Stock Vehículos Ideal", "Stock Voitures Idéal", 0, 1, 1 },
+						{ "Vehicles Production", "Produção de Viaturas", "Vehicles Production", "Producción de Vehículos", "Production de Véhicules", 0, 1, 1 },
+				        { "Invoice Analysis", "Análise de Faturação", "Invoice Analysis", "Análisis de Facturación", "Analyse de Facturation", 0, 1, 1 }
+				    }
+				)
+
+	annotation PBI_Id = 49b9dbdedc884c3fae0ce78fa6ef6340
+

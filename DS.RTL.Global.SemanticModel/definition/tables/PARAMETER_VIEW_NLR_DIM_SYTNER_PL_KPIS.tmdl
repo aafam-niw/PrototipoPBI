@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_NLR_DIM_SYTNER_PL_KPIS
+	lineageTag: 815d790f-a690-470b-af2a-4cf9d36c3675
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 9f296b8b-e13d-4f78-b29b-d0600092e487
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_KPI_DESC
+		lineageTag: c322d5dd-7e38-4582-acfe-e1267113e6f7
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_SYTNER_PL_KPIS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_PL_KPIS'[PT_SYTNER_PL_KPI_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_PL_KPIS'[EN_SYTNER_PL_KPI_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_PL_KPIS'[ES_SYTNER_PL_KPI_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_SYTNER_PL_KPIS'[FR_SYTNER_PL_KPI_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 471924390ceb4887a67964ab75c02eea
+

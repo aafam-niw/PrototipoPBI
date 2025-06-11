@@ -1,0 +1,352 @@
+﻿table VIEW_NLR_DIM_SYTNER_PL_DETAIL
+	isHidden
+	lineageTag: a08f2802-038f-4ccd-ac32-12b44c184a5d
+
+	column Sytner_PL_Detail_Code
+		dataType: string
+		isHidden
+		isKey
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: f9dd6621-82fa-4a86-9351-c6d3916e2ec2
+		summarizeBy: none
+		sourceColumn: Sytner_PL_Detail_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: e2d0caeb-306f-4c7f-bba4-f1a8e7a10624
+		summarizeBy: none
+		sourceColumn: PT_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 25ea433e-9504-41a0-941e-5ab856fb5217
+		summarizeBy: none
+		sourceColumn: PT_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 22f1f7f0-9b92-4555-87c6-150b78db6c3c
+		summarizeBy: none
+		sourceColumn: PT_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 8e919b3a-19e2-4f3f-b060-80b58282afd4
+		summarizeBy: none
+		sourceColumn: PT_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: da496170-dccc-46e7-ab51-87fc040ba371
+		summarizeBy: none
+		sourceColumn: ES_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: cf8757ff-da4b-4312-8ee4-d5f0f4f0b880
+		summarizeBy: none
+		sourceColumn: ES_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 65bea7e9-4b5e-4495-aae8-6040041085d4
+		summarizeBy: none
+		sourceColumn: ES_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: d2a858ee-49dd-427d-b122-aa1a042ea243
+		summarizeBy: none
+		sourceColumn: ES_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 4f3709ed-691b-4a54-a169-d3ab616e44cc
+		summarizeBy: none
+		sourceColumn: EN_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: bae7a5ab-e339-47ab-b0f5-1aebc348c9d3
+		summarizeBy: none
+		sourceColumn: EN_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 3213c05e-2f18-4cd5-ba4e-d7bf418bf2bd
+		summarizeBy: none
+		sourceColumn: EN_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: ca3c4c75-3bb3-4ae7-bd74-50092a8d6010
+		summarizeBy: none
+		sourceColumn: EN_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 84c94eb5-cfe9-4fae-b52b-d33c82eca79c
+		summarizeBy: none
+		sourceColumn: FR_SYTNER_PL_DETAIL_LEVEL_1_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 43620f59-6a39-4204-b350-6f0650154efa
+		summarizeBy: none
+		sourceColumn: FR_SYTNER_PL_DETAIL_LEVEL_2_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: a2cc7de0-1dfe-454e-9e8e-06354e76afcf
+		summarizeBy: none
+		sourceColumn: FR_SYTNER_PL_DETAIL_LEVEL_3_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 37eeef20-7ec1-43db-81dc-2bc1037065a8
+		summarizeBy: none
+		sourceColumn: FR_SYTNER_PL_DETAIL_LEVEL_4_DESC
+		sortByColumn: SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_DETAIL_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 94b88123-4d13-45b8-8a46-24aff575f1e5
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_DETAIL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0cb8c263-6a91-4ede-af53-0b4ba39ec629
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_DETAIL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 68f41bd5-78d6-4a51-8d36-33d2b3dc7851
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_DETAIL_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f76f1832-3911-4b6a-9dfd-ff199fc014f8
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_DETAIL_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 68d9dd00-ed80-4eff-9866-bceaf870931c
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_DETAIL_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_DETAIL_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

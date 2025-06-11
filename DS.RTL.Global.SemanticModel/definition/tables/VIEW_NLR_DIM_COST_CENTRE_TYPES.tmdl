@@ -1,0 +1,113 @@
+table VIEW_NLR_DIM_COST_CENTRE_TYPES
+	isHidden
+	lineageTag: 88cedde6-0274-407f-9031-df67ba1f5796
+
+	column COST_CENTRE_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 28ba0455-e79d-4369-ab1d-82f4345846e3
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_COST_CENTRE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: bd8e7b71-a569-4eea-b45f-1115b4b24bea
+		summarizeBy: none
+		sourceColumn: PT_COST_CENTRE_TYPE_DESC
+		sortByColumn: COST_CENTRE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_COST_CENTRE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: c579dddb-ad5d-4e0f-86d4-ddc8aedaf154
+		summarizeBy: none
+		sourceColumn: EN_COST_CENTRE_TYPE_DESC
+		sortByColumn: COST_CENTRE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_COST_CENTRE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 6a013929-bc73-4872-8942-d19fbde076e6
+		summarizeBy: none
+		sourceColumn: ES_COST_CENTRE_TYPE_DESC
+		sortByColumn: COST_CENTRE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_COST_CENTRE_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 9959ae05-eb12-4bd0-9ef9-73ed632fc8f9
+		summarizeBy: none
+		sourceColumn: FR_COST_CENTRE_TYPE_DESC
+		sortByColumn: COST_CENTRE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_CENTRE_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cf353d8e-d584-4e07-a5aa-6bdb2f910b88
+		summarizeBy: sum
+		sourceColumn: COST_CENTRE_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_COST_CENTRE_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_COST_CENTRE_TYPES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_COST_CENTRE_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_COST_CENTRE_TYPES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,68 @@
+table PARAMETER_PAYMENT_MEASURES
+	lineageTag: e09a00ca-b35b-4d08-a672-3f4265903648
+
+	column PARAMETER_PAYMENT_MEASURES
+		lineageTag: e8d0401c-6408-42e0-bf2b-dcd209a92ad2
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_PAYMENT_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_PAYMENT_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_PAYMENT_MEASURES Fields'
+		isHidden
+		lineageTag: 1a0505bd-5bd2-48c5-85ee-347b2b2e2c69
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_PAYMENT_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_PAYMENT_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 423de683-0289-48d3-beb2-ddbcf24349dd
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 44a7fc97-0045-4b77-946b-a1c325be5eb6
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_PAYMENT_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Valor em pagamento", NAMEOF([Payment CY]), 0, "pt-PT"),
+				    ("Valor em pagamento %", NAMEOF([Payment CY %]), 1, "pt-PT"),
+				
+				    ("Amount in payment", NAMEOF([Payment CY]), 0, "en-US"),
+				    ("Amount in payment %", NAMEOF([Payment CY %]), 1, "en-US"),
+				
+				    ("Valor en pago", NAMEOF([Payment CY]), 0, "es-ES"),
+				    ("Valor en pago %", NAMEOF([Payment CY %]), 1, "es-ES"),
+				
+				    ("Montant à payer", NAMEOF([Payment CY]), 0, "fr-FR"),
+				    ("Montant à payer %", NAMEOF([Payment CY %]), 1, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = f0a641d48b994bd3903f0a89abd053f9
+

@@ -1,0 +1,137 @@
+/// DW: PBI.PARAMETER_MEASURES
+table PARAMETER_DRPL_MEASURES
+	lineageTag: a0413d6f-0476-40f4-91be-bbc2314dd6e2
+
+	/// DW:PBI.PARAMETER_MEASURES.PARAMETER_MEASURES
+	column Measures
+		lineageTag: d53173bc-1ee7-47f6-a609-00057d768605
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PARAMETER_MEASURES.PARAMETER_MEASURES Fields
+	column 'PARAMETER_MEASURES Fields'
+		isHidden
+		lineageTag: 5233feca-915b-433b-bf84-5fddddd5590a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PARAMETER_MEASURES.PARAMETER_MEASURES Order
+	column 'PARAMETER_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 1ce04740-7b96-43e0-8f0b-8496c2bbad7e
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.PARAMETER_MEASURES.USER_CULTURE
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: ea8d9f84-e93e-43f5-968f-b073461ee420
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 164e733a-9bcf-4a9e-ac19-2d41bc38595f
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_DRPL_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([DR PL CY]), 0, "pt-PT", 2),
+				    ("Real %", NAMEOF([DR PL CY %]), 1, "pt-PT", 2),
+				    ("Orç", NAMEOF([DR PL Bgt]), 2, "pt-PT", 3),
+				    ("Orç %", NAMEOF([DR PL Bgt %]), 3, "pt-PT", 3),
+				    ("Δ Orç", NAMEOF([DR PL Delta Bgt]), 4, "pt-PT", 3),
+				    ("Δ Orç %", NAMEOF([DR PL Delta Bgt %]), 5, "pt-PT", 3),    
+				    ("Orç Adm", NAMEOF([DR PL Bgt Adm]), 6, "pt-PT", 4),
+				    ("Orç Adm %", NAMEOF([DR PL Bgt Adm %]), 7, "pt-PT", 4),
+				    ("Δ Orç Adm", NAMEOF([DR PL Delta Bgt Adm]), 8, "pt-PT", 4),
+				    ("Δ Orç Adm %", NAMEOF([DR PL Delta Bgt Adm %]), 9, "pt-PT", 4),
+				    ("AA", NAMEOF([DR PL LY]), 10, "pt-PT", 2),
+				    ("AA %", NAMEOF([DR PL LY %]), 11, "pt-PT", 2),
+				    ("Δ AA", NAMEOF([DR PL Delta LY]), 12, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([DR PL Delta LY %]), 13, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([DR PL CY]), 0, "en-US", 2),
+				    ("CY %", NAMEOF([DR PL CY %]), 1, "en-US", 2),
+				    ("Bgt", NAMEOF([DR PL Bgt]), 2, "en-US", 3),
+				    ("Bgt %", NAMEOF([DR PL Bgt %]), 3, "en-US", 3),
+				    ("Δ Bgt", NAMEOF([DR PL Delta Bgt]), 4, "en-US", 3),
+				    ("Δ Bgt %", NAMEOF([DR PL Delta Bgt %]), 5, "en-US", 3),
+				    ("Bgt Adm", NAMEOF([DR PL Bgt Adm]), 6, "en-US", 4),
+				    ("Bgt Adm %", NAMEOF([DR PL Bgt Adm %]), 7, "en-US", 4),
+				    ("Δ Bgt Adm", NAMEOF([DR PL Delta Bgt Adm]), 8, "en-US", 4),
+				    ("Δ Bgt Adm %", NAMEOF([DR PL Delta Bgt Adm %]), 9, "en-US", 4),
+				    ("LY", NAMEOF([DR PL LY]), 10, "en-US", 2),
+				    ("LY %", NAMEOF([DR PL LY %]), 11, "en-US", 2),
+				    ("Δ LY", NAMEOF([DR PL Delta LY]), 12, "en-US", 2),
+				    ("Δ LY %", NAMEOF([DR PL Delta LY %]), 13, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([DR PL CY]), 0, "es-ES", 2),
+				    ("Real %", NAMEOF([DR PL CY %]), 1, "es-ES", 2),
+				    ("Ppto", NAMEOF([DR PL Bgt]), 2, "es-ES", 3),
+				    ("Ppto %", NAMEOF([DR PL Bgt %]), 3, "es-ES", 3),
+				    ("Δ Ppto", NAMEOF([DR PL Delta Bgt]), 4, "es-ES", 3),
+				    ("Δ Ppto %", NAMEOF([DR PL Delta Bgt %]), 5, "es-ES", 3),
+				    ("Ppto Adm", NAMEOF([DR PL Bgt Adm]), 6, "es-ES", 4),
+				    ("Ppto Adm %", NAMEOF([DR PL Bgt Adm %]), 7, "es-ES", 4),
+				    ("Δ Ppto Adm", NAMEOF([DR PL Delta Bgt Adm]), 8, "es-ES", 4),
+				    ("Δ Ppto Adm %", NAMEOF([DR PL Delta Bgt Adm %]), 9, "es-ES", 4),
+				    ("AA", NAMEOF([DR PL LY]), 10, "es-ES", 2),
+				    ("AA %", NAMEOF([DR PL LY %]), 11, "es-ES", 2),
+				    ("Δ AA", NAMEOF([DR PL Delta LY]), 12, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([DR PL Delta LY %]), 13, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([DR PL CY]), 0, "fr-FR", 2),
+				    ("Réel %", NAMEOF([DR PL CY %]), 1, "fr-FR", 2),
+				    ("Bgt", NAMEOF([DR PL Bgt]), 2, "fr-FR", 3),
+				    ("Bgt %", NAMEOF([DR PL Bgt %]), 3, "fr-FR", 3),
+				    ("Δ Bgt", NAMEOF([DR PL Delta Bgt]), 4, "fr-FR", 3),
+				    ("Δ Bgt %", NAMEOF([DR PL Delta Bgt %]), 5, "fr-FR", 3),
+				    ("Bgt Adm", NAMEOF([DR PL Bgt Adm]), 6, "fr-FR", 4),
+				    ("Bgt Adm %", NAMEOF([DR PL Bgt Adm %]), 7, "fr-FR", 4),
+				    ("Δ Bgt Adm", NAMEOF([DR PL Delta Bgt Adm]), 8, "fr-FR", 4),
+				    ("Δ Bgt Adm %", NAMEOF([DR PL Delta Bgt Adm %]), 9, "fr-FR", 4),
+				    ("AD", NAMEOF([DR PL LY]), 10, "fr-FR", 2),
+				    ("AD %", NAMEOF([DR PL LY %]), 11, "fr-FR", 2),
+				    ("Δ AD", NAMEOF([DR PL Delta LY]), 12, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([DR PL Delta LY %]), 13, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 4823fb65a2184aa59d1ed38aae147e11
+

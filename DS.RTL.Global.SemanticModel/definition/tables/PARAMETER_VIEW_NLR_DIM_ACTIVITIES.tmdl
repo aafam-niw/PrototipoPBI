@@ -1,0 +1,102 @@
+table PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+	lineageTag: 29a46fae-b297-4151-a255-a81b6dba9499
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: e403de04-1e1f-4a4b-af67-f72e53b1d20e
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_DESC
+		lineageTag: b56be5d8-1478-4e33-9798-e168e94bd2e0
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_1_DESC
+		lineageTag: 12f72f22-5d22-484b-9a3c-bac6ba731cee
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_2_DESC
+		lineageTag: a327f872-6c3e-411e-b558-bac787f01b90
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_LEVEL_3_DESC
+		lineageTag: 3a5e8223-80d6-4b93-89f1-25b61d2c9412
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_ACTIVITIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_3_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = d5e6e3a69135429c8883a70c5aa1e1e9
+

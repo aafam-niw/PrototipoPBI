@@ -1,0 +1,76 @@
+table PARAMETER_VHE_STOCK_MEASURES
+	lineageTag: 082e8408-4057-447d-9760-0456f4cc60b0
+
+	column PARAMETER_VHE_STOCK_MEASURES
+		lineageTag: 5c4ba3ce-91a7-441a-a254-263259e64113
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_STOCK_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_STOCK_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_STOCK_MEASURES Fields'
+		isHidden
+		lineageTag: b802eff0-1b15-4a67-aee6-5780dcb6fb00
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_STOCK_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_STOCK_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 97db4d83-3e76-441a-b52e-189bce1b1df9
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: fced03a1-3d30-4cea-8d4e-adbc229c5ce2
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_STOCK_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([VHE Stock CY]), 0, "pt-PT"),
+				    ("AA", NAMEOF([VHE Stock LY]), 1, "pt-PT"),
+				    ("Δ AA", NAMEOF([VHE Stock Delta LY]), 2, "pt-PT"),
+				    ("Δ AA %", NAMEOF([VHE Stock Delta LY %]), 3, "pt-PT"),
+				
+				    ("CY", NAMEOF([VHE Stock CY]), 0, "en-US"),
+				    ("LY", NAMEOF([VHE Stock LY]), 1, "en-US"),
+				    ("Δ LY", NAMEOF([VHE Stock Delta LY]), 2, "en-US"),
+				    ("Δ LY %", NAMEOF([VHE Stock Delta LY %]), 3, "en-US"),
+				
+				    ("Real", NAMEOF([VHE Stock CY]), 0, "es-ES"),
+				    ("AA", NAMEOF([VHE Stock LY]), 1, "es-ES"),
+				    ("Δ AA", NAMEOF([VHE Stock Delta LY]), 2, "es-ES"),
+				    ("Δ AA %", NAMEOF([VHE Stock Delta LY %]), 3, "es-ES"),
+				
+				    ("Réel", NAMEOF([VHE Stock CY]), 0, "fr-FR"),
+				    ("AD", NAMEOF([VHE Stock LY]), 1, "fr-FR"),
+				    ("Δ AD", NAMEOF([VHE Stock Delta LY]), 2, "fr-FR"),
+				    ("Δ AD %", NAMEOF([VHE Stock Delta LY %]), 3, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = cd8302f70c234240a4d874b4882e4ad6
+

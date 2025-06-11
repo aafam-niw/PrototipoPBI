@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_GBL_DIM_VALUE_TYPES_ALL
+	lineageTag: 4c0cdac7-d387-46f9-9bcc-97b5c9f13d72
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 27529c3f-ceac-468b-b09b-45badb892c74
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_DESC
+		lineageTag: c347e8ed-b00c-4d81-bb9c-bc332b0e0b84
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_VALUE_TYPES_ALL = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_VALUE_TYPES_ALL'[PT_VALUE_TYPE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_VALUE_TYPES_ALL'[EN_VALUE_TYPE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_VALUE_TYPES_ALL'[ES_VALUE_TYPE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_VALUE_TYPES_ALL'[FR_VALUE_TYPE_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 67ddbf740dd046049e54de2f29c9ab90
+

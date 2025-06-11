@@ -1,0 +1,71 @@
+table PARAMETER_DEBT_MEASURES
+	lineageTag: 2f28a643-73db-4861-addf-63895b70bd88
+
+	column PARAMETER_DEBT_MEASURES
+		lineageTag: dc8cfbf7-9565-4816-aea6-19b883d5edc9
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_DEBT_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_DEBT_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_DEBT_MEASURES Fields'
+		isHidden
+		lineageTag: 239cceda-a2a5-4beb-b9b5-014a8a14f070
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_DEBT_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_DEBT_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: a4114346-5413-4c58-b43e-fbb793ac077d
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 14ac8c63-506d-4cd9-aa2a-2ccb6a6b7593
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_DEBT_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Antiguidade", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE[PT_DOCUMENT_AGE_DESC]), 0, "pt-PT"),
+				    ("Antiguidade Duvidosos", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE_2[PT_DOCUMENT_AGE_DESC]), 1, "pt-PT"),
+				
+				    ("Aging", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE[EN_DOCUMENT_AGE_DESC]), 0, "en-US"),
+				    ("Doubtful Aging", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE_2[EN_DOCUMENT_AGE_DESC]), 1, "en-US"),
+				
+				
+				    ("Antigüedad", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE[ES_DOCUMENT_AGE_DESC]), 0, "es-ES"),
+				    ("Antigüedad Dudosos", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE_2[ES_DOCUMENT_AGE_DESC]), 1, "es-ES"),
+				    
+				
+				
+				    ("Ancienneté", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE[FR_DOCUMENT_AGE_DESC]), 0, "fr-FR"),
+				    ("Ancienneté Doubtuses", NAMEOF(VIEW_SLR_DIM_DOCUMENT_AGE_2[FR_DOCUMENT_AGE_DESC]), 1, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = c00d0585d83b44e4b3573b0c33c56e4e
+

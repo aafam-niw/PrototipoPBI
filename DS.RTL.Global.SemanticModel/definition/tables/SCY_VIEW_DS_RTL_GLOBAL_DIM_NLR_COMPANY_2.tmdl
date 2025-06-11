@@ -1,0 +1,44 @@
+table SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_COMPANY_2
+	isHidden
+	lineageTag: 919205bb-87d8-42d6-8126-3394cab842e9
+
+	column O365_USER
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: d96f58c9-e0cb-49aa-8854-f80d5d277e3b
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: aa83c35c-3586-4f3d-bfa5-5d574cde9991
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_COMPANY_2 = m
+		mode: import
+		queryGroup: Security
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.RTL.GLOBAL_DIM_NLR.COMPANY_2 = Source{[Schema="SCY",Item="VIEW_DS.RTL.GLOBAL_DIM_NLR.COMPANY_2"]}[Data]
+				in
+				    SCY_View_DS.RTL.GLOBAL_DIM_NLR.COMPANY_2
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

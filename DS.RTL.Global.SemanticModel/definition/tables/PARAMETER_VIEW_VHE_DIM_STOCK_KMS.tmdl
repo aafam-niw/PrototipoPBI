@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_STOCK_KMS
+	lineageTag: 7d3e8db2-57cc-4ce6-88de-1943c4101386
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: fdf446d4-0cc2-49e5-ac42-62ece864ec5f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_KMS_DESC
+		lineageTag: 17358488-0476-47ea-8f1b-cd0c390220cf
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_STOCK_KMS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_KMS'[PT_STOCK_KMS_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_KMS'[EN_STOCK_KMS_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_KMS'[ES_STOCK_KMS_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_STOCK_KMS'[FR_STOCK_KMS_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 9bfb1ddacec14c1e9c92411305e70a4d
+

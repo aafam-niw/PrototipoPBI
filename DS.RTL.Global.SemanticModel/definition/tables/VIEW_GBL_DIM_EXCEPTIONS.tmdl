@@ -1,0 +1,101 @@
+table VIEW_GBL_DIM_EXCEPTIONS
+	isHidden
+	lineageTag: 1d5b5774-0fcc-4cb2-b220-048a647e4a0a
+
+	column EXCEPTION_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 25ec451d-0e11-447c-92ef-2c4347d74ee8
+		summarizeBy: none
+		sourceColumn: EXCEPTION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_EXCEPTION_DESC
+		dataType: string
+		isHidden
+		lineageTag: be491f09-7e6a-401f-9d51-5f8aad63506b
+		summarizeBy: none
+		sourceColumn: PT_EXCEPTION_DESC
+		sortByColumn: EXCEPTION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_EXCEPTION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 59f75fcf-a059-4b33-a2e4-7bd89624af07
+		summarizeBy: none
+		sourceColumn: EN_EXCEPTION_DESC
+		sortByColumn: EXCEPTION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_EXCEPTION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 2ab67381-b98c-4bf8-b9e9-3b4f05b564a7
+		summarizeBy: none
+		sourceColumn: ES_EXCEPTION_DESC
+		sortByColumn: EXCEPTION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_EXCEPTION_DESC
+		dataType: string
+		isHidden
+		lineageTag: 8ad02d42-4336-4e48-950f-6af2e667494a
+		summarizeBy: none
+		sourceColumn: FR_EXCEPTION_DESC
+		sortByColumn: EXCEPTION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXCEPTION_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ed25e036-a43a-449b-ad5d-e972e6a6de64
+		summarizeBy: none
+		sourceColumn: EXCEPTION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_EXCEPTIONS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_EXCEPTIONS_MPBI = Source{[Schema="PBI",Item="VIEW_GBL_DIM_EXCEPTIONS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_EXCEPTIONS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

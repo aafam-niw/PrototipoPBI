@@ -1,0 +1,125 @@
+table VIEW_VHE_DIM_USAGE_AGE
+	isHidden
+	lineageTag: c2abd385-6da8-4a71-af59-0d9d7b6e4ceb
+
+	column USAGE_AGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: a9d48400-ff4c-4de9-ad88-401b404c8772
+		summarizeBy: none
+		sourceColumn: USAGE_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_USAGE_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 9f77b94b-1711-49a8-ba66-a0fb1a8997ff
+		summarizeBy: none
+		sourceColumn: PT_USAGE_AGE_DESC
+		sortByColumn: USAGE_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_USAGE_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 4206f4ef-3cd5-473f-b5cf-1baa2387fba9
+		summarizeBy: none
+		sourceColumn: ES_USAGE_AGE_DESC
+		sortByColumn: USAGE_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_USAGE_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 752de7f9-23d8-45ee-969c-bec189a60cde
+		summarizeBy: none
+		sourceColumn: EN_USAGE_AGE_DESC
+		sortByColumn: USAGE_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_USAGE_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: beedc60b-61e8-4fb4-b676-6500bc14eb67
+		summarizeBy: none
+		sourceColumn: FR_USAGE_AGE_DESC
+		sortByColumn: USAGE_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column AGE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: db00249d-9411-4123-a235-03bbbf131c95
+		summarizeBy: none
+		sourceColumn: AGE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOVEMENT_DATE_CRITERIA
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 47c8dbe7-7aa8-4d0c-b94f-f622199d2eb4
+		summarizeBy: none
+		sourceColumn: MOVEMENT_DATE_CRITERIA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USAGE_AGE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c9f58e92-4d9d-485f-a569-e27215c1c074
+		summarizeBy: none
+		sourceColumn: USAGE_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_USAGE_AGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_USAGE_AGE_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_USAGE_AGE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_USAGE_AGE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

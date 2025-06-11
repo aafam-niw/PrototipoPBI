@@ -1,0 +1,94 @@
+table PARAMETER_CF_INDICADORES
+	isHidden
+	lineageTag: cb1fbc54-925b-45ae-b91d-84df1e810a20
+
+	column Id
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: e4943ce4-08c6-4a3d-99a7-5122a3d32d84
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: df7dc0f9-c1f3-44f0-96e2-ba014cd005f7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 7d17c269-3164-42c1-9ba9-bf270e8b7299
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 9f9833ec-36f3-463e-955c-249079d7b01e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: bf389288-d5a0-47ea-9b3e-4bda2c326b36
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_CF_INDICADORES = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Real", "CF CY", "pt-PT", 2 },
+				        { 2, "AA", "CF LY", "pt-PT", 2 },
+				        { 3, "Δ AA", "CF Delta LY", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "CF CY", "en-US", 2 },
+				        { 2, "LY", "CF LY", "en-US", 2 },
+				        { 3, "Δ LY", "CF Delta LY", "en-US", 2 },
+				
+				
+				        { 1, "Real", "CF CY", "es-ES", 2 },
+				        { 2, "AA", "CF LY", "es-ES", 2 },
+				        { 3, "Δ AA", "CF Delta LY", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "CF CY", "fr-FR", 2 },
+				        { 2, "AD", "CF LY", "fr-FR", 2 },
+				        { 3, "Δ AD", "CF Delta LY", "fr-FR", 2 }
+				    }
+				)
+				
+				
+				```
+
+	annotation PBI_Id = eb156d9dadb0499e92d11ccbe835581b
+

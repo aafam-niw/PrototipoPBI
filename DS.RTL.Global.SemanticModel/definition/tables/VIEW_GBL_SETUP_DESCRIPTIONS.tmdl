@@ -1,0 +1,144 @@
+table VIEW_GBL_SETUP_DESCRIPTIONS
+	isHidden
+	lineageTag: bd54f751-60e1-4523-9930-9950d4b90a89
+
+	column ID_DESCRIPTION
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6624bb3b-67a8-4413-b03a-d4a2846759b5
+		summarizeBy: sum
+		sourceColumn: ID_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPORT_NAME
+		dataType: string
+		isHidden
+		lineageTag: 16c08acb-9d79-491b-b46a-05cc7f23a0bb
+		summarizeBy: none
+		sourceColumn: REPORT_NAME
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column WORKSPACE_NAME
+		dataType: string
+		isHidden
+		lineageTag: e363f631-1a8a-464b-96df-0d1bb4929216
+		summarizeBy: none
+		sourceColumn: WORKSPACE_NAME
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_TRANSLATION
+		dataType: string
+		isHidden
+		lineageTag: 74d48008-c7d3-4745-b365-48299fc94877
+		summarizeBy: none
+		sourceColumn: PT_TRANSLATION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_DESCRIPTION
+		dataType: string
+		isHidden
+		lineageTag: 5f2db25b-c582-484c-b5cc-3124217ce5b5
+		summarizeBy: none
+		sourceColumn: PT_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_TRANSLATION
+		dataType: string
+		isHidden
+		lineageTag: b8ce9009-59a4-44cc-aaed-e1bcb46d8276
+		summarizeBy: none
+		sourceColumn: EN_TRANSLATION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_DESCRIPTION
+		dataType: string
+		isHidden
+		lineageTag: 1ba00994-7b62-4f98-8522-f562bf354464
+		summarizeBy: none
+		sourceColumn: EN_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_TRANSLATION
+		dataType: string
+		isHidden
+		lineageTag: a6da42b6-32a5-4342-99ae-66b860b0175b
+		summarizeBy: none
+		sourceColumn: ES_TRANSLATION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_DESCRIPTION
+		dataType: string
+		isHidden
+		lineageTag: 096121fc-6d9e-44d1-aaad-2325913074a9
+		summarizeBy: none
+		sourceColumn: ES_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_TRANSLATION
+		dataType: string
+		isHidden
+		lineageTag: 8c8a9dab-a478-483f-b7b5-1d81f9370373
+		summarizeBy: none
+		sourceColumn: FR_TRANSLATION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_DESCRIPTION
+		dataType: string
+		isHidden
+		lineageTag: e559f47c-e70f-4f8c-93ee-50969eb5210e
+		summarizeBy: none
+		sourceColumn: FR_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_SETUP_DESCRIPTIONS = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar),
+				    PBI_VIEW_GBL_SETUP_DESCRIPTIONS = Source{[Schema="PBI",Item="VIEW_GBL_SETUP_DESCRIPTIONS"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(PBI_VIEW_GBL_SETUP_DESCRIPTIONS, each [WORKSPACE_NAME] = Workspace)
+				in
+				    #"Filtered Rows"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["ENSURE_TABLES_HAVE_RELATIONSHIPS"]}
+

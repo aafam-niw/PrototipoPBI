@@ -1,0 +1,90 @@
+table PARAMETER_GM_FIELDS
+	isHidden
+	lineageTag: b725f37b-8d49-4915-b93b-8416dbf1a8a5
+
+	column PARAMETER_GM_FIELDS
+		isHidden
+		lineageTag: 591aa50e-4b99-4622-9fb4-d903f08a1c1d
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_GM_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_GM_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GM_FIELDS Fields'
+		isHidden
+		lineageTag: 8e409616-358f-490c-9a5a-b3306e00221d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_GM_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_GM_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: a5407626-bb26-4622-b5c9-0b3fef962b79
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 67871bde-b2c3-46a8-9c08-cf1a3c07b95e
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_GM_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("KPIs/General Indicators", NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[EN_GM_MEASURE_DESC]), 1, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 2, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 3, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 4, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 6, "en-US"),
+				    ("Year", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 7, "en-US"),
+				    ("Year-Month", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 8, "en-US"),
+				
+				    ("Indicadores Gerais", NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[PT_GM_MEASURE_DESC]), 1, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 3, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 4, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 6, "pt-PT"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 7, "pt-PT"),
+				    ("Ano-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 8, "pt-PT"),
+				
+				    ("Indicadores Generales", NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[ES_GM_MEASURE_DESC]), 1, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 3, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 4, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 6, "es-ES"),
+				    ("Año", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 7, "es-ES"),
+				    ("Año-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 8, "es-ES"),
+				
+				    ("Indicateurs Généraux", NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[FR_GM_MEASURE_DESC]), 1, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 3, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 4, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 6, "fr-FR"),
+				    ("Année", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 7, "fr-FR"),
+				    ("Année-Mois", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 8, "fr-FR") 
+				
+				}
+				```
+
+	annotation PBI_Id = 160e4d7678b04c6296fde4d2fbd6483d
+

@@ -1,0 +1,169 @@
+table VIEW_VHE_DIM_PRODUCTION_TYPES
+	isHidden
+	lineageTag: 5421b810-65be-45f7-90e4-83066165e42e
+
+	column PRODUCTION_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: c1d4ca6e-bc7b-4bb9-8342-ba8d0e5bf0de
+		summarizeBy: none
+		sourceColumn: PRODUCTION_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PRODUCTION_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 65d5be0d-18f3-4411-956a-f9cf6d33cd28
+		summarizeBy: none
+		sourceColumn: PT_PRODUCTION_TYPE_LEVEL_1_DESC
+		sortByColumn: PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_PRODUCTION_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 3dc67242-62cc-4acd-bd87-389ab3515c90
+		summarizeBy: none
+		sourceColumn: PT_PRODUCTION_TYPE_DESC
+		sortByColumn: PRODUCTION_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PRODUCTION_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 992f4aa1-9747-4a89-8043-9ae964c06ddf
+		summarizeBy: none
+		sourceColumn: ES_PRODUCTION_TYPE_LEVEL_1_DESC
+		sortByColumn: PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_PRODUCTION_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 45afa3af-a9b9-4d0f-9c9d-6134ff9ac932
+		summarizeBy: none
+		sourceColumn: ES_PRODUCTION_TYPE_DESC
+		sortByColumn: PRODUCTION_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PRODUCTION_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6b297641-1e9f-493d-8ee7-bc1a0699fc07
+		summarizeBy: none
+		sourceColumn: EN_PRODUCTION_TYPE_LEVEL_1_DESC
+		sortByColumn: PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_PRODUCTION_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 8e523781-8ef9-4ebf-9c08-b6791ec5cb1a
+		summarizeBy: none
+		sourceColumn: EN_PRODUCTION_TYPE_DESC
+		sortByColumn: PRODUCTION_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PRODUCTION_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 3cc5fb98-b858-40e0-9cf4-c43d582f4b75
+		summarizeBy: none
+		sourceColumn: FR_PRODUCTION_TYPE_LEVEL_1_DESC
+		sortByColumn: PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_PRODUCTION_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 3d9579e4-a7da-4f45-b9a9-326e8cd8410d
+		summarizeBy: none
+		sourceColumn: FR_PRODUCTION_TYPE_DESC
+		sortByColumn: PRODUCTION_TYPE_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCTION_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4ecb93d5-49f0-461a-95d2-8cceabbadca6
+		summarizeBy: none
+		sourceColumn: PRODUCTION_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5e777f88-c2fe-4754-b714-decf5039214e
+		summarizeBy: none
+		sourceColumn: PRODUCTION_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_PRODUCTION_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_PRODUCTION_TYPES = Source{[Schema="PBI",Item="VIEW_VHE_DIM_PRODUCTION_TYPES"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_PRODUCTION_TYPES
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

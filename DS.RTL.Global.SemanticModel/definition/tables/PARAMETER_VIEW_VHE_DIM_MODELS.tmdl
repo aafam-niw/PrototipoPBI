@@ -1,0 +1,67 @@
+table PARAMETER_VIEW_VHE_DIM_MODELS
+	lineageTag: 051b3677-abb6-4068-965e-8818d669b3d5
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 37716f2e-8f96-41c3-a007-6a38b5cd483a
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_DESC
+		lineageTag: 92422fa9-a4be-4611-b272-5879e3943245
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_LEVEL_1_DESC
+		lineageTag: bd07a90b-757d-4527-860e-1d91de6a76af
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_MODELS = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[PT_MODEL_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[PT_MODEL_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[EN_MODEL_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[EN_MODEL_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[ES_MODEL_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[ES_MODEL_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[FR_MODEL_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MODELS'[FR_MODEL_LEVEL_1_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = fc272b74684f4124b8218dc129c83e72
+

@@ -1,0 +1,43 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.59\",\"type\":2}},\"activeSectionIndex\":0,\"bookmarks\":[{\"displayName\":\"filter on\",\"name\":\"f268b2cf3bbd8e47e981\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"57aa97745e48d5ae2a09\",\"filters\":{\"byExpr\":[{\"name\":\"363657d67d7fe4976297\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_GBL_SETUP_USER_CULTURE\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"a02b4489da9cb5817ff4\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_NLR_DIM_PL_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"be5e418668abc8bde09e\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_NLR_DIM_ACTIVITIES_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"5b5baf5950ab7f4c7d02\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_GBL_DIM_FRANCHISES_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1}]},\"sections\":{\"57aa97745e48d5ae2a09\":{\"visualContainers\":{},\"visualContainerGroups\":{\"5a00bb01ed0ed508e35c\":{\"isHidden\":false}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}},\"options\":{\"targetVisualNames\":[]}},{\"displayName\":\"filter off\",\"name\":\"15abe8c26e584a29bd70\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"57aa97745e48d5ae2a09\",\"filters\":{\"byExpr\":[{\"name\":\"363657d67d7fe4976297\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_GBL_SETUP_USER_CULTURE\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"a02b4489da9cb5817ff4\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_NLR_DIM_PL_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"be5e418668abc8bde09e\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_NLR_DIM_ACTIVITIES_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1},{\"name\":\"5b5baf5950ab7f4c7d02\",\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VIEW_GBL_DIM_FRANCHISES_WITH_LANG\"}},\"Property\":\"USER_CULTURE\"}},\"howCreated\":1}]},\"sections\":{\"57aa97745e48d5ae2a09\":{\"visualContainers\":{},\"visualContainerGroups\":{\"5a00bb01ed0ed508e35c\":{\"isHidden\":true}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}},\"options\":{\"targetVisualNames\":[]}}],\"defaultDrillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"240L\"}}}}}]},\"filterSortOrder\":3}",
+      "displayName": "page1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "aa9a1ce1a15d4e15d82d",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"75cfd7d9090c47c0fca6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.498827591538046,\"y\":0,\"z\":0,\"width\":351.4566208869077,\"height\":72.4285603854776,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"DS.RTL.Global\",\"textStyle\":{\"fontSize\":\"32pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 72.43,
+          "width": 351.46,
+          "x": 9.50,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

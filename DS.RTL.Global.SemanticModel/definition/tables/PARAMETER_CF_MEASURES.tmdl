@@ -1,0 +1,88 @@
+table PARAMETER_CF_MEASURES
+	lineageTag: 2b76161c-43a3-49c6-ac62-af9da224dee8
+
+	column PARAMETER_CF_MEASURES
+		lineageTag: 5055dcb4-1bb2-4525-8a65-46197f837e3c
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_CF_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_CF_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CF_MEASURES Fields'
+		isHidden
+		lineageTag: 84369bb2-4d19-4bb5-bb93-d3e8cdd13b39
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_CF_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CF_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: ab46e266-bef9-466a-aa68-a147c704e73b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 30956d25-d7e3-4c34-9158-66abe0519b00
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: b231c9b2-363e-4f34-9736-ebafed1e27c2
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_CF_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([CF CY]), 0, "pt-PT", 2),
+				    ("AA", NAMEOF([CF LY]), 1, "pt-PT", 2),
+				    ("Δ AA", NAMEOF([CF Delta LY]), 2, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([CF CY]), 0, "en-US", 2),
+				    ("LY", NAMEOF([CF LY]), 1, "en-US", 2),
+				    ("Δ LY", NAMEOF([CF Delta LY]), 2, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([CF CY]), 0, "es-ES", 2),
+				    ("AA", NAMEOF([CF LY]), 1, "es-ES", 2),
+				    ("Δ AA", NAMEOF([CF Delta LY]), 2, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([CF CY]), 0, "fr-FR", 2),
+				    ("AD", NAMEOF([CF LY]), 1, "fr-FR", 2),
+				    ("Δ AD", NAMEOF([CF Delta LY]), 2, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 82db9375ab294024856b29510e9acd11
+

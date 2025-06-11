@@ -1,0 +1,389 @@
+table VIEW_GBL_DIM_SITES
+	isHidden
+	lineageTag: 89d6f411-372f-4197-bfcb-83676a11658d
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 98adad5b-221d-4e9d-b859-76216927c4b2
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 147564d3-2f70-484a-9b28-a77bdcc9f979
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 49044a4c-6de8-4d75-80ee-f86fe7a1f3a3
+		summarizeBy: sum
+		sourceColumn: SITE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SITE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ea0785a7-312a-4bd6-a63e-72bf219a7c56
+		summarizeBy: none
+		sourceColumn: PT_SITE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SITE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 63a9d18b-5c37-464f-8c9e-dde8c9a620cb
+		summarizeBy: none
+		sourceColumn: PT_SITE_LEVEL_1_DESC
+		sortByColumn: SITE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SITE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: c80cc7f9-a0f8-4dad-ba80-c91706c82229
+		summarizeBy: none
+		sourceColumn: PT_SITE_LEVEL_2_DESC
+		sortByColumn: SITE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SITE_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: e3815b89-3b23-4080-867a-760805d2ced2
+		summarizeBy: none
+		sourceColumn: PT_SITE_LEVEL_3_DESC
+		sortByColumn: SITE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SITE_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 01f7875b-3a41-4711-a3ed-ca4f0294bcab
+		summarizeBy: none
+		sourceColumn: PT_SITE_LEVEL_4_DESC
+		sortByColumn: SITE_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SITE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 8e23d17a-cbff-4b71-952e-3de445bdd9ae
+		summarizeBy: none
+		sourceColumn: EN_SITE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SITE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 6cfc0b48-1871-499d-89ef-24034ccfd084
+		summarizeBy: none
+		sourceColumn: EN_SITE_LEVEL_1_DESC
+		sortByColumn: SITE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SITE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: b44c1fb0-1598-4fc4-ad96-40875531884a
+		summarizeBy: none
+		sourceColumn: EN_SITE_LEVEL_2_DESC
+		sortByColumn: SITE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SITE_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 871d05af-0e94-4159-9f85-e703bfdf84e9
+		summarizeBy: none
+		sourceColumn: EN_SITE_LEVEL_3_DESC
+		sortByColumn: SITE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SITE_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 2cc0b4c2-fd9c-4cce-aa1c-c3d8b5e0b898
+		summarizeBy: none
+		sourceColumn: EN_SITE_LEVEL_4_DESC
+		sortByColumn: SITE_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SITE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: fc0e6541-d6be-4a05-bc11-3fdc5527b165
+		summarizeBy: none
+		sourceColumn: ES_SITE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SITE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 6266a3b0-0688-4acb-86a4-7a65a0cab326
+		summarizeBy: none
+		sourceColumn: ES_SITE_LEVEL_1_DESC
+		sortByColumn: SITE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SITE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 8c7cfbe1-adbd-4cb7-a63a-082fa5038fae
+		summarizeBy: none
+		sourceColumn: ES_SITE_LEVEL_2_DESC
+		sortByColumn: SITE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SITE_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: f8d82a68-7b3a-471e-93ca-81733a696480
+		summarizeBy: none
+		sourceColumn: ES_SITE_LEVEL_3_DESC
+		sortByColumn: SITE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SITE_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: a96bbdd9-e3ee-4895-adbb-73d4230d77bf
+		summarizeBy: none
+		sourceColumn: ES_SITE_LEVEL_4_DESC
+		sortByColumn: SITE_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SITE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 48b47dbc-2da8-419e-ab65-3dff45c6941e
+		summarizeBy: none
+		sourceColumn: FR_SITE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SITE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 65cfe055-e27d-4325-912e-a79cfc7ca4f5
+		summarizeBy: none
+		sourceColumn: FR_SITE_LEVEL_1_DESC
+		sortByColumn: SITE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SITE_LEVEL_2_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 281f7c65-c8d7-46c3-b4df-88a678d2b208
+		summarizeBy: none
+		sourceColumn: FR_SITE_LEVEL_2_DESC
+		sortByColumn: SITE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SITE_LEVEL_3_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 5a2f5bbf-d284-4149-ab69-4d70bb55dc28
+		summarizeBy: none
+		sourceColumn: FR_SITE_LEVEL_3_DESC
+		sortByColumn: SITE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SITE_LEVEL_4_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 08d9c0c6-da0d-4427-9098-c4653967fcc2
+		summarizeBy: none
+		sourceColumn: FR_SITE_LEVEL_4_DESC
+		sortByColumn: SITE_LEVEL_4_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 25b7b340-5b1e-467f-b262-320eb81009e2
+		summarizeBy: sum
+		sourceColumn: SITE_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: cc2c15e7-5eaf-4d5d-9495-403031575eaf
+		summarizeBy: sum
+		sourceColumn: SITE_LEVEL_2_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c97467c-dd85-40d4-a848-12d83c60d8bc
+		summarizeBy: sum
+		sourceColumn: SITE_LEVEL_3_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_4_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dccda12-38e7-47c2-b550-90bbe16bae00
+		summarizeBy: sum
+		sourceColumn: SITE_LEVEL_4_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_SITES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_SITES_MPBI = Source{[Schema="PBI",Item="VIEW_GBL_DIM_SITES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_SITES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

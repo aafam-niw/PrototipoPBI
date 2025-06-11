@@ -1,0 +1,262 @@
+table VIEW_VHE_FACT_SALESMEN_COSTS
+	lineageTag: 4284b838-e25c-48a9-8ac6-214ea0ec7cfb
+
+	column Client_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 91852346-60dd-4e3a-a24b-71d37c4b03b1
+		summarizeBy: count
+		sourceColumn: Client_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Environment
+		dataType: int64
+		formatString: 0
+		lineageTag: b7e192d9-2f36-4c20-a75c-5a951336f5dd
+		summarizeBy: sum
+		sourceColumn: Environment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Record_Type
+		dataType: int64
+		formatString: 0
+		lineageTag: fdc7cb4a-fbe0-477d-a482-3d84ec35ac2d
+		summarizeBy: sum
+		sourceColumn: Record_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_Code
+		dataType: string
+		lineageTag: 7d672dd1-b8ed-4056-9064-1ac09c5b5d2b
+		summarizeBy: none
+		sourceColumn: NLR_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Site_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f8e6ffb-e98d-4a02-a392-74f3ec50dba6
+		summarizeBy: count
+		sourceColumn: Site_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salesman
+		dataType: string
+		lineageTag: af3ea9d2-d0bd-43d8-a0fd-5805e6a1ad62
+		summarizeBy: none
+		sourceColumn: Salesman
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salesman_Name
+		dataType: string
+		lineageTag: 91517602-df54-4e13-b31f-e714cd915a47
+		summarizeBy: none
+		sourceColumn: Salesman_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salesman_Position
+		dataType: string
+		lineageTag: 1abf4c0a-bc2d-487a-9038-bd3e955f325d
+		summarizeBy: none
+		sourceColumn: Salesman_Position
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Executive
+		dataType: string
+		lineageTag: 6151d488-d085-404d-9692-38607916c0a1
+		summarizeBy: none
+		sourceColumn: Sales_Executive
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Executive_Name
+		dataType: string
+		lineageTag: 77b0b41a-dc4b-4eef-9675-88caa7e82216
+		summarizeBy: none
+		sourceColumn: Sales_Executive_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: string
+		lineageTag: c1b0fd07-9edf-4233-aee3-d17b56132f31
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		lineageTag: f76d8483-9040-4154-8fb2-849d8f41925d
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Franchise_Code_DW
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e6b2376-ee43-4b3f-b94a-0f8e088abe57
+		summarizeBy: sum
+		sourceColumn: Franchise_Code_DW
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: bb18e8c4-d25d-4587-aefc-ff9e04f4c47c
+		summarizeBy: count
+		sourceColumn: Activity_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active
+		dataType: int64
+		formatString: 0
+		lineageTag: 954c243a-0e09-4c7a-ba2e-492bc0adc3b7
+		summarizeBy: sum
+		sourceColumn: Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value_Type
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a4be768-bd46-4695-8671-bccd6e444dd4
+		summarizeBy: sum
+		sourceColumn: Value_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: a5bfdbd1-6c32-4d3c-a34c-e054d510289d
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sell_Value
+		dataType: double
+		lineageTag: 1b181b14-ef42-497e-a5c7-9e5d90f3ac4e
+		summarizeBy: sum
+		sourceColumn: Sell_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Gross_Margin
+		dataType: double
+		lineageTag: 00eb37b8-52b1-4a2c-b5af-91885d840a55
+		summarizeBy: sum
+		sourceColumn: Gross_Margin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Finance_Revenue
+		dataType: double
+		lineageTag: 86e9ff74-020e-47ad-aa8e-c21f76a26702
+		summarizeBy: sum
+		sourceColumn: Finance_Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fixed_Cost
+		dataType: double
+		lineageTag: 225681ee-9d3a-4275-a607-07c73543931f
+		summarizeBy: sum
+		sourceColumn: Fixed_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Variable_Cost
+		dataType: double
+		lineageTag: 7bae5844-e7ee-4605-8d69-e8fed5e12259
+		summarizeBy: sum
+		sourceColumn: Variable_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Financial_Cost
+		dataType: double
+		lineageTag: a04ea1fb-849a-4258-9964-bc0a6633bca1
+		summarizeBy: sum
+		sourceColumn: Financial_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Reversion_Value
+		dataType: double
+		lineageTag: 8fda6287-dfdd-46f2-a343-dc0f20ed237f
+		summarizeBy: sum
+		sourceColumn: Reversion_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Salesmen_Cost
+		dataType: double
+		lineageTag: 2f075003-a2bb-4cd4-af81-159092c41f51
+		summarizeBy: sum
+		sourceColumn: Salesmen_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Result
+		dataType: double
+		lineageTag: 3c67dc17-6b06-43a7-8e64-62978409efd7
+		summarizeBy: sum
+		sourceColumn: Result
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency_Rate
+		dataType: double
+		lineageTag: 0f7470db-3c41-43f9-b577-7cb4c03ada17
+		summarizeBy: sum
+		sourceColumn: Currency_Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition VIEW_VHE_FACT_SALESMEN_COSTS = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_VHE_FACT_SALESMEN_COSTS"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,93 @@
+table PARAMETER_CF_FIELDS
+	isHidden
+	lineageTag: 93c501bd-3a96-4d69-8c44-d2e3e31bc5b6
+
+	column PARAMETER_CF_FIELDS
+		isHidden
+		lineageTag: 8204e72d-2341-4746-8ca9-5eb3c5a7de82
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_CF_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_CF_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CF_FIELDS Fields'
+		isHidden
+		lineageTag: db52c489-3380-4cde-ac07-9b53995e7047
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_CF_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_CF_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: f4d67881-0096-406c-8c19-ba5e3614d1cb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 7d621f5f-d383-49c0-8d37-33dfa3eafdc9
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_CF_FIELDS = calculated
+		mode: import
+		source =
+				{
+				    ("CF Level 1", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[EN_CF_LEVEL_1_DESC]), 1, "en-US"),
+				    ("CF", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[EN_CF_DESC]), 2, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 3, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 4, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 5, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 7, "en-US"),
+				    ("Year", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 8, "en-US"),
+				    ("Year-Month", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 9, "en-US"),
+				
+				    ("CF Nível 1", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[PT_CF_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("CF", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[PT_CF_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 3, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 4, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 5, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 7, "pt-PT"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 8, "pt-PT"),
+				    ("Ano-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 9, "pt-PT"),
+				
+				    ("CF Nivel 1", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[ES_CF_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("CF", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[ES_CF_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 3, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 4, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 5, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 7, "es-ES"),
+				    ("Año", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 8, "es-ES"),
+				    ("Año-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 9, "es-ES"),
+				
+				    ("CF Niveau 1", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[FR_CF_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("CF", NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[FR_CF_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 3, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 4, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 5, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 7, "fr-FR"),
+				    ("Année", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 8, "fr-FR"),
+				    ("Année-Mois", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 9, "fr-FR")
+				
+				}
+
+	annotation PBI_Id = 2f6fcff7c0d44de298b2ad9562a1a448
+

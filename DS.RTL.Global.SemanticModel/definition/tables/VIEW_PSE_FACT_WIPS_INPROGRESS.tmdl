@@ -1,0 +1,169 @@
+table VIEW_PSE_FACT_WIPS_INPROGRESS
+	lineageTag: b4557cef-7006-4299-8bf2-0ab401839c3d
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 57b3a4a8-bca9-4916-aafd-683cd7d0912d
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 2e7451f1-38f3-408a-880e-b3186cc5065b
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: dc5c06a4-6350-4bbd-ac69-114c1770d520
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIP_DATE_CREATED
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8ed442b6-6d03-431b-aa73-0103782b18f0
+		summarizeBy: none
+		sourceColumn: WIP_DATE_CREATED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DPT_CODE
+		dataType: string
+		lineageTag: 3e944f42-43ba-4ece-86fd-4d0a0c47647c
+		summarizeBy: none
+		sourceColumn: DPT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: e3d5bc51-b8e8-4c17-8a77-545a7e9d8a76
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_FRANCHISE_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 41c90d02-8188-4ef5-916f-6d07b752553c
+		summarizeBy: sum
+		sourceColumn: VHE_FRANCHISE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LINE_POSTING
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e1de772-4e37-4c34-a7dc-25648d36f1c4
+		summarizeBy: sum
+		sourceColumn: LINE_POSTING
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIP_AGE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 09e2379c-40ee-44e8-ba78-decafa5a0841
+		summarizeBy: sum
+		sourceColumn: WIP_AGE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIP_STATUS_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: adea71ee-a4c4-4143-aa3b-48362d94beaf
+		summarizeBy: sum
+		sourceColumn: WIP_STATUS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER
+		dataType: string
+		lineageTag: 1242a451-1060-4ecf-99ea-7f446d777bae
+		summarizeBy: none
+		sourceColumn: CUSTOMER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECTION_FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 41b9cf4b-cc49-4dcb-af54-bd0dce3dc9ce
+		summarizeBy: sum
+		sourceColumn: SECTION_FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUEL_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 95599867-85c2-475e-9939-269b2e6d66b7
+		summarizeBy: sum
+		sourceColumn: FUEL_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: ca4b24cd-6e7b-41f4-880a-87259dd5cc1a
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: 25faa234-9c06-4bbf-a869-a16c04565534
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e3a75f4b-fc68-4cfb-b071-79dbf053575e
+		summarizeBy: count
+		sourceColumn: OBJSECURED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: 42e76071-7139-4184-8553-e08ce815b092
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PSE_FACT_WIPS_INPROGRESS = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PSE_FACT_WIPS_INPROGRESS"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

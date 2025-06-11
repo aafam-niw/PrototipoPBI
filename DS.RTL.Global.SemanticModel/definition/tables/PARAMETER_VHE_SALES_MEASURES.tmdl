@@ -1,0 +1,102 @@
+table PARAMETER_VHE_SALES_MEASURES
+	lineageTag: 16fa65bd-ca5c-4c79-939a-9409a923766c
+
+	column PARAMETER_VHE_SALES_MEASURES
+		lineageTag: a322ebf7-3824-43d7-9fef-67576fa3fd31
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_SALES_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_SALES_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_SALES_MEASURES Fields'
+		isHidden
+		lineageTag: d83c7fa8-b810-4a19-a14b-9d677001749a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_SALES_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_SALES_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 846c867d-a0c0-4c20-bcc5-82e15591c82b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: c631634d-d16d-4013-a0fc-9a3b4291b240
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		lineageTag: c71c612e-180d-4574-a146-7c352794d994
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_SALES_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([VHE Sales CY]), 0, "pt-PT", 2),
+				    ("Orç", NAMEOF([VHE Sales Bgt]), 1, "pt-PT", 3),
+				    ("Δ Orç %", NAMEOF([VHE Sales Delta Bgt %]), 2, "pt-PT", 3),   
+				    ("Orç Adm", NAMEOF([VHE Sales Bgt Adm]), 3, "pt-PT", 4),
+				    ("Δ Orç Adm %", NAMEOF([VHE Sales Delta Bgt Adm %]), 4, "pt-PT", 4),
+				    ("AA", NAMEOF([VHE Sales LY]), 5, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([VHE Sales Delta LY %]), 6, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([VHE Sales CY]), 0, "en-US", 2),
+				    ("Bgt", NAMEOF([VHE Sales Bgt]), 1, "en-US", 3),
+				    ("Δ Bgt %", NAMEOF([VHE Sales Delta Bgt %]), 2, "en-US", 3),
+				    ("Bgt Adm", NAMEOF([VHE Sales Bgt Adm]), 3, "en-US", 4),
+				    ("Δ Bgt Adm %", NAMEOF([VHE Sales Delta Bgt Adm %]), 4, "en-US", 4),
+				    ("LY", NAMEOF([VHE Sales LY]), 5, "en-US", 2),
+				    ("Δ LY %", NAMEOF([VHE Sales Delta LY %]), 6, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([VHE Sales CY]), 0, "es-ES", 2),
+				    ("Ppto", NAMEOF([VHE Sales Bgt]), 1, "es-ES", 3),
+				    ("Δ Ppto %", NAMEOF([VHE Sales Delta Bgt %]), 2, "es-ES", 3),
+				    ("Ppto Adm", NAMEOF([VHE Sales Bgt Adm]), 3, "es-ES", 4),
+				    ("Δ Ppto Adm %", NAMEOF([VHE Sales Delta Bgt Adm %]), 4, "es-ES", 4),
+				    ("AA", NAMEOF([VHE Sales LY]), 5, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([VHE Sales Delta LY %]), 6, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([VHE Sales CY]), 0, "fr-FR", 2),
+				    ("Bgt", NAMEOF([VHE Sales Bgt]), 1, "fr-FR", 3),
+				    ("Δ Bgt %", NAMEOF([VHE Sales Delta Bgt %]), 2, "fr-FR", 3),
+				    ("Bgt Adm", NAMEOF([VHE Sales Bgt Adm]), 3, "fr-FR", 4),
+				    ("Δ Bgt Adm %", NAMEOF([VHE Sales Delta Bgt Adm %]), 4, "fr-FR", 4),
+				    ("AD", NAMEOF([VHE Sales LY]), 5, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([VHE Sales Delta LY %]), 6, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 0de969217cae461b912921b13926fb53
+

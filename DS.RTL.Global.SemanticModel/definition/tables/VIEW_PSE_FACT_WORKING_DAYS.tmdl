@@ -1,0 +1,90 @@
+table VIEW_PSE_FACT_WORKING_DAYS
+	lineageTag: eccdc320-5636-4130-92d5-0a69e845d44d
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a39c46f-d740-4180-b991-231c1919eeb7
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c3202998-78a8-4d38-8735-076bed66680d
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: c7999cd2-ba78-425c-aff3-542cae6e9155
+		summarizeBy: sum
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: f12ef71c-21fd-4ce6-80a1-958b29d598f9
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: 08e9b651-2d24-49d1-8763-a6d26caceac6
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d897b1b-2e2a-44cb-9a97-50dbe2a71b28
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: 0e437828-097f-425e-8bb5-328dac49ee86
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa5fcfac-2dcf-4854-a14c-b9bb351a2cd4
+		summarizeBy: count
+		sourceColumn: OBJSECURED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PSE_FACT_WORKING_DAYS = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PSE_FACT_WORKING_DAYS"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

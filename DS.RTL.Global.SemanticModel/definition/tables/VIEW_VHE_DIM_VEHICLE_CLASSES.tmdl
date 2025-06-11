@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_VEHICLE_CLASSES
+	isHidden
+	lineageTag: 073b9839-7e15-4286-a336-d006e33dce6d
+
+	column VEHICLE_CLASS_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 46e75bf5-eddf-4ced-8882-614df84f3ac3
+		summarizeBy: none
+		sourceColumn: VEHICLE_CLASS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_VEHICLE_CLASS_DESC
+		dataType: string
+		isHidden
+		lineageTag: bd92c9a1-6217-4a42-abd9-363c485a6ae7
+		summarizeBy: none
+		sourceColumn: PT_VEHICLE_CLASS_DESC
+		sortByColumn: VEHICLE_CLASS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_VEHICLE_CLASS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1eaef421-e1ee-4f30-99aa-d3fbc4d0f435
+		summarizeBy: none
+		sourceColumn: EN_VEHICLE_CLASS_DESC
+		sortByColumn: VEHICLE_CLASS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_VEHICLE_CLASS_DESC
+		dataType: string
+		isHidden
+		lineageTag: d163f994-f9f1-4bad-abbb-89c2e66be87d
+		summarizeBy: none
+		sourceColumn: ES_VEHICLE_CLASS_DESC
+		sortByColumn: VEHICLE_CLASS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_VEHICLE_CLASS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 1d27a4c0-f12b-4556-b49b-eb416c285f34
+		summarizeBy: none
+		sourceColumn: FR_VEHICLE_CLASS_DESC
+		sortByColumn: VEHICLE_CLASS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_CLASS_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 453f20d1-fb21-400d-82ad-3ca53799e1f7
+		summarizeBy: sum
+		sourceColumn: VEHICLE_CLASS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_VEHICLE_CLASSES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_VEHICLE_CLASSES_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_VEHICLE_CLASSES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_VEHICLE_CLASSES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

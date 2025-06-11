@@ -1,0 +1,42 @@
+table VIEW_SLR_DIM_CUSTOMERS_MPBI
+	lineageTag: 8a507584-9e27-4cdf-9649-88bc70eccd9a
+
+	column SLR_ACCOUNT_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: bd8c037b-8492-4ef0-896a-2dfd8f2d9608
+		summarizeBy: sum
+		sourceColumn: SLR_ACCOUNT_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_ACCOUNT
+		dataType: string
+		lineageTag: 58aa34b9-49fc-47ee-978d-e6ea7b157ded
+		summarizeBy: none
+		sourceColumn: SLR_ACCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLR_ACCOUNT_DESC
+		dataType: string
+		lineageTag: 4e7af476-9a77-459e-96b3-f5a564e1d7e2
+		summarizeBy: none
+		sourceColumn: SLR_ACCOUNT_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_CUSTOMERS_MPBI = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    VIEW_SLR_DIM_CUSTOMERS_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_CUSTOMERS_MPBI"]}[Data]
+				in
+				    VIEW_SLR_DIM_CUSTOMERS_MPBI
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,105 @@
+table VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES
+	isHidden
+	lineageTag: 19ac5197-4f84-412a-b6a5-35af5803fdd1
+
+	column FUNCTIONAL_CATEGORY_CODE
+		dataType: string
+		isHidden
+		isKey
+		isNullable: false
+		sourceProviderType: varchar(5)
+		lineageTag: 49544b6c-f11b-4573-9f65-10324399d52b
+		summarizeBy: none
+		sourceColumn: FUNCTIONAL_CATEGORY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_FUNCTIONAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 240b8d51-9554-4861-8617-4579afcfba4e
+		summarizeBy: none
+		sourceColumn: PT_FUNCTIONAL_CATEGORY_DESC
+		sortByColumn: FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_FUNCTIONAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: a54f7b02-91bc-4411-9dba-a6376af3f1e4
+		summarizeBy: none
+		sourceColumn: EN_FUNCTIONAL_CATEGORY_DESC
+		sortByColumn: FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_FUNCTIONAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: f6cdfa93-023d-4ddd-861c-3b4246d4d75b
+		summarizeBy: none
+		sourceColumn: ES_FUNCTIONAL_CATEGORY_DESC
+		sortByColumn: FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_FUNCTIONAL_CATEGORY_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: fa601277-1b59-49e6-95b6-b723ca36f2f7
+		summarizeBy: none
+		sourceColumn: FR_FUNCTIONAL_CATEGORY_DESC
+		sortByColumn: FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ddaffe65-2696-439f-9094-c983663cd1be
+		summarizeBy: none
+		sourceColumn: FUNCTIONAL_CATEGORY_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES_MPBI = Source{[Schema="PBI",Item="VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

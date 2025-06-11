@@ -1,0 +1,157 @@
+table PBI_TABLE_TITLES
+	isHidden
+	lineageTag: 846d540f-fe80-4251-9b64-05ab72705266
+
+	column Id
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d0ee7572-ee99-40c6-9a5d-4a66b4c5b439
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT-PT
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1a521ab5-88c2-473b-a42f-7915d458116e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [PT-PT]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN-US
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: df2e8a83-0bfe-492b-a650-3c1537f9721a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [EN-US]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES-ES
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 9fd085bb-089b-44b4-8816-5d90d668cbf3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ES-ES]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR-FR
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 6acad824-d308-4344-b206-765f0b99693a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [FR-FR]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PBI_TABLE_TITLES = calculated
+		mode: import
+		source =
+				
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "PT-PT", STRING,
+				    "EN-US", STRING,
+				    "ES-ES", STRING,
+				    "FR-FR", STRING,
+				    {
+				        { 1, "Demonstração de Resultados", "Income Statements", "Estado de Resultados", "Compte de Résultat"},
+				        { 2, "Moeda", "Currency", "Moneda", "Monnaie"},
+				        { 3, "Período", "Period", "Periodo", "Période"},
+				        { 4, "Marca", "Brand", "Franquicia", "Franchise"},
+				        { 5, "Atividade", "Activity", "Actividad", "Activité"},
+				        { 6, "Empresa", "Company", "Empresa", "Entreprise"},
+				        { 7, "Lucro e Perda", "Profit & Loss", "Ganancias y Pérdidas", "Profit et Perte"},
+				        { 8, "Protótipo PBI", "PBI Prototype", "Prototipo PBI", "Prototype PBI"},
+				        { 9, "Página", "Page", "Página", "Page"},
+				        { 10, "Tipo Centro de Custo", "Cost Center Type", "Tipo Centro de Costo", "Type de Centre de Coût"},
+				        { 11, "Ano", "Year", "Año", "Année"},
+				        { 12, "Mês", "Month", "Mes", "Mois"},
+				        { 13, "Orçamento", "Budget", "Presupuesto", "Budget"},
+				        { 14, "Vendas", "Sales", "Ventas", "Ventes"},
+				        { 15, "Selecione os Indicadores", "Select Indicators", "Seleccionar indicadores", "Sélectionnez les indicateurs"},
+				        { 16, "Polo", "Site", "Sitio", "Site"},
+				        { 17, "Canal de Vendas", "Sales Channel", "Canal de Ventas", "Canal de Vente"},
+				        { 18, "Real vs. Orçamento", "Actual vs. Budget", "Real vs. Presupuesto", "Réel vs. Budget"},
+				        { 19, "Margem Comercial", "Sales Margin", "Margen Comercial", "Marge Commerciale"},
+				        { 20, "RAI", "EBT", "RAI", "RAI"},
+				        { 21, "Atualizações", "Refreshes", "Actualizaciones", "Actualisations"},
+				        { 22, "Período Fechado", "Closed Period", "Periodo Cerrado", "Période Fermée"},
+				        { 23, "Acum/Mensal", "YTD/Monthly", "Acum/Mensual", "Accum/Mensuel"},
+				        { 24, "Indicador/Mês", "Indicator/Month", "Indicador/Mes", "Indicateur/Mois"},
+				        { 25, "Mês/Indicador", "Month/Indicator", "Mes/Indicador", "Mois/Indicateur"},
+				        { 26, "Empresa Nível 1", "Company Level 1", "Empresa Nivel 1", "Entreprise Niveau 1"},
+				        { 27, "Empresa Nível 2+", "Company Level 2+", "Empresa Nivel 2+", "Entreprise Niveau 2+"},
+				        { 28, "Conta", "Account", "Cuenta", "Compte"},
+				        { 29, "Centro de Custo", "Cost Centre", "Centro de Costos", "Centre de Coût"},
+				        { 30, "Demonstração de Resultados IFRS", "Income Statements IFRS", "Estado de Resultados IFRS", "Compte de Résultat IFRS"},
+				        { 31, "Balanço IFRS", "Balance IFRS", "Balance IFRS", "Bilan IFRS"},
+				        { 32, "Glossário", "Glossary", "Glosario", "Glossaire"},
+				        { 33, "Estrutura de Pessoal", "Workforce Structure", "Estructura de Personal", "Structure du Personnel"},
+				        { 34, "Categoria", "Category", "Categoría", "Categórie"},
+				        { 35, "Categorias Funcionais", "Functional Categories", "Categorías Funcionales", "Catégories Fonctionnelles"},
+				        { 36, "Categorias Internas", "Internal Categories", "Categorías Internas", "Catégories Internes"},
+				        { 37, "Custo com Pessoal", "Workforce Costs", "Costes de Personal", "Coûts de Personnel"},
+				        { 38, "Balanço ES", "Balance ES", "Balance ES", "Bilan ES"},
+				        { 39, "Tipo Conta", "Account Type", "Tipo Cuenta", "Type Compte"},
+				        { 40, "Categoria Clientes", "Customer Category", "Categoría Clientes", "Catégorie Clients"},
+				        { 41, "Data Documento", "Document Date", "Fecha Documento", "Date Document"},
+				        { 42, "Data Vencimento", "Due Date", "Fecha de Vencimiento", "Date d'Échéance"},
+				        { 43, "Antiguidade", "Aging", "Antigüedad", "Ancienneté"},
+				        { 44, "Antiguidade Duvidosos", "Doubtful Aging", "Antigüedad Dudosos", "Ancienneté Doubtuses"},
+				        { 45, "Cliente", "Customer", "Cliente", "Client"},
+				        { 46, "Código Área", "Area Code", "Código Área", "Code de Zone"},
+				        { 47, "Origem Caetano Pay", "Caetano Pay Source", "Origen Caetano Pay", "Origine Caetano Pay"},
+				        { 48, "Fornecedores", "Suppliers", "Proveedores", "Fournisseurs"},
+				        { 49, "Área Viaturas", "Vehicle Area", "Área Vehículos", "Zone Véhicules"},
+				        { 50, "Tipo Viatura", "Vehicle Type", "Tipo Vehículo", "Type Véhicule"},
+				        { 51, "Proveniências", "Source", "Procedencias", "Provenance"},
+				        { 52, "Canais de Vendas", "Sales Channels", "Canales de Venta", "Canaux de Vente"},
+				        { 53, "Antiguidade Stock", "Stock Age", "Antigüedad Stock", "Ancienneté Stock"},
+				        { 54, "Antiguidade Matrícula", "Registration Age", "Antigüedad Matrícula", "Ancienneté Immatriculation"},
+				        { 55, "Tipos de Combustível", "Fuel Types", "Tipos de Combustible", "Types de Carburant"},
+				        { 56, "Reflexo Contabilístico", "Accounting Reflect", "Reflejo Contable", "Réflexion Comptable"},
+				        { 57, "Data Entrega", "Delivery Date", "Fecha de Entrega", "Date de Livraison"},
+				        { 58, "Indicadores", "Indicators", "Indicadores", "Indicateurs"},
+				        { 59, "Estados Viatura", "Vehicle Status", "Estado Vehículo", "État Véhicule"},
+				        { 60, "Uso Destino", "Destination Usage", "Uso Destino", "Usage Destination"},
+				        { 61, "Vendáveis", "Sellable", "Vendibles", "Vendables "},
+				        { 62, "Vendedores", "Sellers", "Vendedores", "Vendeurs "},
+				        { 63, "Posições", "Positions", "Posiciones", "Positions "},
+				        { 64, "Chefes de Vendas", "Sales Managers", "Jefes de Ventas", "Chefs des Ventes"},
+				        { 65, "Localização Física", "Physical Location", "Ubicación Física", "Emplacement Physique"},
+				        { 66, "Utilizadores Viaturas", "Vehicle Users", "Usuarios de Vehículos", "Utilisateurs de Véhicules"},
+				        { 67, "Antiguidade Stock Líquida", "Net Stock Age", "Antigüedad Stock Neto", "Ancienneté Stock Net"},
+				        { 68, "Quilometragem", "Mileage", "Kilometraje", "Kilométrage"},
+				        { 69, "Reservado Por", "Reserved by", "Reservado Por", "Réservé par"},
+				        { 70, "Encargos Financeiros", "Financial Charges", "Cargos Financieros", "Charges Financières"},
+				        { 71, "Matriculados", "Registered", "Matriculados", "Immatriculés"},
+				        { 72, "Data Análise", "Analysis Date", "Fecha de Análisis", "Date d’Analyse"},
+				        { 73, "Stock Ideal", "Ideal Stock", "Stock Ideal", "Stock Idéal"},
+				        { 74, "Cor", "Color", "Color", "Couleur"},
+				        { 75, "Vendas de Viaturas", "Vehicle Sales", "Ventas de Vehículos", "Ventes de Véhicules"},
+				        { 76, "Tipo de Produção", "Production Type", "Tipo de Producción", "Type de Production"},
+				        { 77, "Forma de Pagamento", "Payment Method", "Forma de Pago", "Mode de Paiement"},
+				        { 78, "Grupo de Viaturas", "Vehicle Group", "Grupo de Vehículos", "Groupe de Véhicules"},
+				        { 79, "Modelo", "Model", "Modelo", "Modèle"},
+				        { 80, "Tipo de Cliente", "Customer Type", "Tipo de Cliente", "Type de Client"},
+				        { 81, "Grupo de Clientes", "Customer Group", "Grupo de Clientes", "Groupe de Clients"},
+				        { 82, "Colaborador", "Collaborator", "Colaborador", "Collaborateur"},
+				        { 83, "Tipo Colab", "Type Colab", "Tipo Colab", "Type Collaborateur"}
+				    }
+				)
+
+	annotation PBI_Id = 90063041ea024a18a03c8c4bf1d5407b
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["ENSURE_TABLES_HAVE_RELATIONSHIPS"]}
+

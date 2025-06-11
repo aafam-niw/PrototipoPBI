@@ -1,0 +1,115 @@
+﻿table VIEW_NLR_DIM_SYTNER_PL_KPIS
+	isHidden
+	lineageTag: 8346d86d-7941-4eec-aa55-4c24572d6061
+
+	column SYTNER_PL_KPI_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 879124b5-6f14-418d-998c-90d78ae1fcc1
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_KPI_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SYTNER_PL_KPI_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: abeefe61-23d8-44a2-bdcf-e424927b89dd
+		summarizeBy: none
+		sourceColumn: PT_SYTNER_PL_KPI_DESC
+		sortByColumn: SYTNER_PL_KPI_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SYTNER_PL_KPI_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: c2ad2daa-445c-4f97-87be-2f77dd5d9534
+		summarizeBy: none
+		sourceColumn: EN_SYTNER_PL_KPI_DESC
+		sortByColumn: SYTNER_PL_KPI_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SYTNER_PL_KPI_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: db79fe7e-9e2b-4212-ba3f-867861236ce9
+		summarizeBy: none
+		sourceColumn: ES_SYTNER_PL_KPI_DESC
+		sortByColumn: SYTNER_PL_KPI_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SYTNER_PL_KPI_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 3fe7c980-21cb-4e84-a3cf-15ea0d6dded1
+		summarizeBy: none
+		sourceColumn: FR_SYTNER_PL_KPI_DESC
+		sortByColumn: SYTNER_PL_KPI_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SYTNER_PL_KPI_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 25087e96-80ae-4fb8-aff1-a385b68d1b6d
+		summarizeBy: sum
+		sourceColumn: SYTNER_PL_KPI_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_2 = m
+		mode: directQuery
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_KPIS = Source{[Schema="PBI",Item="VIEW_NLR_DIM_SYTNER_PL_KPIS"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_SYTNER_PL_KPIS
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

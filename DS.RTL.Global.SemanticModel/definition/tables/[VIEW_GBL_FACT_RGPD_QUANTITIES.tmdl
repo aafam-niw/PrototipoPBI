@@ -1,0 +1,109 @@
+table [VIEW_GBL_FACT_RGPD_QUANTITIES
+	lineageTag: 3999d5ff-39cf-4706-8d91-c8ae22b56130
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a58c0b2a-f558-4353-a05f-bf6bd10dba2c
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 092573d8-3f06-4aa1-9328-48bf3440dc41
+		summarizeBy: sum
+		sourceColumn: RECORD_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 7ac0572c-f98c-4914-b0f0-a360495c5fc3
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e69f718-bd41-434e-97bf-d0eaff44e750
+		summarizeBy: sum
+		sourceColumn: SITE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a18db3f-b66e-4563-9224-d7b1ee812e85
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: edf4946d-ded1-450e-8b5e-a1e2a9c4b5a4
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column AREA
+		dataType: string
+		lineageTag: 50b0f7ba-b2a5-481d-bcb2-ee03426da5bc
+		summarizeBy: none
+		sourceColumn: AREA
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 72970cd4-40a6-4db1-96e6-00d800ec3222
+		summarizeBy: sum
+		sourceColumn: VHE_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PSE_QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 55cb644c-86ca-41fa-8a88-099e7773eed8
+		summarizeBy: sum
+		sourceColumn: PSE_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 498e989b-f3d6-4d7f-ae7a-95976a66a280
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition [VIEW_GBL_FACT_RGPD_QUANTITIES = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_GBL_FACT_RGPD_QUANTITIES"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

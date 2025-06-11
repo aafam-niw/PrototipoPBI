@@ -1,0 +1,30 @@
+perspective 'KPIs-General Indicators'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_GM_MEASURES
+
+		perspectiveColumn PARAMETER_GM_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_GM_MEASURES
+
+		perspectiveColumn GM_MEASURE_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+

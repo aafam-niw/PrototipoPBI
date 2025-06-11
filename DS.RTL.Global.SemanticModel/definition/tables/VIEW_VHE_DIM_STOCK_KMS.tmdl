@@ -1,0 +1,126 @@
+table VIEW_VHE_DIM_STOCK_KMS
+	isHidden
+	lineageTag: 1fd28553-1b39-4b94-ab73-329de67df171
+
+	column STOCK_KMS_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: d84803ae-3fa4-41bb-8dc1-bc77d858921a
+		summarizeBy: none
+		sourceColumn: STOCK_KMS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_STOCK_KMS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 6da4ed6b-809b-4711-ac2f-97bb4aac3c8e
+		summarizeBy: none
+		sourceColumn: PT_STOCK_KMS_DESC
+		sortByColumn: STOCK_KMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_STOCK_KMS_DESC
+		dataType: string
+		isHidden
+		lineageTag: dec8d3c8-e565-4e3b-96b4-a5a3b5224941
+		summarizeBy: none
+		sourceColumn: ES_STOCK_KMS_DESC
+		sortByColumn: STOCK_KMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_STOCK_KMS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 9465d1c0-e092-470f-a555-15a17850f078
+		summarizeBy: none
+		sourceColumn: EN_STOCK_KMS_DESC
+		sortByColumn: STOCK_KMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_STOCK_KMS_DESC
+		dataType: string
+		isHidden
+		lineageTag: 89059c72-6cd0-4c3d-ad54-a549b9c99bc7
+		summarizeBy: none
+		sourceColumn: FR_STOCK_KMS_DESC
+		sortByColumn: STOCK_KMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column KMS
+		dataType: double
+		isHidden
+		lineageTag: a3d68788-4f6c-4451-9073-1571ef5dc585
+		summarizeBy: none
+		sourceColumn: KMS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KMS_CRITERIA
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 802edac3-3ab7-4c24-8af8-382899504712
+		summarizeBy: none
+		sourceColumn: KMS_CRITERIA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_KMS_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 72ee5120-7cde-4468-8f30-1c8186f15d50
+		summarizeBy: none
+		sourceColumn: STOCK_KMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_STOCK_KMS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_STOCK_KMS_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_STOCK_KMS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_STOCK_KMS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

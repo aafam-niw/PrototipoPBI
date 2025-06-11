@@ -1,0 +1,102 @@
+table PARAMETER_VIEW_NLR_DIM_COMPANIES
+	lineageTag: f9a20458-6582-43a5-88bc-b8950ee669dd
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 8060b2ff-8196-40af-8351-8ddf34afab9e
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPANY_DESC
+		lineageTag: 29cd3e1c-0741-4353-b468-3c0f95fd18fb
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPANY_LEVEL_1_DESC
+		lineageTag: 57857b9d-2c73-4362-a534-c5ed16717a1c
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPANY_LEVEL_2_DESC
+		lineageTag: 763ced25-9869-4076-a657-5359db6a7c95
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPANY_LEVEL_3_DESC
+		lineageTag: 687489ff-d97d-48a5-b48f-e45250bdc8aa
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_COMPANIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "en-US",  
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "es-ES",  
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC])
+				    ),
+				    (
+				    "fr-FR",  
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 7900fedb107b4301ad2ab9a7cfe873fd
+

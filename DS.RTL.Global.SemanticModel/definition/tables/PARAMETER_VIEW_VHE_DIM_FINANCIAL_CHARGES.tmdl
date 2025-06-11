@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_FINANCIAL_CHARGES
+	lineageTag: fe0e894f-04f0-47ef-a61e-7ca2ef2b50c7
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: a6f054aa-12ce-45d4-b775-a43f40116932
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINANCIAL_CHARGE_DESC
+		lineageTag: 88bf8b87-5c7b-4532-9ff2-947513250779
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_FINANCIAL_CHARGES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_FINANCIAL_CHARGES'[PT_FINANCIAL_CHARGE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_FINANCIAL_CHARGES'[EN_FINANCIAL_CHARGE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_FINANCIAL_CHARGES'[ES_FINANCIAL_CHARGE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_FINANCIAL_CHARGES'[FR_FINANCIAL_CHARGE_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = cd78766bf23445f38a3fb576fbae6227
+

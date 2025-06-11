@@ -1,0 +1,410 @@
+﻿table VIEW_VHE_FACT_STOCK_MONTH
+	isHidden
+	lineageTag: 84c94699-dca4-44eb-8651-463c17a37111
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 57917175-3ef0-4925-a391-658e978556f1
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column ENVIRONMENT
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b32d976a-0c58-4405-9417-2a63351d3cbd
+		summarizeBy: none
+		sourceColumn: ENVIRONMENT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column STOCK_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 664c8da3-8787-43d4-ae80-e1e1c513cd85
+		summarizeBy: none
+		sourceColumn: STOCK_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PURCHASE_DATE
+		dataType: dateTime
+		isHidden
+		formatString: dd-mm-yyyy
+		lineageTag: b93a4b36-6b46-42cd-bbbc-4e628135c148
+		summarizeBy: none
+		sourceColumn: PURCHASE_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: 5681f3d5-9289-4cc6-903f-bcd94134a283
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column VHE_TYPE
+		dataType: string
+		isHidden
+		lineageTag: 9360a678-2de7-4b63-b789-849c03fd0c85
+		summarizeBy: none
+		sourceColumn: VHE_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2257e710-e301-4846-80cb-fd19ce8413ac
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column MODEL_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b1b04910-a2c6-44ba-a2b3-30fb9a7f1ce2
+		summarizeBy: none
+		sourceColumn: MODEL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column VEHICLE_CLASS
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c1a37b1-6672-48f3-8080-414d41566ce1
+		summarizeBy: none
+		sourceColumn: VEHICLE_CLASS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SOURCE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b4cc573a-ce48-4d04-a0d5-fe0f6419eec9
+		summarizeBy: none
+		sourceColumn: SOURCE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column MEASURE_TYPE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eb850d65-becd-4059-acec-444271f52a3c
+		summarizeBy: none
+		sourceColumn: MEASURE_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column MEASURE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: de2f3674-703d-4d8f-806f-35264467e102
+		summarizeBy: none
+		sourceColumn: MEASURE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column VALUE
+		dataType: double
+		isHidden
+		lineageTag: 36163a67-b44d-41f7-a404-abd8548973c1
+		summarizeBy: none
+		sourceColumn: VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DESTINATION_USAGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 394cb5fa-c187-4b6e-b398-a447057248fe
+		summarizeBy: none
+		sourceColumn: DESTINATION_USAGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2c733839-d9de-4b30-aa76-3c58289c0e1e
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8263534b-61d4-4a23-b905-41c85b46c04d
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 18a90a9e-cb8a-4d5b-8e2d-4150172279a7
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PHYSICAL_LOCATION_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ef0473d3-7493-4210-8b0a-03ccc9811891
+		summarizeBy: none
+		sourceColumn: PHYSICAL_LOCATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_AVAILABILITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: efb8edb7-796e-41f5-ac18-688e67a472c4
+		summarizeBy: none
+		sourceColumn: USER_AVAILABILITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_KMS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 57aac4d5-625b-44b0-a159-2903eff6a407
+		summarizeBy: none
+		sourceColumn: STOCK_KMS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USAGE_AGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c81133a7-efc3-472a-8323-b78589a68051
+		summarizeBy: none
+		sourceColumn: USAGE_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINANCIAL_CHARGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 41c699d1-fd28-4fd3-b1b9-5cf725daad77
+		summarizeBy: none
+		sourceColumn: FINANCIAL_CHARGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMMERCIAL_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e454cf06-d50e-4a02-8ef2-fd945112e29a
+		summarizeBy: none
+		sourceColumn: COMMERCIAL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTRATION_DATE
+		dataType: string
+		isHidden
+		lineageTag: b64a7630-dafe-4aed-8a5b-ad77c7057412
+		summarizeBy: none
+		sourceColumn: REGISTRATION_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTERED_VEHICLE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8867d78a-ac2e-44d4-9f7b-3f02abf602bf
+		summarizeBy: none
+		sourceColumn: REGISTERED_VEHICLE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RESERVED_BY_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 064a4ccc-202e-4d3b-ae91-2d7708dabc13
+		summarizeBy: none
+		sourceColumn: RESERVED_BY_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STOCK_AGE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a4bb83da-d30e-40c6-9861-155eaa7bd286
+		summarizeBy: sum
+		sourceColumn: STOCK_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH = Source{[Schema="PBI",Item="VIEW_VHE_FACT_STOCK_MONTH"]}[Data]
+				in
+				    PBI_VIEW_VHE_FACT_STOCK_MONTH
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_USERS_AVAILABILITY
+	lineageTag: f0d769a0-e6fb-4ef0-8b67-7df4441d97d2
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: e3c19ac4-ebdc-4bab-aa84-eb52e789a44a
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_AVAILABILITY_DESC
+		lineageTag: 5fc31fb0-50d3-4650-9d6b-7d10d231facb
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_USERS_AVAILABILITY = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_USERS_AVAILABILITY'[PT_USER_AVAILABILITY_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_USERS_AVAILABILITY'[EN_USER_AVAILABILITY_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_USERS_AVAILABILITY'[ES_USER_AVAILABILITY_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_USERS_AVAILABILITY'[FR_USER_AVAILABILITY_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 6d0b33c817ef487abba2ba15673fa980
+

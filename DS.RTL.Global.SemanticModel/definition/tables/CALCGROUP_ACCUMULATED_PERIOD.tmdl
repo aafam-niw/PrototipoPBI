@@ -1,0 +1,42 @@
+table CALCGROUP_ACCUMULATED_PERIOD
+	lineageTag: 8fceed0f-437a-4d12-9429-c9f0d3918d73
+
+	calculationGroup
+		precedence: 3
+
+		calculationItem Monthly = SELECTEDMEASURE()
+
+		calculationItem YTD =
+				
+				
+				VAR __FixedMeasures = NOT(SELECTEDMEASURENAME() IN {"Title - Tables", "Report - Title"})
+				RETURN
+				
+				SWITCH(
+				    TRUE(),
+				    __FixedMeasures && SELECTEDVALUE(PBI_TABLE_REPORTS[CALENDAR]) = 1,
+				        TOTALYTD(SELECTEDMEASURE(), VIEW_GBL_DIM_CALENDAR[DATE]),
+				    __FixedMeasures && SELECTEDVALUE(PBI_TABLE_REPORTS[CALENDAR]) = 2,
+				        TOTALYTD(SELECTEDMEASURE(), VIEW_GBL_DIM_CALENDAR_SECONDARY[DATE]),
+				    SELECTEDMEASURE()
+				)
+
+	column Period
+		dataType: string
+		lineageTag: 8962c8e1-1c04-4361-a450-ba68169e46be
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: be9a3a93-5925-4b46-a9ee-44a86e41e41a
+		summarizeBy: none
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

@@ -1,0 +1,135 @@
+﻿/// DW: PBI.VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+table VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+	isHidden
+	lineageTag: 01bd1b3e-1a52-467b-bdce-9a3db056509c
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 79e4a57f-7a27-4a24-8162-ae6d750e8c4c
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 1a3070e0-397f-4d12-bb47-6edf168fb059
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NLR_CLOSEDPERIOD
+		dataType: string
+		isHidden
+		lineageTag: 9a2d5d9a-b351-4cd3-b704-3d43daafe6ed
+		summarizeBy: none
+		sourceColumn: NLR_CLOSEDPERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CLOSEDDATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 218c13b1-d2ba-46d5-8806-69bc1b876086
+		summarizeBy: none
+		sourceColumn: NLR_CLOSEDDATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Partition_1 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_2 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_3 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_4 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_5 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_8 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	partition Partition_History = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS = Source{[Schema="PBI",Item="VIEW_NLR_SETUP_CLOSED_PERIODS_USERS"]}[Data]
+				in
+				    PBI_VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

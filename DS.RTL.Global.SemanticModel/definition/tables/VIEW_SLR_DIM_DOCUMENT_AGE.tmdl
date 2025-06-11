@@ -1,0 +1,112 @@
+table VIEW_SLR_DIM_DOCUMENT_AGE
+	isHidden
+	lineageTag: 3f84f160-1e41-4540-8238-b76ad6b854d8
+
+	column DOCUMENT_AGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bdf38cf0-9652-4fcc-9e72-bb45d33d0805
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 9e2fb12e-a572-44b6-aed7-8b9d5b069104
+		summarizeBy: none
+		sourceColumn: PT_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 5c5f00b2-c59e-4eb6-b8e6-65823b45a893
+		summarizeBy: none
+		sourceColumn: ES_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 2385456b-8b17-48b4-b339-7475deb9b358
+		summarizeBy: none
+		sourceColumn: EN_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 0a507565-256c-426c-b39d-b0eb57a7a7c3
+		summarizeBy: none
+		sourceColumn: FR_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_AGE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fb393699-80e1-4825-a8a0-1e9b1fdb7d34
+		summarizeBy: sum
+		sourceColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_DOCUMENT_AGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_DOCUMENT_AGE_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DOCUMENT_AGE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DOCUMENT_AGE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

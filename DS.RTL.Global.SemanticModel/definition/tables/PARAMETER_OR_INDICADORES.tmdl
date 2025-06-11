@@ -1,0 +1,89 @@
+table PARAMETER_OR_INDICADORES
+	isHidden
+	lineageTag: f3bed153-606f-45f9-97fc-a8bd5c48a7f4
+
+	column Id
+		isHidden
+		formatString: 0
+		lineageTag: a22fa60e-4e9f-4528-80fa-217165acfd9b
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		isHidden
+		lineageTag: 54318c81-b135-404c-afcc-f1f602c4b930
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Indicador]
+		sortByColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medida
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 0538e341-0c3b-45cf-8fa0-3d2280922210
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 669cfe6b-8e07-4591-a999-2b5cfd2b4d2e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [USER_CULTURE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 7797cbf9-2586-46c9-a40b-1ce24c84e4f4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [VALUE_TYPE_CODE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_OR_INDICADORES = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Id", INTEGER,
+				    "Indicador", STRING,
+				    "Medida", STRING,
+				    "USER_CULTURE", STRING,
+				    "VALUE_TYPE_CODE", INTEGER,
+				    {
+				        { 1, "Real", "OR CY", "pt-PT", 2 },
+				        { 2, "AA", "OR LY", "pt-PT", 2 },
+				        { 3, "Δ AA %", "OR Delta LY %", "pt-PT", 2 },
+				
+				
+				        { 1, "CY", "OR CY", "en-US", 2 },
+				        { 2, "LY", "OR LY", "en-US", 2 },
+				        { 3, "Δ LY %", "OR Delta LY %", "en-US", 2 },
+				
+				
+				        { 1, "Real", "OR CY", "es-ES", 2 },
+				        { 2, "AA", "OR LY", "es-ES", 2 },
+				        { 3, "Δ AA %", "OR Delta LY %", "es-ES", 2 },
+				
+				
+				        { 1, "Réel", "OR CY", "fr-FR", 2 },
+				        { 2, "AD", "OR LY", "fr-FR", 2 },
+				        { 3, "Δ AD %", "OR Delta LY %", "fr-FR", 2 }
+				    }
+				)
+
+	annotation PBI_Id = ee9f5a9b48414308b4ee307f22359437
+

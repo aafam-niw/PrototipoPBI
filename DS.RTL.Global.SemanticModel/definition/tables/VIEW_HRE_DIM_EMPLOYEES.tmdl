@@ -1,0 +1,67 @@
+table VIEW_HRE_DIM_EMPLOYEES
+	lineageTag: f2a2bf07-bc46-4e5e-984b-ee2b037003d7
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: cf7b7a7c-d68d-463e-8b22-e83ab94928ac
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 6bd77fcf-c195-4521-8161-5580d190676c
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_DMS_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: f0461d98-e58f-4fee-8778-b3f98c33cabb
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DMS_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_DMS_CODE
+		dataType: string
+		lineageTag: 09401b0e-6c66-4389-ad98-9171b0394a72
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DMS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_NAME
+		dataType: string
+		lineageTag: 856922dd-7434-4fdb-b60d-97d1af0ebbb0
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_DISPLAY
+		dataType: string
+		lineageTag: 8f3c49ff-d0e4-41a2-96de-b3cab32a0da3
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DISPLAY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_HRE_DIM_EMPLOYEES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_GBL_DIM_SITES_MPBI = Source{[Schema="PBI",Item="VIEW_HRE_DIM_EMPLOYEES"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_SITES_MPBI
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

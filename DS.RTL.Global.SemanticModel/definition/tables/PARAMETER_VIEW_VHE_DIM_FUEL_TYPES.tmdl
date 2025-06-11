@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_FUEL_TYPES
+	lineageTag: f63e6314-2973-4a0e-b52b-f6ec6f47f0d9
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 91b47554-e732-4843-a54b-34e169c7d57f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUEL_TYPE_DESC
+		lineageTag: a9423eb3-e837-472d-b711-934afc3eb2b7
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_FUEL_TYPES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_FUEL_TYPES'[PT_FUEL_TYPE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_FUEL_TYPES'[EN_FUEL_TYPE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_FUEL_TYPES'[ES_FUEL_TYPE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_FUEL_TYPES'[FR_FUEL_TYPE_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 1f4404ef107a45ccaf72662f2c91660d
+

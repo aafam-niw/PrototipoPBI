@@ -1,0 +1,101 @@
+table VIEW_NLR_DIM_SALES_TYPES
+	isHidden
+	lineageTag: f1202362-170b-421a-b82f-3b5550f7c2fe
+
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1782a127-2eab-45bd-a0ac-4142238200b7
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: e9077204-77db-4e99-846a-b31cd40f877f
+		summarizeBy: none
+		sourceColumn: PT_SALES_TYPE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 9a8b4a36-0dd5-447d-a049-0c6c0ce63175
+		summarizeBy: none
+		sourceColumn: EN_SALES_TYPE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 77361642-8101-4eb5-9205-c2dd2e5439f3
+		summarizeBy: none
+		sourceColumn: ES_SALES_TYPE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_SALES_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 02cb3710-35e6-4f11-9f4d-d5b52574d05a
+		summarizeBy: none
+		sourceColumn: FR_SALES_TYPE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ed349f0a-32e8-4197-975b-9dc076af4941
+		summarizeBy: sum
+		sourceColumn: SALES_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_SALES_TYPES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_SALES_TYPES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_SALES_TYPES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_SALES_TYPES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

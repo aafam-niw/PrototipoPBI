@@ -1,0 +1,38 @@
+perspective 'Balance ES'
+
+	perspectiveTable PARAMETER_BL_ES_MEASURES
+
+		perspectiveColumn PARAMETER_BL_ES_MEASURES
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_BL_FISCAL_ES
+
+		perspectiveColumn BL_FISCAL_ES_DESC
+
+		perspectiveColumn BL_FISCAL_ES_LEVEL_1_DESC
+
+		perspectiveColumn BL_FISCAL_ES_LEVEL_2_DESC
+
+		perspectiveColumn BL_FISCAL_ES_LEVEL_3_DESC
+
+		perspectiveColumn BL_FISCAL_ES_LEVEL_4_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+

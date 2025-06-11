@@ -1,0 +1,119 @@
+table PARAMETER_VIEW_GBL_DIM_SITES
+	lineageTag: 8cfd76bf-78ab-480a-a5e4-52dd38917929
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: a4c54f90-2b8c-4c80-a0ca-00831592be93
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_DESC
+		lineageTag: 47fe8ec9-6721-4de4-9a19-075ba92ab5b0
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_1_DESC
+		lineageTag: dbf5335b-ae5a-4545-8140-c0188aeb636b
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_2_DESC
+		lineageTag: 42e43f22-2fa0-47e1-bb06-262126dc62f5
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_3_DESC
+		lineageTag: 7b9a9bdd-6756-4af9-85ef-b20ffda293d4
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_LEVEL_4_DESC
+		lineageTag: c5edc621-e1f6-4134-94a1-f3d8b4384d90
+		summarizeBy: none
+		sourceColumn: [Value6]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_GBL_DIM_SITES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_4_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_4_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_4_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_3_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_4_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 2c76e9f733384a35921e0b7a88b0b8e7
+

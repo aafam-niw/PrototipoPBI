@@ -1,0 +1,182 @@
+table VIEW_GBL_DTBI_LAST_UPDATE
+	isHidden
+	lineageTag: 288501ee-321d-4a3e-a303-10ccfb3b4601
+
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		isAvailableInMdx: false
+		sourceProviderType: int
+		lineageTag: 4df59476-b087-4af5-85e4-18f7afd8480b
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_NAME
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(10)
+		lineageTag: e20b2b12-3523-4cc5-bf31-aca453a3256c
+		summarizeBy: none
+		sourceColumn: CLIENT_NAME
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_DESCRIPTION
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 2b702637-8e6d-442e-9e3f-61a199dbdea1
+		summarizeBy: none
+		sourceColumn: CLIENT_DESCRIPTION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 0d01cf16-3cab-47a5-be1b-73efa2606e35
+		summarizeBy: none
+		sourceColumn: AREA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA_DISPLAY
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 31ac9c74-8696-4b52-bc2d-b1a779330a28
+		summarizeBy: none
+		sourceColumn: AREA_DISPLAY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_UPDATE_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		sourceProviderType: datetime
+		lineageTag: 01b67be1-904f-45a2-861a-d8a4fc205936
+		summarizeBy: none
+		sourceColumn: LAST_UPDATE_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_REFRESH_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		sourceProviderType: datetime
+		lineageTag: 38be27ee-a4bf-4a25-9b44-cebdd1dfdadf
+		summarizeBy: none
+		sourceColumn: LAST_REFRESH_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAILY_UPDATED
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		isAvailableInMdx: false
+		sourceProviderType: int
+		lineageTag: 49096d55-50f7-4152-b3fc-8829b3e726d8
+		summarizeBy: none
+		sourceColumn: DAILY_UPDATED
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DMS_LEVEL_1
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: 3a82ceb0-b06a-45b5-8a5d-d3101a332e82
+		summarizeBy: none
+		sourceColumn: DMS_LEVEL_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DMS_LEVEL_2
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: a0bd6a6c-267c-4f50-8e6c-af7ea471661f
+		summarizeBy: none
+		sourceColumn: DMS_LEVEL_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DMS_LEVEL_3
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 2462cb4d-cc89-47f7-8a34-3274e5871a4f
+		summarizeBy: none
+		sourceColumn: DMS_LEVEL_3
+		sortByColumn: DMS_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DMS_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 48fef443-26d8-4f5f-9c7e-27828294b9a1
+		summarizeBy: none
+		sourceColumn: DMS_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DTBI_LAST_UPDATE = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar, [CreateNavigationProperties=false]),
+				    PBI_VIEW_GBL_DTBI_LAST_UPDATE = Source{[Schema="PBI",Item="VIEW_GBL_DTBI_LAST_UPDATE"]}[Data]
+				in
+				    PBI_VIEW_GBL_DTBI_LAST_UPDATE
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["DATE/CALENDAR_TABLES_SHOULD_BE_MARKED_AS_A_DATE_TABLE"]}
+

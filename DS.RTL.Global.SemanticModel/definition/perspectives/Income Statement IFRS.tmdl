@@ -1,0 +1,48 @@
+perspective 'Income Statement IFRS'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_DRIFRS_MEASURES
+
+		perspectiveColumn PARAMETER_DRIFRS_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_PL_IFRS
+
+		perspectiveColumn PL_IFRS_DESC
+
+		perspectiveColumn PL_IFRS_LEVEL_1_DESC
+
+		perspectiveColumn PL_IFRS_LEVEL_2_DESC
+
+		perspectiveColumn PL_IFRS_LEVEL_3_DESC
+
+		perspectiveColumn PL_IFRS_LEVEL_4_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+
+		perspectiveColumn ACTIVITY_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_1_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_2_DESC
+
+		perspectiveColumn ACTIVITY_LEVEL_3_DESC
+

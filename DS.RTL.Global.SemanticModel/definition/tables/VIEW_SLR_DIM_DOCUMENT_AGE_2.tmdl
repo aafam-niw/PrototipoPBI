@@ -1,0 +1,98 @@
+table VIEW_SLR_DIM_DOCUMENT_AGE_2
+	isHidden
+	lineageTag: 1aa4e5d4-63ae-4e02-b424-05919c0c5590
+
+	column DOCUMENT_AGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: e49083fd-8c6c-4f39-8ee5-751020f55f29
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 47e263cd-5137-4d6a-bf92-b6fa202fdf5c
+		summarizeBy: none
+		sourceColumn: PT_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: e4fbf5e8-6b84-4c78-98b2-e9a1f433666c
+		summarizeBy: none
+		sourceColumn: ES_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 71920353-44c9-4750-b201-022a1064b0d4
+		summarizeBy: none
+		sourceColumn: FR_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_DOCUMENT_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: e566f71c-93fb-4673-9986-073db70dd0fb
+		summarizeBy: none
+		sourceColumn: EN_DOCUMENT_AGE_DESC
+		sortByColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_AGE_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: afc91473-78af-4995-8842-c36449a015d6
+		summarizeBy: none
+		sourceColumn: DOCUMENT_AGE_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_DOCUMENT_AGE_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_DOCUMENT_AGE_2_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DOCUMENT_AGE_2_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DOCUMENT_AGE_2_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

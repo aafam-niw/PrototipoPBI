@@ -1,0 +1,195 @@
+table VIEW_RTG_FACT_RENTING_SALES
+	lineageTag: 80b2ecc3-72bb-45b4-b77c-e6676202781d
+
+	column SLR_INVOICE_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 33106dbb-3580-46b7-9d13-1a34622d7458
+		summarizeBy: none
+		sourceColumn: SLR_INVOICE_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 148d518f-94d6-4b25-999f-d80acbbd9731
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: f4703f46-0042-45aa-9770-24e5f2f0ddf1
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b59038f3-cf6c-4a84-a640-9aad81a5d631
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 72c4ad72-6684-4d8c-8524-63e98cc72262
+		summarizeBy: none
+		sourceColumn: CUSTOMER_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b70bca68-7cdc-44db-b362-56ddaad09d1a
+		summarizeBy: none
+		sourceColumn: MODEL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8f24850e-2d63-4d7b-9185-d7af20d9f03e
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d257f399-0f60-46e5-b670-46ac4ed10577
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_EMPLOYEE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0040074c-a42f-42f2-8060-260d24dd5d23
+		summarizeBy: none
+		sourceColumn: USER_EMPLOYEE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b4a6d73f-f62f-4c42-b34a-753c3f563ef0
+		summarizeBy: none
+		sourceColumn: CUSTOMER_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: b9000518-acfe-4b4f-bad1-12929a0a021b
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_TYPE
+		dataType: string
+		lineageTag: 84dad3a9-2ae1-4406-af08-d53e9000e9cd
+		summarizeBy: none
+		sourceColumn: PAYMENT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUANTITY_VEHICLES
+		dataType: int64
+		formatString: 0
+		lineageTag: f7ae10bc-e996-4cc8-9ef3-da7ccefa4490
+		summarizeBy: sum
+		sourceColumn: QUANTITY_VEHICLES
+
+		annotation SummarizationSetBy = Automatic
+
+	column SELL_NET_VALUE
+		dataType: double
+		lineageTag: eae86b00-e23c-46fd-b5ea-c5abd3a003e2
+		summarizeBy: sum
+		sourceColumn: SELL_NET_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QUANTITY_DOCUMENTS
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d873e36-e459-4d69-8ca7-c0747472564f
+		summarizeBy: sum
+		sourceColumn: QUANTITY_DOCUMENTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_GROUP_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2a0bd5f8-b813-4696-954f-3cbf46499b3c
+		summarizeBy: none
+		sourceColumn: VEHICLE_GROUP_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_RTG_FACT_RENTING_SALES = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_RTG_FACT_RENTING_SALES"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

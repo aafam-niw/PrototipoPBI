@@ -1,0 +1,81 @@
+table PARAMETER_VHE_PRD_MEASURES
+	lineageTag: 46a4064b-7570-4c01-ad22-2275125a1a47
+
+	column PARAMETER_VHE_PRD_MEASURES
+		lineageTag: 4b33852d-5825-4b47-a2af-c75261e0419f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_PRD_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_PRD_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PRD_MEASURES Fields'
+		isHidden
+		lineageTag: 159d7cc9-da00-4f2b-ba5a-8d4d6c09d7f0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_PRD_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_PRD_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: ac2fa72e-fe1a-4a11-899a-4c2b4805716c
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: d1b1ffdd-443d-4bb8-860f-914af3f11010
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_PRD_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([VHE PRD CY]), 0, "pt-PT"),
+				    ("AA", NAMEOF([VHE PRD LY]), 1, "pt-PT"),
+				    ("Δ AA", NAMEOF([VHE PRD Delta LY]), 2, "pt-PT"),
+				    ("Δ AA %", NAMEOF([VHE PRD Delta LY %]), 3, "pt-PT"),
+				
+				
+				    ("CY", NAMEOF([VHE PRD CY]), 0, "en-US"),
+				    ("LY", NAMEOF([VHE PRD LY]), 1, "en-US"),
+				    ("Δ LY", NAMEOF([VHE PRD Delta LY]), 2, "en-US"),
+				    ("Δ LY %", NAMEOF([VHE PRD Delta LY %]), 3, "en-US"),
+				    
+				
+				
+				    ("Real", NAMEOF([VHE PRD CY]), 0, "es-ES"),
+				    ("AA", NAMEOF([VHE PRD LY]), 1, "es-ES"),
+				    ("Δ AA", NAMEOF([VHE PRD Delta LY]), 2, "es-ES"),
+				    ("Δ AA %", NAMEOF([VHE PRD Delta LY %]), 3, "es-ES"),
+				    
+				
+				
+				    ("Réel", NAMEOF([VHE PRD CY]), 0, "fr-FR"),
+				    ("AD", NAMEOF([VHE PRD LY]), 1, "fr-FR"),
+				    ("Δ AD", NAMEOF([VHE PRD Delta LY %]), 2, "fr-FR"),
+				    ("Δ AD %", NAMEOF([VHE PRD Delta LY %]), 3, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = d3e78ffde78c4580a9176c7ff6449f62
+

@@ -1,0 +1,114 @@
+table PARAMETER_SYTNER_MEASURES
+	lineageTag: 7e4d36ef-1fb4-4533-8ffc-3f9279594a53
+
+	column PARAMETER_SYTNER_MEASURES
+		lineageTag: 6e568918-7c63-4cd8-9ce2-427409f2e5ce
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_SYTNER_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_SYTNER_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_SYTNER_MEASURES Fields'
+		isHidden
+		lineageTag: d2a410ed-f7fb-4c95-a39e-f22dcf013cb2
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_SYTNER_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_SYTNER_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 7953f943-d81a-431c-a88c-2aaae6ee2bd6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: a31333a6-d919-4859-a6a1-00ee2745c69d
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		lineageTag: bbee4d74-5c49-4751-9912-87c48f531051
+		summarizeBy: sum
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_SYTNER_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([Sytner CY]), 0, "pt-PT", 2),
+				    ("Real %", NAMEOF([Sytner CY %]), 1, "pt-PT", 2),
+				    ("Orç", NAMEOF([Sytner Bgt]), 2, "pt-PT", 3),
+				    ("Orç %", NAMEOF([Sytner Bgt %]), 3, "pt-PT", 3),
+				    ("Δ Orç", NAMEOF([Sytner Delta Bgt]), 4, "pt-PT", 3),
+				    ("Δ Orç %", NAMEOF([Sytner Delta Bgt %]), 5, "pt-PT", 3),
+				    ("AA", NAMEOF([Sytner LY]), 6, "pt-PT", 2),
+				    ("AA %", NAMEOF([Sytner LY %]), 7, "pt-PT", 2),
+				    ("Δ AA", NAMEOF([Sytner Delta LY]), 8, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([Sytner Delta LY %]), 9, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([Sytner CY]), 0, "en-US", 2),
+				    ("CY %", NAMEOF([Sytner CY %]), 1, "en-US", 2),
+				    ("Bgt", NAMEOF([Sytner Bgt]), 2, "en-US", 3),
+				    ("Bgt %", NAMEOF([Sytner Bgt %]), 3, "en-US", 3),
+				    ("Δ Bgt", NAMEOF([Sytner Delta Bgt]), 4, "en-US", 3),
+				    ("Δ Bgt %", NAMEOF([Sytner Delta Bgt %]), 5, "en-US", 3),
+				    ("LY", NAMEOF([Sytner LY]), 6, "en-US", 2),
+				    ("LY %", NAMEOF([Sytner LY %]), 7, "en-US", 2),
+				    ("Δ LY", NAMEOF([Sytner Delta LY]), 8, "en-US", 2),
+				    ("Δ LY %", NAMEOF([Sytner Delta LY %]), 9, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([Sytner CY]), 0, "es-ES", 2),
+				    ("Real %", NAMEOF([Sytner CY %]), 1, "es-ES", 2),
+				    ("Ppto", NAMEOF([Sytner Bgt]), 2, "es-ES", 3),
+				    ("Ppto %", NAMEOF([Sytner Bgt %]), 3, "es-ES", 3),
+				    ("Δ Ppto", NAMEOF([Sytner Delta Bgt]), 4, "es-ES", 3),
+				    ("Δ Ppto %", NAMEOF([Sytner Delta Bgt %]), 5, "es-ES", 3),
+				    ("AA", NAMEOF([Sytner LY]), 6, "es-ES", 2),
+				    ("AA %", NAMEOF([Sytner LY %]), 7, "es-ES", 2),
+				    ("Δ AA", NAMEOF([Sytner Delta LY]), 8, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([Sytner Delta LY %]), 9, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([Sytner CY]), 0, "fr-FR", 2),
+				    ("Réel %", NAMEOF([Sytner CY %]), 1, "fr-FR", 2),
+				    ("Bgt", NAMEOF([Sytner Bgt]), 2, "fr-FR", 3),
+				    ("Bgt %", NAMEOF([Sytner Bgt %]), 3, "fr-FR", 3),
+				    ("Δ Bgt", NAMEOF([Sytner Delta Bgt]), 4, "fr-FR", 3),
+				    ("Δ Bgt %", NAMEOF([Sytner Delta Bgt %]), 5, "fr-FR", 3),
+				    ("AD", NAMEOF([Sytner LY]), 6, "fr-FR", 2),
+				    ("AD %", NAMEOF([Sytner LY %]), 7, "fr-FR", 2),
+				    ("Δ AD", NAMEOF([Sytner Delta LY]), 8, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([Sytner Delta LY %]), 9, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = d1c4988db7c94e4aa57635a0600fd335
+

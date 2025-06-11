@@ -1,0 +1,157 @@
+table VIEW_PLR_DIM_SUPPLIER_GROUPS
+	isHidden
+	lineageTag: 98428558-4b45-40fc-8551-b9161d5ee089
+
+	column SUPPLIER_GROUP_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 840d06cb-bb53-4458-9411-e84645525f77
+		summarizeBy: none
+		sourceColumn: SUPPLIER_GROUP_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PT_SUPPLIER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 822297d4-a48a-44f9-8970-743571ac84ec
+		summarizeBy: none
+		sourceColumn: PT_SUPPLIER_GROUP_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PT_SUPPLIER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 2f256166-8e17-4902-ab8e-ceb9e7434039
+		summarizeBy: none
+		sourceColumn: PT_SUPPLIER_GROUP_DESC
+		sortByColumn: SUPPLIER_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column EN_SUPPLIER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: e62055cf-bb0c-484c-b414-6a96f0d9a7b6
+		summarizeBy: none
+		sourceColumn: EN_SUPPLIER_GROUP_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column EN_SUPPLIER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 001d7faa-c388-49c7-a1f8-26117b9ad184
+		summarizeBy: none
+		sourceColumn: EN_SUPPLIER_GROUP_DESC
+		sortByColumn: SUPPLIER_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column ES_SUPPLIER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0363eece-ed9c-44be-ad9f-47e3e6687ad9
+		summarizeBy: none
+		sourceColumn: ES_SUPPLIER_GROUP_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column ES_SUPPLIER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: bd08cd5f-36d5-4638-9fae-f73ee423d1b8
+		summarizeBy: none
+		sourceColumn: ES_SUPPLIER_GROUP_DESC
+		sortByColumn: SUPPLIER_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FR_SUPPLIER_GROUP_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 0de5fde9-6612-41b7-93ff-052d2860aff7
+		summarizeBy: none
+		sourceColumn: FR_SUPPLIER_GROUP_LEVEL_1_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FR_SUPPLIER_GROUP_DESC
+		dataType: string
+		isHidden
+		lineageTag: 9e3b0eaa-a08d-41a2-9ae2-84b5a75ae5b5
+		summarizeBy: none
+		sourceColumn: FR_SUPPLIER_GROUP_DESC
+		sortByColumn: SUPPLIER_GROUP_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SUPPLIER_GROUP_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 684e80b9-6475-406b-8d97-d9a4d92e82c2
+		summarizeBy: none
+		sourceColumn: SUPPLIER_GROUP_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SUPPLIER_GROUP_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 013fd0b3-0364-4f7b-9312-818581422e31
+		summarizeBy: none
+		sourceColumn: SUPPLIER_GROUP_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition VIEW_PLR_DIM_SUPPLIER_GROUPS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_PLR_DIM_SUPPLIER_GROUPS_MPBI = Source{[Schema="PBI",Item="VIEW_PLR_DIM_SUPPLIER_GROUPS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_PLR_DIM_SUPPLIER_GROUPS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

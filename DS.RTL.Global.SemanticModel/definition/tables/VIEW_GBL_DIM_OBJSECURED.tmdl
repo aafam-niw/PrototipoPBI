@@ -1,0 +1,69 @@
+table VIEW_GBL_DIM_OBJSECURED
+	isHidden
+	lineageTag: a93874ce-fb66-47e1-9516-983a0237c3d3
+
+	column DATASET_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cb759c5d-230c-4061-ade2-cee2d5347616
+		summarizeBy: count
+		sourceColumn: DATASET_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATASET
+		dataType: string
+		isHidden
+		lineageTag: a9cc637d-2d75-4c20-b7e5-dae96f5fb452
+		summarizeBy: none
+		sourceColumn: DATASET
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 7cc163b9-011f-4f62-9b55-45ea7da8765f
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_KEY
+		dataType: string
+		isHidden
+		lineageTag: 3a451fb1-4960-4228-a6e1-143bf2a52846
+		summarizeBy: none
+		sourceColumn: OBJSECURED_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_OBJSECURED = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    PBI_VIEW_GBL_DIM_OBJSECURED = Source{[Schema="PBI",Item="VIEW_GBL_DIM_OBJSECURED"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(PBI_VIEW_GBL_DIM_OBJSECURED, each ([DATASET_ID] = 4))
+				in
+				    #"Filtered Rows"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

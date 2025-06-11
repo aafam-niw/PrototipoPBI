@@ -1,0 +1,84 @@
+table PARAMETER_VIEW_VHE_DIM_MEASURES
+	lineageTag: b3c4ab82-5a4e-4c62-b47e-f66f7845276d
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: a250b413-a2ef-437f-a006-e261552e175f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_1_DESC
+		lineageTag: e004a5e4-5cd2-4aa8-974e-2f14008aad9e
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_2_DESC
+		lineageTag: 40dcec2b-9ce9-4ed9-994d-71a401cf0fc7
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_3_DESC
+		lineageTag: a6d1c5d3-f1dd-4254-a795-e531c49d2115
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_MEASURES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_3_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_3_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_3_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_3_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = fef5f7b7fff3473c984a97677352768a
+

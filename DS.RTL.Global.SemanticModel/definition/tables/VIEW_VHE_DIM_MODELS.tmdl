@@ -1,0 +1,166 @@
+table VIEW_VHE_DIM_MODELS
+	isHidden
+	lineageTag: 5b163e69-7314-42ba-a812-3cf76f935221
+
+	column MODEL_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 7421fc95-f87b-4b03-9fc7-b70d007a5fb7
+		summarizeBy: none
+		sourceColumn: MODEL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MODEL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: d20ac34b-9430-4866-9a65-995f52bf2376
+		summarizeBy: none
+		sourceColumn: PT_MODEL_LEVEL_1_DESC
+		sortByColumn: MODEL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MODEL_DESC
+		dataType: string
+		isHidden
+		lineageTag: 96d1c166-cec4-402d-a8a9-274542f9e1e1
+		summarizeBy: none
+		sourceColumn: PT_MODEL_DESC
+		sortByColumn: MODEL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MODEL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 86554c63-ab9e-46ac-ac00-31bfdf4f3478
+		summarizeBy: none
+		sourceColumn: EN_MODEL_LEVEL_1_DESC
+		sortByColumn: MODEL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MODEL_DESC
+		dataType: string
+		isHidden
+		lineageTag: 96d862fc-cedd-4f70-8560-db8430402494
+		summarizeBy: none
+		sourceColumn: EN_MODEL_DESC
+		sortByColumn: MODEL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MODEL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: 97dbc6be-e14c-4601-89f4-e4dda9f6644d
+		summarizeBy: none
+		sourceColumn: ES_MODEL_LEVEL_1_DESC
+		sortByColumn: MODEL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MODEL_DESC
+		dataType: string
+		isHidden
+		lineageTag: 8e2d0512-06c7-4921-b4e4-513b9389ca47
+		summarizeBy: none
+		sourceColumn: ES_MODEL_DESC
+		sortByColumn: MODEL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MODEL_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		lineageTag: abf50f63-ff63-4da3-abf1-aab5faed0ebb
+		summarizeBy: none
+		sourceColumn: FR_MODEL_LEVEL_1_DESC
+		sortByColumn: MODEL_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MODEL_DESC
+		dataType: string
+		isHidden
+		lineageTag: e2fa7f05-922e-45db-8d1c-2ac98d5f21e1
+		summarizeBy: none
+		sourceColumn: FR_MODEL_DESC
+		sortByColumn: MODEL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f7843213-8227-4c51-8ccb-468346a4a8ab
+		summarizeBy: sum
+		sourceColumn: MODEL_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 620bba5b-8828-4312-b1e2-55fcae3c864b
+		summarizeBy: sum
+		sourceColumn: MODEL_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_MODELS = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_MODELS_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_MODELS_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_MODELS_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

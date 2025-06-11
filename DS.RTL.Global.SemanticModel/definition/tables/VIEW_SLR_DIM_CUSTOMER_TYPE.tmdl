@@ -1,0 +1,238 @@
+table VIEW_SLR_DIM_CUSTOMER_TYPE
+	isHidden
+	lineageTag: 67c1e6fe-b227-4526-8b6c-29c5e989108b
+
+	column CUSTOMER_TYPE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 34eb2083-964b-4a73-a8b6-80ca62c680c0
+		summarizeBy: none
+		sourceColumn: CUSTOMER_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 935a2710-8efc-400c-bff4-e36c41372025
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_TYPE_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 2a6e181b-3826-4fee-b598-4032be50218e
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_TYPE_DESC
+		sortByColumn: CUSTOMER_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: e83f2aed-4559-4c7b-98cb-693356a479e8
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_TYPE_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 4c3e5a44-345e-45ee-97fd-29afe237e6c2
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_TYPE_DESC
+		sortByColumn: CUSTOMER_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: f5418f60-e3ee-45eb-863b-9238c7b02857
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_TYPE_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 1db8131d-b895-4da6-93aa-45bd8e8f7ac2
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_TYPE_DESC
+		sortByColumn: CUSTOMER_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_TYPE_LEVEL_1_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 7652e026-3873-4443-8230-c2aeac7c0782
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_TYPE_LEVEL_1_DESC
+		sortByColumn: CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_TYPE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(100)
+		lineageTag: 9e9b59d1-46ff-4dea-aa35-780f411c9937
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_TYPE_DESC
+		sortByColumn: CUSTOMER_TYPE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 36c5309d-e6f0-49ac-97dd-005de2bd844e
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: c0a0cac0-1bf9-4cdd-acd9-50bb126deb38
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: 4029eb5f-2d1b-4c89-88c3-5acdd7bbe68e
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: d8d5fd73-abfe-4c33-bc8a-9fc5bd6ed438
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e41cd8b3-0ab4-4475-947e-6c7a4eafd555
+		summarizeBy: sum
+		sourceColumn: CUSTOMER_TYPE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_ACTIVE_CUSTOMER_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: f0f41615-c9d9-4327-8222-df5bd3895e5a
+		summarizeBy: sum
+		sourceColumn: CUSTOMER_TYPE_ACTIVE_CUSTOMER_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: d00f9976-f307-417d-b01a-c7a260b2b2fd
+		summarizeBy: sum
+		sourceColumn: CUSTOMER_TYPE_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_CUSTOMER_TYPE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_CUSTOMER_TYPE_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_CUSTOMER_TYPE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_CUSTOMER_TYPE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

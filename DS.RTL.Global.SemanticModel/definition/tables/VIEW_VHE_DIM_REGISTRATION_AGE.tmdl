@@ -1,0 +1,101 @@
+table VIEW_VHE_DIM_REGISTRATION_AGE
+	isHidden
+	lineageTag: c8ea4f32-8af8-422d-9f9f-9cf365ec2972
+
+	column REGISTRATION_AGE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 7492d400-db16-4655-81ea-e67097329a84
+		summarizeBy: none
+		sourceColumn: REGISTRATION_AGE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_REGISTRATION_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 5fbe23c4-de7b-402a-b655-5a09b7f68cbe
+		summarizeBy: none
+		sourceColumn: PT_REGISTRATION_AGE_DESC
+		sortByColumn: REGISTRATION_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_REGISTRATION_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: ea60d7e7-d38c-4797-85c4-f3be9f0ad150
+		summarizeBy: none
+		sourceColumn: EN_REGISTRATION_AGE_DESC
+		sortByColumn: REGISTRATION_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_REGISTRATION_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: c29ea44f-7d6f-4740-940a-4427da833bdf
+		summarizeBy: none
+		sourceColumn: ES_REGISTRATION_AGE_DESC
+		sortByColumn: REGISTRATION_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_REGISTRATION_AGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 964b2886-3e7f-4e0c-a336-d9ecb372b645
+		summarizeBy: none
+		sourceColumn: FR_REGISTRATION_AGE_DESC
+		sortByColumn: REGISTRATION_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTRATION_AGE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c5c67045-d231-4843-a01b-b7964954cfa8
+		summarizeBy: sum
+		sourceColumn: REGISTRATION_AGE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_REGISTRATION_AGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_VHE_DIM_REGISTRATION_AGE_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_REGISTRATION_AGE_MPBI"]}[Data]
+				in
+				    PBI_VIEW_VHE_DIM_REGISTRATION_AGE_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,88 @@
+table PARAMETER_OR_MEASURES
+	lineageTag: 27b63d49-c526-4ecf-8f91-71b9c092d91b
+
+	column PARAMETER_OR_MEASURES
+		lineageTag: 9df1eb8f-5357-42ff-bd1a-2c1ba2af9591
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_OR_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_OR_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_OR_MEASURES Fields'
+		isHidden
+		lineageTag: 19d723f6-d618-41a1-a03d-7c5181e77790
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_OR_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_OR_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: 5f160bfa-e1fc-4e29-8b23-718becaf95c0
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 12b2018e-f85a-4f33-8721-80c0aedc5339
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: b43b829a-159d-475f-8e81-ca5132747d28
+		summarizeBy: sum
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_OR_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([OR CY]), 0, "pt-PT", 2),
+				    ("AA", NAMEOF([OR LY]), 1, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([OR Delta LY %]), 2, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([OR CY]), 0, "en-US", 2),
+				    ("LY", NAMEOF([OR LY]), 1, "en-US", 2),
+				    ("Δ LY %", NAMEOF([OR Delta LY %]), 2, "en-US", 2),
+				    
+				
+				
+				    ("Real", NAMEOF([OR CY]), 0, "es-ES", 2),
+				    ("AA", NAMEOF([OR LY]), 1, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([OR Delta LY %]), 2, "es-ES", 2),
+				    
+				
+				
+				    ("Réel", NAMEOF([OR CY]), 0, "fr-FR", 2),
+				    ("AD", NAMEOF([OR LY]), 1, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([OR Delta LY %]), 2, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 7f82d36cf7d14d8d8d0b36c2314f3bb7
+

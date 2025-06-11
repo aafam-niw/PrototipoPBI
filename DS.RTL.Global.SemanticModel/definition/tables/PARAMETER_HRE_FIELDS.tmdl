@@ -1,0 +1,129 @@
+table PARAMETER_HRE_FIELDS
+	isHidden
+	lineageTag: ae99c88b-b507-4832-8896-8e7892a5e2c4
+
+	column PARAMETER_HRE_FIELDS
+		isHidden
+		lineageTag: 7e7dd6e5-1167-4b55-bc17-91478f85f881
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_HRE_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_HRE_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_FIELDS Fields'
+		isHidden
+		lineageTag: 984934ee-f7a6-4791-b107-82d4ef1bc35f
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_HRE_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 696a8846-83ff-4a02-9fb0-f4fb0058a8f3
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 2e47ec3c-607e-4055-9be7-80f7ff8e6ce4
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_HRE_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Category Level 1", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_LEVEL_1_DESC]), 1, "en-US"),
+				    ("Category Level 2", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_LEVEL_2_DESC]), 2, "en-US"),
+				    ("Category", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_DESC]), 3, "en-US"),
+				    ("Functional Categories", NAMEOF(VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES[EN_FUNCTIONAL_CATEGORY_DESC]), 4, "en-US"),
+				    ("Internal Categories", NAMEOF(VIEW_HRE_DIM_INTERNAL_CATEGORIES[EN_INTERNAL_CATEGORY_DESC]), 5, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 6, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 7, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 8, "en-US"),
+				    --("Company Level 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_4_DESC]), 9, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 10, "en-US"),
+				    ("Site Level 1", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_1_DESC]), 11, "en-US"),
+				    ("Site Level 2", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_2_DESC]), 12, "en-US"),
+				    ("Site Level 3", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_3_DESC]), 13, "en-US"),
+				    ("Site Level 4", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_LEVEL_4_DESC]), 14, "en-US"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[EN_SITE_DESC]), 15, "en-US"),
+				    ("Year", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 16, "en-US"),
+				    ("Year-Month", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 17, "en-US"),
+				
+				    ("Categoria Nível 1", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_LEVEL_1_DESC]), 1, "pt-PT"),
+				    ("Categoria Nível 2", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_LEVEL_2_DESC]), 2, "pt-PT"),
+				    ("Categoria", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_DESC]), 3, "pt-PT"),
+				    ("Categorias Funcionais", NAMEOF(VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES[PT_FUNCTIONAL_CATEGORY_DESC]), 4, "pt-PT"),
+				    ("Categorias Internas", NAMEOF(VIEW_HRE_DIM_INTERNAL_CATEGORIES[PT_INTERNAL_CATEGORY_DESC]), 5, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 6, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 7, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 8, "pt-PT"),
+				    --("Empresa Nível 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_4_DESC]), 9, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 10, "pt-PT"),
+				    ("Polo Nível 1", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_1_DESC]), 11, "pt-PT"),
+				    ("Polo Nível 2", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_2_DESC]), 12, "pt-PT"),
+				    ("Polo Nível 3", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_3_DESC]), 13, "pt-PT"),
+				    ("Polo Nível 4", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_LEVEL_4_DESC]), 14, "pt-PT"),
+				    ("Polo", NAMEOF('VIEW_GBL_DIM_SITES'[PT_SITE_DESC]), 15, "pt-PT"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 16, "pt-PT"),
+				    ("Ano-Mês", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 17, "pt-PT"),
+				
+				    ("Categoría Nivel 1", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_LEVEL_1_DESC]), 1, "es-ES"),
+				    ("Categoría Nivel 2", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_LEVEL_2_DESC]), 2, "es-ES"),
+				    ("Categoría", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_DESC]), 3, "es-ES"),
+				    ("Categorías Funcionales", NAMEOF(VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES[ES_FUNCTIONAL_CATEGORY_DESC]), 4, "es-ES"),
+				    ("Categorías Internas", NAMEOF(VIEW_HRE_DIM_INTERNAL_CATEGORIES[ES_INTERNAL_CATEGORY_DESC]), 5, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 6, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 7, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 8, "es-ES"),
+				    --("Compañía Nivel 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_4_DESC]), 9, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 10, "es-ES"),
+				    ("Sitio Nivel 1", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_1_DESC]), 11, "es-ES"),
+				    ("Sitio Nivel 2", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_2_DESC]), 12, "es-ES"),
+				    ("Sitio Nivel 3", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_3_DESC]), 13, "es-ES"),
+				    ("Sitio Nivel 4", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_LEVEL_4_DESC]), 14, "es-ES"),
+				    ("Sitio", NAMEOF('VIEW_GBL_DIM_SITES'[ES_SITE_DESC]), 15, "es-ES"),
+				    ("Año", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 16, "es-ES"),
+				    ("Año-Mes", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 17, "es-ES"),
+				
+				    ("Catégorie Niveau 1", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_LEVEL_1_DESC]), 1, "fr-FR"),
+				    ("Catégorie Niveau 2", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_LEVEL_2_DESC]), 2, "fr-FR"),
+				    ("Catégorie", NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_DESC]), 3, "fr-FR"),
+				    ("Catégories Fonctionnelles", NAMEOF(VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES[FR_FUNCTIONAL_CATEGORY_DESC]), 4, "fr-FR"),
+				    ("Catégories Internes", NAMEOF(VIEW_HRE_DIM_INTERNAL_CATEGORIES[FR_INTERNAL_CATEGORY_DESC]), 5, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 6, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 7, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 8, "fr-FR"),
+				    --("Entreprise Niveau 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_4_DESC]), 9, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 10, "fr-FR"),
+				    ("Site Niveau 1", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_1_DESC]), 11, "fr-FR"),
+				    ("Site Niveau 2", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_2_DESC]), 12, "fr-FR"),
+				    ("Site Niveau 3", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_3_DESC]), 13, "fr-FR"),
+				    ("Site Niveau 4", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_LEVEL_4_DESC]), 14, "fr-FR"),
+				    ("Site", NAMEOF('VIEW_GBL_DIM_SITES'[FR_SITE_DESC]), 15, "fr-FR"),
+				    ("Année", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 16, "fr-FR"),
+				    ("Année-Mois", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 17, "fr-FR")
+				}   
+				```
+
+	annotation PBI_Id = 4df0129068d84f14a78b647753666b47
+

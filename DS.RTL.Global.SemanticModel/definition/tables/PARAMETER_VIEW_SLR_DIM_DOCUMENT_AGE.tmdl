@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_SLR_DIM_DOCUMENT_AGE
+	lineageTag: 1b507bac-67d7-4cc3-9ebd-6140f0fcbfc3
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 26f6ab9c-2ba3-49b1-8551-5481ebfb7e46
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCUMENT_AGE_DESC
+		lineageTag: 7f5ee0a6-9d4d-4411-be6b-81037aed3bf0
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_SLR_DIM_DOCUMENT_AGE = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_SLR_DIM_DOCUMENT_AGE'[PT_DOCUMENT_AGE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_SLR_DIM_DOCUMENT_AGE'[EN_DOCUMENT_AGE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_SLR_DIM_DOCUMENT_AGE'[ES_DOCUMENT_AGE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_SLR_DIM_DOCUMENT_AGE'[FR_DOCUMENT_AGE_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 186999be7ce14e9ea59367c8950d2579
+

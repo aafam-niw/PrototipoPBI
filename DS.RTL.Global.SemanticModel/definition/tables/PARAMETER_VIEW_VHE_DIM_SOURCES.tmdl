@@ -1,0 +1,84 @@
+table PARAMETER_VIEW_VHE_DIM_SOURCES
+	lineageTag: 388346ec-521a-415a-953c-58649978c1d7
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 5bcd76bd-9e56-4ad7-ba68-c4fd244c8083
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_DESC
+		lineageTag: b2824730-0918-4e03-8f59-a95ad4ec29ad
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_LEVEL_1_DESC
+		lineageTag: 1d7c4a84-70e8-4f94-8bc1-07ccd99c35e8
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_LEVEL_2_DESC
+		lineageTag: 56bccef5-9963-4c5c-8355-4c723aab93f5
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_SOURCES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[PT_SOURCE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[PT_SOURCE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[PT_SOURCE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[EN_SOURCE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[EN_SOURCE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[EN_SOURCE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[ES_SOURCE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[ES_SOURCE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[ES_SOURCE_LEVEL_2_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[FR_SOURCE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[FR_SOURCE_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SOURCES'[FR_SOURCE_LEVEL_2_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 2c6bc64dad32450a8a30aedec00dbd37
+

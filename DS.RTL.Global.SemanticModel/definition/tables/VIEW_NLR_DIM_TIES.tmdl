@@ -1,0 +1,113 @@
+table VIEW_NLR_DIM_TIES
+	isHidden
+	lineageTag: d92d82dd-ea39-4d01-837d-e655d8d59300
+
+	column TIE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a56fbf68-0ded-463a-b0d3-b209978033f8
+		summarizeBy: none
+		sourceColumn: TIE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_TIE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 7aceadb0-c291-4119-9e10-ee10ddc3732f
+		summarizeBy: none
+		sourceColumn: PT_TIE_DESC
+		sortByColumn: TIE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_TIE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 6d05563c-2f16-431c-825b-dcbbdd4708b7
+		summarizeBy: none
+		sourceColumn: EN_TIE_DESC
+		sortByColumn: TIE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_TIE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 4badde61-5188-4a55-befb-13e48d0c152e
+		summarizeBy: none
+		sourceColumn: ES_TIE_DESC
+		sortByColumn: TIE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_TIE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: df9068b7-ff48-40cf-9943-ec6d551c244b
+		summarizeBy: none
+		sourceColumn: FR_TIE_DESC
+		sortByColumn: TIE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f95a6098-8eb9-4b74-8ebb-8b597ca23381
+		summarizeBy: sum
+		sourceColumn: TIE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_TIES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_NLR_DIM_TIES_MPBI = Source{[Schema="PBI",Item="VIEW_NLR_DIM_TIES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_NLR_DIM_TIES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,36 @@
+perspective 'Official Results (ES)'
+
+	perspectiveTable PARAMETER_OR_MEASURES
+
+		perspectiveColumn PARAMETER_OR_MEASURES
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_PL_FISCAL_ES
+
+		perspectiveColumn PL_FISCAL_ES_DESC
+
+		perspectiveColumn PL_FISCAL_ES_LEVEL_1_DESC
+
+		perspectiveColumn PL_FISCAL_ES_LEVEL_2_DESC
+
+		perspectiveColumn PL_FISCAL_ES_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+

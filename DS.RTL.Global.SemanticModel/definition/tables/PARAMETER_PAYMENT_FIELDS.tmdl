@@ -1,0 +1,124 @@
+table PARAMETER_PAYMENT_FIELDS
+	isHidden
+	lineageTag: d7c37025-7fde-4e37-967c-2aedf035885d
+
+	column PARAMETER_PAYMENT_FIELDS
+		isHidden
+		lineageTag: e4bb9265-7502-4a10-9766-50bf2f82db91
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_PAYMENT_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_PAYMENT_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_PAYMENT_FIELDS Fields'
+		isHidden
+		lineageTag: 6528a477-fd5c-4d25-ab47-0a0ed7d530b8
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_PAYMENT_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_PAYMENT_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 48f81a3c-b866-4fbc-855a-2fced4b2cfd2
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 84b3494d-48cd-4028-a277-84a1bff53838
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_PAYMENT_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Payment Source", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[EN_PAYMENT_METHOD_SOURCE]), 1, "en-US"),
+				    ("Payment Methods", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[EN_PAYMENT_METHOD_DESC]), 2, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 3, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 4, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 5, "en-US"),
+				    --("Company Level 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_4_DESC]), 6, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 7, "en-US"),
+				    ("Activity Level 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_1_DESC]), 8, "en-US"),
+				    ("Activity Level 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_2_DESC]), 9, "en-US"),
+				    ("Activity Level 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_LEVEL_3_DESC]), 10, "en-US"),
+				    ("Activity", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[EN_ACTIVITY_DESC]), 11, "en-US"),
+				    ("Caetano Pay Source", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[ORIGIN_CAETANO_PAY_DESC]), 12, "en-US"),
+				    ("Analysis Date", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[PAYMENT_DATE]), 13, "en-US"),
+				    ("Year", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 14, "en-US"),
+				    ("Document Date", NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 15, "en-US"),
+				    
+				    
+				    ("Fonte de Pagamento", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[PT_PAYMENT_METHOD_SOURCE]), 1, "pt-PT"),
+				    ("Formas de Pagamento", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[PT_PAYMENT_METHOD_DESC]), 2, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 3, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 4, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 5, "pt-PT"),
+				    --("Empresa Nível 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_4_DESC]), 6, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 7, "pt-PT"),
+				    ("Atividade Nível 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_1_DESC]), 8, "pt-PT"),
+				    ("Atividade Nível 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_2_DESC]), 9, "pt-PT"),
+				    ("Atividade Nível 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_LEVEL_3_DESC]), 10, "pt-PT"),
+				    ("Atividade", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[PT_ACTIVITY_DESC]), 11, "pt-PT"),
+				    ("Origem Caetano Pay", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[ORIGIN_CAETANO_PAY_DESC]), 12, "pt-PT"),
+				    ("Data de Análise", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[PAYMENT_DATE]), 13, "pt-PT"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 14, "pt-PT"),
+				    ("Data Documento", NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 15, "pt-PT"),
+				    
+				    
+				    ("Fuente de Pago", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[ES_PAYMENT_METHOD_SOURCE]), 1, "es-ES"),
+				    ("Formas de Pago", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[ES_PAYMENT_METHOD_DESC]), 2, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 3, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 4, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 5, "es-ES"),
+				    --("Compañía Nivel 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_4_DESC]), 6, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 7, "es-ES"),
+				    ("Actividad Nivel 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_1_DESC]), 8, "es-ES"),
+				    ("Actividad Nivel 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_2_DESC]), 9, "es-ES"),
+				    ("Actividad Nivel 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_LEVEL_3_DESC]), 10, "es-ES"),
+				    ("Actividad", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[ES_ACTIVITY_DESC]), 11, "es-ES"),
+				    ("Origen Caetano Pay", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[ORIGIN_CAETANO_PAY_DESC]), 12, "es-ES"),
+				    ("Fecha de Análisis", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[PAYMENT_DATE]), 13, "es-ES"),
+				    ("Ano", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 14, "es-ES"),
+				    ("Fecha de Documento", NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 15, "es-ES"),
+				
+				    
+				    ("Source de Paiement", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[FR_PAYMENT_METHOD_SOURCE]), 1, "fr-FR"),
+				    ("Modes de Paiement", NAMEOF('VIEW_SLR_DIM_PAYMENT_METHODS'[FR_PAYMENT_METHOD_DESC]), 2, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 3, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 4, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 5, "fr-FR"),
+				    --("Entreprise Niveau 4", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_4_DESC]), 6, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 7, "fr-FR"),
+				    ("Activité Niveau 1", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_1_DESC]), 8, "fr-FR"),
+				    ("Activité Niveau 2", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_2_DESC]), 9, "fr-FR"),
+				    ("Activité Niveau 3", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_LEVEL_3_DESC]), 10, "fr-FR"),
+				    ("Activité", NAMEOF('VIEW_NLR_DIM_ACTIVITIES'[FR_ACTIVITY_DESC]), 11, "fr-FR"),
+				    ("Origine Caetano Pay", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[ORIGIN_CAETANO_PAY_DESC]), 12, "fr-FR"),
+				    ("Date d’Analyse", NAMEOF('VIEW_SLR_FACT_PAYMENT_METHOD'[PAYMENT_DATE]), 13, "fr-FR"),
+				    ("Anné", NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 14, "fr-FR"),
+				    ("Date du Document", NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 15, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = b7d7cf9d09d6467fb856b03b221ec1aa
+

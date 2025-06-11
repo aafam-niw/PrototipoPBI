@@ -1,0 +1,114 @@
+table PARAMETER_HRE_C_MEASURES
+	lineageTag: 0d123e3e-4db9-4c64-afe4-b13d9611e6e6
+
+	column PARAMETER_HRE_C_MEASURES
+		lineageTag: 03e31b81-c143-46e2-babc-429105c8a279
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_HRE_C_MEASURES Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_HRE_C_MEASURES Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_C_MEASURES Fields'
+		isHidden
+		lineageTag: 15c3c14e-0229-4a8c-a5cb-a5c2ee0d8837
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_HRE_C_MEASURES Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_HRE_C_MEASURES Order'
+		isHidden
+		formatString: 0
+		lineageTag: c8144a3a-140e-4ebc-b49b-9c1434ed9cba
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: b2adb464-10cf-41c3-ac9f-cd439c4c9cfb
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE_CODE
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: d277345d-dce4-4066-92ee-9cbe80bcea15
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_HRE_C_MEASURES = calculated
+		mode: import
+		source = ```
+				{
+				
+				    ("Real", NAMEOF([HRE_C CY]), 0, "pt-PT", 2),
+				    ("Orç", NAMEOF([HRE_C Bgt]), 1, "pt-PT", 3),
+				    ("Δ Orç", NAMEOF([HRE_C Delta Bgt]), 2, "pt-PT", 3),
+				    ("Δ Orç %", NAMEOF([HRE_C Delta Bgt %]), 3, "pt-PT", 3),    
+				    ("Orç Adm", NAMEOF([HRE_C Bgt Adm]), 4, "pt-PT", 4),
+				    ("Δ Orç Adm", NAMEOF([HRE_C Delta Bgt Adm]), 5, "pt-PT", 4),
+				    ("Δ Orç Adm %", NAMEOF([HRE_C Delta Bgt Adm %]), 6, "pt-PT", 4),
+				    ("AA", NAMEOF([HRE_C LY]), 7, "pt-PT", 2),
+				    ("Δ AA", NAMEOF([HRE_C Delta LY]), 8, "pt-PT", 2),
+				    ("Δ AA %", NAMEOF([HRE_C Delta LY %]), 9, "pt-PT", 2),
+				
+				
+				    ("CY", NAMEOF([HRE_C CY]), 0, "en-US", 2),
+				    ("Bgt", NAMEOF([HRE_C Bgt]), 1, "en-US", 3),
+				    ("Δ Bgt", NAMEOF([HRE_C Delta Bgt]), 2, "en-US", 3),
+				    ("Δ Bgt %", NAMEOF([HRE_C Delta Bgt %]), 3, "en-US", 3),
+				    ("Bgt Adm", NAMEOF([HRE_C Bgt Adm]), 4, "en-US", 4),
+				    ("Δ Bgt Adm", NAMEOF([HRE_C Delta Bgt Adm]), 5, "en-US", 4),
+				    ("Δ Bgt Adm %", NAMEOF([HRE_C Delta Bgt Adm %]), 6, "en-US", 4),
+				    ("LY", NAMEOF([HRE_C LY]), 7, "en-US", 2),
+				    ("Δ LY", NAMEOF([HRE_C Delta LY]), 8, "en-US", 2),
+				    ("Δ LY %", NAMEOF([HRE_C Delta LY %]), 9, "en-US", 2),    
+				
+				
+				    ("Real", NAMEOF([HRE_C CY]), 0, "es-ES", 2),
+				    ("Ppto", NAMEOF([HRE_C Bgt]), 1, "es-ES", 3),
+				    ("Δ Ppto", NAMEOF([HRE_C Delta Bgt]), 2, "es-ES", 3),
+				    ("Δ Ppto %", NAMEOF([HRE_C Delta Bgt %]), 3, "es-ES", 3),
+				    ("Ppto Adm", NAMEOF([HRE_C Bgt Adm]), 4, "es-ES", 4),
+				    ("Δ Ppto Adm", NAMEOF([HRE_C Delta Bgt Adm]), 5, "es-ES", 4),
+				    ("Δ Ppto Adm %", NAMEOF([HRE_C Delta Bgt Adm %]), 6, "es-ES", 4),
+				    ("AA", NAMEOF([HRE_C LY]), 7, "es-ES", 2),
+				    ("Δ AA", NAMEOF([HRE_C Delta LY]), 8, "es-ES", 2),
+				    ("Δ AA %", NAMEOF([HRE_C Delta LY %]), 9, "es-ES", 2),
+				
+				
+				    ("Réel", NAMEOF([HRE_C CY]), 0, "fr-FR", 2),
+				    ("Bgt", NAMEOF([HRE_C Bgt]), 1, "fr-FR", 3),
+				    ("Δ Bgt", NAMEOF([HRE_C Delta Bgt]), 2, "fr-FR", 3),
+				    ("Δ Bgt %", NAMEOF([HRE_C Delta Bgt %]), 3, "fr-FR", 3),
+				    ("Bgt Adm", NAMEOF([HRE_C Bgt Adm]), 4, "fr-FR", 4),
+				    ("Δ Bgt Adm", NAMEOF([HRE_C Delta Bgt Adm]), 5, "fr-FR", 4),
+				    ("Δ Bgt Adm %", NAMEOF([HRE_C Delta Bgt Adm %]), 6, "fr-FR", 4),
+				    ("AD", NAMEOF([HRE_C LY]), 7, "fr-FR", 2),
+				    ("Δ AD", NAMEOF([HRE_C Delta LY]), 8, "fr-FR", 2),
+				    ("Δ AD %", NAMEOF([HRE_C Delta LY %]), 9, "fr-FR", 2)
+				    
+				}
+				```
+
+	annotation PBI_Id = 5ce6528c65aa487aac75ad011cd2be2c
+

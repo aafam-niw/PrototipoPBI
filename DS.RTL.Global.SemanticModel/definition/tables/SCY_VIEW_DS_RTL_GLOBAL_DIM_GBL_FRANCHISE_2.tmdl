@@ -1,0 +1,47 @@
+table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_FRANCHISE_2
+	isHidden
+	lineageTag: 3cf94f82-e29f-45db-bed6-11de083fe03b
+
+	column O365_USER
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 14519978-92ae-4fe4-9227-fb533b9c5795
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 32c10d02-416d-4a99-9e9f-33b09b9888d8
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_FRANCHISE_2 = m
+		mode: import
+		queryGroup: Security
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.RTL.GLOBAL_DIM_GBL.FRANCHISE_2 = Source{[Schema="SCY",Item="VIEW_DS.RTL.GLOBAL_DIM_GBL.FRANCHISE_2"]}[Data]
+				in
+				    SCY_View_DS.RTL.GLOBAL_DIM_GBL.FRANCHISE_2
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

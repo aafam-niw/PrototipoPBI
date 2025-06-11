@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES
+	lineageTag: 6aa17020-8359-476f-94ae-4bea635821f4
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 051e616a-abc0-4c3a-91b2-982ca7578441
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FUNCTIONAL_CATEGORY_DESC
+		lineageTag: 80f63156-cf87-421c-a94e-77145ac6667b
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES'[PT_FUNCTIONAL_CATEGORY_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES'[EN_FUNCTIONAL_CATEGORY_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES'[ES_FUNCTIONAL_CATEGORY_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES'[FR_FUNCTIONAL_CATEGORY_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = de61327490274ccf86bf912e13c87226
+

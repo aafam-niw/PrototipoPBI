@@ -1,0 +1,192 @@
+table PARAMETER_VHE_STOCK_FIELDS
+	isHidden
+	lineageTag: 79c8f9ae-69f4-403e-9a2d-99f97f0f9ded
+
+	column PARAMETER_VHE_STOCK_FIELDS
+		isHidden
+		lineageTag: 007cdb7e-34e3-47ce-b870-519f64946b2b
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'PARAMETER_VHE_STOCK_FIELDS Order'
+
+		relatedColumnDetails
+			groupByColumn: 'PARAMETER_VHE_STOCK_FIELDS Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_STOCK_FIELDS Fields'
+		isHidden
+		lineageTag: 149bfbad-5fce-4a82-ad46-aa5bfddd4a24
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'PARAMETER_VHE_STOCK_FIELDS Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PARAMETER_VHE_STOCK_FIELDS Order'
+		isHidden
+		formatString: 0
+		lineageTag: 25a36826-a7ca-4508-9bd3-f80a65dae752
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: f23a68d0-3f08-48e4-9414-f35ae5437e37
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VHE_STOCK_FIELDS = calculated
+		mode: import
+		source = ```
+				{
+				    ("Indicators Level 1", NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_1_DESC]), 0, "en-US"),
+				    ("Indicators Level 2", NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_2_DESC]), 10, "en-US"),
+				    ("Indicators Level 3", NAMEOF('VIEW_VHE_DIM_MEASURES'[EN_MEASURE_LEVEL_3_DESC]), 20, "en-US"),
+				    ("Company Level 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_1_DESC]), 30, "en-US"),
+				    ("Company Level 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_2_DESC]), 40, "en-US"),
+				    ("Company Level 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_LEVEL_3_DESC]), 50, "en-US"),
+				    ("Company", NAMEOF('VIEW_NLR_DIM_COMPANIES'[EN_COMPANY_DESC]), 60, "en-US"),
+				    ("Physical Location Level 1", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[EN_PHYSICAL_LOCATION_LEVEL_1_DESC]), 70, "en-US"),
+				    ("Physical Location", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[EN_PHYSICAL_LOCATION_DESC]), 80, "en-US"),
+				    ("Brand", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[EN_FRANCHISE_DESC]), 90, "en-US"),
+				    ("Vehicle Area", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[EN_VHE_TYPE_DESC]), 100, "en-US"),
+				    ("Vehicle Type", NAMEOF(VIEW_VHE_DIM_VEHICLE_CLASSES[EN_VEHICLE_CLASS_DESC]), 110, "en-US"),
+				    ("Vehicle Users", NAMEOF(VIEW_VHE_DIM_USERS_AVAILABILITY[EN_USER_AVAILABILITY_DESC]), 120, "en-US"),
+				    ("Source Level 1", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_LEVEL_1_DESC]), 130, "en-US"),
+				    ("Source Level 2", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_LEVEL_2_DESC]), 140, "en-US"),
+				    ("Source", NAMEOF(VIEW_VHE_DIM_SOURCES[EN_SOURCE_DESC]), 150, "en-US"),
+				    ("Vehicle Status Level 1", NAMEOF(VIEW_VHE_DIM_STATUS_1[EN_STATUS_LEVEL_1_DESC]), 160, "en-US"),
+				    ("Vehicle Status Level 2", NAMEOF(VIEW_VHE_DIM_STATUS_1[EN_STATUS_LEVEL_2_DESC]), 170, "en-US"),
+				    ("Vehicle Status", NAMEOF(VIEW_VHE_DIM_STATUS_1[EN_STATUS_DESC]), 180, "en-US"),
+				    ("Stock Age", NAMEOF(VIEW_VHE_DIM_STOCK_AGE[EN_STOCK_AGE_DESC]), 190, "en-US"),
+				    ("Net Stock Age", NAMEOF(VIEW_VHE_DIM_USAGE_AGE[EN_USAGE_AGE_DESC]), 200, "en-US"),
+				    ("Registration Age", NAMEOF(VIEW_VHE_DIM_REGISTRATION_AGE[EN_REGISTRATION_AGE_DESC]), 210, "en-US"),
+				    ("Mileage", NAMEOF(VIEW_VHE_DIM_STOCK_KMS[EN_STOCK_KMS_DESC]), 220, "en-US"),
+				    ("Reserved by", NAMEOF(VIEW_VHE_DIM_RESERVED_BY[RESERVED_BY_DESC]), 230, "en-US"),
+				    ("Financial Charges", NAMEOF(VIEW_VHE_DIM_FINANCIAL_CHARGES[EN_FINANCIAL_CHARGE_DESC]), 240, "en-US"),
+				    ("Sales Channels Level 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[EN_SALES_TYPE_LEVEL_1_DESC]), 250, "en-US"),
+				    ("Sales Channels", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[EN_SALES_TYPE_DESC]), 260, "en-US"),
+				    ("Registered", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[EN_REGISTERED_VEHICLE_DESC]), 270, "en-US"),
+				    ("Sellable", NAMEOF(VIEW_GBL_DIM_EXCEPTIONS[EN_EXCEPTION_DESC]), 280, "en-US"),
+				    ("Destination Usage Level 1", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[EN_DESTINATION_USAGE_LEVEL_1_DESC]), 290, "en-US"),
+				    ("Destination Usage", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[EN_DESTINATION_USAGE_DESC]), 300, "en-US"),
+				    ("Analysis Date", NAMEOF(VIEW_VHE_FACT_STOCK_MONTH[PURCHASE_DATE]), 310, "en-US"),
+				    
+				    
+				    ("Indicadores Nível 1", NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_1_DESC]), 0, "pt-PT"),
+				    ("Indicadores Nível 2", NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_2_DESC]), 10, "pt-PT"),
+				    ("Indicadores Nível 3", NAMEOF('VIEW_VHE_DIM_MEASURES'[PT_MEASURE_LEVEL_3_DESC]), 20, "pt-PT"),
+				    ("Empresa Nível 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_1_DESC]), 30, "pt-PT"),
+				    ("Empresa Nível 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_2_DESC]), 40, "pt-PT"),
+				    ("Empresa Nível 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_LEVEL_3_DESC]), 50, "pt-PT"),
+				    ("Empresa", NAMEOF('VIEW_NLR_DIM_COMPANIES'[PT_COMPANY_DESC]), 60, "pt-PT"),
+				    ("Localização Física Nível 1", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[PT_PHYSICAL_LOCATION_LEVEL_1_DESC]), 70, "pt-PT"),
+				    ("Localização Física", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[PT_PHYSICAL_LOCATION_DESC]), 80, "pt-PT"),
+				    ("Marca", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[PT_FRANCHISE_DESC]), 90, "pt-PT"),
+				    ("Área Viaturas", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[PT_VHE_TYPE_DESC]), 100, "pt-PT"),
+				    ("Tipo Viatura", NAMEOF(VIEW_VHE_DIM_VEHICLE_CLASSES[PT_VEHICLE_CLASS_DESC]), 110, "pt-PT"),
+				    ("Utilizadores Viaturas", NAMEOF(VIEW_VHE_DIM_USERS_AVAILABILITY[PT_USER_AVAILABILITY_DESC]), 120, "pt-PT"),
+				    ("Proveniências Nível 1", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_LEVEL_1_DESC]), 130, "pt-PT"),
+				    ("Proveniências Nível 2", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_LEVEL_2_DESC]), 140, "pt-PT"),
+				    ("Proveniências", NAMEOF(VIEW_VHE_DIM_SOURCES[PT_SOURCE_DESC]), 150, "pt-PT"),
+				    ("Estados Viatura Nível 1", NAMEOF(VIEW_VHE_DIM_STATUS_1[PT_STATUS_LEVEL_1_DESC]), 160, "pt-PT"),
+				    ("Estados Viatura Nível 2", NAMEOF(VIEW_VHE_DIM_STATUS_1[PT_STATUS_LEVEL_2_DESC]), 170, "pt-PT"),
+				    ("Estados Viatura", NAMEOF(VIEW_VHE_DIM_STATUS_1[PT_STATUS_DESC]), 180, "pt-PT"),
+				    ("Antiguidade Stock", NAMEOF(VIEW_VHE_DIM_STOCK_AGE[PT_STOCK_AGE_DESC]), 190, "pt-PT"),
+				    ("Antiguidade Stock Líquida", NAMEOF(VIEW_VHE_DIM_USAGE_AGE[PT_USAGE_AGE_DESC]), 200, "pt-PT"),
+				    ("Antiguidade Matrícula", NAMEOF(VIEW_VHE_DIM_REGISTRATION_AGE[PT_REGISTRATION_AGE_DESC]), 210, "pt-PT"),
+				    ("Quilometragem", NAMEOF(VIEW_VHE_DIM_STOCK_KMS[PT_STOCK_KMS_DESC]), 220, "pt-PT"),
+				    ("Reservado por", NAMEOF(VIEW_VHE_DIM_RESERVED_BY[RESERVED_BY_DESC]), 230, "pt-PT"),
+				    ("Encargos Financeiros", NAMEOF(VIEW_VHE_DIM_FINANCIAL_CHARGES[PT_FINANCIAL_CHARGE_DESC]), 240, "pt-PT"),
+				    ("Canais de Venda Nível 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[PT_SALES_TYPE_LEVEL_1_DESC]), 250, "pt-PT"),
+				    ("Canais de Venda", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[PT_SALES_TYPE_DESC]), 260, "pt-PT"),
+				    ("Matriculados", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[PT_REGISTERED_VEHICLE_DESC]), 270, "pt-PT"),
+				    ("Vendáveis", NAMEOF(VIEW_GBL_DIM_EXCEPTIONS[PT_EXCEPTION_DESC]), 280, "pt-PT"),
+				    ("Uso Destino Nível 1", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[PT_DESTINATION_USAGE_LEVEL_1_DESC]), 290, "pt-PT"),
+				    ("Uso Destino", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[PT_DESTINATION_USAGE_DESC]), 300, "pt-PT"),
+				    ("Data Análise", NAMEOF(VIEW_VHE_FACT_STOCK_MONTH[PURCHASE_DATE]), 310, "pt-PT"),
+				    
+				    
+				    ("Indicadores Nivel 1", NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_1_DESC]), 0, "es-ES"),
+				    ("Indicadores Nivel 2", NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_2_DESC]), 10, "es-ES"),
+				    ("Indicadores Nivel 3", NAMEOF('VIEW_VHE_DIM_MEASURES'[ES_MEASURE_LEVEL_3_DESC]), 20, "es-ES"),
+				    ("Compañía Nivel 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_1_DESC]), 30, "es-ES"),
+				    ("Compañía Nivel 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_2_DESC]), 40, "es-ES"),
+				    ("Compañía Nivel 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_LEVEL_3_DESC]), 50, "es-ES"),
+				    ("Compañía", NAMEOF('VIEW_NLR_DIM_COMPANIES'[ES_COMPANY_DESC]), 60, "es-ES"),
+				    ("Ubicación Física Nivel 1", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[ES_PHYSICAL_LOCATION_LEVEL_1_DESC]), 70, "es-ES"),
+				    ("Ubicación Física", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[ES_PHYSICAL_LOCATION_DESC]), 80, "es-ES"),
+				    ("Franquicia", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[ES_FRANCHISE_DESC]), 90, "es-ES"),
+				    ("Área Vehículos", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[ES_VHE_TYPE_DESC]), 100, "es-ES"),
+				    ("Tipo Vehículo", NAMEOF(VIEW_VHE_DIM_VEHICLE_CLASSES[ES_VEHICLE_CLASS_DESC]), 110, "es-ES"),
+				    ("Usuarios de Vehículos", NAMEOF(VIEW_VHE_DIM_USERS_AVAILABILITY[ES_USER_AVAILABILITY_DESC]), 120, "es-ES"),
+				    ("Procedencias Nivel 1", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_LEVEL_1_DESC]), 130, "es-ES"),
+				    ("Procedencias Nivel 2", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_LEVEL_2_DESC]), 140, "es-ES"),
+				    ("Procedencias", NAMEOF(VIEW_VHE_DIM_SOURCES[ES_SOURCE_DESC]), 150, "es-ES"),
+				    ("Estado Vehículo Nivel 1", NAMEOF(VIEW_VHE_DIM_STATUS_1[ES_STATUS_LEVEL_1_DESC]), 160, "es-ES"),
+				    ("Estado Vehículo Nivel 2", NAMEOF(VIEW_VHE_DIM_STATUS_1[ES_STATUS_LEVEL_2_DESC]), 170, "es-ES"),
+				    ("Estado Vehículo", NAMEOF(VIEW_VHE_DIM_STATUS_1[ES_STATUS_DESC]), 180, "es-ES"),
+				    ("Antigüedad Stock", NAMEOF(VIEW_VHE_DIM_STOCK_AGE[ES_STOCK_AGE_DESC]), 190, "es-ES"),
+				    ("Antigüedad Stock Neto", NAMEOF(VIEW_VHE_DIM_USAGE_AGE[ES_USAGE_AGE_DESC]), 200, "es-ES"),
+				    ("Antigüedad Matrícula", NAMEOF(VIEW_VHE_DIM_REGISTRATION_AGE[ES_REGISTRATION_AGE_DESC]), 210, "es-ES"),
+				    ("Kilometraje", NAMEOF(VIEW_VHE_DIM_STOCK_KMS[ES_STOCK_KMS_DESC]), 220, "es-ES"),
+				    ("Reservado por", NAMEOF(VIEW_VHE_DIM_RESERVED_BY[RESERVED_BY_DESC]), 230, "es-ES"),
+				    ("Cargos Financieros", NAMEOF(VIEW_VHE_DIM_FINANCIAL_CHARGES[ES_FINANCIAL_CHARGE_DESC]), 240, "es-ES"),
+				    ("Canales de Venta Nivel 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[ES_SALES_TYPE_LEVEL_1_DESC]), 250, "es-ES"),
+				    ("Canales de Venta", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[ES_SALES_TYPE_DESC]), 260, "es-ES"),
+				    ("Matriculados", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[ES_REGISTERED_VEHICLE_DESC]), 270, "es-ES"),
+				    ("Vendibles", NAMEOF(VIEW_GBL_DIM_EXCEPTIONS[ES_EXCEPTION_DESC]), 280, "es-ES"),
+				    ("Uso Destino Nivel 1", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[ES_DESTINATION_USAGE_LEVEL_1_DESC]), 290, "es-ES"),
+				    ("Uso Destino", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[ES_DESTINATION_USAGE_DESC]), 300, "es-ES"),
+				    ("Fecha de Análisis", NAMEOF(VIEW_VHE_FACT_STOCK_MONTH[PURCHASE_DATE]), 310, "es-ES"),
+				
+				    
+				    ("Indicateurs Niveau 1", NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_1_DESC]), 0, "fr-FR"),
+				    ("Indicateurs Niveau 2", NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_2_DESC]), 10, "fr-FR"),
+				    ("Indicateurs Niveau 3", NAMEOF('VIEW_VHE_DIM_MEASURES'[FR_MEASURE_LEVEL_3_DESC]), 20, "fr-FR"),
+				    ("Entreprise Niveau 1", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_1_DESC]), 30, "fr-FR"),
+				    ("Entreprise Niveau 2", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_2_DESC]), 40, "fr-FR"),
+				    ("Entreprise Niveau 3", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_LEVEL_3_DESC]), 50, "fr-FR"),
+				    ("Entreprise", NAMEOF('VIEW_NLR_DIM_COMPANIES'[FR_COMPANY_DESC]), 60, "fr-FR"),
+				    ("Emplacement Physique Niveau 1", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[FR_PHYSICAL_LOCATION_LEVEL_1_DESC]), 70, "fr-FR"),
+				    ("Emplacement Physique", NAMEOF(VIEW_VHE_DIM_PHYSICAL_LOCATIONS[FR_PHYSICAL_LOCATION_DESC]), 80, "fr-FR"),
+				    ("Franchise", NAMEOF('VIEW_GBL_DIM_FRANCHISES'[FR_FRANCHISE_DESC]), 90, "fr-FR"),
+				    ("Zone Véhicules", NAMEOF(VIEW_VHE_DIM_VEHICLE_TYPES[FR_VHE_TYPE_DESC]), 100, "fr-FR"),
+				    ("Type Véhicule", NAMEOF(VIEW_VHE_DIM_VEHICLE_CLASSES[FR_VEHICLE_CLASS_DESC]), 110, "fr-FR"),
+				    ("Utilisateurs de Véhicules", NAMEOF(VIEW_VHE_DIM_USERS_AVAILABILITY[FR_USER_AVAILABILITY_DESC]), 120, "fr-FR"),
+				    ("Provenance Niveau 1", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_LEVEL_1_DESC]), 130, "fr-FR"),
+				    ("Provenance Niveau 2", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_LEVEL_2_DESC]), 140, "fr-FR"),
+				    ("Provenance", NAMEOF(VIEW_VHE_DIM_SOURCES[FR_SOURCE_DESC]), 150, "fr-FR"),
+				    ("État Véhicule Niveau 1", NAMEOF(VIEW_VHE_DIM_STATUS_1[FR_STATUS_LEVEL_1_DESC]), 160, "fr-FR"),
+				    ("État Véhicule Niveau 2", NAMEOF(VIEW_VHE_DIM_STATUS_1[FR_STATUS_LEVEL_2_DESC]), 170, "fr-FR"),
+				    ("État Véhicule", NAMEOF(VIEW_VHE_DIM_STATUS_1[FR_STATUS_DESC]), 180, "fr-FR"),
+				    ("Ancienneté Stock", NAMEOF(VIEW_VHE_DIM_STOCK_AGE[FR_STOCK_AGE_DESC]), 190, "fr-FR"),
+				    ("Ancienneté Stock Net", NAMEOF(VIEW_VHE_DIM_USAGE_AGE[FR_USAGE_AGE_DESC]), 200, "fr-FR"),
+				    ("Ancienneté Immatriculation", NAMEOF(VIEW_VHE_DIM_REGISTRATION_AGE[FR_REGISTRATION_AGE_DESC]), 210, "fr-FR"),
+				    ("Kilométrage", NAMEOF(VIEW_VHE_DIM_STOCK_KMS[FR_STOCK_KMS_DESC]), 220, "fr-FR"),
+				    ("Réservé par", NAMEOF(VIEW_VHE_DIM_RESERVED_BY[RESERVED_BY_DESC]), 230, "fr-FR"),
+				    ("Charges Financières", NAMEOF(VIEW_VHE_DIM_FINANCIAL_CHARGES[FR_FINANCIAL_CHARGE_DESC]), 240, "fr-FR"),
+				    ("Canaux de Vente Niveau 1", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[FR_SALES_TYPE_LEVEL_1_DESC]), 250, "fr-FR"),
+				    ("Canaux de Vente", NAMEOF(VIEW_VHE_DIM_SALES_TYPES[FR_SALES_TYPE_DESC]), 260, "fr-FR"),
+				    ("Immatriculés", NAMEOF(VIEW_VHE_DIM_REGISTERED_VEHICLE[FR_REGISTERED_VEHICLE_DESC]), 270, "fr-FR"),
+				    ("Vendables", NAMEOF(VIEW_GBL_DIM_EXCEPTIONS[FR_EXCEPTION_DESC]), 280, "fr-FR"),
+				    ("Usage Destination Niveau 1", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[FR_DESTINATION_USAGE_LEVEL_1_DESC]), 290, "fr-FR"),
+				    ("Usage Destination", NAMEOF(VIEW_VHE_DIM_DESTINATION_USAGE[FR_DESTINATION_USAGE_DESC]), 300, "fr-FR"),
+				    ("Date d’Analyse", NAMEOF(VIEW_VHE_FACT_STOCK_MONTH[PURCHASE_DATE]), 310, "fr-FR")
+				    
+				}
+				```
+
+	annotation PBI_Id = c1bb81425fd042bdbf5a5d5a9472a3a8
+

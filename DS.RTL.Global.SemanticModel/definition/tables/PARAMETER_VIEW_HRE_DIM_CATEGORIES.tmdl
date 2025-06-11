@@ -1,0 +1,85 @@
+table PARAMETER_VIEW_HRE_DIM_CATEGORIES
+	lineageTag: 31f31659-78f9-4f2f-83cc-90c0c8f06547
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 856a852c-c4d7-4c2b-b893-72a1cdacc1a3
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_DESC
+		lineageTag: 1ebb61b1-d2dd-4f5f-bca8-51cb9e959c3a
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_LEVEL_1_DESC
+		lineageTag: efe07ffa-91fd-400a-843d-c6a5999fca09
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_LEVEL_2_DESC
+		lineageTag: 260e8ded-3f59-4e63-a120-549ab9fb0962
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_HRE_DIM_CATEGORIES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[PT_CATEGORY_LEVEL_2_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[EN_CATEGORY_LEVEL_2_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[ES_CATEGORY_LEVEL_2_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_HRE_DIM_CATEGORIES'[FR_CATEGORY_LEVEL_2_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 4ef76df88a1f4e95a1fdb16020e2b033
+

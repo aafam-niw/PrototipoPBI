@@ -1,0 +1,486 @@
+﻿/// DW: PBI.VIEW_NLR_FACT_BI_TRANS_PL
+table VIEW_NLR_FACT_BI_TRANS_PL
+	isHidden
+	lineageTag: 6fa5b6ee-da98-4904-a578-a3fb820a57fa
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.CLIENT_ID
+	column CLIENT_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: b9b23aea-0718-4e4f-9675-7eb06820d156
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.NLR_CODE
+	column NLR_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 1100ddba-7154-472c-affd-d941b2900b72
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.FRANCHISE_CODE
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 83820c16-77da-4e7b-bf43-2c52f5ae9c0a
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.ACTIVITY_CODE
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: cc2501ab-209a-4fd9-9a26-5ce2b77c259a
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.SALES_TYPE_CODE
+	column SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: c218b7de-d73e-46c8-950b-35dc2a0a059b
+		summarizeBy: none
+		sourceColumn: SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.VALUE_TYPE_CODE
+	column VALUE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 4cf79c7e-11fe-4790-817b-4f6a8df89400
+		summarizeBy: none
+		sourceColumn: VALUE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.TIE_CODE
+	column TIE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 0735bb72-4a1a-42d8-a163-1cfe61585bf6
+		summarizeBy: none
+		sourceColumn: TIE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_CODE
+	column PL_CODE
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: c7da3d64-232a-4958-91b0-c38f40df7ff2
+		summarizeBy: none
+		sourceColumn: PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// DW:PBI.VIEW_NLR_FACT_BI_TRANS_PL.PL_IFRS_CODE
+	column PL_IFRS_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 5d385988-d2b7-4472-80b6-773ef349cc30
+		summarizeBy: none
+		sourceColumn: PL_IFRS_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_CENTRE_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: f6019067-5709-4c4f-b51c-b52ba568e12e
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSIS_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		isAvailableInMdx: false
+		lineageTag: 7ca43da5-862d-4852-917d-ac6d6dc275e0
+		summarizeBy: none
+		sourceColumn: ANALYSIS_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 03db2c7f-3d2e-4a64-a7bf-3df22d6fc498
+		summarizeBy: none
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column VALUE
+		dataType: decimal
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: de290b47-ede5-4516-8543-e40d46b7b6e7
+		summarizeBy: none
+		sourceColumn: VALUE
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NLR_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 4abde7d7-33cf-4335-afd8-c3ddcdc1395a
+		summarizeBy: none
+		sourceColumn: NLR_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COST_CENTRE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 57e8134e-0ba2-46f5-9d4a-2ed8c29eb418
+		summarizeBy: none
+		sourceColumn: COST_CENTRE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IFRS_VALUE
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 44e6445b-173a-4afb-b9b0-b66dbc269e23
+		summarizeBy: none
+		sourceColumn: IFRS_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: 446a3476-cf66-4e25-8752-f163fe04b8ba
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_PL_CODE
+		dataType: string
+		isHidden
+		lineageTag: 78ae464a-80d7-4553-a6fc-a0e3ec2bddee
+		summarizeBy: none
+		sourceColumn: HRE_COST_PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f5729027-1b51-4ae7-993e-b3a8f548c125
+		summarizeBy: none
+		sourceColumn: HRE_COST_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column EMPLOYEE_DMS_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d91a0bc6-f854-4a52-aa06-f47c5210a9cf
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_DMS_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column HRE_COST_INCLUDED
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 96d09151-2b6a-4d91-ab3c-270a69b8da5e
+		summarizeBy: none
+		sourceColumn: HRE_COST_INCLUDED
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FISCAL_ES_VALUE
+		dataType: double
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 517a4560-58ad-4e74-99d0-400fe9b4e9f5
+		summarizeBy: none
+		sourceColumn: FISCAL_ES_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SYTNER_VALUE
+		dataType: double
+		isHidden
+		lineageTag: 82518838-6a1d-4db2-806b-983c0060c81c
+		summarizeBy: none
+		sourceColumn: SYTNER_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PL_FISCALES_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e2d5d91f-75e6-409f-b25f-65e5e097b787
+		summarizeBy: none
+		sourceColumn: PL_FISCALES_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PL_SYTNER_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8926a885-461c-4f97-9b1d-efeb3c62d830
+		summarizeBy: none
+		sourceColumn: PL_SYTNER_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_SYTNER_FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d61e0555-d40c-4032-a3eb-681cd34b2567
+		summarizeBy: none
+		sourceColumn: PL_SYTNER_FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PL_SYTNER_SALES_TYPE_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: babda094-e697-41e3-ac20-a7d69c14d629
+		summarizeBy: none
+		sourceColumn: PL_SYTNER_SALES_TYPE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column PL_SYTNER_DETAIL_CODE
+		dataType: string
+		isHidden
+		lineageTag: e398eb71-2fc6-4655-bc20-9c831650ac58
+		summarizeBy: none
+		sourceColumn: PL_SYTNER_DETAIL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3411adc2-ba8a-4249-88eb-af66cb17a377
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOSED_PERIOD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bced646e-9c51-4b6c-a4c4-49752075fdab
+		summarizeBy: none
+		sourceColumn: CLOSED_PERIOD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HRE_COST_CESSION_INCLUDED
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 73186660-3f22-43bd-b82b-53526a0fc5a9
+		summarizeBy: sum
+		sourceColumn: HRE_COST_CESSION_INCLUDED
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL = Source{[Schema="PBI",Item="VIEW_NLR_FACT_BI_TRANS_PL"]}[Data]
+				in
+				    PBI_VIEW_NLR_FACT_BI_TRANS_PL
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+
+

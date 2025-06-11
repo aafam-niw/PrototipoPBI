@@ -1,0 +1,50 @@
+table PARAMETER_VIEW_VHE_DIM_REGISTRATION_AGE
+	lineageTag: 2675207e-3f77-416c-85d9-9ac510282a5f
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 653c2204-5512-454e-8887-9b82aef90550
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTRATION_AGE_DESC
+		lineageTag: a1c510f0-18a3-4e1d-b146-a62e82358453
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_REGISTRATION_AGE = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTRATION_AGE'[PT_REGISTRATION_AGE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTRATION_AGE'[EN_REGISTRATION_AGE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTRATION_AGE'[ES_REGISTRATION_AGE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_REGISTRATION_AGE'[FR_REGISTRATION_AGE_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = 7b5a0c4cad774f948d371db6986dab85
+

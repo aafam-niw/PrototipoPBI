@@ -1,0 +1,108 @@
+table PARAMETER_VIEW_GBL_DIM_CALENDAR
+	lineageTag: a4d36bcc-6b90-45e6-9b61-088c50d74c8a
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 42c57bfc-877e-42b5-bfef-ae702de29d0e
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		lineageTag: 9a11aa56-0b6d-4c80-8073-a25783f7dbfe
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENT_YEAR
+		lineageTag: 65b09bf7-d32e-40de-8304-a75da9cf3484
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_MONTH_SHORT_DESC
+		lineageTag: 940493b6-bf01-4512-a6cd-afa601d2a723
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["MONTH_(AS_A_STRING)_MUST_BE_SORTED"]}
+
+	column MONTH_DESC
+		lineageTag: 5030091f-a7aa-4b26-81a0-556c41eb3735
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["MONTH_(AS_A_STRING)_MUST_BE_SORTED"]}
+
+	partition PARAMETER_VIEW_GBL_DIM_CALENDAR = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[PT_MONTH_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[EN_MONTH_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[ES_MONTH_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_CURRENT_YEAR]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_YEAR_MONTH_SHORT_DESC]), 
+				    NAMEOF('VIEW_GBL_DIM_CALENDAR'[FR_MONTH_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 9bc6e30f45d64c66820206d09af04be2
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["DATE/CALENDAR_TABLES_SHOULD_BE_MARKED_AS_A_DATE_TABLE"]}
+

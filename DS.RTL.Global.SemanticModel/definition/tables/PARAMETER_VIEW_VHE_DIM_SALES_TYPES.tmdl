@@ -1,0 +1,67 @@
+table PARAMETER_VIEW_VHE_DIM_SALES_TYPES
+	lineageTag: c93f5b0f-0d94-4814-a886-5f811587a4f7
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 5c6cb5f9-babe-411b-a3bf-662edf87006f
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_DESC
+		lineageTag: 089650ae-1337-4bb4-b7ef-150c7c45ac3f
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE_LEVEL_1_DESC
+		lineageTag: e350f841-b18b-4955-b2c2-f205dec77aa2
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_VHE_DIM_SALES_TYPES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[PT_SALES_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[PT_SALES_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[EN_SALES_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[EN_SALES_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[ES_SALES_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[ES_SALES_TYPE_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[FR_SALES_TYPE_DESC]), 
+				    NAMEOF('VIEW_VHE_DIM_SALES_TYPES'[FR_SALES_TYPE_LEVEL_1_DESC])
+				    )
+				}
+				```
+
+	annotation PBI_Id = e1b8f4435dbd477c9ee707e38556e125
+

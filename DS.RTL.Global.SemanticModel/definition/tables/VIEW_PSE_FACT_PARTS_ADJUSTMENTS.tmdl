@@ -1,0 +1,143 @@
+table VIEW_PSE_FACT_PARTS_ADJUSTMENTS
+	lineageTag: c6fe1302-36a9-4f1b-a99f-cc349823c22f
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: b26db20f-70bf-462f-8b26-7cd01e5f681e
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 27ef79bd-8218-43ce-b560-66881016bab6
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 8fdaa86f-5c8b-4fbd-8223-e31bd7324bef
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_GROUP_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 764d10ea-1b30-40ca-8763-ca7e504c269c
+		summarizeBy: sum
+		sourceColumn: PRODUCT_GROUP_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PARTS_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: a56a6cbf-1b80-4b5a-921a-b740f8770ebc
+		summarizeBy: sum
+		sourceColumn: PARTS_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOVEMENT_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b071b798-9da7-459f-b390-c073fe2130aa
+		summarizeBy: none
+		sourceColumn: MOVEMENT_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ADJUSTMENT_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 191a983c-688e-4fe9-a26c-0fa67c989de1
+		summarizeBy: sum
+		sourceColumn: ADJUSTMENT_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: 1e1ce7dd-47cf-46f8-a928-a97236ac3004
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPROVED_STATUS_CODE
+		dataType: string
+		lineageTag: 70e48d94-ba01-4ce6-b0de-3c072922e203
+		summarizeBy: none
+		sourceColumn: APPROVED_STATUS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADJUSTMENT_OPERATION_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 475ef133-9873-4a5b-b1f3-8dd65d53721e
+		summarizeBy: sum
+		sourceColumn: ADJUSTMENT_OPERATION_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: e8f3381e-d386-487a-ac87-c689d502b6fb
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: 12d4ba44-b272-499c-82e4-52401d96278c
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a574f4e-5576-4d83-82cd-568ddd8d4431
+		summarizeBy: count
+		sourceColumn: OBJSECURED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: d14571b1-d129-4f65-9912-e5acc92a03f2
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PSE_FACT_PARTS_ADJUSTMENTS = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PSE_FACT_PARTS_ADJUSTMENTS"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

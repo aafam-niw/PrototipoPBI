@@ -1,0 +1,32 @@
+table VIEW_NLR_DIM_PL_BRIDGE
+	isHidden
+	lineageTag: ae77719f-6e1f-45ef-a2c6-28317c78789f
+
+	column PL_CODE
+		dataType: string
+		isHidden
+		lineageTag: 16a79afb-f527-4280-adc3-0e4a20860b6c
+		summarizeBy: none
+		sourceColumn: PL_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_NLR_DIM_PL_BRIDGE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = VIEW_NLR_DIM_PL,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"PL_CODE"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

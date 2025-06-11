@@ -1,0 +1,68 @@
+table PARAMETER_VIEW_NLR_DIM_CASH_FLOW
+	lineageTag: 1ff2b4ef-5200-4734-80a0-342015d99a6b
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: f0200758-5472-40b9-b022-130b187326f4
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_DESC
+		lineageTag: 2c0ce81a-066f-455c-bfbd-0055c1a50a52
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column CF_LEVEL_1_DESC
+		lineageTag: 2d40abf3-c5f5-4495-b11d-c38806a41e5b
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_CASH_FLOW = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[PT_CF_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[PT_CF_LEVEL_1_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[EN_CF_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[EN_CF_LEVEL_1_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[ES_CF_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[ES_CF_LEVEL_1_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[FR_CF_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_CASH_FLOW'[FR_CF_LEVEL_1_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 87632f1abcaf49e4bc106b0f7a3561e7
+

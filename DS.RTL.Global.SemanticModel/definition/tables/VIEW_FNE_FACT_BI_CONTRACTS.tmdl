@@ -1,0 +1,260 @@
+table VIEW_FNE_FACT_BI_CONTRACTS
+	lineageTag: 6a67b13b-18e6-4afa-98c5-d733985d197f
+
+	column ANALYSIS_MONTH
+		dataType: string
+		lineageTag: d16cc538-73db-474c-ae5b-4821b5d4927d
+		summarizeBy: none
+		sourceColumn: ANALYSIS_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 97a4e66e-7287-4e97-9f84-f5dbe28443f5
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 9772bed5-d2e7-40fd-a5b0-239c35ecfc5d
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 020d83a7-1a36-4361-80fc-7b7eb2c95fe3
+		summarizeBy: sum
+		sourceColumn: SITE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION_CODE
+		dataType: string
+		lineageTag: 3ccf9ef8-f25a-4379-8548-8bf406e4eedb
+		summarizeBy: none
+		sourceColumn: LOCATION_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINANCIAL_ENTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e6b9408-49fd-46f5-9054-3fcd77a17700
+		summarizeBy: sum
+		sourceColumn: FINANCIAL_ENTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINANCIAL_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 27cfa78c-5c74-469d-8289-f84482bc2b6c
+		summarizeBy: sum
+		sourceColumn: FINANCIAL_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column INSURANCE_TYPE
+		dataType: string
+		lineageTag: ac9397c4-85ea-4827-9aee-ad526188154c
+		summarizeBy: none
+		sourceColumn: INSURANCE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_ID
+		dataType: string
+		lineageTag: 5d9915a0-c43a-4af2-949a-8f6868e416aa
+		summarizeBy: none
+		sourceColumn: USER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_TYPE
+		dataType: string
+		lineageTag: 11739316-0925-417a-bdae-1dc874530bab
+		summarizeBy: none
+		sourceColumn: VEHICLE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VHE_TYPE_PORTAL
+		dataType: string
+		lineageTag: be930615-4794-4c5a-af72-498167aa2ec9
+		summarizeBy: none
+		sourceColumn: VHE_TYPE_PORTAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 2dbc1f3a-6686-4dc2-bc90-22dc002e76ec
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: b3957898-d279-42fd-b9e6-bb763c23e310
+		summarizeBy: sum
+		sourceColumn: SALES_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BUSINESS_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 58eec81a-975f-40a0-88e5-c24c4cfaa393
+		summarizeBy: sum
+		sourceColumn: BUSINESS_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALESMAN_POSITION
+		dataType: string
+		lineageTag: 7630b702-6ea5-4761-bdf1-2efe9149fa10
+		summarizeBy: none
+		sourceColumn: SALESMAN_POSITION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALESMAN
+		dataType: string
+		lineageTag: 0fbd7600-c886-48bd-8b02-2ffc6cb591f4
+		summarizeBy: none
+		sourceColumn: SALESMAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALESMAN_NAME
+		dataType: string
+		lineageTag: 62ed0a99-0ef0-4b2f-a6f5-9ab8de8ebe52
+		summarizeBy: none
+		sourceColumn: SALESMAN_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODEL_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: bf87b782-9e1c-4145-8af7-cdc506b9a98a
+		summarizeBy: sum
+		sourceColumn: MODEL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ELIGIBLE_MONTH
+		dataType: string
+		lineageTag: f7287cd8-a665-477a-a3d1-614aae56fa8e
+		summarizeBy: none
+		sourceColumn: ELIGIBLE_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: b599485c-2cdf-418a-b68a-5f2ad7a81380
+		summarizeBy: sum
+		sourceColumn: CUSTOMER_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b7a9aaf-2e44-4e64-917a-4dba116fa115
+		summarizeBy: sum
+		sourceColumn: SOURCE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VEHICLE_CLASS
+		dataType: int64
+		formatString: 0
+		lineageTag: 431bc02f-9174-4fa8-8355-44d6a99e28fe
+		summarizeBy: sum
+		sourceColumn: VEHICLE_CLASS
+
+		annotation SummarizationSetBy = Automatic
+
+	column INSURANCE_VHE_ENTITY_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: bf0fdbbc-1834-44fd-85db-9356bea897fd
+		summarizeBy: sum
+		sourceColumn: INSURANCE_VHE_ENTITY_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 73d35d5c-1d97-4335-86ad-3a035f376dfe
+		summarizeBy: sum
+		sourceColumn: VALUE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 28c73025-de47-4243-ad85-ddb360a7f362
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: f4da920f-f1ba-447e-9d44-33ba589685bb
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 050c9018-7df3-4022-b64e-8c47b9c7eb8d
+		summarizeBy: sum
+		sourceColumn: QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTAL_INVOICE
+		dataType: double
+		lineageTag: 09f97295-eb2c-44be-b8b0-6ee8d3ddb8aa
+		summarizeBy: sum
+		sourceColumn: TOTAL_INVOICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition VIEW_FNE_FACT_BI_CONTRACTS = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseFinance),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_FNE_FACT_BI_CONTRACTS"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,124 @@
+﻿table VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+	isHidden
+	lineageTag: 1b2a1e99-c31f-4b01-881b-2af5d0870787
+
+	column CONTROL_ACCOUNT_KEY
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: e1443171-bc1f-4027-90c4-1e34634ef616
+		summarizeBy: none
+		sourceColumn: CONTROL_ACCOUNT_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTROL_ACCOUNT_TYPE
+		dataType: string
+		isHidden
+		lineageTag: c5a08c29-1beb-470c-8593-573945a4c743
+		summarizeBy: none
+		sourceColumn: CONTROL_ACCOUNT_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTROL_ACCOUNT_TYPE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 99758131-b6dd-4025-bd08-afc703618377
+		summarizeBy: none
+		sourceColumn: CONTROL_ACCOUNT_TYPE_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE = Source{[Schema="PBI",Item="VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

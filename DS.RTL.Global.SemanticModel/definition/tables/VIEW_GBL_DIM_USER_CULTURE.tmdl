@@ -1,0 +1,96 @@
+table VIEW_GBL_DIM_USER_CULTURE
+	isHidden
+	lineageTag: 5e768310-207d-45e5-89a3-0a2de74969fd
+
+	column USER_CULTURE
+		dataType: string
+		isHidden
+		isKey
+		lineageTag: 2f977ef6-dd1e-4d5e-b813-0f26c1433236
+		summarizeBy: none
+		sourceColumn: USER_CULTURE
+		sortByColumn: USER_CULTURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column LANGUAGE
+		dataType: string
+		isHidden
+		lineageTag: 382d3cec-8ea8-4662-b786-27c2852be552
+		summarizeBy: none
+		sourceColumn: LANGUAGE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LABEL_LANGUAGE
+		dataType: string
+		isHidden
+		lineageTag: 7828fd1b-bfb3-4d91-bed9-2c4fdaeadb24
+		summarizeBy: none
+		sourceColumn: LABEL_LANGUAGE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FLAG_IMG
+		dataType: string
+		isHidden
+		lineageTag: a1a6f87a-679f-4f46-8f48-19e1558d44f9
+		summarizeBy: none
+		sourceColumn: FLAG_IMG
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column USER_CULTURE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d6b18831-e40c-46ff-bdca-6f9501ecf256
+		summarizeBy: sum
+		sourceColumn: USER_CULTURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LANGUAGE_DESC
+		dataType: string
+		isHidden
+		lineageTag: 762c0fa5-a705-4f32-bc47-3d7275841c2c
+		summarizeBy: none
+		sourceColumn: LANGUAGE_DESC
+		sortByColumn: USER_CULTURE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_USER_CULTURE = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseCalendar),
+				    PBI_VIEW_GBL_SETUP_USER_CULTURE = Source{[Schema="PBI",Item="VIEW_GBL_DIM_USER_CULTURE"]}[Data]
+				in
+				    PBI_VIEW_GBL_SETUP_USER_CULTURE
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+	annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":["LIMIT_ROW_LEVEL_SECURITY_(RLS)_LOGIC"]}
+

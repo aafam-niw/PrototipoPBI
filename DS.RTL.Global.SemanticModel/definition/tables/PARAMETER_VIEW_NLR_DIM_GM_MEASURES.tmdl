@@ -1,0 +1,51 @@
+table PARAMETER_VIEW_NLR_DIM_GM_MEASURES
+	lineageTag: 2d16c340-7934-4253-ae2d-a3bb87b05f6c
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 07abf3c4-f3c9-48cb-ae4b-bfdb0777cdf9
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column GM_MEASURE_DESC
+		lineageTag: 86aedbcb-f01f-4a14-969c-2a180cb193a9
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_GM_MEASURES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[PT_GM_MEASURE_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[EN_GM_MEASURE_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[ES_GM_MEASURE_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_GM_MEASURES'[FR_GM_MEASURE_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = 442694efdfc44303821fdba0b860ac78
+

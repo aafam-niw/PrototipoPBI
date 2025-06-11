@@ -1,0 +1,112 @@
+table VIEW_GBL_DIM_FRANCHISES
+	isHidden
+	lineageTag: a3be6faa-0ba7-4ca0-87cb-67ba4bebbb60
+
+	column FRANCHISE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3589e3f2-4445-4661-a1f0-c731b9c49e05
+		summarizeBy: none
+		sourceColumn: FRANCHISE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_FRANCHISE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 17410f68-1267-49ba-869c-1128c2fb7630
+		summarizeBy: none
+		sourceColumn: PT_FRANCHISE_DESC
+		sortByColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_FRANCHISE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: ae5b784d-a6ab-4e16-ad29-46591e319a09
+		summarizeBy: none
+		sourceColumn: EN_FRANCHISE_DESC
+		sortByColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_FRANCHISE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a833fabb-ce19-429f-ae5d-4639ddf101cc
+		summarizeBy: none
+		sourceColumn: ES_FRANCHISE_DESC
+		sortByColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_FRANCHISE_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 6eb6ab05-6716-4383-b05c-2b7c470c5035
+		summarizeBy: none
+		sourceColumn: FR_FRANCHISE_DESC
+		sortByColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FRANCHISE_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7007c830-6319-43c4-9f00-7d98ae79d07d
+		summarizeBy: sum
+		sourceColumn: FRANCHISE_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_GBL_DIM_FRANCHISES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_GBL_DIM_FRANCHISES_MPBI = Source{[Schema="PBI",Item="VIEW_GBL_DIM_FRANCHISES_MPBI"]}[Data]
+				in
+				    PBI_VIEW_GBL_DIM_FRANCHISES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

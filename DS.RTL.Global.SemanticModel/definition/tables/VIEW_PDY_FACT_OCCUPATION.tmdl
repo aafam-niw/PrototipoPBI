@@ -1,0 +1,134 @@
+table VIEW_PDY_FACT_OCCUPATION
+	lineageTag: d0115f75-1dcf-465e-afb7-ac1ef3a222fa
+
+	column CLIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 867b89e1-0880-4cef-a0e2-562128c21e64
+		summarizeBy: count
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENVIRONMENT
+		dataType: int64
+		formatString: 0
+		lineageTag: a4caccbb-7676-4510-9151-c900521f9cc4
+		summarizeBy: sum
+		sourceColumn: ENVIRONMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NLR_CODE
+		dataType: string
+		lineageTag: 3456da6a-1141-49bf-b661-58c93539ff30
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_CODE
+		dataType: string
+		lineageTag: 0bfc48ef-e26f-4811-b892-82790a3d7974
+		summarizeBy: none
+		sourceColumn: POS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column RESOURCE_CODE
+		dataType: string
+		lineageTag: feb3f7ac-2ae7-43b5-9d5d-921a6dc3e3e6
+		summarizeBy: none
+		sourceColumn: RESOURCE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOCKING_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4356901c-ded7-479d-91ab-793119910d53
+		summarizeBy: none
+		sourceColumn: CLOCKING_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TEAM_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: d41b819e-812e-4492-abf8-f154fc8f6b30
+		summarizeBy: sum
+		sourceColumn: TEAM_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DPT_TYPE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fe87578-260e-476f-a519-4397abdc0296
+		summarizeBy: sum
+		sourceColumn: DPT_TYPE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLOCKING_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 83dc6683-499a-4dc9-a08a-fa0e45cc8b61
+		summarizeBy: sum
+		sourceColumn: CLOCKING_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PSE_TYPE
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b2309f8-0c5f-4fb9-920c-ddeed6cc3f91
+		summarizeBy: sum
+		sourceColumn: PSE_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c6f42efe-9e84-45e7-8ea8-f33309aea247
+		summarizeBy: sum
+		sourceColumn: MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: 86099929-1e63-46fd-90c5-4e81aaa7fab0
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBJSECURED_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f5935b0-e1e6-4b09-8bfa-7963b55bca16
+		summarizeBy: count
+		sourceColumn: OBJSECURED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_PDY_FACT_OCCUPATION = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    PBI_VIEW_RTG_FACT_RENTING_SALES = Source{[Schema="PBI",Item="VIEW_PDY_FACT_OCCUPATION"]}[Data]
+				in
+				    PBI_VIEW_RTG_FACT_RENTING_SALES
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

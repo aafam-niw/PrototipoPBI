@@ -1,0 +1,205 @@
+﻿table VIEW_SLR_FACT_PAYMENT_METHOD
+	isHidden
+	lineageTag: 0463072d-3dd3-47db-a0ca-27e8d3fdacbc
+
+	column PAYMENT_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 9c9c5a89-6592-4dd0-8698-06b88860653e
+		summarizeBy: none
+		sourceColumn: PAYMENT_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DOCUMENT_DATE
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 98ee11db-52b6-4af0-b8db-75c51ecf8b28
+		summarizeBy: none
+		sourceColumn: DOCUMENT_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NLR_CODE
+		dataType: string
+		isHidden
+		lineageTag: 1f8efe23-1c52-4640-9f8a-c5d76c691003
+		summarizeBy: none
+		sourceColumn: NLR_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITY_CODE
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ec251e16-de09-44d0-99d0-02006fe0234c
+		summarizeBy: none
+		sourceColumn: ACTIVITY_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORIGIN_CAETANO_PAY_FLAG
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 034d889b-e99c-4a08-b584-ea7a5a0dbc87
+		summarizeBy: sum
+		sourceColumn: ORIGIN_CAETANO_PAY_FLAG
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAID_VALUE
+		dataType: double
+		isHidden
+		lineageTag: 2ccbdc54-520f-4556-bafb-07abef5a8def
+		summarizeBy: none
+		sourceColumn: PAID_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ORIGIN_CAETANO_PAY_DESC
+		dataType: string
+		isHidden
+		lineageTag: d1ace64c-3dfa-4666-a510-b7727b118893
+		summarizeBy: none
+		sourceColumn: ORIGIN_CAETANO_PAY_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_METHOD_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 038d4096-bc53-4191-b08c-5eac074595d7
+		summarizeBy: none
+		sourceColumn: PAYMENT_METHOD_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 140b8e61-5ab5-42c8-9841-0a3d89b65ad7
+		summarizeBy: none
+		sourceColumn: SITE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_RATE_KEY
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d1edc234-f5a7-41d3-b51e-68d04a868480
+		summarizeBy: sum
+		sourceColumn: CURRENCY_RATE_KEY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partition_1 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_1),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_2 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_2),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_3 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_3),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_4 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_4),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_5 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_5),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_8 = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_8),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	partition Partition_History = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(Server, Partition_History),
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD = Source{[Schema="PBI",Item="VIEW_SLR_FACT_PAYMENT_METHOD"]}[Data]
+				in
+				    PBI_VIEW_SLR_FACT_PAYMENT_METHOD
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+
+

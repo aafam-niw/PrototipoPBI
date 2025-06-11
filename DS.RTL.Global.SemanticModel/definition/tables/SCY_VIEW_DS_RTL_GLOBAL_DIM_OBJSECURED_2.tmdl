@@ -1,0 +1,45 @@
+table SCY_VIEW_DS_RTL_GLOBAL_DIM_OBJSECURED_2
+	isHidden
+	lineageTag: b86fffe4-40ac-4998-9f32-d316f58df75b
+
+	column O365_USER
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		lineageTag: 2911adaa-7848-46e9-9aae-f66123c1030a
+		summarizeBy: none
+		sourceColumn: O365_USER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBJSECURED_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		isAvailableInMdx: false
+		lineageTag: f8a13014-63c8-4ad0-ab6a-d1c5366ec5fd
+		summarizeBy: none
+		sourceColumn: OBJSECURED_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SCY_VIEW_DS_RTL_GLOBAL_DIM_OBJSECURED_2 = m
+		mode: import
+		queryGroup: Security
+		source =
+				let
+				    Source = Sql.Database(Server, Security_DB),
+				    SCY_View_DS.RTL.GLOBAL_DIM_OBJSECURED_2 = Source{[Schema="SCY",Item="VIEW_DS.RTL.GLOBAL_DIM_OBJSECURED_2"]}[Data]
+				in
+				    SCY_View_DS.RTL.GLOBAL_DIM_OBJSECURED_2
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

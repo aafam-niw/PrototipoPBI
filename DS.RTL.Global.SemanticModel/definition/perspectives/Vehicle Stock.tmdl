@@ -1,0 +1,116 @@
+perspective 'Vehicle Stock'
+
+	perspectiveTable CALCGROUP_CURRENCY
+
+		perspectiveColumn Currency
+
+	perspectiveTable PARAMETER_VHE_STOCK_MEASURES
+
+		perspectiveColumn PARAMETER_VHE_STOCK_MEASURES
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_CALENDAR
+
+		perspectiveColumn YEAR
+
+		perspectiveColumn MONTH_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_MEASURES
+
+		perspectiveColumn MEASURE_LEVEL_1_DESC
+
+		perspectiveColumn MEASURE_LEVEL_2_DESC
+
+		perspectiveColumn MEASURE_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_NLR_DIM_COMPANIES
+
+		perspectiveColumn COMPANY_DESC
+
+		perspectiveColumn COMPANY_LEVEL_1_DESC
+
+		perspectiveColumn COMPANY_LEVEL_2_DESC
+
+		perspectiveColumn COMPANY_LEVEL_3_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_PHYSICAL_LOCATIONS
+
+		perspectiveColumn PHYSICAL_LOCATION_DESC
+
+		perspectiveColumn PHYSICAL_LOCATION_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_FRANCHISES
+
+		perspectiveColumn FRANCHISE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_TYPES
+
+		perspectiveColumn VHE_TYPE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES
+
+		perspectiveColumn VEHICLE_CLASS_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_USERS_AVAILABILITY
+
+		perspectiveColumn USER_AVAILABILITY_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_SOURCES
+
+		perspectiveColumn SOURCE_DESC
+
+		perspectiveColumn SOURCE_LEVEL_1_DESC
+
+		perspectiveColumn SOURCE_LEVEL_2_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_STATUS_1
+
+		perspectiveColumn STATUS_DESC
+
+		perspectiveColumn STATUS_LEVEL_1_DESC
+
+		perspectiveColumn STATUS_LEVEL_2_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_STOCK_AGE
+
+		perspectiveColumn STOCK_AGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_USAGE_AGE
+
+		perspectiveColumn USAGE_AGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_REGISTRATION_AGE
+
+		perspectiveColumn REGISTRATION_AGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_STOCK_KMS
+
+		perspectiveColumn STOCK_KMS_DESC
+
+	perspectiveTable VIEW_VHE_DIM_RESERVED_BY
+
+		perspectiveColumn RESERVED_BY_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_FINANCIAL_CHARGES
+
+		perspectiveColumn FINANCIAL_CHARGE_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_SALES_TYPES
+
+		perspectiveColumn SALES_TYPE_DESC
+
+		perspectiveColumn SALES_TYPE_LEVEL_1_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_REGISTERED_VEHICLE
+
+		perspectiveColumn REGISTERED_VEHICLE_DESC
+
+	perspectiveTable PARAMETER_VIEW_GBL_DIM_EXCEPTIONS
+
+		perspectiveColumn EXCEPTION_DESC
+
+	perspectiveTable PARAMETER_VIEW_VHE_DIM_DESTINATION_USAGE
+
+		perspectiveColumn DESTINATION_USAGE_DESC
+
+		perspectiveColumn DESTINATION_USAGE_LEVEL_1_DESC
+

@@ -1,0 +1,102 @@
+table PARAMETER_VIEW_NLR_DIM_PL_FISCAL_ES
+	lineageTag: 360d39b1-b2db-4806-bcc9-610bb1ffd8d2
+
+	column USER_CULTURE
+		isHidden
+		lineageTag: 629487d2-c0a4-4de9-9808-aa89e4e044de
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_FISCAL_ES_DESC
+		lineageTag: fb0c6699-7113-499e-a7ac-47182f03c4fb
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_FISCAL_ES_LEVEL_1_DESC
+		lineageTag: ab7ce33b-bc01-4150-9ac3-efa01a15bb4c
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_FISCAL_ES_LEVEL_2_DESC
+		lineageTag: ba753eee-1e80-489c-8d1b-fb98d65f969d
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column PL_FISCAL_ES_LEVEL_3_DESC
+		lineageTag: 7f548b32-6a87-4d37-b08f-e8bf7e70b921
+		summarizeBy: none
+		sourceColumn: [Value5]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PARAMETER_VIEW_NLR_DIM_PL_FISCAL_ES = calculated
+		mode: import
+		source = ```
+				
+				{
+				    (
+				    "pt-PT", 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[PT_PL_FISCAL_ES_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[PT_PL_FISCAL_ES_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[PT_PL_FISCAL_ES_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[PT_PL_FISCAL_ES_LEVEL_3_DESC])
+				    ),
+				    (
+				    "en-US", 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[EN_PL_FISCAL_ES_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[EN_PL_FISCAL_ES_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[EN_PL_FISCAL_ES_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[EN_PL_FISCAL_ES_LEVEL_3_DESC])
+				    ),
+				    (
+				    "es-ES", 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[ES_PL_FISCAL_ES_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[ES_PL_FISCAL_ES_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[ES_PL_FISCAL_ES_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[ES_PL_FISCAL_ES_LEVEL_3_DESC])
+				    ),
+				    (
+				    "fr-FR", 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[FR_PL_FISCAL_ES_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[FR_PL_FISCAL_ES_LEVEL_1_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[FR_PL_FISCAL_ES_LEVEL_2_DESC]), 
+				    NAMEOF('VIEW_NLR_DIM_PL_FISCAL_ES'[FR_PL_FISCAL_ES_LEVEL_3_DESC])
+				    )
+				}
+				
+				```
+
+	annotation PBI_Id = b9f33616e7c946a2af77568b45ecc7eb
+

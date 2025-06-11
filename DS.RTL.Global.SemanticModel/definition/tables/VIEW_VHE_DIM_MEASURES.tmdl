@@ -1,0 +1,244 @@
+table VIEW_VHE_DIM_MEASURES
+	isHidden
+	lineageTag: 1284b0ca-b3d6-4df0-ba05-acd872896048
+
+	column MEASURE_CODE
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 243ccf0c-dc8c-4c6e-9bab-dcc3e16dd531
+		summarizeBy: none
+		sourceColumn: MEASURE_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_HIDDEN
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b611eb1c-ac3d-4479-b16b-cfb7d4a35508
+		summarizeBy: none
+		sourceColumn: MEASURE_HIDDEN
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FORMAT_TYPE
+		dataType: string
+		isHidden
+		lineageTag: 86a3885d-d17b-4952-9097-3b1c1d92b150
+		summarizeBy: none
+		sourceColumn: FORMAT_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENCY_CONVERSION
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 53589a26-6dca-43d4-8631-0489dce76b81
+		summarizeBy: none
+		sourceColumn: CURRENCY_CONVERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MEASURE_LEVEL_1_DESC
+		dataType: string
+		lineageTag: 9f83be1b-3165-4b48-acb6-3e8669dc2dd1
+		summarizeBy: none
+		sourceColumn: PT_MEASURE_LEVEL_1_DESC
+		sortByColumn: MEASURE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MEASURE_LEVEL_1_DESC
+		dataType: string
+		lineageTag: 5823abe1-bba1-4bae-93e5-e57029ef1321
+		summarizeBy: none
+		sourceColumn: ES_MEASURE_LEVEL_1_DESC
+		sortByColumn: MEASURE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MEASURE_LEVEL_1_DESC
+		dataType: string
+		lineageTag: 026f19a3-0e3f-46f9-8f6f-78e6a7d03aaa
+		summarizeBy: none
+		sourceColumn: EN_MEASURE_LEVEL_1_DESC
+		sortByColumn: MEASURE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MEASURE_LEVEL_1_DESC
+		dataType: string
+		lineageTag: 886da2b0-1e99-4597-a49e-746dde37cec5
+		summarizeBy: none
+		sourceColumn: FR_MEASURE_LEVEL_1_DESC
+		sortByColumn: MEASURE_LEVEL_1_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MEASURE_LEVEL_2_DESC
+		dataType: string
+		lineageTag: b4c3a4bb-5920-4091-89c0-f4930c1b8576
+		summarizeBy: none
+		sourceColumn: PT_MEASURE_LEVEL_2_DESC
+		sortByColumn: MEASURE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MEASURE_LEVEL_2_DESC
+		dataType: string
+		lineageTag: 61d5d5b7-af53-4c80-86cd-2014d65e7486
+		summarizeBy: none
+		sourceColumn: ES_MEASURE_LEVEL_2_DESC
+		sortByColumn: MEASURE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MEASURE_LEVEL_2_DESC
+		dataType: string
+		lineageTag: c775e3d7-4cc8-4867-84e4-aa4701bb35ba
+		summarizeBy: none
+		sourceColumn: EN_MEASURE_LEVEL_2_DESC
+		sortByColumn: MEASURE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MEASURE_LEVEL_2_DESC
+		dataType: string
+		lineageTag: 8ac421f5-961e-4c0b-8345-485ddd01169f
+		summarizeBy: none
+		sourceColumn: FR_MEASURE_LEVEL_2_DESC
+		sortByColumn: MEASURE_LEVEL_2_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_MEASURE_LEVEL_3_DESC
+		dataType: string
+		lineageTag: bb8b0d56-b3ef-4867-bda0-93f178b870ef
+		summarizeBy: none
+		sourceColumn: PT_MEASURE_LEVEL_3_DESC
+		sortByColumn: MEASURE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_MEASURE_LEVEL_3_DESC
+		dataType: string
+		lineageTag: da23e3b6-ec48-468e-9e67-f43bd5114e16
+		summarizeBy: none
+		sourceColumn: ES_MEASURE_LEVEL_3_DESC
+		sortByColumn: MEASURE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_MEASURE_LEVEL_3_DESC
+		dataType: string
+		lineageTag: 2d57ebb9-3a92-4bbf-8572-0f1d8c439251
+		summarizeBy: none
+		sourceColumn: EN_MEASURE_LEVEL_3_DESC
+		sortByColumn: MEASURE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_MEASURE_LEVEL_3_DESC
+		dataType: string
+		lineageTag: 341f6803-4d2b-4292-ae74-d20958fa39ee
+		summarizeBy: none
+		sourceColumn: FR_MEASURE_LEVEL_3_DESC
+		sortByColumn: MEASURE_LEVEL_3_DISPLAY_ORDER
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_1_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: fe02fb37-b726-411e-a8c6-e22e9b898d7e
+		summarizeBy: sum
+		sourceColumn: MEASURE_LEVEL_1_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_2_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: 092ec180-2bd5-4d5a-88fc-fe4269ae39bd
+		summarizeBy: sum
+		sourceColumn: MEASURE_LEVEL_2_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURE_LEVEL_3_DISPLAY_ORDER
+		dataType: int64
+		formatString: 0
+		lineageTag: ecf66447-8cc6-409f-88f7-079daca97500
+		summarizeBy: sum
+		sourceColumn: MEASURE_LEVEL_3_DISPLAY_ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPORT_LEVEL
+		dataType: int64
+		formatString: 0
+		lineageTag: aabbde67-fbae-462e-833e-9d9bf0bfc93f
+		summarizeBy: sum
+		sourceColumn: REPORT_LEVEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column PARENT_MEASURE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 96f162c1-89c4-4258-82e9-ef64b63ef55c
+		summarizeBy: sum
+		sourceColumn: PARENT_MEASURE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_VHE_DIM_MEASURES = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				
+				    PBI_VIEW_VHE_SETUP_MEASURES_MPBI = Source{[Schema="PBI",Item="VIEW_VHE_DIM_MEASURES"]}[Data]
+				
+				in
+				    PBI_VIEW_VHE_SETUP_MEASURES_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,2727 @@
+cultureInfo es-ES
+	translations
+		model Model
+			table MEASURE_TABLE
+				caption: Tabla de Medidas
+				column MEASURE_TABLE
+					caption: Tabla de Medidas
+				measure 'Visual Title'
+					caption: Título Visual
+				measure 'Indicators DR PL'
+					caption: Indicadores
+				measure 'VHE Purchase CY'
+					caption: Cantidad
+			table VIEW_NLR_FACT_BI_TRANS_PL
+				caption: FT NLR Trans PL
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column TIE_CODE
+					caption: Código TIE
+				column PL_CODE
+					caption: Código PL
+				column PL_IFRS_CODE
+					caption: Código IFRS PL
+				column COST_CENTRE_TYPE_CODE
+					caption: Código del Tipo de Centro de Costos
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column VALUE
+					caption: Valor
+				column NLR_ACCOUNT_KEY
+					caption: Clave de la Cuenta NLR
+				column COST_CENTRE_KEY
+					caption: Clave del Centro de Costos
+				column IFRS_VALUE
+					caption: Valor IFRS
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column HRE_COST_PL_CODE
+					caption: Código del Costo HRE PL
+				column HRE_COST_TYPE_CODE
+					caption: Código del Tipo de Costo HRE
+				column EMPLOYEE_DMS_KEY
+					caption: Clave del Empleado DMS
+				column HRE_COST_INCLUDED
+					caption: Costo de HRE Incluido
+				column FISCAL_ES_VALUE
+					caption: Valor Fiscal (ES)
+				column SYTNER_VALUE
+					caption: Valor Sytner
+				column PL_FISCALES_CODE
+					caption: Código Fiscal
+				column PL_SYTNER_CODE
+					caption: Código Sytner PL
+				column PL_SYTNER_FRANCHISE_CODE
+					caption: Código de Franquicia Sytner PL
+				column PL_SYTNER_SALES_TYPE_CODE
+					caption: Código del Tipo de Venta Sytner
+				column PL_SYTNER_DETAIL_CODE
+					caption: Código de Sytner PL Detalle
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_FACT_BI_TRANS_PL_BUDGET
+				caption: FT NLR Trans PL Budget
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column PL_CODE
+					caption: Código PL
+				column PL_IFRS_CODE
+					caption: Código IFRS PL
+				column COST_CENTRE_TYPE
+					caption: Tipo de Centro de Costos
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column VALUE
+					caption: Valor
+				column IFRS_VALUE
+					caption: Valor IFRS
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column EMPLOYEE_DMS_KEY
+					caption: Clave del Empleado DMS
+				column HRE_COST_INCLUDED
+					caption: Costo de HRE Incluido
+				column SYTNER_VALUE
+					caption: Valor Sytner
+				column PL_SYTNER_CODE
+					caption: Código Sytner PL
+				column SITE_KEY
+					caption: Clave del Sitio
+				column TIE_CODE
+					caption: Código TIE
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_FACT_BI_BL_BUDGET
+				caption: FT NLR BL Budget
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column BL_IFRS_CODE
+					caption: Código IFRS
+				column BALANCE
+					caption: Saldo
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column BL_FISCAL_ES_CODE
+					caption: Código Fiscal (ES)
+				column BL_SYTNER_CODE
+					caption: Código Sytner
+				column BALANCE_FISCAL_ES
+					caption: Saldo Fiscal (ES)
+				column BALANCE_SYTNER
+					caption: Saldo Sytner
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_FACT_BI_BL
+				caption: FT NLR BL
+				column NLR_CODE
+					caption: Código NLR
+				column BALANCE
+					caption: Saldo
+				column CLIENT_ID
+					caption: ID del Cliente
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column BL_IFRS_CODE
+					caption: Código IFRS
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column NLR_ACCOUNT_KEY
+					caption: Clave de la Cuenta NLR
+				column BL_FISCAL_ES_CODE
+					caption: Código Fiscal (ES)
+				column BL_SYTNER_CODE
+					caption: Código Sytner
+				column BALANCE_FISCAL_ES
+					caption: Saldo Fiscal (ES)
+				column BALANCE_SYTNER
+					caption: Saldo Sytner
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_SETUP_PL_CALC_CATEGORIES_GSC
+				caption: PL Categorías Calculadas
+				column PL_CODE
+					caption: Código PL
+				column PL_CODE_SOURCE_FORCALCULATION
+					caption: Código PL Fuente para Cálculo
+				column PL_CODE_SOURCE_SIGNAL_FORCALCULATIONS
+					caption: Código PL Fuente de Señal para Cálculos
+			table CALCGROUP_CURRENCY
+				caption: Moneda
+				column Currency
+					caption: Moneda
+				column Ordinal
+					caption: Ordinal
+			table VIEW_NLR_SETUP_CLOSED_PERIODS_USERS
+				caption: Períodos Cerrados Usuarios
+				column CLIENT_ID
+					caption: ID del Cliente
+				column RECORD_DATE
+					caption: Fecha del Registro
+				column NLR_CLOSEDPERIOD
+					caption: Período Cerrado NLR
+				column NLR_CLOSEDDATE
+					caption: Fecha de Cierre NLR
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_COMPANY
+				caption: SCY Empresas
+				column O365_USER
+					caption: Usuario O365
+				column NLR_CODE
+					caption: Código NLR
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_FRANCHISE
+				caption: SCY Franquicias
+				column O365_USER
+					caption: Usuario O365
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_SITE
+				caption: SCY Sitios
+				column O365_USER
+					caption: Usuario O365
+				column SITE_CODE
+					caption: Código del Sitio
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_VALUETYPE
+				caption: SCY Tipos de Valor
+				column O365_USER
+					caption: Usuario O365
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_ACTIVITY
+				caption: SCY Actividades
+				column O365_USER
+					caption: Usuario O365
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+			table PARAMETER_DRPL_MEASURES
+				caption: Indicadores - PL
+				column Measures
+					caption: Medidas
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PBI_TABLE_TITLES
+				caption: Títulos
+				column Id
+					caption: Id
+			table PARAMETER_DRPL_FIELDS
+				caption: Campos PL
+				column Fields
+					caption: Campos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table CALCGROUP_ACCUMULATED_PERIOD
+				caption: Periodo
+				column Period
+					caption: Periodo
+				column Ordinal
+					caption: Ordinal
+			table PARAMETER_DRPL_INDICADORES
+				caption: PARAM Indicadores - PL
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_GBL_DTBI_LAST_UPDATE
+				caption: Última Actualización
+				column CLIENT_ID
+					caption: ID del Cliente
+				column CLIENT_NAME
+					caption: Nombre del Cliente
+				column CLIENT_DESCRIPTION
+					caption: Cliente
+				column AREA
+					caption: Área
+				column AREA_DISPLAY
+					caption: Visualización del Área
+				column LAST_UPDATE_DATE
+					caption: Fecha de Última Actualización
+				column LAST_REFRESH_DATE
+					caption: Fecha de Última Actualización (Reflejo)
+				column DAILY_UPDATED
+					caption: Actualizado Diariamente
+				column DMS_LEVEL_1
+					caption: Nivel 1 DMS
+				column DMS_LEVEL_2
+					caption: Nivel 2 DMS
+				column DMS_LEVEL_3
+					caption: Nivel 3 DMS
+			table VIEW_GBL_DIM_CLIENTS
+				caption: DIM Clientes
+				column CLIENT_ID
+					caption: ID del Cliente
+				column CLIENT_NAME
+					caption: Nombre del Cliente
+				column DESCRIPTION
+					caption: Descripción
+				column DESCRIPTION_MOBILE
+					caption: Móvil
+				column DISPLAY_ORDER
+					caption: Orden Visualización
+				column BI_DATABASE
+					caption: Base de Datos BI
+			table PARAMETER_GBL_UPDATE
+				caption: PARAM Indicadores - Actualización
+				column PARAMETER_GBL_UPDATE
+					caption: PARAM Indicadores - Actualización
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_GBL_DTBI_RATES
+				caption: Tasas
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column CURRENCY_RATE_AVG_YTD
+					caption: Tipo de Cambio Promedio Año a la Fecha
+				column CURRENCY_RATE_AVG_MTD
+					caption: Tipo de Cambio Promedio Mes a la Fecha
+				column CURRENCY_RATE_EOM
+					caption: Tipo de Cambio Fin de Mes
+				column CURRENCY_RATE_AVG_BDT
+					caption: Tipo de Cambio Promedio BDT
+				column CLIENT_ID_AUX
+					caption: ID Auxiliar del Cliente
+				column ENVIRONMENT_AUX
+					caption: Ambiente Auxiliar
+				column VALUE_TYPE_CODE_AUX
+					caption: Código del Tipo de Valor Auxiliar
+				column DATE_AUX
+					caption: Fecha Auxiliar
+			table PARAMETER_CLOSED_PERIOD
+				caption: PARAM Indicadores - Períodos Cerrados
+				column PARAMETER_CLOSED_PERIOD
+					caption: PARAM Indicadores - Períodos Cerrados
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_GBL_DIM_USER_CULTURE
+				caption: DIM Cultura del Usuario
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column LANGUAGE
+					caption: Idioma
+				column LABEL_LANGUAGE
+					caption: Etiqueta de Idioma
+				column FLAG_IMG
+					caption: Imagen de Bandera
+				column LANGUAGE_DESC
+					caption: Idioma
+			table VIEW_NLR_DIM_DTDMS_ACCOUNT
+				caption: DIM Cuentas
+				column NLR_ACCOUNT_KEY
+					caption: Clave de la Cuenta NLR
+				column NLR_ACCOUNT_DESC
+					caption: Cuenta NLR
+			table VIEW_NLR_DIM_DTDMS_COST_CENTRES
+				caption: DIM Centros de Costo
+				column COST_CENTRE_KEY
+					caption: Clave del Centro de Costos
+				column COST_CENTRE_DESC
+					caption: Centro de Costo
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_COMPANY_2
+				caption: SCY Empresas 2
+				column O365_USER
+					caption: Usuario O365
+				column NLR_CODE
+					caption: Código NLR
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_FRANCHISE_2
+				caption: SCY Franquicias 2
+				column O365_USER
+					caption: Usuario O365
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_SITE_2
+				caption: SCY Sitios 2
+				column O365_USER
+					caption: Usuario O365
+				column SITE_CODE
+					caption: Código del Sitio
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_GBL_VALUETYPE_2
+				caption: SCY Tipos de Valor 2
+				column O365_USER
+					caption: Usuario O365
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_NLR_ACTIVITY_2
+				caption: SCY Actividades 2
+				column O365_USER
+					caption: Usuario O365
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+			table VIEW_GBL_DIM_OBJSECURED
+				caption: DIM Objeto Asegurado
+				column DATASET_ID
+					caption: ID del Conjunto de Datos
+				column DATASET
+					caption: Conjunto de Datos
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column OBJSECURED_KEY
+					caption: Clave del Objeto Asegurado
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_OBJSECURED
+				caption: SCY Objeto Asegurado
+				column O365_USER
+					caption: Usuario O365
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+			table SCY_VIEW_DS_RTL_GLOBAL_DIM_OBJSECURED_2
+				caption: SCY Objeto Asegurado 2
+				column O365_USER
+					caption: Usuario O365
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+			table PARAMETER_DRIFRS_INDICADORES
+				caption: PARAM Indicadores - PL IFRS
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column 'Value Type'
+					caption: Tipo de Valor
+			table VIEW_NLR_SETUP_PL_IFRS_CALC_CATEGORIES_SCG
+				caption: PL IFRS Categorías Calculadas
+				column PL_IFRS_CALCULATION_CODE
+					caption: Código de Cálculo IFRS
+				column PL_IFRS_CODE
+					caption: Código IFRS PL
+				column PL_IFRS_LEVEL_1_CODE_SOURCE_FORCALCULATION
+					caption: Código de Nivel 1 IFRS para Cálculo
+				column PL_IFRS_CODE_SOURCE_SIGNAL_FORCALCULATIONS
+					caption: Código IFRS Fuente de Señal para Cálculos
+			table PARAMETER_DRIFRS_FIELDS
+				caption: Campos PL IFRS
+				column PARAMETER_DRIFRS_FIELDS
+					caption: Campos PL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_DRIFRS_MEASURES
+				caption: Indicadores - PL IFRS
+				column PARAMETER_DRIFRS_MEASURES
+					caption: Indicadores - PL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_GBL_SETUP_DESCRIPTIONS
+				caption: DIM Descripciones
+				column ID_DESCRIPTION
+					caption: Id
+				column REPORT_NAME
+					caption: Nombre del Informe
+				column WORKSPACE_NAME
+					caption: Nombre del Espacio de Trabajo
+				column PT_TRANSLATION
+					caption: PT Traducción
+				column PT_DESCRIPTION
+					caption: PT Descripción
+				column EN_TRANSLATION
+					caption: EN Traducción
+				column EN_DESCRIPTION
+					caption: EN Descripción
+				column ES_TRANSLATION
+					caption: ES Traducción
+				column ES_DESCRIPTION
+					caption: ES Descripción
+				column FR_TRANSLATION
+					caption: FR Traducción
+				column FR_DESCRIPTION
+					caption: FR Descripción
+			table PARAMETER_BL_IFRS_FIELDS
+				caption: Campos BL IFRS
+				column PARAMETER_BL_IFRS_FIELDS
+					caption: Campos BL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_BL_IFRS_INDICADORES
+				caption: PARAM Indicadores - BL IFRS
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_BL_IFRS_MEASURES
+				caption: Indicadores - BL IFRS
+				column PARAMETER_BL_IFRS_MEASURES
+					caption: Indicadores - BL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_GLOSSARY
+				caption: PARAM Indicadores - Glosario
+				column PARAMETER_GLOSSARY
+					caption: PARAM Indicadores - Glosario
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_NLR_FACT_CASH_FLOW
+				caption: FT NLR Cash Flow
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column CF_CODE
+					caption: Código CF
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column BALANCE_DISPLAY
+					caption: Visualización de Saldo
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column CFBOOKSYTNER_CODE
+					caption: Código CF Sytner
+				column BALANCE_SYTNER_DISPLAY
+					caption: Visualización del Saldo Sytner
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_FACT_GM
+				caption: FT NLR GM
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column GM_MEASURE_CODE
+					caption: Código de la Medida GM
+				column GM_VALUE
+					caption: Valor GM
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column VAT_KEY
+					caption: Clave de IVA
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table PARAMETER_CF_FIELDS
+				caption: Campos de Flujo de Caja
+				column PARAMETER_CF_FIELDS
+					caption: Campos de Flujo de Caja
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_CF_INDICADORES
+				caption: PARAM Indicadores - Flujo de Caja
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_CF_MEASURES
+				caption: Indicadores - Flujo de Caja
+				column PARAMETER_CF_MEASURES
+					caption: Indicadores - Flujo de Caja
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_GM_FIELDS
+				caption: Campos Indicadores Generales
+				column PARAMETER_GM_FIELDS
+					caption: Campos Indicadores Generales
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_GM_MEASURES
+				caption: Indicadores - Indicadores Generales
+				column PARAMETER_GM_MEASURES
+					caption: Indicadores - Indicadores Generales
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_GM_INDICADORES
+				caption: PARAM Indicadores - Indicadores Generales
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column 'Value Type'
+					caption: Tipo de Valor
+			table VIEW_HRE_FACT_HR
+				caption: FT HRE HR
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column EMPLOYEE_DMS_KEY
+					caption: Clave del Empleado DMS
+				column INTERNAL_CATEGORY_CODE
+					caption: Código de Categoría Interna
+				column CATEGORY_CODE
+					caption: Código de la Categoría
+				column FUNCTIONAL_CATEGORY_CODE
+					caption: Código de la Categoría Funcional
+				column HR_NUMBER
+					caption: Número de RH
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column SITE_KEY
+					caption: Clave del Sitio
+			table PARAMETER_HRE_FIELDS
+				caption: Campos Estructura de Personal
+				column PARAMETER_HRE_FIELDS
+					caption: Campos Estructura de Personal
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_HRE_MEASURES
+				caption: Indicadores - Estructura de Personal
+				column PARAMETER_HRE_MEASURES
+					caption: Indicadores - Estructura de Personal
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_HRE_INDICADORES
+				caption: PARAM Indicadores - Estructura de Personal
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_NLR_FACT_HRE_COSTS
+				caption: FT NLR HRE Costs
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column NLR_CODE
+					caption: Código NLR
+				column NLR_ACCOUNT_KEY
+					caption: Clave de la Cuenta NLR
+				column EMPLOYEE_DMS_KEY
+					caption: Clave del Empleado DMS
+				column HRE_COST_PL_CODE
+					caption: Código del Costo HRE PL
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column HRE_COST_TYPE_CODE
+					caption: Código del Tipo de Costo HRE
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column HRE_COST_VALUE
+					caption: Valor del Costo HRE
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_NLR_FACT_HRE_COSTS_BUDGET
+				caption: FT NLR HRE Costs Budget
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column NLR_CODE
+					caption: Código NLR
+				column EMPLOYEE_DMS_KEY
+					caption: Clave del Empleado DMS
+				column HRE_COST_PL_CODE
+					caption: Código del Costo HRE PL
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column HRE_COST_TYPE_CODE
+					caption: Código del Tipo de Costo HRE
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column HRE_COST_VALUE
+					caption: Valor del Costo HRE
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table PARAMETER_HRE_C_FIELDS
+				caption: Campos Costos de Personal
+				column PARAMETER_HRE_C_FIELDS
+					caption: Campos Costos de Personal
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_HRE_C_MEASURES
+				caption: Indicadores - Costos de Personal
+				column PARAMETER_HRE_C_MEASURES
+					caption: Indicadores - Costos de Personal
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_HRE_C_INDICADORES
+				caption: PARAM Indicadores - Costos de Personal
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_OR_FIELDS
+				caption: Campos PL ES
+				column PARAMETER_OR_FIELDS
+					caption: Campos PL ES
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_OR_MEASURES
+				caption: Indicadores - PL ES
+				column PARAMETER_OR_MEASURES
+					caption: Indicadores - PL ES
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_OR_INDICADORES
+				caption: PARAM Indicadores - PL ES
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_BL_ES_FIELDS
+				caption: Campos BL (ES)
+				column PARAMETER_BL_ES_FIELDS
+					caption: Campos BL (ES)
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_BL_ES_INDICADORES
+				caption: PARAM Indicadores - BL (ES)
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_BL_ES_MEASURES
+				caption: Indicadores - BL (ES)
+				column PARAMETER_BL_ES_MEASURES
+					caption: Indicadores - BL (ES)
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_GBL_DTBI_VAT_RATES
+				caption: VAT
+				column CLIENT_ID
+					caption: ID del Cliente
+				column ENVIRONMENT
+					caption: Ambiente
+				column ANALYSIS_DATE
+					caption: Fecha de Análisis
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column VAT_RATE
+					caption: Tasa de IVA
+				column VAT_KEY
+					caption: Clave de IVA
+			table PARAMETER_SYTNER_FIELDS
+				caption: Campos Sytner
+				column PARAMETER_SYTNER_FIELDS
+					caption: Campos Sytner
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_SYTNER_MEASURES
+				caption: Indicadores - Sytner
+				column PARAMETER_SYTNER_MEASURES
+					caption: Indicadores - Sytner
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_SLR_FACT_OPEN_DOCUMENTS
+				caption: FT SLR Open Documents
+				column CONTROL_ACCOUNT_KEY
+					caption: Clave de la Cuenta de Control
+				column AREA_CODE_KEY
+					caption: Clave del Código de Área
+				column NLR_CODE
+					caption: Código NLR
+				column DOCUMENT_DATE
+					caption: Fecha del Documento
+				column DUE_DATE
+					caption: Fecha de Vencimiento
+				column DUE_MONTH
+					caption: Mes de Vencimiento
+				column DUE_YEAR
+					caption: Año de Vencimiento
+				column PENDING_DATE
+					caption: Fecha Pendiente
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column DOCUMENT_AGE_CODE
+					caption: Código de Antigüedad del Documento
+				column DOCUMENT_AGE_2_CODE
+					caption: Código de Antigüedad 2 del Documento
+				column CUSTOMER_AGGREGATION_CODE
+					caption: Código de Agregación del Cliente
+				column CUSTOMER_TYPE_CODE
+					caption: Código de Tipo de Cliente
+				column CUSTOMER_GROUP_CODE
+					caption: Código de Grupo de Cliente
+				column OPEN_VALUE
+					caption: Valor Abierto
+				column PENDING_YEAR_MONTH
+					caption: Año y Mes Pendiente
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column SITE_KEY
+					caption: Clave del Sitio
+				column DOCUMENT_MONTH
+					caption: Mes del Documento
+				column DOCUMENT_YEAR
+					caption: Año del Documento
+			table VIEW_SLR_DIM_DTDMS_CONTROL_ACCOUNT_TYPE
+				caption: DIM Tipo de Cuenta de Control
+				column CONTROL_ACCOUNT_KEY
+					caption: Clave de la Cuenta de Control
+				column CONTROL_ACCOUNT_TYPE
+					caption: Tipo de Cuenta de Control
+				column CONTROL_ACCOUNT_TYPE_DESC
+					caption: Tipo de Cuenta de Control
+			table VIEW_SLR_DIM_DTDMS_AREA_CODES
+				caption: DIM Códigos de Área
+				column AREA_CODE_KEY
+					caption: Clave del Código de Área
+				column AREA_CODE
+					caption: Código del Área
+				column AREA_CODE_DESC
+					caption: Descripción del Código de Área
+			table PARAMETER_DEBT_FIELDS
+				caption: Campos Antigüedad de Saldos de Clientes
+				column PARAMETER_DEBT_FIELDS
+					caption: Campos Antigüedad de Saldos de Clientes
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_DEBT_MEASURES
+				caption: Indicadores - Antigüedad de Saldos
+				column PARAMETER_DEBT_MEASURES
+					caption: Indicadores - Antigüedad de Saldos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_SLR_FACT_PAYMENT_METHOD
+				caption: FT SLR Payment Method
+				column PAYMENT_DATE
+					caption: Fecha de Pago
+				column DOCUMENT_DATE
+					caption: Fecha del Documento
+				column NLR_CODE
+					caption: Código NLR
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column ORIGIN_CAETANO_PAY_FLAG
+					caption: Indicador de Pago Caetano
+				column PAID_VALUE
+					caption: Valor Pagado
+				column ORIGIN_CAETANO_PAY_DESC
+					caption: Pago Caetano
+				column PAYMENT_METHOD_KEY
+					caption: Clave del Método de Pago
+				column SITE_KEY
+					caption: Clave del Sitio
+			table PARAMETER_PAYMENT_FIELDS
+				caption: Campos Métodos de Pago
+				column PARAMETER_PAYMENT_FIELDS
+					caption: Campos Métodos de Pago
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_PAYMENT_MEASURES
+				caption: Indicadores - Formas de Pago
+				column PARAMETER_PAYMENT_MEASURES
+					caption: Indicadores - Formas de Pago
+			table PARAMETER_PAYMENT_INDICADORES
+				caption: PARAM Indicadores - Formas de Pago
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+			table VIEW_GBL_DIM_CALENDAR
+				caption: DIM Calendario
+				column DATE
+					caption: Fecha
+				column DAY
+					caption: Día
+				column WORKING_DAY
+					caption: Día Laboral
+				column MONTH
+					caption: Mes
+				column PT_MONTH_DESC
+					caption: PT Mes
+				column EN_MONTH_DESC
+					caption: EN Mes
+				column ES_MONTH_DESC
+					caption: ES Mes
+				column FR_MONTH_DESC
+					caption: FR Mes
+				column YEAR_MONTH
+					caption: Año-Mes
+				column PT_YEAR_MONTH_SHORT_DESC
+					caption: PT Año-Mes
+				column EN_YEAR_MONTH_SHORT_DESC
+					caption: EN Año-Mes
+				column ES_YEAR_MONTH_SHORT_DESC
+					caption: ES Año-Mes
+				column FR_YEAR_MONTH_SHORT_DESC
+					caption: FR Año-Mes
+				column YEAR
+					caption: Año
+				column PT_CURRENT_YEAR
+					caption: PT Año Actual
+				column EN_CURRENT_YEAR
+					caption: EN Año Actual
+				column ES_CURRENT_YEAR
+					caption: ES Año Actual
+				column FR_CURRENT_YEAR
+					caption: FR Año Actual
+				column PT_MONTH_SHORT_DESC
+					caption: PT Mes
+				column EN_MONTH_SHORT_DESC
+					caption: EN Mes
+				column ES_MONTH_SHORT_DESC
+					caption: ES Mes
+				column FR_MONTH_SHORT_DESC
+					caption: FR Mes
+			table VIEW_NLR_DIM_SYTNER_BL
+				caption: DIM Sytner BL
+				column SYTNER_BL_CODE
+					caption: Código Sytner BL
+				column PT_SYTNER_BL_LEVEL_1_DESC
+					caption: PT Sytner BL Nivel 1
+				column PT_SYTNER_BL_LEVEL_2_DESC
+					caption: PT Sytner BL Nivel 2
+				column PT_SYTNER_BL_DESC
+					caption: PT Sytner BL
+				column ES_SYTNER_BL_LEVEL_1_DESC
+					caption: ES Sytner BL Nivel 1
+				column ES_SYTNER_BL_LEVEL_2_DESC
+					caption: ES Sytner BL Nivel 2
+				column ES_SYTNER_BL_DESC
+					caption: ES Sytner BL
+				column EN_SYTNER_BL_LEVEL_1_DESC
+					caption: EN Sytner BL Nivel 1
+				column EN_SYTNER_BL_LEVEL_2_DESC
+					caption: EN Sytner BL Nivel 2
+				column EN_SYTNER_BL_DESC
+					caption: EN Sytner BL
+				column FR_SYTNER_BL_LEVEL_1_DESC
+					caption: FR Sytner BL Nivel 1
+				column FR_SYTNER_BL_LEVEL_2_DESC
+					caption: FR Sytner BL Nivel 2
+				column FR_SYTNER_BL_DESC
+					caption: FR Sytner BL
+			table VIEW_NLR_DIM_SYTNER_PL_DETAIL
+				caption: DIM Sytner PL Detalle
+				column Sytner_PL_Detail_Code
+					caption: Código de Sytner PL Detalle
+				column PT_SYTNER_PL_DETAIL_LEVEL_1_DESC
+					caption: PT Sytner PL Detalle Nivel 1
+				column PT_SYTNER_PL_DETAIL_LEVEL_2_DESC
+					caption: PT Sytner PL Detalle Nivel 2
+				column PT_SYTNER_PL_DETAIL_LEVEL_3_DESC
+					caption: PT Sytner PL Detalle Nivel 3
+				column PT_SYTNER_PL_DETAIL_LEVEL_4_DESC
+					caption: PT Sytner PL Detalle Nivel 4
+				column ES_SYTNER_PL_DETAIL_LEVEL_1_DESC
+					caption: ES Sytner PL Detalle Nivel 1
+				column ES_SYTNER_PL_DETAIL_LEVEL_2_DESC
+					caption: ES Sytner PL Detalle Nivel 2
+				column ES_SYTNER_PL_DETAIL_LEVEL_3_DESC
+					caption: ES Sytner PL Detalle Nivel 3
+				column ES_SYTNER_PL_DETAIL_LEVEL_4_DESC
+					caption: ES Sytner PL Detalle Nivel 4
+				column EN_SYTNER_PL_DETAIL_LEVEL_1_DESC
+					caption: EN Sytner PL Detalle Nivel 1
+				column EN_SYTNER_PL_DETAIL_LEVEL_2_DESC
+					caption: EN Sytner PL Detalle Nivel 2
+				column EN_SYTNER_PL_DETAIL_LEVEL_3_DESC
+					caption: EN Sytner PL Detalle Nivel 3
+				column EN_SYTNER_PL_DETAIL_LEVEL_4_DESC
+					caption: EN Sytner PL Detalle Nivel 4
+				column FR_SYTNER_PL_DETAIL_LEVEL_1_DESC
+					caption: FR Sytner PL Detalle Nivel 1
+				column FR_SYTNER_PL_DETAIL_LEVEL_2_DESC
+					caption: FR Sytner PL Detalle Nivel 2
+				column FR_SYTNER_PL_DETAIL_LEVEL_3_DESC
+					caption: FR Sytner PL Detalle Nivel 3
+				column FR_SYTNER_PL_DETAIL_LEVEL_4_DESC
+					caption: FR Sytner PL Detalle Nivel 4
+			table VIEW_NLR_DIM_SYTNER_PL
+				caption: DIM Sytner PL
+				column SYTNER_PL_CODE
+					caption: Código Sytner PL
+				column PT_SYTNER_PL_LEVEL_1_DESC
+					caption: PT Sytner PL Nivel 1
+				column PT_SYTNER_PL_LEVEL_2_DESC
+					caption: PT Sytner PL Nivel 2
+				column PT_SYTNER_PL_DESC
+					caption: PT Sytner PL
+				column ES_SYTNER_PL_LEVEL_1_DESC
+					caption: ES Sytner PL Nivel 1
+				column ES_SYTNER_PL_LEVEL_2_DESC
+					caption: ES Sytner PL Nivel 2
+				column ES_SYTNER_PL_DESC
+					caption: ES Sytner PL
+				column EN_SYTNER_PL_LEVEL_1_DESC
+					caption: EN Sytner PL Nivel 1
+				column EN_SYTNER_PL_LEVEL_2_DESC
+					caption: EN Sytner PL Nivel 2
+				column EN_SYTNER_PL_DESC
+					caption: EN Sytner PL
+				column FR_SYTNER_PL_LEVEL_1_DESC
+					caption: FR Sytner PL Nivel 1
+				column FR_SYTNER_PL_LEVEL_2_DESC
+					caption: FR Sytner PL Nivel 2
+				column FR_SYTNER_PL_DESC
+					caption: FR Sytner PL
+				column SYTNER_PL_LEVEL_1_CODE
+					caption: Código del Nivel 1 Sytner PL
+			table VIEW_GBL_DIM_FRANCHISES
+				caption: DIM Franquicias
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column PT_FRANCHISE_DESC
+					caption: PT Franquicia
+				column EN_FRANCHISE_DESC
+					caption: EN Franquicia
+				column ES_FRANCHISE_DESC
+					caption: ES Franquicia
+				column FR_FRANCHISE_DESC
+					caption: FR Franquicia
+				column FRANCHISE_DISPLAY_ORDER
+					caption: Orden de Exhibición de la Franquicia
+			table VIEW_GBL_DIM_SITES
+				caption: DIM Sitios
+				column CLIENT_ID
+					caption: ID del Cliente
+				column SITE_KEY
+					caption: Clave del Sitio
+				column SITE_CODE
+					caption: Código del Sitio
+				column PT_SITE_DESC
+					caption: PT Sitio
+				column PT_SITE_LEVEL_1_DESC
+					caption: PT Sitio Nivel 1
+				column PT_SITE_LEVEL_2_DESC
+					caption: PT Sitio Nivel 2
+				column PT_SITE_LEVEL_3_DESC
+					caption: PT Sitio Nivel 3
+				column PT_SITE_LEVEL_4_DESC
+					caption: PT Sitio Nivel 4
+				column EN_SITE_DESC
+					caption: EN Sitio
+				column EN_SITE_LEVEL_1_DESC
+					caption: EN Sitio Nivel 1
+				column EN_SITE_LEVEL_2_DESC
+					caption: EN Sitio Nivel 2
+				column EN_SITE_LEVEL_3_DESC
+					caption: EN Sitio Nivel 3
+				column EN_SITE_LEVEL_4_DESC
+					caption: EN Sitio Nivel 4
+				column ES_SITE_DESC
+					caption: ES Sitio
+				column ES_SITE_LEVEL_1_DESC
+					caption: ES Sitio Nivel 1
+				column ES_SITE_LEVEL_2_DESC
+					caption: ES Sitio Nivel 2
+				column ES_SITE_LEVEL_3_DESC
+					caption: ES Sitio Nivel 3
+				column ES_SITE_LEVEL_4_DESC
+					caption: ES Sitio Nivel 4
+				column FR_SITE_DESC
+					caption: FR Sitio
+				column FR_SITE_LEVEL_1_DESC
+					caption: FR Sitio Nivel 1
+				column FR_SITE_LEVEL_2_DESC
+					caption: FR Sitio Nivel 2
+				column FR_SITE_LEVEL_3_DESC
+					caption: FR Sitio Nivel 3
+				column FR_SITE_LEVEL_4_DESC
+					caption: FR Sitio Nivel 4
+			table VIEW_GBL_DIM_VALUE_TYPES_ALL
+				caption: DIM Tipos de Valor
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column PT_VALUE_TYPE_DESC
+					caption: PT Tipo de Valor
+				column EN_VALUE_TYPE_DESC
+					caption: EN Tipo de Valor
+				column ES_VALUE_TYPE_DESC
+					caption: ES Tipo de Valor
+				column FR_VALUE_TYPE_DESC
+					caption: FR Tipo de Valor
+				column VALUE_TYPE_DISPLAY_ORDER
+					caption: Orden de Visualización del Tipo de Valor
+			table VIEW_HRE_DIM_CATEGORIES
+				caption: DIM Categorías
+				column CATEGORY_CODE
+					caption: Código de la Categoría
+				column PT_CATEGORY_LEVEL_1_DESC
+					caption: PT Categoría Nivel 1
+				column PT_CATEGORY_LEVEL_2_DESC
+					caption: PT Categoría Nivel 2
+				column PT_CATEGORY_DESC
+					caption: PT Categoría
+				column EN_CATEGORY_LEVEL_1_DESC
+					caption: EN Categoría Nivel 1
+				column EN_CATEGORY_LEVEL_2_DESC
+					caption: EN Categoría Nivel 2
+				column EN_CATEGORY_DESC
+					caption: EN Categoría
+				column ES_CATEGORY_LEVEL_1_DESC
+					caption: ES Categoría Nivel 1
+				column ES_CATEGORY_LEVEL_2_DESC
+					caption: ES Categoría Nivel 2
+				column ES_CATEGORY_DESC
+					caption: ES Categoría
+				column FR_CATEGORY_LEVEL_1_DESC
+					caption: FR Categoría Nivel 1
+				column FR_CATEGORY_LEVEL_2_DESC
+					caption: FR Categoría Nivel 2
+				column FR_CATEGORY_DESC
+					caption: FR Categoría
+			table VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES
+				caption: DIM Categorías Funcionales
+				column FUNCTIONAL_CATEGORY_CODE
+					caption: Código de la Categoría Funcional
+				column PT_FUNCTIONAL_CATEGORY_DESC
+					caption: PT Categoría Funcional
+				column EN_FUNCTIONAL_CATEGORY_DESC
+					caption: EN Categoría Funcional
+				column ES_FUNCTIONAL_CATEGORY_DESC
+					caption: ES Categoría Funcional
+				column FR_FUNCTIONAL_CATEGORY_DESC
+					caption: FR Categoría Funcional
+			table VIEW_HRE_DIM_INTERNAL_CATEGORIES
+				caption: DIM Categorías Internas
+				column INTERNAL_CATEGORY_CODE
+					caption: Código de Categoría Interna
+				column PT_INTERNAL_CATEGORY_DESC
+					caption: PT Categoría Interna
+				column PT_INTERNAL_CATEGORY_LEVEL_1_DESC
+					caption: PT Categoría Interna Nivel 1
+				column EN_INTERNAL_CATEGORY_DESC
+					caption: EN Categoría Interna
+				column EN_INTERNAL_CATEGORY_LEVEL_1_DESC
+					caption: EN Categoría Interna Nivel 1
+				column ES_INTERNAL_CATEGORY_DESC
+					caption: ES Categoría Interna
+				column ES_INTERNAL_CATEGORY_LEVEL_1_DESC
+					caption: ES Categoría Interna Nivel 1
+				column FR_INTERNAL_CATEGORY_DESC
+					caption: FR Categoría Interna
+				column FR_INTERNAL_CATEGORY_LEVEL_1_DESC
+					caption: FR Categoría Interna Nivel 1
+			table VIEW_NLR_DIM_ACTIVITIES
+				caption: DIM Actividades
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column ACTIVITY_LEVEL_1_CODE
+					caption: Código del Nivel 1 de la Actividad
+				column PT_ACTIVITY_DESC
+					caption: PT Actividad
+				column PT_ACTIVITY_LEVEL_1_DESC
+					caption: PT Actividad Nivel 1
+				column PT_ACTIVITY_LEVEL_2_DESC
+					caption: PT Actividad Nivel 2
+				column PT_ACTIVITY_LEVEL_3_DESC
+					caption: PT Actividad Nivel 3
+				column EN_ACTIVITY_DESC
+					caption: EN Actividad
+				column EN_ACTIVITY_LEVEL_1_DESC
+					caption: EN Actividad Nivel 1
+				column EN_ACTIVITY_LEVEL_2_DESC
+					caption: EN Actividad Nivel 2
+				column EN_ACTIVITY_LEVEL_3_DESC
+					caption: EN Actividad Nivel 3
+				column ES_ACTIVITY_DESC
+					caption: ES Actividad
+				column ES_ACTIVITY_LEVEL_1_DESC
+					caption: ES Actividad Nivel 1
+				column ES_ACTIVITY_LEVEL_2_DESC
+					caption: ES Actividad Nivel 2
+				column ES_ACTIVITY_LEVEL_3_DESC
+					caption: ES Actividad Nivel 3
+				column FR_ACTIVITY_DESC
+					caption: FR Actividad
+				column FR_ACTIVITY_LEVEL_1_DESC
+					caption: FR Actividad Nivel 1
+				column FR_ACTIVITY_LEVEL_3_DESC
+					caption: FR Actividad Nivel 3
+				column FR_ACTIVITY_LEVEL_2_DESC
+					caption: FR Actividad Nivel 2
+				column ACTIVITY_DISPLAY_ORDER
+					caption: Orden Visualización Actividad
+				column ACTIVITY_LEVEL_2_CODE
+					caption: Código del Nivel 2 de la Actividad
+				column ACTIVITY_LEVEL_3_CODE
+					caption: Código del Nivel 3 de la Actividad
+			table VIEW_NLR_DIM_BL_FISCAL_ES
+				caption: DIM BL Fiscal (ES)
+				column BL_FISCAL_ES_CODE
+					caption: Código Fiscal (ES)
+				column PT_BL_FISCAL_ES_LEVEL_1_DESC
+					caption: PT BL Fiscal (ES) Nivel 1
+				column PT_BL_FISCAL_ES_LEVEL_2_DESC
+					caption: PT BL Fiscal (ES) Nivel 2
+				column PT_BL_FISCAL_ES_LEVEL_3_DESC
+					caption: PT BL Fiscal (ES) Nivel 3
+				column PT_BL_FISCAL_ES_LEVEL_4_DESC
+					caption: PT BL Fiscal (ES) Nivel 4
+				column PT_BL_FISCAL_ES_DESC
+					caption: PT BL Fiscal (ES)
+				column ES_BL_FISCAL_ES_LEVEL_1_DESC
+					caption: ES BL Fiscal (ES) Nivel 1
+				column ES_BL_FISCAL_ES_LEVEL_2_DESC
+					caption: ES BL Fiscal (ES) Nivel 2
+				column ES_BL_FISCAL_ES_LEVEL_3_DESC
+					caption: ES BL Fiscal (ES) Nivel 3
+				column ES_BL_FISCAL_ES_LEVEL_4_DESC
+					caption: ES BL Fiscal (ES) Nivel 4
+				column ES_BL_FISCAL_ES_DESC
+					caption: ES BL Fiscal (ES)
+				column EN_BL_FISCAL_ES_LEVEL_1_DESC
+					caption: EN BL Fiscal (ES) Nivel 1
+				column EN_BL_FISCAL_ES_LEVEL_2_DESC
+					caption: EN BL Fiscal (ES) (Inglés) Nivel 2
+				column EN_BL_FISCAL_ES_LEVEL_3_DESC
+					caption: EN BL Fiscal (ES) (Inglés) Nivel 3
+				column EN_BL_FISCAL_ES_LEVEL_4_DESC
+					caption: EN BL Fiscal (ES) (Inglés) Nivel 4
+				column EN_BL_FISCAL_ES_DESC
+					caption: EN BL Fiscal (ES)
+				column FR_BL_FISCAL_ES_LEVEL_1_DESC
+					caption: FR BL Fiscal (ES) Niveau 1
+				column FR_BL_FISCAL_ES_LEVEL_2_DESC
+					caption: FR BL Fiscal (ES) Niveau 2
+				column FR_BL_FISCAL_ES_LEVEL_3_DESC
+					caption: FR BL Fiscal (ES) Niveau 3
+				column FR_BL_FISCAL_ES_LEVEL_4_DESC
+					caption: FR BL Fiscal (ES) Niveau 4
+				column FR_BL_FISCAL_ES_DESC
+					caption: FR BL Fiscal (ES)
+			table VIEW_NLR_DIM_BL_IFRS
+				caption: DIM BL IFRS
+				column BL_IFRS_CODE
+					caption: Código IFRS
+				column PT_BL_IFRS_LEVEL_1_DESC
+					caption: PT BL IRFS Nivel 1
+				column PT_BL_IFRS_LEVEL_2_DESC
+					caption: PT BL IRFS Nivel 2
+				column PT_BL_IFRS_LEVEL_3_DESC
+					caption: PT BL IRFS Nivel 3
+				column PT_BL_IFRS_LEVEL_4_DESC
+					caption: PT BL IRFS Nivel 4
+				column PT_BL_IFRS_DESC
+					caption: PT BL IFRS
+				column ES_BL_IFRS_LEVEL_1_DESC
+					caption: ES BL IRFS Nivel 1
+				column ES_BL_IFRS_LEVEL_2_DESC
+					caption: ES BL IRFS Nivel 2
+				column ES_BL_IFRS_LEVEL_3_DESC
+					caption: ES BL IRFS Nivel 3
+				column ES_BL_IFRS_LEVEL_4_DESC
+					caption: ES BL IRFS Nivel 4
+				column ES_BL_IFRS_DESC
+					caption: ES BL IFRS
+				column EN_BL_IFRS_LEVEL_1_DESC
+					caption: EN BL IRFS Nivel 1
+				column EN_BL_IFRS_LEVEL_2_DESC
+					caption: EN BL IRFS Nivel 2
+				column EN_BL_IFRS_LEVEL_3_DESC
+					caption: EN BL IRFS Nivel 3
+				column EN_BL_IFRS_LEVEL_4_DESC
+					caption: EN BL IRFS Nivel 4
+				column EN_BL_IFRS_DESC
+					caption: EN BL IFRS
+				column FR_BL_IFRS_LEVEL_1_DESC
+					caption: FR BL IRFS Nivel 1
+				column FR_BL_IFRS_LEVEL_2_DESC
+					caption: FR BL IRFS Nivel 2
+				column FR_BL_IFRS_LEVEL_3_DESC
+					caption: FR BL IRFS Nivel 3
+				column FR_BL_IFRS_LEVEL_4_DESC
+					caption: FR BL IRFS Nivel 4
+				column FR_BL_IFRS_DESC
+					caption: FR BL IFRS
+				column BL_IFRS_DISPLAY_ORDER
+					caption: Orden de Exhibición IFRS
+				column BL_IFRS_LEVEL_1_CODE
+					caption: Código de Nivel 1 IFRS
+			table VIEW_NLR_DIM_CASH_FLOW
+				caption: DIM Flujo de Caja
+				column CF_CODE
+					caption: Código CF
+				column PT_CF_LEVEL_1_DESC
+					caption: PT Flujo de Caja Nivel 1
+				column PT_CF_DESC
+					caption: PT Flujo de Caja
+				column EN_CF_LEVEL_1_DESC
+					caption: EN Flujo de Caja Nivel 1
+				column EN_CF_DESC
+					caption: EN Flujo de Caja
+				column ES_CF_LEVEL_1_DESC
+					caption: ES Flujo de Caja Nivel 1
+				column ES_CF_DESC
+					caption: ES Flujo de Caja
+				column FR_CF_LEVEL_1_DESC
+					caption: FR Flujo de Caja Nivel 1
+				column FR_CF_DESC
+					caption: FR Flujo de Caja
+			table VIEW_NLR_DIM_COMPANIES
+				caption: DIM Empresas
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column PT_COMPANY_DESC
+					caption: PT Empresa
+				column PT_COMPANY_LEVEL_1_DESC
+					caption: PT Empresa Nivel 1
+				column PT_COMPANY_LEVEL_2_DESC
+					caption: PT Empresa Nivel 2
+				column PT_COMPANY_LEVEL_3_DESC
+					caption: PT Empresa Nivel 3
+				column EN_COMPANY_DESC
+					caption: EN Empresa
+				column EN_COMPANY_LEVEL_1_DESC
+					caption: EN Empresa Nivel 1
+				column EN_COMPANY_LEVEL_2_DESC
+					caption: EN Empresa Nivel 2
+				column EN_COMPANY_LEVEL_3_DESC
+					caption: EN Empresa Nivel 3
+				column ES_COMPANY_DESC
+					caption: ES Empresa
+				column ES_COMPANY_LEVEL_1_DESC
+					caption: ES Empresa Nivel 1
+				column ES_COMPANY_LEVEL_2_DESC
+					caption: ES Empresa Nivel 2
+				column ES_COMPANY_LEVEL_3_DESC
+					caption: ES Empresa Nivel 3
+				column FR_COMPANY_DESC
+					caption: FR Empresa
+				column FR_COMPANY_LEVEL_1_DESC
+					caption: FR Empresa Nivel 1
+				column FR_COMPANY_LEVEL_2_DESC
+					caption: FR Empresa Nivel 2
+				column FR_COMPANY_LEVEL_3_DESC
+					caption: FR Empresa Nivel 3
+				column COMPANY_DISPLAY_ORDER
+					caption: Orden Visualización Empresa
+			table VIEW_NLR_DIM_COST_CENTRE_TYPES
+				caption: DIM Tipos de Centro de Costo
+				column COST_CENTRE_TYPE_CODE
+					caption: Código del Tipo de Centro de Costos
+				column PT_COST_CENTRE_TYPE_DESC
+					caption: PT Tipo de Centro de Costo
+				column EN_COST_CENTRE_TYPE_DESC
+					caption: EN Tipo de Centro de Costo
+				column ES_COST_CENTRE_TYPE_DESC
+					caption: ES Tipo de Centro de Costo
+				column FR_COST_CENTRE_TYPE_DESC
+					caption: FR Tipo de Centro de Costo
+			table VIEW_NLR_DIM_GM_MEASURES
+				caption: DIM Indicadores Generales
+				column GM_MEASURE_CODE
+					caption: Código de la Medida GM
+				column PT_GM_MEASURE_DESC
+					caption: PT Indicadores Generales
+				column ES_GM_MEASURE_DESC
+					caption: ES Indicadores Generales
+				column EN_GM_MEASURE_DESC
+					caption: EN Indicadores Generales
+				column FR_GM_MEASURE_DESC
+					caption: FR Indicadores Generales
+				column VISIBLE_TO_CUSTOMER
+					caption: Visible al Cliente
+			table VIEW_NLR_DIM_HRE_COST_TYPES
+				caption: DIM Tipos de Costo
+				column HRE_COST_TYPE_CODE
+					caption: Código del Tipo de Costo HRE
+				column PT_HRE_COST_TYPE_LEVEL_1_DESC
+					caption: PT Tipo de Costo HRE Nivel 1
+				column PT_HRE_COST_TYPE_LEVEL_2_DESC
+					caption: PT Tipo de Costo HRE Nivel 2
+				column PT_HRE_COST_TYPE_DESC
+					caption: PT Tipo de Costo HRE
+				column ES_HRE_COST_TYPE_LEVEL_1_DESC
+					caption: ES Tipo de Costo HRE Nivel 1
+				column ES_HRE_COST_TYPE_LEVEL_2_DESC
+					caption: ES Tipo de Costo HRE Nivel 2
+				column ES_HRE_COST_TYPE_DESC
+					caption: ES Tipo de Costo HRE
+				column EN_HRE_COST_TYPE_LEVEL_1_DESC
+					caption: EN Tipo de Costo HRE Nivel 1
+				column EN_HRE_COST_TYPE_LEVEL_2_DESC
+					caption: EN Tipo de Costo HRE Nivel 2
+				column EN_HRE_COST_TYPE_DESC
+					caption: EN Tipo de Costo HRE
+				column FR_HRE_COST_TYPE_LEVEL_1_DESC
+					caption: FR Tipo de Costo HRE Nivel 1
+				column FR_HRE_COST_TYPE_LEVEL_2_DESC
+					caption: FR Tipo de Costo HRE Nivel 2
+				column FR_HRE_COST_TYPE_DESC
+					caption: FR Tipo de Costo HRE
+			table VIEW_NLR_DIM_PL_FISCAL_ES
+				caption: DIM PL Fiscal (ES)
+				column PL_FISCAL_ES_CODE
+					caption: Código Fiscal (ES)
+				column PT_PL_FISCAL_ES_LEVEL_1_DESC
+					caption: PT PL Fiscal (ES) Nivel 1
+				column PT_PL_FISCAL_ES_LEVEL_3_DESC
+					caption: PT PL Fiscal (ES) Nivel 3
+				column PT_PL_FISCAL_ES_DESC
+					caption: PT PL Fiscal (ES)
+				column ES_PL_FISCAL_ES_LEVEL_1_DESC
+					caption: ES PL Fiscal (ES) Nivel 1
+				column ES_PL_FISCAL_ES_LEVEL_2_DESC
+					caption: ES PL Fiscal (ES) Nivel 2
+				column ES_PL_FISCAL_ES_LEVEL_3_DESC
+					caption: ES PL Fiscal (ES) Nivel 3
+				column ES_PL_FISCAL_ES_DESC
+					caption: ES PL Fiscal (ES)
+				column EN_PL_FISCAL_ES_LEVEL_1_DESC
+					caption: EN PL Fiscal (ES) Nivel 1
+				column EN_PL_FISCAL_ES_LEVEL_2_DESC
+					caption: EN PL Fiscal (ES) Nivel 2
+				column EN_PL_FISCAL_ES_LEVEL_3_DESC
+					caption: EN PL Fiscal (ES) Nivel 3
+				column EN_PL_FISCAL_ES_DESC
+					caption: EN PL Fiscal (ES)
+				column FR_PL_FISCAL_ES_LEVEL_1_DESC
+					caption: FR PL Fiscal (ES) Nivel 1
+				column FR_PL_FISCAL_ES_LEVEL_2_DESC
+					caption: FR PL Fiscal (ES) Nivel 2
+				column FR_PL_FISCAL_ES_LEVEL_3_DESC
+					caption: FR PL Fiscal (ES) Nivel 3
+				column FR_PL_FISCAL_ES_DESC
+					caption: FR PL Fiscal (ES)
+				column PT_PL_FISCAL_ES_LEVEL_2_DESC
+					caption: PT PL Fiscal (ES) Nivel 2
+			table VIEW_NLR_DIM_PL_IFRS
+				caption: DIM PL IFRS
+				column PL_IFRS_CODE
+					caption: Código IFRS PL
+				column PT_PL_IFRS_LEVEL_1_DESC
+					caption: PT PL IFRS Nivel 1
+				column PT_PL_IFRS_LEVEL_2_DESC
+					caption: PT PL IFRS Nivel 2
+				column PT_PL_IFRS_LEVEL_3_DESC
+					caption: PT PL IFRS Nivel 3
+				column PT_PL_IFRS_LEVEL_4_DESC
+					caption: PT PL IFRS Nivel 4
+				column PT_PL_IFRS_DESC
+					caption: PT IFRS PL
+				column ES_PL_IFRS_LEVEL_1_DESC
+					caption: ES PL IFRS Nivel 1
+				column ES_PL_IFRS_LEVEL_2_DESC
+					caption: ES PL IFRS Nivel 2
+				column ES_PL_IFRS_LEVEL_3_DESC
+					caption: ES PL IFRS Nivel 3
+				column ES_PL_IFRS_LEVEL_4_DESC
+					caption: ES PL IFRS Nivel 4
+				column ES_PL_IFRS_DESC
+					caption: ES IFRS PL
+				column EN_PL_IFRS_LEVEL_1_DESC
+					caption: EN PL IFRS Nivel 1
+				column EN_PL_IFRS_LEVEL_2_DESC
+					caption: EN PL IFRS Nivel 2
+				column EN_PL_IFRS_LEVEL_3_DESC
+					caption: EN PL IFRS Nivel 3
+				column EN_PL_IFRS_LEVEL_4_DESC
+					caption: EN PL IFRS Nivel 4
+				column EN_PL_IFRS_DESC
+					caption: EN PL IFRS
+				column FR_PL_IFRS_LEVEL_1_DESC
+					caption: FR PL IFRS Nivel 1
+				column FR_PL_IFRS_LEVEL_2_DESC
+					caption: FR PL IFRS Nivel 2
+				column FR_PL_IFRS_LEVEL_3_DESC
+					caption: FR PL IFRS Nivel 3
+				column FR_PL_IFRS_LEVEL_4_DESC
+					caption: FR PL IFRS Nivel 4
+				column FR_PL_IFRS_DESC
+					caption: FR IFRS PL
+				column PL_IFRS_DISPLAY_ORDER
+					caption: Orden de Exhibición IFRS del PL
+				column PL_IFRS_LEVEL_1_CODE
+					caption: Código del Nivel 1 IFRS PL
+				column PL_IFRS_LEVEL_2_CODE
+					caption: Código Nivel 2 IFRS
+			table VIEW_NLR_DIM_PL
+				caption: DIM PL
+				column PL_CODE
+					caption: Código PL
+				column PL_LEVEL_1_CODE
+					caption: Código del Nivel 1 PL
+				column PT_PL_DESC
+					caption: PT PL
+				column PT_PL_LEVEL_1_DESC
+					caption: PT PL Nivel 1
+				column PT_PL_LEVEL_2_DESC
+					caption: PT PL Nivel 2
+				column PT_PL_LEVEL_3_DESC
+					caption: PT PL Nivel 3
+				column PT_PL_LEVEL_4_DESC
+					caption: PT PL Nivel 4
+				column PT_PL_LEVEL_5_DESC
+					caption: PT PL Nivel 5
+				column EN_PL_DESC
+					caption: EN PL
+				column EN_PL_LEVEL_1_DESC
+					caption: EN PL Nivel 1
+				column EN_PL_LEVEL_2_DESC
+					caption: EN PL Nivel 2
+				column EN_PL_LEVEL_3_DESC
+					caption: EN PL Nivel 3
+				column EN_PL_LEVEL_4_DESC
+					caption: EN PL Nivel 4
+				column EN_PL_LEVEL_5_DESC
+					caption: EN PL Nivel 5
+				column ES_PL_DESC
+					caption: ES PL
+				column ES_PL_LEVEL_1_DESC
+					caption: ES PL Nivel 1
+				column ES_PL_LEVEL_2_DESC
+					caption: ES PL Nivel 2
+				column ES_PL_LEVEL_3_DESC
+					caption: ES PL Nivel 3
+				column ES_PL_LEVEL_4_DESC
+					caption: ES PL Nivel 4
+				column ES_PL_LEVEL_5_DESC
+					caption: ES PL Nivel 5
+				column FR_PL_DESC
+					caption: FR PL
+				column FR_PL_LEVEL_1_DESC
+					caption: FR PL Nivel 1
+				column FR_PL_LEVEL_2_DESC
+					caption: FR PL Nivel 2
+				column FR_PL_LEVEL_3_DESC
+					caption: FR PL Nivel 3
+				column FR_PL_LEVEL_4_DESC
+					caption: FR PL Nivel 4
+				column FR_PL_LEVEL_5_DESC
+					caption: FR PL Nivel 5
+				column PL_DISPLAY_ORDER
+					caption: Orden de Visualización del PL
+				column PL_LEVEL_1_DISPLAY_ORDER
+					caption: Orden de Visualización del Nivel 1 del PL
+				column PL_LEVEL_2_DISPLAY_ORDER
+					caption: Orden de Visualización Nivel 2
+				column PL_LEVEL_3_DISPLAY_ORDER
+					caption: Orden de Visualización Nivel 3
+				column PL_LEVEL_4_DISPLAY_ORDER
+					caption: Orden de Visualización Nivel 4
+				column PL_LEVEL_5_DISPLAY_ORDER
+					caption: Orden de Visualización Nivel 5
+			table VIEW_NLR_DIM_SALES_TYPES
+				caption: DIM Tipos de Ventas
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+				column PT_SALES_TYPE_DESC
+					caption: PT Tipo de Venta
+				column EN_SALES_TYPE_DESC
+					caption: EN Tipo de Venta
+				column ES_SALES_TYPE_DESC
+					caption: ES Tipo de Venta
+				column FR_SALES_TYPE_DESC
+					caption: FR Tipo de Venta
+				column SALES_TYPE_DISPLAY_ORDER
+					caption: Orden de Visualización del Tipo de Venta
+			table VIEW_NLR_DIM_TIES
+				caption: DIM TIEs
+				column TIE_CODE
+					caption: Código TIE
+				column PT_TIE_DESC
+					caption: PT TIE
+				column EN_TIE_DESC
+					caption: EN TIE
+				column ES_TIE_DESC
+					caption: ES TIE
+				column FR_TIE_DESC
+					caption: FR TIE
+				column TIE_DISPLAY_ORDER
+					caption: Orden de Visualización de TIE
+			table VIEW_SLR_DIM_CUSTOMER_AGGREGATION
+				caption: DIM Agregaciones de Clientes
+				column CUSTOMER_AGGREGATION_CODE
+					caption: Código de Agregación del Cliente
+				column PT_CUSTOMER_AGGREGATION_DESC
+					caption: PT Agregación de Cliente
+				column ES_CUSTOMER_AGGREGATION_DESC
+					caption: ES Agregación de Cliente
+				column EN_CUSTOMER_AGGREGATION_DESC
+					caption: EN Agregación de Cliente
+				column FR_CUSTOMER_AGGREGATION_DESC
+					caption: FR Agregación de Cliente
+			table VIEW_SLR_DIM_CUSTOMER_TYPE
+				caption: DIM Tipos de Clientes
+				column CUSTOMER_TYPE_CODE
+					caption: Código de Tipo de Cliente
+				column PT_CUSTOMER_TYPE_LEVEL_1_DESC
+					caption: PT Tipo de Cliente Nivel 1
+				column PT_CUSTOMER_TYPE_DESC
+					caption: PT Tipo de Cliente
+				column ES_CUSTOMER_TYPE_LEVEL_1_DESC
+					caption: ES Tipo de Cliente Nivel 1
+				column ES_CUSTOMER_TYPE_DESC
+					caption: ES Tipo de Cliente
+				column EN_CUSTOMER_TYPE_LEVEL_1_DESC
+					caption: EN Tipo de Cliente Nivel 1
+				column EN_CUSTOMER_TYPE_DESC
+					caption: EN Tipo de Cliente
+				column FR_CUSTOMER_TYPE_LEVEL_1_DESC
+					caption: FR Tipo de Cliente Nivel 1
+				column FR_CUSTOMER_TYPE_DESC
+					caption: FR Tipo de Cliente
+				column PT_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+					caption: PT Cliente Activo
+				column ES_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+					caption: ES Cliente Activo
+				column EN_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+					caption: EN Cliente Activo
+				column FR_CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+					caption: FR Cliente Activo
+				column CUSTOMER_TYPE_DISPLAY_ORDER
+					caption: Orden Visualización Tipo Cliente
+			table VIEW_SLR_DIM_DOCUMENT_AGE_2
+				caption: DIM Antigüedad del Documento 2
+				column DOCUMENT_AGE_CODE
+					caption: Código de Antigüedad del Documento
+				column PT_DOCUMENT_AGE_DESC
+					caption: PT Antigüedad del Documento
+				column ES_DOCUMENT_AGE_DESC
+					caption: ES Antigüedad del Documento
+				column FR_DOCUMENT_AGE_DESC
+					caption: FR Antigüedad del Documento
+				column EN_DOCUMENT_AGE_DESC
+					caption: EN Antigüedad del Documento
+			table VIEW_SLR_DIM_DOCUMENT_AGE
+				caption: DIM Antigüedad del Documento
+				column DOCUMENT_AGE_CODE
+					caption: Código de Antigüedad del Documento
+				column PT_DOCUMENT_AGE_DESC
+					caption: PT Antigüedad del Documento
+				column ES_DOCUMENT_AGE_DESC
+					caption: ES Antigüedad del Documento
+				column EN_DOCUMENT_AGE_DESC
+					caption: EN Antigüedad del Documento
+				column FR_DOCUMENT_AGE_DESC
+					caption: FR Antigüedad del Documento
+			table VIEW_SLR_DIM_PAYMENT_METHODS
+				caption: DIM Métodos de Pago
+				column PAYMENT_METHOD_CODE
+					caption: Código del Método de Pago
+				column PT_PAYMENT_METHOD_DESC
+					caption: PT Método de Pago
+				column EN_PAYMENT_METHOD_DESC
+					caption: EN Método de Pago
+				column ES_PAYMENT_METHOD_DESC
+					caption: ES Método de Pago
+				column FR_PAYMENT_METHOD_DESC
+					caption: FR Método de Pago
+				column PAYMENT_METHOD_CODE_DMS
+					caption: Código del Método de Pago DMS
+				column PAYMENT_METHOD_KEY
+					caption: Clave del Método de Pago
+				column PT_PAYMENT_METHOD_SOURCE
+					caption: PT Fuente del Método de Pago
+				column EN_PAYMENT_METHOD_SOURCE
+					caption: EN Fuente del Método de Pago
+				column ES_PAYMENT_METHOD_SOURCE
+					caption: ES Fuente del Método de Pago
+				column FR_PAYMENT_METHOD_SOURCE
+					caption: FR Fuente del Método de Pago
+			table PARAMETER_VIEW_GBL_DIM_CALENDAR
+				caption: Calendario
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column YEAR
+					caption: Año
+				column CURRENT_YEAR
+					caption: Año Actual
+				column YEAR_MONTH_SHORT_DESC
+					caption: Año-Mes
+				column MONTH_DESC
+					caption: Mes
+			table PARAMETER_VIEW_NLR_DIM_PL
+				caption: PL
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column PL_DESC
+					caption: PL
+				column PL_LEVEL_1_DESC
+					caption: PL Nivel 1
+				column PL_LEVEL_2_DESC
+					caption: PL Nivel 2
+				column PL_LEVEL_3_DESC
+					caption: PL Nivel 3
+				column PL_LEVEL_4_DESC
+					caption: PL Nivel 4
+				column PL_LEVEL_5_DESC
+					caption: PL Nivel 5
+			table PARAMETER_VIEW_NLR_DIM_COMPANIES
+				caption: Empresas
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column COMPANY_DESC
+					caption: Empresa
+				column COMPANY_LEVEL_1_DESC
+					caption: Empresa Nivel 1
+				column COMPANY_LEVEL_2_DESC
+					caption: Empresa Nivel 2
+				column COMPANY_LEVEL_3_DESC
+					caption: Empresa Nivel 3
+			table PARAMETER_VIEW_GBL_DIM_SITES
+				caption: Sitios
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SITE_DESC
+					caption: Sitio
+				column SITE_LEVEL_1_DESC
+					caption: Sitio Nivel 1
+				column SITE_LEVEL_2_DESC
+					caption: Sitio Nivel 2
+				column SITE_LEVEL_3_DESC
+					caption: Sitio Nivel 3
+				column SITE_LEVEL_4_DESC
+					caption: Sitio Nivel 4
+			table PARAMETER_VIEW_NLR_DIM_ACTIVITIES
+				caption: Actividades
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column ACTIVITY_DESC
+					caption: Actividad
+				column ACTIVITY_LEVEL_1_DESC
+					caption: Actividad Nivel 1
+				column ACTIVITY_LEVEL_2_DESC
+					caption: Actividad Nivel 2
+				column ACTIVITY_LEVEL_3_DESC
+					caption: Actividad Nivel 3
+			table PARAMETER_VIEW_NLR_DIM_SALES_TYPES
+				caption: Tipos de Ventas
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SALES_TYPE_DESC
+					caption: Tipo de Venta
+			table PARAMETER_VIEW_GBL_DIM_FRANCHISES
+				caption: Franquicias
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column FRANCHISE_DESC
+					caption: Franquicia
+			table PARAMETER_VIEW_NLR_DIM_COST_CENTRE_TYPES
+				caption: Tipos de Centro de Costo
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column COST_CENTRE_TYPE_DESC
+					caption: Tipo de Centro de Costo
+			table PARAMETER_VIEW_NLR_DIM_TIES
+				caption: TIEs
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column TIE_DESC
+					caption: TIE
+			table PARAMETER_VIEW_GBL_DIM_VALUE_TYPES_ALL
+				caption: Tipos de Valor
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_DESC
+					caption: Tipo de Valor
+			table PARAMETER_VIEW_GBL_SETUP_DESCRIPTIONS
+				caption: Descripciones
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column DESCRIPTION
+					caption: Descripción
+				column TRANSLATION
+					caption: Traducción
+			table PARAMETER_VIEW_HRE_DIM_CATEGORIES
+				caption: Categorías
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column CATEGORY_DESC
+					caption: Categoría
+				column CATEGORY_LEVEL_1_DESC
+					caption: Categoría Nivel 1
+				column CATEGORY_LEVEL_2_DESC
+					caption: Categoría Nivel 2
+			table PARAMETER_VIEW_HRE_DIM_FUNCTIONAL_CATEGORIES
+				caption: Categorías Funcionales
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column FUNCTIONAL_CATEGORY_DESC
+					caption: Categoría Funcional
+			table PARAMETER_VIEW_HRE_DIM_INTERNAL_CATEGORIES
+				caption: Categorías Internas
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column INTERNAL_CATEGORY_DESC
+					caption: Categoría Interna
+				column INTERNAL_CATEGORY_LEVEL_1_DESC
+					caption: Categoría Interna Nivel 1
+			table PARAMETER_VIEW_NLR_DIM_BL_FISCAL_ES
+				caption: BL Fiscal (ES)
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column BL_FISCAL_ES_DESC
+					caption: Fiscal (ES)
+				column BL_FISCAL_ES_LEVEL_1_DESC
+					caption: BL Fiscal (ES) Nivel 1
+				column BL_FISCAL_ES_LEVEL_2_DESC
+					caption: BL Fiscal (ES) Nivel 2
+				column BL_FISCAL_ES_LEVEL_3_DESC
+					caption: BL Fiscal (ES) Nivel 3
+				column BL_FISCAL_ES_LEVEL_4_DESC
+					caption: BL Fiscal (ES) Nivel 4
+			table PARAMETER_VIEW_NLR_DIM_BL_IFRS
+				caption: BL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column BL_IFRS_DESC
+					caption: IFRS
+				column BL_IFRS_LEVEL_1_DESC
+					caption: BL IFRS Nivel 1
+				column BL_IFRS_LEVEL_2_DESC
+					caption: BL IFRS Nivel 2
+				column BL_IFRS_LEVEL_3_DESC
+					caption: BL IFRS Nivel 3
+				column BL_IFRS_LEVEL_4_DESC
+					caption: BL IFRS Nivel 4
+			table PARAMETER_VIEW_NLR_DIM_CASH_FLOW
+				caption: Flujo de Caja
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column CF_DESC
+					caption: Flujo de Caja
+				column CF_LEVEL_1_DESC
+					caption: Flujo de Caja Nivel 1
+			table PARAMETER_VIEW_NLR_DIM_GM_MEASURES
+				caption: Indicadores Generales
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column GM_MEASURE_DESC
+					caption: Indicadores Generales
+			table PARAMETER_VIEW_NLR_DIM_HRE_COST_TYPES
+				caption: Tipos de Costo
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column HRE_COST_TYPE_DESC
+					caption: Tipo de Costo HRE
+				column HRE_COST_TYPE_LEVEL_1_DESC
+					caption: Tipo de Costo HRE Nivel 1
+				column HRE_COST_TYPE_LEVEL_2_DESC
+					caption: Tipo de Costo HRE Nivel 2
+			table PARAMETER_VIEW_NLR_DIM_PL_FISCAL_ES
+				caption: PL Fiscal (ES)
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column PL_FISCAL_ES_DESC
+					caption: PL Fiscal (ES)
+				column PL_FISCAL_ES_LEVEL_1_DESC
+					caption: PL Fiscal (ES) Nivel 1
+				column PL_FISCAL_ES_LEVEL_2_DESC
+					caption: PL Fiscal (ES) Nivel 2
+				column PL_FISCAL_ES_LEVEL_3_DESC
+					caption: PL Fiscal (ES) Nivel 3
+			table PARAMETER_VIEW_NLR_DIM_PL_IFRS
+				caption: PL IFRS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column PL_IFRS_DESC
+					caption: IFRS PL
+				column PL_IFRS_LEVEL_1_DESC
+					caption: PL IFRS Nivel 1
+				column PL_IFRS_LEVEL_2_DESC
+					caption: PL IFRS Nivel 2
+				column PL_IFRS_LEVEL_3_DESC
+					caption: PL IFRS Nivel 3
+				column PL_IFRS_LEVEL_4_DESC
+					caption: PL IFRS Nivel 4
+			table PARAMETER_VIEW_NLR_DIM_SYTNER_BL
+				caption: Sytner BL
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SYTNER_BL_DESC
+					caption: Sytner BL
+				column SYTNER_BL_LEVEL_1_DESC
+					caption: Sytner BL Nivel 1
+				column SYTNER_BL_LEVEL_2_DESC
+					caption: Sytner BL Nivel 2
+			table PARAMETER_VIEW_NLR_DIM_SYTNER_PL
+				caption: Sytner PL
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SYTNER_PL_DESC
+					caption: Sytner PL
+				column SYTNER_PL_LEVEL_1_DESC
+					caption: Sytner PL Nivel 1
+				column SYTNER_PL_LEVEL_2_DESC
+					caption: Sytner PL Nivel 2
+			table PARAMETER_VIEW_NLR_DIM_SYTNER_PL_DETAIL
+				caption: Sytner PL Detalle
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SYTNER_PL_DETAIL_LEVEL_1_DESC
+					caption: Sytner PL Detalle Nivel 1
+				column SYTNER_PL_DETAIL_LEVEL_2_DESC
+					caption: Sytner PL Detalle Nivel 2
+				column SYTNER_PL_DETAIL_LEVEL_3_DESC
+					caption: Sytner PL Detalle Nivel 3
+				column SYTNER_PL_DETAIL_LEVEL_4_DESC
+					caption: Sytner PL Detalle Nivel 4
+			table PARAMETER_VIEW_SLR_DIM_CUSTOMER_AGGREGATION
+				caption: Agregaciones de Clientes
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column CUSTOMER_AGGREGATION_DESC
+					caption: Agregación de Cliente
+			table PARAMETER_VIEW_SLR_DIM_CUSTOMER_TYPE
+				caption: Tipos de Clientes
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column CUSTOMER_TYPE_DESC
+					caption: Tipo de Cliente
+				column CUSTOMER_TYPE_LEVEL_1_DESC
+					caption: Tipo de Cliente Nivel 1 Nivel 1
+				column CUSTOMER_TYPE_ACTIVE_CUSTOMER_DESC
+					caption: Cliente Activo
+			table PARAMETER_VIEW_SLR_DIM_DOCUMENT_AGE
+				caption: Antigüedad del Documento
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column DOCUMENT_AGE_DESC
+					caption: Antigüedad del Documento
+			table PARAMETER_VIEW_SLR_DIM_DOCUMENT_AGE_2
+				caption: Antigüedad del Documento 2
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column DOCUMENT_AGE_DESC
+					caption: Antigüedad del Documento
+			table PARAMETER_VIEW_SLR_DIM_PAYMENT_METHODS
+				caption: Métodos de Pago
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column PAYMENT_METHOD_DESC
+					caption: Método de Pago
+				column PAYMENT_METHOD_SOURCE
+					caption: Fuente del Método de Pago
+			table VIEW_VHE_DIM_VEHICLE_CLASSES
+				caption: DIM Clases de Vehículos
+				column VEHICLE_CLASS_CODE
+					caption: Código de la Clase del Vehículo
+				column PT_VEHICLE_CLASS_DESC
+					caption: PT Clase del Vehículo
+				column EN_VEHICLE_CLASS_DESC
+					caption: EN Clase del Vehículo
+				column ES_VEHICLE_CLASS_DESC
+					caption: ES Clase del Vehículo
+				column FR_VEHICLE_CLASS_DESC
+					caption: FR Clase del Vehículo
+			table VIEW_VHE_DIM_REGISTRATION_AGE
+				caption: DIM Antigüedad del Registro
+				column REGISTRATION_AGE_CODE
+					caption: Código de la Antigüedad de Registro
+				column PT_REGISTRATION_AGE_DESC
+					caption: PT Antigüedad de Registro
+				column EN_REGISTRATION_AGE_DESC
+					caption: EN Antigüedad de Registro
+				column ES_REGISTRATION_AGE_DESC
+					caption: ES Antigüedad de Registro
+				column FR_REGISTRATION_AGE_DESC
+					caption: FR Antigüedad de Registro
+			table VIEW_VHE_DIM_STOCK_AGE
+				caption: DIM Antigüedad del Inventario
+				column STOCK_AGE_CODE
+					caption: Código de la Antigüedad de Stock
+				column PT_STOCK_AGE_DESC
+					caption: PT Antigüedad de Stock
+				column EN_STOCK_AGE_DESC
+					caption: EN Antigüedad de Stock
+				column ES_STOCK_AGE_DESC
+					caption: ES Antigüedad de Stock
+				column FR_STOCK_AGE_DESC
+					caption: FR Antigüedad de Stock
+			table VIEW_VHE_DIM_ACCOUNTING_REFLECT
+				caption: DIM Contabilidad Reflejada
+				column ACCOUNTING_REFLECT_CODE
+					caption: Código de Reflexión Contable
+				column PT_ACCOUNTING_REFLECT_DESC
+					caption: PT Reflexión Contable
+				column EN_ACCOUNTING_REFLECT_DESC
+					caption: EN Reflexión Contable
+				column ES_ACCOUNTING_REFLECT_DESC
+					caption: ES Reflexión Contable
+				column FR_ACCOUNTING_REFLECT_DESC
+					caption: FR Reflexión Contable
+			table VIEW_VHE_DIM_VEHICLE_TYPES
+				caption: DIM Tipos de Vehículos
+				column VHE_TYPE
+					caption: Tipo de Vehículo
+				column PT_VHE_TYPE_DESC
+					caption: PT Tipo de Vehículo
+				column EN_VHE_TYPE_DESC
+					caption: EN Tipo de Vehículo
+				column ES_VHE_TYPE_DESC
+					caption: ES Tipo de Vehículo
+				column FR_VHE_TYPE_DESC
+					caption: FR Tipo de Vehículo
+			table VIEW_VHE_DIM_FUEL_TYPES
+				caption: DIM Tipos de Combustibles
+				column FUEL_TYPE_CODE
+					caption: Código del Tipo de Combustible
+				column PT_FUEL_TYPE_DESC
+					caption: PT Tipo de Combustible
+				column EN_FUEL_TYPE_DESC
+					caption: EN Tipo de Combustible
+				column ES_FUEL_TYPE_DESC
+					caption: ES Tipo de Combustible
+				column FR_FUEL_TYPE_DESC
+					caption: FR Tipo de Combustible
+			table VIEW_VHE_DIM_MODELS
+				caption: DIM Modelos
+				column MODEL_CODE
+					caption: Código del Modelo
+				column PT_MODEL_LEVEL_1_DESC
+					caption: PT Modelo Nivel 1
+				column PT_MODEL_DESC
+					caption: PT Modelo
+				column EN_MODEL_LEVEL_1_DESC
+					caption: EN Modelo Nivel 1
+				column EN_MODEL_DESC
+					caption: EN Modelo
+				column ES_MODEL_LEVEL_1_DESC
+					caption: ES Modelo Nivel 1
+				column ES_MODEL_DESC
+					caption: ES Modelo
+				column FR_MODEL_LEVEL_1_DESC
+					caption: FR Modelo Nivel 1
+				column FR_MODEL_DESC
+					caption: FR Modelo
+			table VIEW_VHE_DIM_SOURCES
+				caption: DIM Fuentes
+				column SOURCE_CODE
+					caption: Código de la Fuente
+				column PT_SOURCE_LEVEL_1_DESC
+					caption: PT Fuente Nivel 1
+				column PT_SOURCE_LEVEL_2_DESC
+					caption: PT Fuente Nivel 2
+				column PT_SOURCE_DESC
+					caption: PT Fuente
+				column EN_SOURCE_LEVEL_1_DESC
+					caption: EN Fuente Nivel 1
+				column EN_SOURCE_LEVEL_2_DESC
+					caption: EN Fuente Nivel 2
+				column EN_SOURCE_DESC
+					caption: EN Fuente
+				column ES_SOURCE_LEVEL_1_DESC
+					caption: ES Fuente Nivel 1
+				column ES_SOURCE_LEVEL_2_DESC
+					caption: ES Fuente Nivel 2
+				column ES_SOURCE_DESC
+					caption: ES Fuente
+				column FR_SOURCE_LEVEL_1_DESC
+					caption: FR Fuente Nivel 1
+				column FR_SOURCE_LEVEL_2_DESC
+					caption: FR Fuente Nivel 2
+				column FR_SOURCE_DESC
+					caption: FR Fuente
+			table VIEW_VHE_DIM_STATUS_1
+				caption: DIM Estados
+				column STATUS_CODE
+					caption: Código de Estado
+				column PT_STATUS_LEVEL_1_DESC
+					caption: PT Estado Nivel 1
+				column PT_STATUS_LEVEL_2_DESC
+					caption: PT Estado Nivel 2
+				column PT_STATUS_DESC
+					caption: PT Estado
+				column EN_STATUS_LEVEL_1_DESC
+					caption: EN Estado Nivel 1
+				column EN_STATUS_LEVEL_2_DESC
+					caption: EN Estado Nivel 2
+				column EN_STATUS_DESC
+					caption: EN Estado
+				column ES_STATUS_LEVEL_1_DESC
+					caption: ES Estado Nivel 1
+				column ES_STATUS_LEVEL_2_DESC
+					caption: ES Estado Nivel 2
+				column ES_STATUS_DESC
+					caption: ES Estado
+				column FR_STATUS_LEVEL_1_DESC
+					caption: FR Estado Nivel 1
+				column FR_STATUS_LEVEL_2_DESC
+					caption: FR Estado Nivel 2
+				column FR_STATUS_DESC
+					caption: FR Estado
+			table VIEW_VHE_DIM_DESTINATION_USAGE
+				caption: DIM Uso Destino
+				column DESTINATION_USAGE_CODE
+					caption: Código de Uso de Destino
+				column PT_DESTINATION_USAGE_LEVEL_1_DESC
+					caption: PT Uso de Destino Nivel 1
+				column PT_DESTINATION_USAGE_DESC
+					caption: PT Uso de Destino
+				column ES_DESTINATION_USAGE_LEVEL_1_DESC
+					caption: ES Uso de Destino Nivel 1
+				column ES_DESTINATION_USAGE_DESC
+					caption: ES Uso de Destino
+				column EN_DESTINATION_USAGE_LEVEL_1_DESC
+					caption: EN Uso de Destino Nivel 1
+				column EN_DESTINATION_USAGE_DESC
+					caption: EN Uso de Destino
+				column FR_DESTINATION_USAGE_LEVEL_1_DESC
+					caption: FR Uso de Destino Nivel 1
+				column FR_DESTINATION_USAGE_DESC
+					caption: FR Uso de Destino
+			table VIEW_GBL_DIM_EXCEPTIONS
+				caption: DIM Excepciones
+				column EXCEPTION_CODE
+					caption: Código de Excepción
+				column PT_EXCEPTION_DESC
+					caption: PT Excepción
+				column EN_EXCEPTION_DESC
+					caption: EN Excepción
+				column ES_EXCEPTION_DESC
+					caption: ES Excepción
+				column FR_EXCEPTION_DESC
+					caption: FR Excepción
+			table VIEW_VHE_FACT_SALES
+				caption: FT VHE Sales
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column VHE_TYPE
+					caption: Tipo de Vehículo
+				column SLR_DOCUMENT_DATE
+					caption: Fecha del Documento SLR
+				column ACTUAL_DELIVERY_DATE
+					caption: Fecha de Entrega Real
+				column SOURCE_CODE
+					caption: Código de la Fuente
+				column ENVIRONMENT
+					caption: Ambiente
+				column VHE_NUMBER
+					caption: Número del Vehículo
+				column SLR_DOCUMENT
+					caption: Documento SLR
+				column REGISTRATION_NUMBER
+					caption: Número de Registro
+				column CUSTOMER_TYPE_CODE
+					caption: Código de Tipo de Cliente
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column MODEL_CODE
+					caption: Código del Modelo
+				column VEHICLE_CLASS_CODE
+					caption: Código de la Clase del Vehículo
+				column ACCOUNTING_REFLECT_CODE
+					caption: Código de Reflexión Contable
+				column STOCK_AGE_CODE
+					caption: Código de la Antigüedad de Stock
+				column REGISTRATION_AGE_CODE
+					caption: Código de la Antigüedad de Registro
+				column MEASURE_CODE
+					caption: Código de la Medida
+				column VALUE
+					caption: Valor
+				column FUEL_TYPE_CODE
+					caption: Código del Tipo de Combustible
+				column SALESMEN_FRANCHISE_CODE
+					caption: Código de la Franquicia del Vendedor
+				column SALESMEN_ACTIVITY_CODE
+					caption: Código de Actividad del Vendedor
+				column SALESMEN_RESULT
+					caption: Resultado del Vendedor
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+			table VIEW_VHE_FACT_SALES_BUDGET
+				caption: FT VHE Sales Budget
+				column CLIENT_ID
+					caption: ID del Cliente
+				column NLR_CODE
+					caption: Código NLR
+				column VHE_TYPE
+					caption: Tipo de Vehículo
+				column SLR_DOCUMENT_DATE
+					caption: Fecha del Documento SLR
+				column ACTUAL_DELIVERY_DATE
+					caption: Fecha de Entrega Real
+				column SOURCE_CODE
+					caption: Código de la Fuente
+				column FUEL_TYPE_CODE
+					caption: Código del Tipo de Combustible
+				column CUSTOMER_TYPE_CODE
+					caption: Código de Tipo de Cliente
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column MODEL_CODE
+					caption: Código del Modelo
+				column ACCOUNTING_REFLECT_CODE
+					caption: Código de Reflexión Contable
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column VEHICLE_CLASS_CODE
+					caption: Código de la Clase del Vehículo
+				column STOCK_AGE_CODE
+					caption: Código de la Antigüedad de Stock
+				column REGISTRATION_AGE_CODE
+					caption: Código de la Antigüedad de Registro
+				column ENVIRONMENT
+					caption: Ambiente
+				column SELL_LOCATION_CODE
+					caption: Código de Local de Venta
+				column VARIANT_CODE
+					caption: Código de la Variante
+				column COMMISSION
+					caption: Comisión
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+				column GENERIC_COLOUR_CODE
+					caption: Código de Color Genérico
+				column MEASURE_TYPE
+					caption: Tipo de Medida
+				column MEASURE_CODE
+					caption: Código de la Medida
+				column VALUE
+					caption: Valor
+			table PARAMETER_VIEW_VHE_DIM_VEHICLE_CLASSES
+				caption: Clases de Vehículos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VEHICLE_CLASS_DESC
+					caption: Clase del Vehículo
+			table PARAMETER_VIEW_VHE_DIM_REGISTRATION_AGE
+				caption: Antigüedad del Registro
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column REGISTRATION_AGE_DESC
+					caption: Antigüedad de Registro
+			table PARAMETER_VIEW_VHE_DIM_STOCK_AGE
+				caption: Antigüedad del Inventario
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column STOCK_AGE_DESC
+					caption: Antigüedad de Stock
+			table PARAMETER_VIEW_VHE_DIM_ACCOUNTING_REFLECT
+				caption: Contabilidad Reflejada
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column ACCOUNTING_REFLECT_DESC
+					caption: Reflexión Contable
+			table PARAMETER_VIEW_VHE_DIM_VEHICLE_TYPES
+				caption: Tipos de Vehículos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VHE_TYPE_DESC
+					caption: Tipo de Vehículo
+			table PARAMETER_VIEW_VHE_DIM_FUEL_TYPES
+				caption: Tipos de Combustibles
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column FUEL_TYPE_DESC
+					caption: Tipo de Combustible
+			table PARAMETER_VIEW_VHE_DIM_MODELS
+				caption: Modelos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column MODEL_DESC
+					caption: Modelo
+				column MODEL_LEVEL_1_DESC
+					caption: Modelo Nivel 1
+			table PARAMETER_VIEW_VHE_DIM_SOURCES
+				caption: Fuentes
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SOURCE_DESC
+					caption: Fuente
+				column SOURCE_LEVEL_1_DESC
+					caption: Fuente Nivel 1
+				column SOURCE_LEVEL_2_DESC
+					caption: Fuente Nivel 2
+			table PARAMETER_VIEW_VHE_DIM_STATUS_1
+				caption: Estados
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column STATUS_DESC
+					caption: Estado
+				column STATUS_LEVEL_1_DESC
+					caption: Estado Nivel 1
+				column STATUS_LEVEL_2_DESC
+					caption: Estado Nivel 2
+			table PARAMETER_VIEW_VHE_DIM_DESTINATION_USAGE
+				caption: Uso de Destino
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column DESTINATION_USAGE_DESC
+					caption: Uso de Destino
+				column DESTINATION_USAGE_LEVEL_1_DESC
+					caption: Uso de Destino Nivel 1
+			table PARAMETER_VIEW_GBL_DIM_EXCEPTIONS
+				caption: Excepciones
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column EXCEPTION_DESC
+					caption: Excepción
+			table PARAMETER_VHE_SALES_FIELDS
+				caption: Campos Ventas de Vehículos
+				column PARAMETER_VHE_FIELDS
+					caption: Parámetros de Campos de VHE
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VIEW_VHE_DIM_SALES_TYPES
+				caption: Tipos de Ventas
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SALES_TYPE_DESC
+					caption: Tipo de Venta
+				column SALES_TYPE_LEVEL_1_DESC
+					caption: Tipo de Venta Nivel 1
+			table VIEW_VHE_DIM_SALES_TYPES
+				caption: DIM Tipos de Ventas
+				column SALES_TYPE_CODE
+					caption: Código de Tipo de Venta
+				column PT_SALES_TYPE_LEVEL_1_DESC
+					caption: PT Tipo de Venta Nivel 1
+				column PT_SALES_TYPE_DESC
+					caption: PT Tipo de Venta
+				column PT_SALES_TYPE_GROUP
+					caption: PT Grupo del Tipo de Venta
+				column ES_SALES_TYPE_LEVEL_1_DESC
+					caption: ES Tipo de Venta Nivel 1
+				column ES_SALES_TYPE_DESC
+					caption: ES Tipo de Venta
+				column ES_SALES_TYPE_GROUP
+					caption: ES Grupo del Tipo de Venta
+				column EN_SALES_TYPE_LEVEL_1_DESC
+					caption: EN Tipo de Venta Nivel 1
+				column EN_SALES_TYPE_DESC
+					caption: EN Tipo de Venta
+				column EN_SALES_TYPE_GROUP
+					caption: EN Grupo del Tipo de Venta
+				column FR_SALES_TYPE_LEVEL_1_DESC
+					caption: FR Tipo de Venta Nivel 1
+				column FR_SALES_TYPE_DESC
+					caption: FR Tipo de Venta
+				column FR_SALES_TYPE_GROUP
+					caption: FR Grupo del Tipo de Venta
+				column SALES_TYPE_DISPLAY_ORDER
+					caption: Orden de Visualización del Tipo de Venta
+			table VIEW_NLR_SETUP_SYTNER_PL_CALC_CATEGORIES
+				caption: Sytner PL Categorías Calculadas
+				column SYTNER_PL_CODE
+					caption: Código Sytner PL
+				column SYTNER_PL_CODE_SOURCE_FOR_CALCULATION
+					caption: Código de Fuente para Cálculo del Sytner PL
+			table VIEW_NLR_DIM_SYTNER_PL_BRIDGE
+				caption: DIM Sytner PL Puente
+				column SYTNER_PL_CODE
+					caption: Código Sytner PL
+			table VIEW_NLR_DIM_SYTNER_PL_KPIS
+				caption: DIM Sytner PL KPIs
+				column SYTNER_PL_KPI_CODE
+					caption: Código de KPI del Sytner PL
+				column PT_SYTNER_PL_KPI_DESC
+					caption: PT Sytner PL KPI
+				column EN_SYTNER_PL_KPI_DESC
+					caption: EN Sytner PL KPI
+				column ES_SYTNER_PL_KPI_DESC
+					caption: ES Sytner PL KPI
+				column FR_SYTNER_PL_KPI_DESC
+					caption: FR Sytner PL KPI
+			table PARAMETER_VIEW_NLR_DIM_SYTNER_PL_KPIS
+				caption: Sytner PL KPIs
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SYTNER_PL_KPI_DESC
+					caption: Sytner PL KPI
+			table VIEW_SLR_DIM_CUSTOMER_GROUPS
+				caption: DIM Grupos de Clientes
+				column CUSTOMER_GROUP_CODE
+					caption: Código de Grupo de Cliente
+				column CUSTOMER_GROUP_LEVEL_1_CODE
+					caption: Código del Nivel 1 del Grupo de Clientes
+				column PT_CUSTOMER_GROUP_LEVEL_1_DESC
+					caption: PT Grupo de Clientes Nivel 1
+				column PT_CUSTOMER_GROUP_DESC
+					caption: PT Grupo de Clientes
+				column ES_CUSTOMER_GROUP_LEVEL_1_DESC
+					caption: ES Grupo de Clientes Nivel 1
+				column ES_CUSTOMER_GROUP_DESC
+					caption: ES Grupo de Clientes
+				column EN_CUSTOMER_GROUP_LEVEL_1_DESC
+					caption: EN Grupo de Clientes Nivel 1
+				column EN_CUSTOMER_GROUP_DESC
+					caption: EN Grupo de Clientes
+				column FR_CUSTOMER_GROUP_LEVEL_1_DESC
+					caption: FR Grupo de Clientes Nivel 1
+				column FR_CUSTOMER_GROUP_DESC
+					caption: FR Grupo de Clientes
+			table PARAMETER_VIEW_SLR_DIM_CUSTOMER_GROUPS
+				caption: Grupos de Clientes
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column CUSTOMER_GROUP_DESC
+					caption: Grupo de Clientes
+				column CUSTOMER_GROUP_LEVEL_1_DESC
+					caption: Grupo de Clientes Nivel 1
+			table VIEW_NLR_DIM_PL_IFRS_BRIDGE
+				caption: DIM PL IFRS Puente
+				column PL_IFRS_CODE
+					caption: Código IFRS PL
+			table VIEW_NLR_DIM_PL_BRIDGE
+				caption: DIM PL Puente
+				column PL_CODE
+					caption: Código PL
+			table VIEW_VHE_DIM_MEASURES
+				caption: DIM Indicadores
+				column MEASURE_CODE
+					caption: Código de la Medida
+				column MEASURE_HIDDEN
+					caption: Medida Oculta
+				column FORMAT_TYPE
+					caption: Tipo de Formato
+			table PARAMETER_VIEW_VHE_DIM_MEASURES
+				caption: Indicadores
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column MEASURE_LEVEL_1_DESC
+					caption: Medida
+			table PARAMETER_VHE_SALES_MEASURES
+				caption: Indicadores - Ventas de Vehículos
+				column PARAMETER_VHE_SALES_MEASURES
+					caption: Indicadores - Ventas de Vehículos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table PARAMETER_VHE_SALES_INDICADORES
+				caption: PARAM Indicadores - Ventas de Vehículos
+				column Id
+					caption: Id
+				column Indicador
+					caption: Indicador
+				column Medida
+					caption: Medida
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column VALUE_TYPE_CODE
+					caption: Código del Tipo de Valor
+			table VIEW_NLR_DIM_CLOSED_PERIODS
+				caption: Períodos Cerrados
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+				column PT_CLOSED_PERIOD_DESC
+					caption: PT Período Cerrado
+				column EN_CLOSED_PERIOD_DESC
+					caption: EN Período Cerrado
+				column ES_CLOSED_PERIOD_DESC
+					caption: ES Período Cerrado
+				column FR_CLOSED_PERIOD_DESC
+					caption: FR Período Cerrado
+				column CLOSED_PERIOD_TEXT
+					caption: Texto del Período Cerrado
+			table VIEW_PLR_FACT_OPEN_DOCUMENTS
+				caption: FT PLR Open Documents
+				column CONTROL_ACCOUNT_KEY
+					caption: Clave de la Cuenta de Control
+				column NLR_CODE
+					caption: Código NLR
+				column PLR_ACCOUNT
+					caption: Cuenta PLR
+				column SUPPLIER_AGGREGATION_CODE
+					caption: Código de Agregación de Proveedor
+				column SUPPLIER_GROUP_CODE
+					caption: Código del Grupo de Proveedores
+				column SITE_KEY
+					caption: Clave del Sitio
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column ACTIVITY_CODE
+					caption: Código de Actividad
+				column DOCUMENT_DATE
+					caption: Fecha del Documento
+				column DOCUMENT_MONTH
+					caption: Mes del Documento
+				column DOCUMENT_YEAR
+					caption: Año del Documento
+				column DUE_DATE
+					caption: Fecha de Vencimiento
+				column DUE_MONTH
+					caption: Mes de Vencimiento
+				column DUE_YEAR
+					caption: Año de Vencimiento
+				column PENDING_DATE
+					caption: Fecha Pendiente
+				column OPEN_VALUE
+					caption: Valor Abierto
+				column DOCUMENT_AGE_CODE
+					caption: Código de Antigüedad del Documento
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+				column CLOSED_PERIOD
+					caption: Período Cerrado
+			table VIEW_PLR_DIM_SUPPLIER_GROUPS
+				caption: DIM Grupos de Proveedores
+				column SUPPLIER_GROUP_CODE
+					caption: Código del Grupo de Proveedores
+				column PT_SUPPLIER_GROUP_LEVEL_1_DESC
+					caption: PT Grupo de Proveedores Nivel 1
+				column PT_SUPPLIER_GROUP_DESC
+					caption: PT Grupo de Proveedores
+				column EN_SUPPLIER_GROUP_LEVEL_1_DESC
+					caption: EN Grupo de Proveedores Nivel 1
+				column EN_SUPPLIER_GROUP_DESC
+					caption: EN Grupo de Proveedores
+				column ES_SUPPLIER_GROUP_LEVEL_1_DESC
+					caption: ES Grupo de Proveedores Nivel 1
+				column ES_SUPPLIER_GROUP_DESC
+					caption: ES Grupo de Proveedores
+				column FR_SUPPLIER_GROUP_LEVEL_1_DESC
+					caption: FR Grupo de Proveedores Nivel 1
+				column FR_SUPPLIER_GROUP_DESC
+					caption: FR Grupo de Proveedores
+			table PARAMETER_VIEW_PLR_DIM_SUPPLIER_GROUPS
+				caption: Grupos de Proveedores
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column SUPPLIER_GROUP_DESC
+					caption: Grupo de Proveedores
+				column SUPPLIER_GROUP_LEVEL_1_DESC
+					caption: Grupo de Proveedores Nivel 1
+			table PARAMETER_DEBT_SUPPLIER_FIELDS
+				caption: Campos Antigüedad de Saldos Proveedores
+				column PARAMETER_DEBT_SUPPLIER_FIELDS
+					caption: Campos Antigüedad de Saldos Proveedores
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_VHE_FACT_STOCK_MONTH
+				caption: FT VHE Stock Month
+				column CLIENT_ID
+					caption: ID del Cliente
+				column ENVIRONMENT
+					caption: Ambiente
+				column STOCK_DATE
+					caption: Fecha de Inventario
+				column PURCHASE_DATE
+					caption: Fecha de Compra
+				column NLR_CODE
+					caption: Código NLR
+				column VHE_TYPE
+					caption: Tipo de Vehículo
+				column FRANCHISE_CODE
+					caption: Código de la Franquicia
+				column MODEL_CODE
+					caption: Código del Modelo
+				column VEHICLE_CLASS
+					caption: Clase de Vehículo
+				column SOURCE_CODE
+					caption: Código de la Fuente
+				column MEASURE_TYPE
+					caption: Tipo de Medida
+				column MEASURE_CODE
+					caption: Código de la Medida
+				column VALUE
+					caption: Valor
+				column DESTINATION_USAGE_CODE
+					caption: Código de Uso de Destino
+				column SITE_KEY
+					caption: Clave del Sitio
+				column CURRENCY_RATE_KEY
+					caption: Clave de la Tasa de Cambio
+				column OBJSECURED_ID
+					caption: ID del Objeto Asegurado
+			table PARAMETER_VHE_PURCHASE_MEASURES
+				caption: Indicadores - Compras de Vehículos
+				column PARAMETER_VHE_PURCHASE_MEASURE
+					caption: Parámetro de Medida de Compra de Vehículo
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VHE_PURCHASE_FIELDS
+				caption: Campos Compras de Vehículos
+				column PARAMETER_VHE_PURCHASE_FIELDS
+					caption: Campos Compras de Vehículos
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table VIEW_GBL_DIM_CALENDAR_SECONDARY
+				caption: DIM Calendario Secundario
+				column DATE
+					caption: Fecha
+				column DAY
+					caption: Día
+				column WORKING_DAY
+					caption: Día Laboral
+				column MONTH
+					caption: Mes
+				column PT_MONTH_DESC
+					caption: PT Mes
+				column EN_MONTH_DESC
+					caption: EN Mes
+				column ES_MONTH_DESC
+					caption: ES Mes
+				column FR_MONTH_DESC
+					caption: FR Mes
+				column YEAR_MONTH
+					caption: Año-Mes
+				column PT_YEAR_MONTH_SHORT_DESC
+					caption: PT Año-Mes
+				column EN_YEAR_MONTH_SHORT_DESC
+					caption: EN Año-Mes
+				column ES_YEAR_MONTH_SHORT_DESC
+					caption: ES Año-Mes
+				column FR_YEAR_MONTH_SHORT_DESC
+					caption: FR Año-Mes
+				column YEAR
+					caption: Año
+				column PT_CURRENT_YEAR
+					caption: PT Año Actual
+				column EN_CURRENT_YEAR
+					caption: EN Año Actual
+				column ES_CURRENT_YEAR
+					caption: ES Año Actual
+				column FR_CURRENT_YEAR
+					caption: FR Año Actual
+				column PT_MONTH_SHORT_DESC
+					caption: PT Mes
+				column EN_MONTH_SHORT_DESC
+					caption: EN Mes
+				column ES_MONTH_SHORT_DESC
+					caption: ES Mes
+				column FR_MONTH_SHORT_DESC
+					caption: FR Mes
+			table PARAMETER_VIEW_GBL_DIM_CALENDAR_SECONDARY
+				caption: Calendario Secundario
+				column USER_CULTURE
+					caption: Cultura del Usuario
+				column YEAR
+					caption: Año
+				column CURRENT_YEAR
+					caption: Fecha
+				column DATE
+					caption: Año-Mes
+				column YEAR_MONTH_SHORT_DESC
+					caption: Mes
+			table PARAMETER_VIEW_GBL_DIM_POSITIONS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VIEW_VHE_DIM_STOCK_KMS
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VIEW_VHE_DIM_USAGE_AGE
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VIEW_VHE_DIM_USERS_AVAILABILITY
+				column USER_CULTURE
+					caption: Cultura del Usuario
+			table PARAMETER_VIEW_VHE_DIM_FINANCIAL_CHARGES
+				column USER_CULTURE
+					caption: Cultura del Usuario
+

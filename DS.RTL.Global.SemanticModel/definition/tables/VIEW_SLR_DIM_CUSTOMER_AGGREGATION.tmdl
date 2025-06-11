@@ -1,0 +1,100 @@
+table VIEW_SLR_DIM_CUSTOMER_AGGREGATION
+	isHidden
+	lineageTag: f60c15c6-ce0c-4d83-8f00-e4065cc578f4
+
+	column CUSTOMER_AGGREGATION_CODE
+		dataType: int64
+		isHidden
+		isKey
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 71e15b43-109a-440c-9062-a0e6c3f7c378
+		summarizeBy: none
+		sourceColumn: CUSTOMER_AGGREGATION_CODE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PT_CUSTOMER_AGGREGATION_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 1c44dcf7-5b01-4e6a-9e6b-29fe834e710c
+		summarizeBy: none
+		sourceColumn: PT_CUSTOMER_AGGREGATION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ES_CUSTOMER_AGGREGATION_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: b91824c8-065e-476d-abbf-3581e5f3a210
+		summarizeBy: none
+		sourceColumn: ES_CUSTOMER_AGGREGATION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EN_CUSTOMER_AGGREGATION_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: a1336087-de38-4ea7-a06e-265ef0f166b8
+		summarizeBy: none
+		sourceColumn: EN_CUSTOMER_AGGREGATION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FR_CUSTOMER_AGGREGATION_DESC
+		dataType: string
+		isHidden
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 23ab8388-375b-45c7-9d56-a86de335d8ae
+		summarizeBy: none
+		sourceColumn: FR_CUSTOMER_AGGREGATION_DESC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_AGGREGATION_DISPLAY_ORDER
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1c364e2a-7e58-4a3a-8a86-2e4e4c0d3980
+		summarizeBy: none
+		sourceColumn: CUSTOMER_AGGREGATION_DISPLAY_ORDER
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VIEW_SLR_DIM_CUSTOMER_AGGREGATION = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(Server, DatabaseDim),
+				    PBI_VIEW_SLR_DIM_CUSTOMER_AGGREGATION_MPBI = Source{[Schema="PBI",Item="VIEW_SLR_DIM_CUSTOMER_AGGREGATION_MPBI"]}[Data]
+				in
+				    PBI_VIEW_SLR_DIM_CUSTOMER_AGGREGATION_MPBI
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
