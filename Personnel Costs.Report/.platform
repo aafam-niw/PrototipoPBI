@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Personnel Costs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5faf23f7-2eda-92a7-477c-2a595dece577"
+  }
+}
